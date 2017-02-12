@@ -1,0 +1,53 @@
+/*
+    THEMES.CSS
+
+    - Last updated: 00.00.00
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+
+$purple-color: #3D3D4F;
+
+//-----------------------------------------------------------------
+// THEME LIGHT
+//-----------------------------------------------------------------
+
+.theme-light .lv-page {
+	background: desaturate(darken($gray-light, 8%), 10%);
+}
+
+//-----------------------------------------------------------------
+// THEMES
+//-----------------------------------------------------------------
+
+.theme-dark-minimal {
+	background: $gray-dark;
+
+	.global-header {
+		// position: relative;
+		padding-bottom: rem-calc(40);
+		border-bottom: 2px solid $purple-color;
+	}
+
+	.topbar ul {
+		border: 2px solid $purple-color;
+		background: none;
+
+		.active a {
+			background: none; //$purple-color;
+			color: $brand-primary;
+		}
+	}
+
+	.lv-hero {
+		// position: relative;
+		padding-top: rem-calc(150);
+		border-bottom: 2px solid $purple-color;
+	}
+}
+
+//=========================================
+//
+//=========================================

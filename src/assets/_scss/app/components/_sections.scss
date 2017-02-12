@@ -1,0 +1,309 @@
+/*
+    SECTIONS.CSS
+
+    - Last updated: 12.10.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// SECTIONS
+//-----------------------------------------------------------------
+
+.section {
+	position: relative;
+	padding: ($spacer-y * 2) 0;
+    background: $gray-light;
+
+    @include media-breakpoint-up(md) {
+        padding: ($spacer-y * 3) 0;
+    }
+
+    >.container {
+        position: initial;
+    }
+
+    p:last-of-type {
+        margin-bottom: 0; // is this right?
+    }
+}
+
+.section-white {
+    background: white;
+}
+
+.section-editorial,
+.section-bio-1,
+.section-bio-2,
+.section-bio-3,
+.section-cereal,
+.section-mad-magazines,
+.section-soberfish,
+.section-soberfish-cards,
+.section-dark,
+.section-darker,
+.section-coupon,
+.section-sf
+ {
+    // display: none;
+}
+
+//-----------------------------------------------------------------
+// Dark Section
+//-----------------------------------------------------------------
+
+.section-dark,
+.section-darker {
+	color: $gray-light;
+	background: $gray-dark;
+
+    p.lead {
+        color: darken($gray-light, 15%);
+    }
+
+	h1, h2, h3, h4, h5, h6 {
+		color: white;
+	}
+
+    .subheader {
+        color: $brand-primary;
+    }
+}
+
+//-----------------------------------------------------------------
+// Darker Section
+//-----------------------------------------------------------------
+
+.section-darker {
+    background: darken($gray-dark, 5%);
+}
+
+//-----------------------------------------------------------------
+// Image Section
+//-----------------------------------------------------------------
+
+.section-image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    z-index: 1;
+
+    &.has-fixed-bg {
+        background-attachment: fixed;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+    	color: white;
+    }
+
+    //=========================================
+    // Buttons
+    //=========================================
+
+    // .button {
+    //     color: white; // add variable
+    //     border: 2px solid white; // add variable
+    //     background: none;
+    // }
+
+    //=========================================
+    // has-color-overlay
+    //=========================================
+
+    // &.is-dark:after {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: rgba(#222, 0.6);
+    //     z-index: -1;
+    // }
+}
+
+//-----------------------------------------------------------------
+// SECTION BIO
+//-----------------------------------------------------------------
+
+.section-bio-1 {
+    // background: url(/assets/img/content/mitch-perturbed-high@2x.jpg) no-repeat;
+    background: url(/assets/img/content/bio-1@2x.jpg) no-repeat;
+    background-size: cover;
+    min-height: 700px;
+
+    h2 {
+        position: relative;
+        top: 70px;
+    }
+}
+
+// .page-tear-top {
+//     position: absolute;
+//     top: -34px;
+//     left: 0;
+//     width: 100%;
+//     height: 100px;
+//     background: #f1f2f6 url(/assets/img/layout/paper-tear-top@2x.png) no-repeat top;
+//     background-size: 100%;
+// }
+
+.section-bio-2 {
+    background: url(/assets/img/content/mitch-perturbed-2-@2x.jpg) no-repeat;
+    background-size: cover;
+    min-height: 700px;
+}
+
+.section-bio-3 {
+    background: url(/assets/img/content/mitch-perturbed-3-@2x.jpg) no-repeat;
+    background-size: cover;
+    min-height: 600px;
+
+    h2 {
+        font-size: rem-calc(30);
+    }
+}
+
+//-----------------------------------------------------------------
+// DAN AND MITCH
+//-----------------------------------------------------------------
+
+.section-dmo {
+    background: url(/assets/img/content/danandmitch/soft-bg.png) no-repeat;
+    background-size: cover;
+    height: 700px;
+    overflow: hidden;
+
+    > .container {
+        height: 100%;
+    }
+
+    .section-dmo-wallpaper {
+        position: absolute;
+        bottom: 0;
+        left: -50%;
+        width: 400%;
+        height: 1000%;
+        background: url(/assets/img/content/danandmitch/icons-wallpaper.png) repeat top left;
+        // background-size: 55%;
+        background-size: 1170px;
+        transform: rotate(10deg) translate(0, 0);
+        transform-origin: 0 0;
+        animation: dmo-wallpaper-scroller 130s linear infinite;
+        // opacity: 0.6;
+    }
+}
+
+@keyframes dmo-wallpaper-scroller {
+    from { transform: rotate(10deg) translate(0, 0); }
+    to { transform: rotate(10deg) translate(0, 80%); }
+}
+
+//-----------------------------------------------------------------
+// SOBERFISH
+//-----------------------------------------------------------------
+
+.section-soberfish {
+    background: url(/assets/img/content/soberfish/soberfish-delete.png) no-repeat;
+    background-size: 100%;
+    min-height: 760px;
+    padding: 0;
+
+    &:after {
+        background: #7a77a8 !important;
+    }
+}
+
+.section-sf {
+    background: url(/assets/img/content/sf3.jpg) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    min-height: 600px;
+}
+
+.section-cereal {
+    background: url(/assets/img/content/cereal-fucker.png) no-repeat;
+    // background: url(/assets/img/content/cereal-fucker-2.jpg) no-repeat right;
+    // background: url(/assets/img/content/cereal-fucker-3.png) no-repeat right;
+    // background: url(/assets/img/content/cereal-fucker-4.png) no-repeat right;
+    // background: url(/assets/img/content/cereal-fucker-5.png) no-repeat right;
+    background: url(/assets/img/content/cereal-fucker@2x.jpg) no-repeat right;
+
+
+    background-size: cover;
+    min-height: 700px;
+
+    h2 {
+        color: white;
+    }
+}
+
+.section-mad-magazines {
+    // display: none;
+    background: url(/assets/img/content/homepage/mad@60.jpg) no-repeat bottom;
+    background-size: cover;
+    // min-height: 600px;
+    min-height: 1200px;
+    // background-attachment: fixed;
+
+    h2 {
+        color: white;
+    }
+
+}
+
+.section-mad-magazines-2 {
+    position: relative;
+    // background: url(/assets/img/content/homepage/mad-1.jpg) no-repeat bottom;
+    background: url(/assets/img/content/homepage/mad-2.png) no-repeat bottom;
+    background-size: cover;
+    min-height: 600px;
+    // background-attachment: fixed;
+
+    h2 {
+        // color: white;
+        // background: rgba($gray-dark, 0.7);
+        padding: rem-calc(30);
+        // padding: rem-calc(200 10);
+    }
+
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+    }
+
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+.section-bleed {
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -200%;
+        width: 400%;
+        height: 100%;
+        background: inherit;
+        z-index: -1;
+        // opacity: 0.6;
+    }
+
+    &.section-light:after {
+        background: desaturate(darken($gray-light, 8%), 10%);
+    }
+}
+
+//=========================================
+//
+//=========================================

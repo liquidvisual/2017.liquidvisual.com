@@ -1,0 +1,36 @@
+/*
+    SPRITES.CSS
+
+    - Last updated: 16.12.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// SPRITES
+//-----------------------------------------------------------------
+
+.sprite-long-drip {
+    width: em-calc(172);
+    height: em-calc(480);
+    background: url(/assets/img/layout/spritesheet-long-drip@2x.png) no-repeat;
+    background-size: em-calc(6192);
+    // border: 1px solid red;
+    overflow: hidden;
+}
+
+.has-loaded .sprite-long-drip {
+    animation: long-drip 1s 0.1s steps(35) forwards 1;
+}
+
+@keyframes long-drip {
+      100% { background-position: calc(#{em-calc(-172px*35)}); }
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================

@@ -1,0 +1,75 @@
+{% assign settings = site.data.settings %}
+
+<!-- FOOTER MIDDLE -->
+<section class="global-footer-middle section section-darker">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<img width="150" src="/assets/img/content/logo-light@2x.png">
+				<!-- <h3 class="h5">About liquidvisual</h3> -->
+				<p>Designer News is a large, global community of people working or interested in design and technology. Proudly published by Andrew Wilkinson.</p>
+
+				<p>hello@liquidvisual.com</p>
+			</div>
+			<div class="col-md-8">
+				<ul class="block-grid-md-4">
+					<li>
+						<h3 class="h5">Case Studies</h3>
+						<ul class="list-unstyled">
+							<li><a href="">Big Red Sky</a></li>
+							<li><a href="">Blarg! News</a></li>
+							<li><a href="">Dan &amp; Mitch</a></li>
+							<li><a href="">Mal Winter</a></li>
+							<li><a href="">Artiqulet</a></li>
+						</ul>
+					</li>
+					<li>
+						<h3 class="h5">Services</h3>
+						<ul class="list-unstyled">
+							<li><a href="">PSD to HTML</a></li>
+							<li><a href="">Redesign</a></li>
+							<li><a href="">Websites</a></li>
+							<li><a href="">Graphics</a></li>
+							<li><a href="">Copywriting</a></li>
+						</ul>
+					</li>
+					<li>
+						<h3 class="h5">Recent</h3>
+						<ul class="list-unstyled">
+							<li><a href="">English Unlimited</a></li>
+							<li><a href="">Pricing</a></li>
+							<li><a href="">Blog Stuff</a></li>
+							<li><a href="">New Stuff</a></li>
+							<li><a href="">Jekyll</a></li>
+						</ul>
+					</li>
+					<li>
+						<h3 class="h5">Connect</h3>
+						<ul class="social-media">
+							<li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+							<li><a href="#"><i class="fa fa-youtube"></i> YouTube</a></li>
+							<li><a href="#"><i class="fa fa-github"></i> Github</a></li>
+							<li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- FOOTER BOTTOM -->
+<section class="global-footer-bottom">
+    <div class="container">
+
+		<small>&copy; {{ site.time | date: '%Y' }}</small>
+
+        <small class="pull-xs-right">
+        	<a class="author-logo" target="_blank" href="{{ settings.author.url }}">
+        		<img width="16" height="16" src="{{ settings.author.logo }}" alt="Created by {{ settings.author.title }}">
+            	<span class="text">{{ settings.author.description }}</span>
+        	</a>
+        </small>
+
+    </div>
+</section>

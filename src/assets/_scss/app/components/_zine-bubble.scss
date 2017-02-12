@@ -1,0 +1,123 @@
+/*
+    ZINE-BUBBLE.CSS
+
+    - Last updated: 15.12.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+//  ZINE BUBBLE
+//-----------------------------------------------------------------
+
+.zine-feature-bubble {
+	position: relative;
+	background: white;
+	border-radius: 100%;
+	width: em-calc(415);
+	height: em-calc(415);
+	line-height: em-calc(415);
+	color: #222;
+	box-shadow: 1px 1px 4px rgba(black, 0.1);
+	font-size: 10px;
+	font-family: $headings-font-family;
+
+	@include media-breakpoint-up(md) {
+	    font-size: rem-calc(14);
+	}
+
+	@include media-breakpoint-up(xl) {
+	    font-size: rem-calc(16);
+	}
+
+	//=========================================
+	// HEADER
+	//=========================================
+
+	.zine-feature-bubble-header {
+		position: relative;
+		top: em-calc(-4);
+		width: em-calc(65);
+		line-height: 0.9;
+		margin: 0 auto;
+		font-size: em-calc(90) !important;
+		text-transform: uppercase;
+		color: #222;
+
+		.text {
+			display: block;
+			font-size: em-calc(6);
+			font-weight: normal;
+			text-transform: lowercase;
+			text-indent: 5px;
+		}
+	}
+
+	//=========================================
+	// INTRO
+	//=========================================
+
+	.zine-feature-bubble-intro,
+	.zine-feature-bubble-body,
+	.zine-feature-bubble-outro-bubble {
+		position: absolute;
+	}
+
+	.zine-feature-bubble-intro {
+		max-width: em-calc(180);
+		line-height: 1;
+		top: em-calc(54);
+		left: calc(50% - #{em-calc(180/2)});
+		font-size: em-calc(16);
+		text-align: left;
+	}
+
+	//=========================================
+	// BODY
+	//=========================================
+
+	.zine-feature-bubble-body {
+		bottom: em-calc(50);
+		right: em-calc(80);
+		width: em-calc(210);
+		line-height: 1;
+		font-size: em-calc(13);
+		font-weight: 300;
+		text-align: left;
+	}
+
+	//=========================================
+	// TINY BUBBLE
+	//=========================================
+
+	.zine-feature-bubble-outro-bubble {
+		left: em-calc(30);
+		bottom: em-calc(-15);
+		width: em-calc(136);
+		height: em-calc(136);
+		line-height: em-calc(136);
+		border-radius: 100%;
+		overflow: hidden;
+		background: lighten($brand-secondary, 5%); //#27bcdd;
+
+		.text {
+			display: block;
+			font-size: em-calc(13);
+			font-family: $font-family-sans-serif;
+			line-height: 1;
+			text-align: right;
+			text-transform: uppercase;
+			font-weight: 600;
+			color: white;
+			padding: em-calc(0 28 0 25);
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================
