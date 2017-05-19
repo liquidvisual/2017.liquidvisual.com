@@ -1,7 +1,7 @@
 /*
     LOADER.CSS
 
-    - Last updated: 00.00.00
+    - Last updated: 18.05.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -12,96 +12,114 @@
 //-----------------------------------------------------------------
 
 .lv-page-loader {
+    display: none;
     position: fixed;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: darken($gray-dark, 3%);
+    background: $gray-dark;
     z-index: 2147483647;
-    transition: opacity ease 1s, visibility ease 1s;
+    opacity: 1;
+
+    &.force-finish {
+        animation: page-loader-fadeout 1s ease 0s alternate 1 forwards;
+    }
 }
 
-.has-loaded .lv-page-loader {
-    opacity: 0;
+html.has-loaded .lv-page-loader {
+    animation: page-loader-fadeout 1s ease 0.1s alternate 1 forwards;
+}
+
+//-----------------------------------------------------------------
+// DEV LOADER TURNED OFF FOR SPEED
+//-----------------------------------------------------------------
+
+html[data-dev-mode] .lv-page-loader {
     visibility: hidden;
 }
 
-.lt-ie10 .lv-page-loader {
-    display: none;
+//-----------------------------------------------------------------
+// DISAPPEAR AFTER DELAY
+//-----------------------------------------------------------------
+
+@keyframes page-loader-fadeout {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 //-----------------------------------------------------------------
 // SPINNER
 //-----------------------------------------------------------------
 
-.lv-page-loader .display-table-cell {
-    text-align: center;
-    // padding-bottom: 200px;
+.lv-page-loader-spinner {
+    position: relative;
+    width: rem-calc(60);
+    height: rem-calc(60);
 }
 
 //-----------------------------------------------------------------
 // SPINNER
 //-----------------------------------------------------------------
 
-// .lv-spinner {
-//     width: 60px;
-//     height: 60px;
-//     display: inline-block;
-//     position: relative;
-//     margin: 100px auto;
-// }
-
-// .double-bounce1,
-// .double-bounce2 {
-//   width: 100%;
-//   height: 100%;
-//   border-radius: 50%;
-//   background-color: $brand-primary;
-//   opacity: 0.6;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   animation: sk-bounce 2.0s infinite ease-in-out;
-// }
-
-// .double-bounce2 {
-//   animation-delay: -1.0s;
-// }
-
-@keyframes sk-bounce {
-  0%, 100% {
-    transform: scale(0.0);
-  } 50% {
-    transform: scale(1.0);
-  }
-}
-
-//-----------------------------------------------------------------
-// SPINNER
-//-----------------------------------------------------------------
-
-.lv-spinner {
-    width: 60px;
-    height: 60px;
-    background: $brand-primary;
-    border-radius: 3px;
+.lv-page-loader-spinner {
+    position: relative;
     display: inline-block;
-    animation: sk-rotateplane 1.2s infinite ease-in-out;
+    width: rem-calc(60);
+    height: rem-calc(60);
+    background: url('data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHh
+tbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBwcmVzZXJ2ZUFzcGVjdF
+JhdGlvPSJub25lIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjM1MHB4IiBoZWlnaHQ9IjM1MHB4I
+iB2aWV3Qm94PSIwIDAgMzUwIDM1MCI+CjxkZWZzPgo8ZyBpZD0iTGF5ZXIyXzBfRklMTCI+Cjxw
+YXRoIGZpbGw9IiMyNzI3MkYiIHN0cm9rZT0ibm9uZSIgZD0iCk0gMjk4Ljc1IDUxLjI1ClEgMjQ
+3LjUgMCAxNzUgMCAxMDIuNSAwIDUxLjI1IDUxLjI1IDAgMTAyLjUgMCAxNzUgMCAyNDcuNSA1MS
+4yNSAyOTguNzUgMTAyLjUgMzUwIDE3NSAzNTAgMjQ3LjUgMzUwIDI5OC43NSAyOTguNzUgMzUwI
+DI0Ny41IDM1MCAxNzUgMzUwIDEwMi41IDI5OC43NSA1MS4yNQpNIDE2NC4zIDE0My44ClEgMTY4
+LjEgMTQxLjkgMTcyLjcgMTQxLjkKTCAyNzEgMTQxLjkKUSAyNzkgMTQxLjkgMjg0LjUgMTQ3LjQ
+gMjkwLjEgMTUyLjggMjkwLjA1IDE2MC40NSAyOTAuMDUgMTY4LjE1IDI4NC41IDE3My41IDI4My
+45NSAxNzQuMDUgMjgzLjQ1IDE3NC40NQpMIDIzNC45NSAyMjIuOTUKUSAyMzQuNjUgMjIzLjM1I
+DIzNC4yNSAyMjMuNzUgMjI4Ljg1IDIyOS4xNSAyMjEuMDUgMjI5LjA1IDIxMy4yNSAyMjguOTUg
+MjA3LjcgMjIzLjQKTCAxNTguNjUgMTc0LjM1ClEgMTUzLjA1IDE2OC43NSAxNTMgMTYxIDE1Mi4
+5IDE1My4yIDE1OC4zIDE0Ny44IDE2MSAxNDUuMSAxNjQuMyAxNDMuOApNIDU5IDE0MC44ClEgNT
+kgMTMyLjg1IDY0LjQgMTI3LjMgNjkuODUgMTIxLjc1IDc3LjUgMTIxLjc1IDgxLjMgMTIxLjc1I
+Dg0LjU1IDEyMy4xNSA4OC42IDEyNC41IDkxLjg1IDEyNy43NQpMIDE2MS40IDE5Ny4zClEgMTY3
+IDIwMi45IDE2Ny4wNSAyMTAuNyAxNjcuMTUgMjE4LjQ1IDE2MS43NSAyMjMuODUgMTU2LjMgMjI
+5LjMgMTQ4LjU1IDIyOS4xNSAxNDcuOCAyMjkuMTUgMTQ3LjE1IDIyOS4xCkwgNzguNTUgMjI5Lj
+EKUSA3OC4wNSAyMjkuMTUgNzcuNSAyMjkuMTUgNjkuODUgMjI5LjE1IDY0LjQgMjIzLjYgNTkgM
+jE4IDU5IDIxMC4xNQpMIDU5IDE0MC44IFoiLz4KPC9nPgo8L2RlZnM+Cgo8ZyB0cmFuc2Zvcm09
+Im1hdHJpeCggMSwgMCwgMCwgMSwgMCwwKSAiPgo8dXNlIHhsaW5rOmhyZWY9IiNMYXllcjJfMF9
+GSUxMIi8+CjwvZz4KPC9zdmc+Cg==');
+    background-size: contain;
 }
 
-@-webkit-keyframes sk-rotateplane {
-  0% { -webkit-transform: perspective(120px) }
-  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
-  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+.lv-page-loader-spinner-ripple {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: $brand-primary;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+    z-index: -1;
 }
 
 @keyframes sk-rotateplane {
     0% {
-        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-    } 50% {
-        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-    } 100% {
-        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(2.0);
+        opacity: 0;
     }
 }
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------

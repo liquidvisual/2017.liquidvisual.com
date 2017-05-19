@@ -88,6 +88,10 @@ $header-height-lg: 220px !default;
 	width: 100%;
 	z-index: 999;
 
+	> .container {
+		position: relative;
+	}
+
 	// KEEP INCASE THE TOPBAR TURNS WHITE ON MOBILE (ALWAYS)
 	@include media-breakpoint-down(sm) {
 		// height: $header-height-sm;

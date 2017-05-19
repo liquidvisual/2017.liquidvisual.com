@@ -21,11 +21,11 @@ $dropdowns-have-anchor-borders : true;
 
 .headroom--not-top.headroom--unpinned,
 .headroom--not-top.headroom--pinned {
-    .topbar {
+    .lv-topbar {
         bottom: 19px;
     }
 
-    .topbar ul {
+    .lv-topbar ul {
         border: 0;
         background: none;
 
@@ -55,7 +55,7 @@ $dropdowns-have-anchor-borders : true;
 // TOPBAR
 //-----------------------------------------------------------------
 
-.topbar {
+.lv-topbar {
     position: absolute; // [LOCKED]
     bottom: 34px;
     // bottom: 0;
@@ -70,7 +70,7 @@ $dropdowns-have-anchor-borders : true;
 // GENERAL UL
 //-----------------------------------------------------------------
 
-.topbar ul {
+.lv-topbar ul {
     padding: 0; // reset
     border: 1px solid white;
     margin: 0; // reset
@@ -86,7 +86,7 @@ $dropdowns-have-anchor-borders : true;
 // TOP PARENT UL
 //=========================================
 
-.topbar > ul {
+.lv-topbar > ul {
     display: table;
 
     > li {
@@ -103,7 +103,7 @@ $dropdowns-have-anchor-borders : true;
 // ALL ANCHORS (INCL. DROPDOWN CHILDREN)
 //-----------------------------------------------------------------
 
-.topbar a {
+.lv-topbar a {
     display: block; // locked
     padding: rem-calc(10 80);
     text-decoration: none;
@@ -114,7 +114,7 @@ $dropdowns-have-anchor-borders : true;
 // TOP PARENT ANCHORS (VISIBLE)
 //-----------------------------------------------------------------
 
-.topbar .top-parent-anchor {
+.lv-topbar .top-parent-anchor {
     display: block; // locked
     padding: rem-calc(0 20);
     line-height: rem-calc(44);
@@ -135,7 +135,7 @@ $dropdowns-have-anchor-borders : true;
 // ACTIVE TOP PARENT ANCHOR
 //=========================================
 
-.topbar .active .top-parent-anchor {
+.lv-topbar .active .top-parent-anchor {
     background: rgba(white, 0.15);
 }
 
@@ -143,17 +143,17 @@ $dropdowns-have-anchor-borders : true;
 // DROPDOWN ANCHORS
 //-----------------------------------------------------------------
 
-.topbar .has-dropdown:hover > .top-parent-anchor {
+.lv-topbar .has-dropdown:hover > .top-parent-anchor {
     background: rgba(black, 0.3); //$top-parent-anchor-bg-color;
     color: white;
 }
 
-.topbar .active.has-dropdown:hover > .top-parent-anchor .text {
+.lv-topbar .active.has-dropdown:hover > .top-parent-anchor .text {
     border-bottom: 0;
 }
 
 // UX decision, dropdowns are fiddly on tablets
-.topbar .has-dropdown:hover > .dropdown {
+.lv-topbar .has-dropdown:hover > .dropdown {
     @include media-breakpoint-up(xl) {
         opacity: 1;
         height: auto;
@@ -166,7 +166,7 @@ $dropdowns-have-anchor-borders : true;
 // ACTIVE STATE (OPTIONAL)
 //=========================================
 
-// .topbar .has-dropdown.active:hover > .top-parent-anchor {
+// .lv-topbar .has-dropdown.active:hover > .top-parent-anchor {
 //     background: $top-parent-anchor-bg-color;
 // }
 
@@ -174,7 +174,7 @@ $dropdowns-have-anchor-borders : true;
 // THIRD LEVEL
 //=========================================
 
-.topbar .dropdown .has-dropdown:hover > .dropdown {
+.lv-topbar .dropdown .has-dropdown:hover > .dropdown {
     @include media-breakpoint-up(md) {
         opacity: 1;
         height: auto;
@@ -186,7 +186,7 @@ $dropdowns-have-anchor-borders : true;
 // DROPDOWNS
 //-----------------------------------------------------------------
 
-.topbar .dropdown {
+.lv-topbar .dropdown {
     @include transition('opacity');
     display: none; // OPT IN DESIGN
     position: absolute;
@@ -207,12 +207,12 @@ $dropdowns-have-anchor-borders : true;
 }
 
 // Prevent far-right dropdown from exceeding page width
-.topbar .has-dropdown-right-aligned .dropdown {
+.lv-topbar .has-dropdown-right-aligned .dropdown {
     right: 0;
     left: auto;
 }
 
-.topbar .dropdown.is-nav-included {
+.lv-topbar .dropdown.is-nav-included {
     display: block;
 }
 
@@ -220,14 +220,14 @@ $dropdowns-have-anchor-borders : true;
 // THIRD LEVEL
 //=========================================
 
-.topbar .dropdown .dropdown {
+.lv-topbar .dropdown .dropdown {
     position: absolute;
     top: 0;
     left: 100%;
 }
 
 // Prevent far-right 'nested' dropdown from exceeding page width
-.topbar .has-dropdown-right-aligned .dropdown .dropdown {
+.lv-topbar .has-dropdown-right-aligned .dropdown .dropdown {
     left: -100%;
 }
 
@@ -235,7 +235,7 @@ $dropdowns-have-anchor-borders : true;
 // DROPDOWN LIST + ANCHORS
 //=========================================
 
-.topbar .dropdown li {
+.lv-topbar .dropdown li {
     position: relative;
     float: none;
     margin: 0; // reset
@@ -254,16 +254,16 @@ $dropdowns-have-anchor-borders : true;
 //=========================================
 
 @if $dropdowns-have-anchor-borders {
-    .topbar .dropdown a {
+    .lv-topbar .dropdown a {
         border-bottom: 1px solid #E8E8E8; //darken($primary-color, 2%); // optional
         // border-top: 1px solid lighten($primary-color, 0%); // optional
     }
 
-    .topbar .dropdown {
+    .lv-topbar .dropdown {
         // border-bottom: 1px solid darken($primary-color, 5%); // optional
     }
 
-    .topbar .dropdown li:last-child a {
+    .lv-topbar .dropdown li:last-child a {
         border-bottom: 0;
     }
 }
@@ -272,7 +272,7 @@ $dropdowns-have-anchor-borders : true;
 // DROPDOWN ANCHOR HOVERS
 //=========================================
 
-.topbar .dropdown a:hover {
+.lv-topbar .dropdown a:hover {
     background: #eee;
     // background: lighten($primary-color, 2%); //#eee;
     // color: white;

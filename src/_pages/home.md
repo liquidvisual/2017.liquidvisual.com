@@ -1,11 +1,11 @@
 ---
 layout: base__homepage
-title: Homepage
+title: Home
 permalink: /
 regenerate: true
-hero: "/assets/img/content/hero-home-2.jpg"
+hero: /assets/img/content/hero-home-2.jpg
 hero_classes: is-tinted
-theme: "theme-home"
+theme: theme-home
 ---
 
 # H1. This Is a Header One

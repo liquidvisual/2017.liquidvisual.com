@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<!--[if lt IE 9]>       <html class="lt-ie9"> <![endif]-->
-<!--[if IE 9]>          <html class="lt-ie10"> <![endif]-->
-<!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
-
+<html class="no-js" {{ site.environment }}>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <title>
         {% if page.url == '/' %}
@@ -20,26 +17,24 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Permanent+Marker|Montserrat:400,700|Oswald">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
-    <!-- FAV ICONS -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-144-precomposed.png">
-    <link rel="shortcut icon" href="/assets/favicon.ico">
-
     <!-- build:css({src,.tmp}) /assets/css/minified.css -->
     <link rel="stylesheet" href="/css/main.css">
     <!-- endbuild -->
 </head>
-<body class="{{ page.theme }}" data-environment="{{ site.environment }}">
+<body class="{{ page.theme }}">
+
+    {% include snippets/loader.html %}
 
     <div class="lv-page">
 
         <!-- HEADER -->
         <header class="global-header fixed-top">
-            <div class="container rel">
+            <div class="container">
                 {% include header.html %}
 
                 <!-- NAVIGATION -->
                 <nav class="global-navigation hidden-md-down">
-                    <div class="topbar">
+                    <div class="lv-topbar">
                         {% include snippets/navigation.html %}
                     </div>
                 </nav>
@@ -62,18 +57,6 @@
         {% include snippets/navigation.html %}
     </nav>
 
-    <!-- PAGE LOADER -->
-    <div class="lv-page-loader" data-page-loader>
-        <div class="display-table">
-            <div class="display-table-cell">
-                <div class="lv-spinner">
-                    <div class="double-bounce1"></div>
-                    <div class="double-bounce2"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!--[if lt IE 9]>
     <div class="lv-alert-bar">
         <p>You're using an outdated browser. Please <a title="Click me, you know you want to." href="http://outdatedbrowser.com">upgrade your browser</a> to improve your experience.</p>
@@ -85,19 +68,18 @@
 
     <!-- build:js(src) /assets/scripts/minified.js -->
     <script src="/_bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
     <script src="/_bower_components/tether/dist/js/tether.min.js"></script>
     <script src="/_bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/_bower_components/bootstrap-validator/dist/validator.min.js"></script>
     <script src="/_bower_components/bxSlider/dist/jquery.bxslider.min.js"></script>
     <script src="/_bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
 
-    <script src="/assets/webvisual/assets/scripts/liquidvisual/alert-bar.js"></script>
-    <script src="/assets/webvisual/assets/scripts/liquidvisual/equal-height.js"></script>
-    <script src="/assets/webvisual/assets/scripts/liquidvisual/hero.js"></script>
-    <script src="/assets/webvisual/assets/scripts/liquidvisual/utilities.js"></script>
-    <script src="/assets/webvisual/assets/scripts/liquidvisual/responsive-utility.js"></script>
-    <script src="/assets/webvisual/assets/scripts/liquidvisual/key.js"></script>
+    <script src="/assets/scripts/liquidvisual/alert-bar.js"></script>
+    <script src="/assets/scripts/liquidvisual/equal-height.js"></script>
+    <script src="/assets/scripts/liquidvisual/hero.js"></script>
+    <script src="/assets/scripts/liquidvisual/utilities.js"></script>
+    <script src="/assets/scripts/liquidvisual/responsive-utility.js"></script>
+    <script src="/assets/scripts/liquidvisual/key.js"></script>
 
     <script src="/assets/scripts/vendor/headroom.js"></script>
     <script src="/assets/scripts/vendor/pxgradient-1.0.3.js"></script>
@@ -111,12 +93,6 @@
             <p>Your browser has Javascript disabled. Some features may be limited.</p>
         </div>
     </noscript>
-
-    <!-- DELETE BELOW FOR PRODUCTION -->
-    <script>
-        localStorage.setItem("pageURL", "{{ page.url }}");
-        localStorage.setItem("pageNotes", JSON.stringify({{ page.notes | jsonify }}));
-    </script>
 
 </body>
 </html>

@@ -16,11 +16,15 @@ include: ['.htaccess', '_pages']
 # _config.build.yml sets future and show_drafts to false on `grunt build`
 future: true
 show_drafts: true
+environment: data-dev-mode
 
-# Docs
+# Blog
 collections:
   docs:
     output: true
+  posts:
+    output: true
+    permalink: /blog/:categories/:title/
 
 # https://github.com/jekyll/jekyll-sitemap
 # If you would like to exclude specific pages/posts from the sitemap set the sitemap flag to false in the front matter for the page/post.
