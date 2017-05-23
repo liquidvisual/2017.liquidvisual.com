@@ -1,7 +1,7 @@
 /*
     TOPBAR.CSS
 
-    - Last updated: 13.12.16
+    - Last updated: 23.05.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -21,33 +21,28 @@ $dropdowns-have-anchor-borders : true;
 
 .headroom--not-top.headroom--unpinned,
 .headroom--not-top.headroom--pinned {
-    .lv-topbar {
-        bottom: 19px;
-    }
 
     .lv-topbar ul {
-        border: 0;
+        border-color: transparent;
         background: none;
 
         > li a {
-            border-radius: $border-radius;
+            border-radius: $border-radius-sm;
         }
 
         > li.active a {
-            background: none;
-            color: $brand-primary;
+            background: rgba(white, 0.1);
         }
     }
 }
 
 //-----------------------------------------------------------------
 // NAVIGATION
-//
-// If nav BG color is desired. Make nav absolute, and topbar relative
 //-----------------------------------------------------------------
 
 .global-navigation {
     position: relative; // [LOCKED]
+    margin-left: auto;
     z-index: 9999;
 }
 
@@ -56,14 +51,7 @@ $dropdowns-have-anchor-borders : true;
 //-----------------------------------------------------------------
 
 .lv-topbar {
-    position: absolute; // [LOCKED]
-    bottom: 34px;
-    // bottom: 0;
-    right: 0;
 
-    @include media-breakpoint-up(xl) {
-        right: $container-gutter*2;
-    }
 }
 
 //-----------------------------------------------------------------

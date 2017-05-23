@@ -18,7 +18,7 @@ $header-height-lg: 220px !default;
 
 .headroom {
     will-change: transform;
-    transition: transform 200ms linear, background 200ms ease;
+    transition: transform 200ms linear, background 200ms ease, opacity 200ms ease;
 }
 
 .headroom--pinned {
@@ -26,7 +26,8 @@ $header-height-lg: 220px !default;
 }
 
 .headroom--unpinned {
-    transform: translateY(-100%);
+    // transform: translateY(-100%);
+    opacity: 0;
 }
 
 .headroom--top {
@@ -40,12 +41,16 @@ $header-height-lg: 220px !default;
 .headroom--not-top.headroom--pinned {
 	background: white;
 
+	@include media-breakpoint-down(sm) {
+	    box-shadow: 0 0 3px 1px rgba(black, 0.2); // added NEW
+	}
+
 	@include media-breakpoint-up(md) {
 	    background: rgba(#111, 0.9);
 	}
 
 	.logo img {
-		display: none;
+		display: none; // [LOCKED]
 
 		@include media-breakpoint-up(md) {
 		    padding: rem-calc(15 0);
@@ -54,17 +59,11 @@ $header-height-lg: 220px !default;
 
 	.global-mobile-menu {
 		@include media-breakpoint-up(md) {
-		    top: 30px;
+		    // top: 30px;
 		}
 	}
 
-	.lv-hamburger-top,
-	.lv-hamburger-middle,
-	.lv-hamburger-bottom {
-		background: #222;
-	}
-
-	// OVERRIDES
+	// OVERRIDES - for all different logo types
 	.logo .img-sm-down-override {
 		@include media-breakpoint-down(sm) {
 		    display: block !important;
@@ -75,6 +74,12 @@ $header-height-lg: 220px !default;
 		@include media-breakpoint-up(md) {
 		    display: block !important;
 		}
+	}
+
+	.lv-hamburger-top,
+	.lv-hamburger-middle,
+	.lv-hamburger-bottom {
+		background: #222;
 	}
 }
 
@@ -89,37 +94,30 @@ $header-height-lg: 220px !default;
 	z-index: 999;
 
 	> .container {
-		position: relative;
-	}
+		display: flex;
+		align-items: center;
+		position: relative; // for abs snapping
 
-	// KEEP INCASE THE TOPBAR TURNS WHITE ON MOBILE (ALWAYS)
-	@include media-breakpoint-down(sm) {
-		// height: $header-height-sm;
-	    // background: white;
-	    // box-shadow: 0 0 3px 1px rgba(black, 0.2);
+		@include media-breakpoint-up(xl) {
+			padding: 0 $container-gutter*3; // [LOCKED]
+		}
 	}
 }
 
 //-----------------------------------------------------------------
-// LOGO
+// LOGO - CONTROLS HEIGHT OF HEADER
 //-----------------------------------------------------------------
 
 .global-header .logo {
-	position: relative;
-	display: block;
-
-	@include media-breakpoint-up(xl) {
-	    left: $container-gutter * 2;
-	}
+	display: block; // improve hit area
 
 	img {
 		width: rem-calc(150);
-		transition: width ease 300ms;
 		padding: rem-calc(10 0);
 
 		@include media-breakpoint-up(md) {
 			width: rem-calc(200);
-		    padding: rem-calc(30 0);
+		    padding: $spacer 0;
 		}
 	}
 }
@@ -129,15 +127,8 @@ $header-height-lg: 220px !default;
 //-----------------------------------------------------------------
 
 .global-mobile-menu {
-	position: absolute;
-	top: 18px;
-	right: $container-gutter/2;
-	overflow: hidden;
-
-	@include media-breakpoint-up(md) {
-	    top: 45px;
-	    right: $container-gutter;
-	}
+	margin-left: auto;
+	line-height: 0; // fix bug?
 }
 
 //-----------------------------------------------------------------

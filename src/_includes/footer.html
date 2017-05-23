@@ -1,15 +1,15 @@
 {% assign settings = site.data.settings %}
 
 <!-- FOOTER MIDDLE -->
-<section class="global-footer-middle section section-darker">
+<section class="global-footer-body section section-darker section-bleed">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4">
-				<img width="150" src="/assets/img/content/logo-light@2x.png">
+				<p><img width="150" src="/assets/img/content/logo-light@2x.png"></p>
 				<!-- <h3 class="h5">About liquidvisual</h3> -->
 				<p>Designer News is a large, global community of people working or interested in design and technology. Proudly published by Andrew Wilkinson.</p>
-
-				<p>hello@liquidvisual.com</p>
+				<br>
+				<h4>hello@liquidvisual.com</h4>
 			</div>
 			<div class="col-md-8">
 				<ul class="block-grid-md-4">
@@ -59,17 +59,14 @@
 </section>
 
 <!-- FOOTER BOTTOM -->
-<section class="global-footer-bottom">
+<section class="global-footer-bottom section-darker section-bleed">
     <div class="container">
-
 		<small>&copy; {{ site.time | date: '%Y' }}</small>
-
-        <small class="pull-xs-right">
+        <small>
         	<a class="author-logo" target="_blank" href="{{ settings.author.url }}">
-        		<img width="16" height="16" src="{{ settings.author.logo }}" alt="Created by {{ settings.author.title }}">
+        		<!-- <img width="16" height="16" src="{{ settings.author.logo }}" alt="Created by {{ settings.author.title }}"> -->
             	<span class="text">{{ settings.author.description }}</span>
         	</a>
         </small>
-
     </div>
 </section>

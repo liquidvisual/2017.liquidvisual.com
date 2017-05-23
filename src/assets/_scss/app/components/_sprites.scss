@@ -12,10 +12,10 @@
 //-----------------------------------------------------------------
 
 .sprite-long-drip {
-    width: em-calc(172);
+    width: calc(#{em-calc(172)} - 1px); // squash rounding bug
     height: em-calc(480);
     background: url(/assets/img/layout/spritesheet-long-drip@2x.png) no-repeat;
-    background-size: em-calc(6192);
+    background-size: cover; //em-calc(6192);
     // border: 1px solid red;
     overflow: hidden;
 }

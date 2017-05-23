@@ -82,7 +82,7 @@ $brand-tertiary:            #96577D !default;
 // // You can add more entries to the $spacers map, should you need more variation.
 
 $spacer:   rem-calc(20); //1rem !default;
-$spacer-x: rem-calc(10); //$spacer !default;
+$spacer-x: $spacer !default;
 $spacer-y: $spacer !default;
 // $spacers: (
 //   0: (
@@ -132,10 +132,10 @@ $container-gutter: 30px; // LV
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 544px,
+  sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1170px
+  xl: 1140px + $container-gutter*4
 ) !default;
 // @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 
@@ -145,10 +145,10 @@ $grid-breakpoints: (
 // // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-  sm: 576px,
+  sm: 576px, //100%,
   md: 768px, // 720px,
   lg: 1024px, // 940px,
-  xl: 1170px + $container-gutter*4 // 1140px
+  xl: 1140px + $container-gutter*4
 ) !default;
 // @include _assert-ascending($container-max-widths, "$container-max-widths");
 

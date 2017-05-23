@@ -9,12 +9,12 @@
 //-----------------------------------------------------------------
 
 $body-bg: white !default;
-$menu-bg-color: #111;
+$menu-bg-color: $brand-primary; //#111;
 $menu-width-xs: 260px;
 $menu-width-md: 350px;
-$hamburger-width: 30px;
+$hamburger-width: rem-calc(30);
 $hamburger-height: $hamburger-width - $hamburger-width/5;
-$hamburger-slit-height: 4px;
+$hamburger-slit-height: rem-calc(4);
 
 //-----------------------------------------------------------------
 // LV PAGE

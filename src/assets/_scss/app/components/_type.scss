@@ -1,7 +1,7 @@
 /*
     TYPE.CSS
 
-    - Last updated: 16.10.16
+    - Last updated: 22.05.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -12,8 +12,8 @@
 //--------------------------------------------------------------------
 
 html {
-  // @include media-breakpoint-down(md) { font-size: 16px; }
-  // @include media-breakpoint-down(sm) { font-size: 16px; }
+  // @include media-breakpoint-down(md) { font-size: 15px; }
+  // @include media-breakpoint-down(sm) { font-size: 14px; }
 }
 
 //-----------------------------------------------------------------
@@ -21,13 +21,9 @@ html {
 //-----------------------------------------------------------------
 
 a {
-	transition: color ease 300ms, background-color ease 300ms;
 	font-weight: bold;
+	transition: color ease 300ms, background-color ease 300ms;
 }
-
-// .main-content a {
-	// font-weight: bold;
-// }
 
 //-----------------------------------------------------------------
 // PARAGRAPHS
@@ -40,16 +36,33 @@ p, ul, ol, td {
 }
 
 //-----------------------------------------------------------------
-// SPACER
+// HEADINGS
 //-----------------------------------------------------------------
 
-.spacer {
-	width: 1px;
-	height: 1px;
+h1, h2, h3, h4, h5, h6 {
+	// word-wrap: break-word;
+	// margin-bottom: rem-calc(30);
+
+	small {
+		font-family: "Gotham Rounded";
+		font-weight: normal;
+		color: $brand-secondary;
+
+		&.standout {
+			font-family: $font-family-sans-serif;
+			// font-size: rem-calc(40);
+			font-style: italic;
+		}
+	}
+}
+
+.display-oswald,
+.d-oswald {
+	font-family: 'Oswald', sans-serif;
 }
 
 //-----------------------------------------------------------------
-// HEADINGS
+// DISPLAY HEADINGS
 //-----------------------------------------------------------------
 
 .display-1,
@@ -60,28 +73,9 @@ p, ul, ol, td {
 	line-height: 1.1;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	// word-wrap: break-word;
-	// margin-bottom: rem-calc(30);
-
-	.standout {
-		font-family: $font-family-sans-serif;
-		// font-weight: normal;
-		font-style: italic;
-		// color: #fbb28d; //$brand-secondary;
-		color: $brand-secondary;
-		font-size: rem-calc(40);
-	}
-
-	small {
-		font-weight: normal;
-		font-family: "Gotham Rounded";
-		color: $brand-tertiary;
-	}
-}
-
-.display-oswald {
-	font-family: 'Oswald', sans-serif;
+.display-2 {
+	// font-size: 18.5vw !important;
+	// font-size: 10vw ;
 }
 
 //-----------------------------------------------------------------
@@ -89,16 +83,16 @@ h1, h2, h3, h4, h5, h6 {
 //-----------------------------------------------------------------
 
 @include media-breakpoint-down(sm) {
-    h1, .h1 { font-size: calc(#{$font-size-h1} - 60%) !important; }
-    h2, .h2 { font-size: calc(#{$font-size-h2} - 60%) !important; }
-    h3, .h3 { font-size: calc(#{$font-size-h3} - 30%) !important; }
-    h4, .h4 { font-size: calc(#{$font-size-h4} - 20%) !important; }
-    h5, .h5 { font-size: calc(#{$font-size-h5} - 10%) !important; }
-    h6, .h6 { font-size: calc(#{$font-size-h6} - 10%) !important; }
+    // h1, .h1 { font-size: calc(#{$font-size-h1} - 60%); }
+    // h2, .h2 { font-size: calc(#{$font-size-h2} - 60%); }
+    // h3, .h3 { font-size: calc(#{$font-size-h3} - 30%); }
+    // h4, .h4 { font-size: calc(#{$font-size-h4} - 20%); }
+    // h5, .h5 { font-size: calc(#{$font-size-h5} - 10%); }
+    // h6, .h6 { font-size: calc(#{$font-size-h6} - 10%); }
 }
 
 @include media-breakpoint-down(sm) {
-	.display-1 { font-size: calc(#{$display1-size} - 150%) !important; }
+	.display-1 { font-size: calc(#{$display1-size} - 150%); }
     // .display-2 { font-size: calc(#{$display1-size} - 100%) !important; }
     // .display-3 { font-size: calc(#{$display1-size} - 100%) !important; }
     // .display-4 { font-size: calc(#{$display1-size} - 100%) !important; }
@@ -109,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 //-----------------------------------------------------------------
 
 h2.subheader,
-h3.subheader, {
+h3.subheader {
 	font-family: $font-family-serif;
 	font-weight: normal;
 }
@@ -170,6 +164,15 @@ hr,
 	// background: -ms-linear-gradient(left,  $brand-primary 0%,$brand-secondary 100%);
 	background: linear-gradient(to right,  $brand-primary 0%,$brand-secondary 100%);
 	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$primary-color', endColorstr='$brand-secondary',GradientType=1 );
+}
+
+//-----------------------------------------------------------------
+// SPACER
+//-----------------------------------------------------------------
+
+.spacer {
+	width: 1px;
+	height: 1px;
 }
 
 //=========================================

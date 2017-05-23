@@ -30,8 +30,18 @@
 }
 
 .num {
+	display: inline-block;
 	color: grey;
-	margin-right: 10px;
+	// margin-right: 10px;
+	border: 1px solid $gray-dark;
+	// border-top-width: 4px;
+	// width: 35px;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	border-radius: 100%;
+	font-size: rem-calc(15);
+	font-family: 'Oswald';
 }
 
 .section-editorial  {

@@ -5,25 +5,12 @@ layout: base
 {% assign settings = site.data.settings %}
 {% assign featured = site.data.sitemap[3].children | where: "featured", true %}
 
-{% include hero_cover_01.html %}
+<!-- { % include hero_cover_01.html %} -->
 
-<!-- MAIN CONTENT -->
+<!-- CONTENT -->
 <div class="container-wrapper">
     <div class="container">
         <main class="main-content">
-
-			<!-- TAGLINE -->
-			<section class="section section-darker section-bleed" hidden>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8 col-centered text-xs-center">
-							<h2><span class="brand-primary-color">I'm curious,</span> who builds your websites?</h2>
-							<p>Do you outsource overseas? Perhaps you use a service for PSD to HTML conversion? Understandably so, it’s much faster and cheaper than doing it in-house.</p>
-						</div>
-
-					</div>
-				</div>
-			</section>
 
 			<!-- BODY DARK -->
 			<section class="section section-dark section-editorial">
@@ -34,50 +21,56 @@ layout: base
 					</div>
 
 					<div class="row">
-						<div class="col-xl-4">
-							<h4 class="h3 subheader" style="font-weight: normal;"><span class="num">01</span> reclusive</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut.</p>
-
-							<h4 class="h3 subheader" style="font-weight: normal;"><span class="num">01</span> blarg!</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation.</p>
-
-							<h4 class="h3 subheader" style="font-weight: normal;"><span class="num">01</span> dan & mitch</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-							quis nostrud exercitation.</p>
-
-							<h4 class="h3 subheader" style="font-weight: normal;"><span class="num">01</span> soberfish</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et
-							quis nostrud exercitation.</p>
-
-							<h4 class="h3 subheader" style="font-weight: normal;"><span class="num">01</span> kleptobreaker</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor.</p>
-
-							<h4 class="h3 subheader" style="font-weight: normal;"><span class="num">01</span> </h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation.</p>
-						</div>
-						<div class="col-xl-8">
+						<div class="col-md-8 push-md-4">
 							<h2 class="display-1 display-oswaldX contents">CON<br>TEN<br>TS</h2>
 
 							<br>
 
 							<h3 class="display-4 brand-secondary-color">Editorial</h3>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							<p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 							quis nostrud exercitation ullamco.</p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							<p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 							quis nostrud exercitation ullamco.</p>
 						</div>
+						<div class="col-md-4 pull-md-8 pr-md-4">
+
+							<h4 class="h3 subheader" style="font-weight: normal;"><span class="num">01</span> Reclusive</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut.</p>
+
+							<h4 class="h3 subheader" style="font-weight: normal;"><span class="num">02</span> Blarg!</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation.</p>
+
+							<h4 class="h3 subheader" style="font-weight: normal;"><span class="num">03</span> Dan &amp; Mitch</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing
+							quis nostrud exercitation.</p>
+
+							<h4 class="h3 subheader" style="font-weight: normal;"><span class="num">04</span> Soberfish</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et
+							quis nostrud exercitation.</p>
+
+							<h4 class="h3 subheader" style="font-weight: normal;"><span class="num">05</span> Kleptobreaker</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor.</p>
+
+							<h4 class="h3 subheader" style="font-weight: normal;"><span class="num">06</span> Other</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation.</p>
+						</div>
+
 					</div>
 				</div>
 			</section>
+
+
+
+
 
 			<!-- BODY LIGHT -->
 			<section class="section section-light section-bleed section-bio-1">
@@ -85,11 +78,13 @@ layout: base
 					<div class="page-tear-top"></div>
 					<div class="row">
 						<div class="col-lg-6 offset-lg-6">
-							<h2 class="display-2 display-oswald">I'm a neurotic, anxious and self-loathing <span class="brand-primary-color">designer</span> with imposter syndrome. But on the outside, I'm a good person.</h2>
+							<h2 class="display-2 display-oswald">I'm a neurotic, anxious and self-loathing <span class="brand-primary-color">designer</span> with imposter syndrome. But on the outside I'm normal.</h2>
 						</div>
 					</div>
 				</div>
 			</section>
+
+			{% comment %}
 
 			<!-- BODY DARK -->
 			<section class="section section-dark">
@@ -295,11 +290,10 @@ layout: base
 				</div>
 			</section>
 
+			{% endcomment %}
+
         </main>
     </div>
 </div>
 
 
-{% comment %}
-
-{% endcomment %}
