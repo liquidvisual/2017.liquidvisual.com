@@ -1,7 +1,7 @@
 /*
     VARIABLES.CSS
 
-    - Last updated: 00.00.00
+    - Last updated: 26.05.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -17,10 +17,10 @@ $header-height-lg: 120px;
 // HERO HEIGHT
 //-----------------------------------------------------------------
 
-$hero-height-sm:            calc(100vh - #{$header-height-sm}); // IMPORTANT: if carousel slides, you need a fixed height
-$hero-height-md:            100vh; //rem-calc(575);
-$hero-height-lg:            100vh;
-$hero-height-xl:            100vh;
+$hero-height-sm:            auto; //calc(100vh - #{$header-height-sm}); // IMPORTANT: if carousel slides, you need a fixed height
+$hero-height-md:            100vh;
+$hero-height-lg:            auto;
+$hero-height-xl:            auto; //1200px;
 
 //=========================================
 //

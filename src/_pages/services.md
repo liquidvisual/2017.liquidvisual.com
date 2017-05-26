@@ -4,7 +4,7 @@ title: Services
 permalink: /services/
 hero: /assets/img/content/hero-home.jpg
 hero_classes: is-tinted
-theme: "theme-home"
+theme:
 logo: /assets/img/content/logo-type-white-transparent.svg
 ---
 

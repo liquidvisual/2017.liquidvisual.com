@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 hero: /assets/img/content/hero-fountain.jpg
 hero_classes: is-tinted
-theme: "theme-home"
+theme:
 logo: /assets/img/content/logo-type-white-transparent.svg
 ---
 

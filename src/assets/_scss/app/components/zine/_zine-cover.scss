@@ -8,22 +8,36 @@
 // VARIABLES
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
+// ZINE BODY
+//-----------------------------------------------------------------
+
+.zine-body {
+    margin: auto 0;
+    font-weight: bold;
+    color: white;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: white;
+    }
+}
+
+.zine-footer {
+    // margin-top: auto;
+    // margin: 0;
+}
+
+//-----------------------------------------------------------------
 // ZINE TITLE
 //-----------------------------------------------------------------
 
 .zine-title {
-	margin-top: rem-calc(100);
+    margin-top: rem-calc(50);
+    margin-bottom: rem-calc(30);
     opacity: 0.8;
+    // margin-bottom: rem-calc(140);
 
     @include media-breakpoint-up(md) {
-        top: rem-calc(150);
-    }
-
-    @include media-breakpoint-up(xl) {
-        position: absolute;
-        top: rem-calc(30);
-        left: 0;
-        width: 100%;
+        margin-top: rem-calc(130);
     }
 
     h1 {
@@ -34,46 +48,6 @@
     }
 }
 
-.special-border {
-	border: 3px solid rgba(white, 0.3);
-	padding: rem-calc(14);
-	// background: rgba(#1b1b21, 0.6);
-	// box-shadow: 0 0 90px 0 $brand-primary;
-	// border-radius: $border-radius;
-}
-
-//-----------------------------------------------------------------
-// SPRITE LONG DRIP
-//-----------------------------------------------------------------
-
-// .lv-hero-wrapper .sprite-long-drip {
-// 	position: absolute;
-// 	top: 970px;
-// 	right: 810px;
-// 	font-size: rem-calc(6);
-// }
-
-//-----------------------------------------------------------------
-// FOOTER
-//-----------------------------------------------------------------
-
-.lv-hero-wrapper .zine-footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
-//-----------------------------------------------------------------
-// FEATURE BUBBLE
-//-----------------------------------------------------------------
-
-.lv-hero-wrapper .zine-feature-bubble {
-	position: absolute;
-	bottom: 15vh;
-	left: rem-calc(26);
-}
-
 //-----------------------------------------------------------------
 // HERO CAPTION
 //-----------------------------------------------------------------
@@ -82,16 +56,27 @@
 
 	p {
 		color: white;
-		// text-transform: uppercase;
 	}
 }
 
 //-----------------------------------------------------------------
+// ZINE FEATURE BORDER
+//-----------------------------------------------------------------
+
+.zine-feature-border {
+    padding: $spacer;
+    border: 3px solid rgba(white, 0.8);
+    color: white;
+    background: rgba(white, 0.15);
+}
+
+//-----------------------------------------------------------------
 // TAGLINES
+// * https://stackoverflow.com/questions/26062154/is-it-possible-to-create-box-shadow-effect-for-inline-text
 //-----------------------------------------------------------------
 
 .zine-feature-tagline {
-    width: rem-calc(450);
+    max-width: rem-calc(450);
     display: inline-block;
     margin-bottom: $spacer;
 
@@ -103,24 +88,30 @@
     .text-highlight,
     .text-highlight-white {
         display: inline;
+        position: relative;
         background: $brand-primary;
-        box-shadow: 0px 0 0px 10px $brand-primary;
-        // line-height: 1.2;
-        color: white;
         font-family: $headings-font-family;
         font-size: rem-calc(16);
+        color: white;
+        box-shadow: 0 0 0 10px $brand-primary;
+        box-decoration-break: clone; // *
     }
 
     .text-highlight-white {
     	background: white;
-    	box-shadow: 0px 0 0px 10px white;
+    	box-shadow: 0px 0 0 10px white;
     	color: black;
     	opacity: 0.8;
     }
+}
 
-    .text-highlight-grad {
-    	background: linear-gradient(to right,  $brand-primary 0%,$brand-secondary 100%);
-    	box-shadow: none;
+//=========================================
+// CONTEXT DIRECTIONS
+//=========================================
+
+.text-right {
+    .zine-feature-tagline .text-highlight {
+        left: -10px;
     }
 }
 

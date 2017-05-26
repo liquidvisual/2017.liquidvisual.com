@@ -25,7 +25,7 @@
     }
 
     p:last-of-type {
-        margin-bottom: 0; // is this right?
+        // margin-bottom: 0; // is this right?  -- NO footer
     }
 }
 
@@ -122,6 +122,60 @@
     //     background-color: rgba(#222, 0.6);
     //     z-index: -1;
     // }
+}
+
+//-----------------------------------------------------------------
+// SECTION EDITORIAL
+//-----------------------------------------------------------------
+
+.section-editorial  {
+    position: relative;
+    // height: 100vh;
+
+    // background: url(/assets/img/layout/paper-tear-top@2x.png) no-repeat left bottom;
+    // background-size: contain;
+    padding-bottom: 100px;
+
+    .sprite-long-drip {
+        position: absolute;
+        top: 0;
+        right: 40px;
+        font-size: 13px;
+    }
+
+    p {
+        font-size: rem-calc(12);
+        // text-transform: uppercase;
+    }
+
+    //=========================================
+    // refactor this - it won't trigger in sections
+    //=========================================
+
+    .contents {
+        font-size: rem-calc(260);
+        // line-height: 0.9;
+        line-height: 0.75;
+    }
+
+    //=========================================
+    //
+    //=========================================
+
+    .num {
+        display: inline-block;
+        color: grey;
+        // margin-right: 10px;
+        border: 1px solid $gray-dark;
+        // border-top-width: 4px;
+        // width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        border-radius: 100%;
+        font-size: rem-calc(15);
+        font-family: 'Oswald';
+    }
 }
 
 //-----------------------------------------------------------------

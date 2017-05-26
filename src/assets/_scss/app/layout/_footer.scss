@@ -1,7 +1,7 @@
 /*
     FOOTER.CSS
 
-    - Last updated: 13.12.16
+    - Last updated: 26.05.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -12,33 +12,115 @@
 //-----------------------------------------------------------------
 
 .global-footer {
-	// background: $gray-dark;
+	background: $gray-dark;
 
 	p, ul {
 		font-size: rem-calc(14);
 	}
 }
 
-.global-footer-bottom {
-	// background: darken($gray-dark, 10%);
-	padding: rem-calc(10 0);
-}
 //-----------------------------------------------------------------
-//
+// REMOVE PADDING ON MOBILE
+//-----------------------------------------------------------------
+
+.global-footer-body,
+.global-footer-bottom {
+	> .container {
+		@include media-breakpoint-down(lg) {
+		    padding: 0;
+		    width: auto;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// FOOTER BODY
 //-----------------------------------------------------------------
 
 .global-footer-body {
 	h1, h2, h3, h4, h5, h6 {
-		font-size: rem-calc(12);
+		font-size: rem-calc(13);
 		text-transform: uppercase;
 		color: $brand-primary;
 	}
 
 	a {
-		color: lighten($gray-dark, 40%);
+		color: lighten($gray-dark, 35%);
+	}
+
+	//=========================================
+	// LISTS
+	//=========================================
+
+	ul.list-unstyled li {
+		margin-bottom: $spacer/2;
+	}
+
+	//=========================================
+	// SUBSCRIBE FORM
+	//=========================================
+
+	form {
+		input {
+			padding-left: rem-calc(46);
+			border: 0;
+			border-radius: $border-radius-sm;
+		}
+
+		button {
+			border-radius: 0 $border-radius-sm $border-radius-sm 0 !important;
+			cursor: pointer;
+
+			&.disabled {
+				opacity: 1; // override error styles
+			}
+		}
+
+		i {
+			position: absolute;
+			top: rem-calc(19);
+			left: rem-calc(13);
+			color: rgba($gray-dark, 0.3);
+			line-height: 0;
+			font-size: rem-calc(20);
+			z-index: 3;
+		}
+
+		::-webkit-input-placeholder { color: rgba($body-color, 0.5); }
+		::-moz-placeholder          { color: rgba($body-color, 0.5); }
+		:-ms-input-placeholder      { color: rgba($body-color, 0.5); }
+		:-moz-placeholder           { color: rgba($body-color, 0.5); }
 	}
 }
 
+//-----------------------------------------------------------------
+// FOOTER BOTTOM
+//-----------------------------------------------------------------
+
+.global-footer-bottom {
+	padding: rem-calc(10 0);
+	color: lighten($gray-dark, 40%);
+}
+
 //=========================================
-//
+// BACK TO TOP
 //=========================================
+
+.back-to-top {
+	// display: none;
+	position: absolute;
+	top: 5px;
+	right: 0;
+	background: #323232;
+	opacity: 0.5;
+	width: rem-calc(50);
+	height: rem-calc(34);
+	line-height: rem-calc(34);
+	text-align: center;
+	font-size: rem-calc(22);
+	border-radius: $border-radius-sm $border-radius-sm 0 0;
+
+	i {
+		color: white;
+	}
+}

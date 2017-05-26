@@ -22,48 +22,61 @@ $header-height-lg: 220px !default;
 }
 
 .headroom--pinned {
-    transform: translateY(0%);
+    // transform: translateY(0%);
 }
 
 .headroom--unpinned {
-    // transform: translateY(-100%);
     opacity: 0;
+    // transform: translateY(-100%);
 }
 
 .headroom--top {
 	background: none; // Need for animation
 }
 
-//**********************************************
+//****************************************************
 // STYLING SCROLL HEADER
-//**********************************************
+//****************************************************
 
 .headroom--not-top.headroom--pinned {
 	background: white;
-
-	@include media-breakpoint-down(sm) {
-	    box-shadow: 0 0 3px 1px rgba(black, 0.2); // added NEW
-	}
+	box-shadow: 0 0 3px 1px rgba(black, 0.2); // added NEW
 
 	@include media-breakpoint-up(md) {
 	    background: rgba(#111, 0.9);
+	    box-shadow: none;
 	}
 
 	.logo img {
 		display: none; // [LOCKED]
 
 		@include media-breakpoint-up(md) {
-		    padding: rem-calc(15 0);
+		    padding: rem-calc(15 0); // shorter header
 		}
 	}
+
+	//=========================================
+	// HAMBURGER
+	//=========================================
 
 	.global-mobile-menu {
 		@include media-breakpoint-up(md) {
-		    // top: 30px;
+		    top: 30px;
+		}
+
+		.lv-hamburger-top,
+		.lv-hamburger-middle,
+		.lv-hamburger-bottom {
+			@include media-breakpoint-down(sm) {
+			    background: #222;
+			}
 		}
 	}
 
-	// OVERRIDES - for all different logo types
+	//=========================================
+	// OVERRIDES - for different logo types
+	//=========================================
+
 	.logo .img-sm-down-override {
 		@include media-breakpoint-down(sm) {
 		    display: block !important;
@@ -74,12 +87,6 @@ $header-height-lg: 220px !default;
 		@include media-breakpoint-up(md) {
 		    display: block !important;
 		}
-	}
-
-	.lv-hamburger-top,
-	.lv-hamburger-middle,
-	.lv-hamburger-bottom {
-		background: #222;
 	}
 }
 

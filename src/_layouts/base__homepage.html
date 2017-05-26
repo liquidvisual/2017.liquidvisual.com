@@ -5,10 +5,10 @@ layout: base
 {% assign settings = site.data.settings %}
 {% assign featured = site.data.sitemap[3].children | where: "featured", true %}
 
-<!-- { % include hero_cover_01.html %} -->
+{% include hero_cover_01.html %}
 
 <!-- CONTENT -->
-<div class="container-wrapper">
+<div class="container-wrapper" hidden>
     <div class="container">
         <main class="main-content">
 
@@ -73,12 +73,12 @@ layout: base
 
 
 			<!-- BODY LIGHT -->
-			<section class="section section-light section-bleed section-bio-1">
+			<section class="section section-light section-bleed section-bio-1" hidden>
 				<div class="container">
 					<div class="page-tear-top"></div>
 					<div class="row">
 						<div class="col-lg-6 offset-lg-6">
-							<h2 class="display-2 display-oswald">I'm a neurotic, anxious and self-loathing <span class="brand-primary-color">designer</span> with imposter syndrome. But on the outside I'm normal.</h2>
+							<h2 class="display-2 display-oswald">I'm a neurotic, anxious and self-loathing <span class="brand-primary-color font-weight-thin">designer</span> with imposter syndrome. But on the outside I'm normal.</h2>
 						</div>
 					</div>
 				</div>
