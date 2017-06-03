@@ -1,0 +1,43 @@
+---
+layout: child_layout/tutorials_item
+date: 2015-02-03
+title: Embed Tagged Instagram Posts into your Website
+categories: Development
+hero: /assets/img/content/hero-home-8.jpg
+theme: theme-light
+logo: /assets/img/content/logo-type-white-transparent.svg
+---
+
+<p class="lead">Because responsive design is hard, first and foremost. These offshore businesses are dealing with hundreds of clients and the developers aren't being paid enough, so you end up with a dodgy end-product and a lame user experience.</p>
+
+<p class="capitalise">
+Elaine: He took it out. Kramer: El Paso. I spent a month there, one night! Jerry: Looking at cleavage is like looking at the sun. You don't stare at it. You get a sense of it and you look away. Jerry: I thought you said people dressed up when they go to the opera? Kramer: People do. I don't. Uncle Leo: Jerry, hellooo! Kramer: Your Nana’s missing because she’s been passing those bum checks all over town and she finally pissed off the wrong people. George: My whole life has been a complete waste of time. Jerry: And there's so much more to go!</p>
+
+<h2>H2. Setting Up The Dev Environment May Take A While</h2>
+
+
+<h2>H2. Setting Up The Dev Environment May Take A While <small class="standout">Standout whatever</small></h2>
+
+<h2>H2. Setting Up The Dev Environment May Take A While <small>small whatever</small></h2>
+
+<p>Jerry: The whole reason you watch a TV show is because it ends. If I wanted a long, boring story with no point to it, I've got my life. George: Frolf, frisbee golf, Jerry. Golf with a frisbee. George: I'd rather be dating the blind. A good looking blind woman doesn't even know you're not good enough for her. Kramer: Boxers! How do you wear these things? Look at that–they’re bagging up, they’re rising in, and there’s nothing holding me in place. Elaine: I am going to</p>
+
+<h3>H3. Jekyll Requirements</h3>
+
+<p> sidle the sidler. Jerry: You sidle? You stomp around like a Clydesdale. Mr. Ross: It's a terrible tragedy when parents outlive their children. George: Yes, I agree. I hope my parents go long before I do. Jerry: Women go after doctors like men go after models. They want someone with knowledge of the body. We just want the body. Jerry: Is it possible they're</p>
+
+<h4>H4. Opening Up The Docs</h4>
+
+<p>Just having babies to get people to visit them? George: My father was a quitter, my grandfather was a quitter, I was raised to give up. It's one of the few things I do well. George: You know what I love? How there's two nuts named after people: Hazel and Filbert. Estelle Costanza: You're not giving away our waterpik!, Jerry : I'll tell you what the big advantage of homosexuality is. If you're going out with someone your size, you double your wardrobe.</p>
+
+<h5>H5. Opening Up The Docs</h5>
+
+<div class="divider text-center">
+	<span class="text">This is a divider class</span>
+</div>
+
+<p>Jerry: We were in the garage. You know how garages are. They're conducive to sex talk. It's a high testosterone area. George: You could do your taxes in the time it takes me to have an orgasm.</p>
+
+<p>George: Was he on his death bed? Jerry: No, he was on his regular bed. Elaine: No, I don't have a square to spare. I can't spare a square."</p>
+
+<p>George: Jerry! Jerry, I'm trapped under my desk. Steinbrenner's in the room. You gotta help me! Jerry: Who is this. Puddy: Right, Koko. That chimp's alright. High-five. Darren: Hi, this is Darren from Kramer’s office. Mr. Kramer would like to schedule a lunch with you at Monk’s coffee shop. Jerry (about George): When he's dead he'll be relieved. Jerry (about George): When he's dead he'll be relieved. George: This experience has changed me. It’s made me more cynical, more bitter, more jaded. Jerry: Really? George: Sure, why not. Elaine: So you were violated by two people while you were under the gas. Big deal! You're single. Morty Seinfeld: How could you spend $200 on a tip calculator? Uncle Leo: Jerry, hellooo! Tim Whatley: Oh, which reminds me, did you hear the one about the Pope and Raquel Welch on the lifeboat.</p>

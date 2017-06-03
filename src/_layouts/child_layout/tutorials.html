@@ -1,0 +1,72 @@
+---
+layout: base__page_feature
+---
+
+<section class="section section-bleed" hiddenX>
+	<div class="container">
+
+		<nav class="nav nav-pills flex-column flex-sm-row">
+		  <a class="flex-sm-fill text-sm-center nav-link active" href="#">All</a>
+		  <a class="flex-sm-fill text-sm-center nav-link" href="#">HTML</a>
+		  <a class="flex-sm-fill text-sm-center nav-link" href="#">CSS</a>
+		  <a class="flex-sm-fill text-sm-center nav-link" href="#">JavaScript</a>
+		  <a class="flex-sm-fill text-sm-center nav-link" href="#">Quick Tip</a>
+		  <a class="flex-sm-fill text-sm-center nav-link" href="#">Resources</a>
+		</nav>
+
+		<div class="spacer mb-5"></div>
+
+			<ul class="block-grid-lg-2 split-grid">
+				{% for item in site.posts  %}
+				<li>
+					<a href="{{ item.url }}">
+						<article class="d-flex">
+							<div class="num">0{{ forloop.index }}</div>
+							<div>
+								<h2 class="h4">{{ item.title }}</h2>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore
+								<!-- { { item.excerpt | truncate: 150 | strip_html }} -->
+							</div>
+						</article>
+					</a>
+				</li>
+				{% endfor %}
+			</ul>
+
+		</div>
+</section>
+
+<style>
+	.num {
+		font-size: 25px;
+		font-weight: 500;
+		color: #ef2163;
+		margin-right: 25px;
+		font-family: 'Oswald';
+		line-height: 1;
+	}
+
+	.split-grid li:nth-child(odd) {
+		padding-right: 60px;
+		border-right: 2px solid #999;
+	}
+	.split-grid li:nth-child(even) {
+		padding-left: 60px;
+	}
+	article {
+		color: #777;
+		font-size: 14px;
+		font-weight: 500;
+		margin-bottom: 20px;
+	}
+
+	.nav a {
+		color: #777;
+	}
+
+	.nav-pills .nav-link.active {
+		background: #999;
+	}
+
+</style>

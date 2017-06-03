@@ -1,11 +1,12 @@
 ---
-layout: child_layout/text_page
+layout: base__page_feature
 title: Projects
 permalink: /projects/
 hero: /assets/img/content/hero-fountain.jpg
 hero_classes: is-tinted
 theme:
 logo: /assets/img/content/logo-type-white-transparent.svg
+hero_text: /assets/img/layout/heading-projects-dark.svg
 ---
 
 <a href="">Blarg! News</a><br>

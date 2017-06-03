@@ -1,8 +1,11 @@
 ---
-layout: internal/post
+layout: child_layout/tutorials_item
 date: 2015-02-03
-title:  Welcome to Jekyll!
-categories: jekyll
+title: Develop a Massive Menu with Masonry and Jekyll
+categories: Development
+hero: /assets/img/content/hero-home-5.jpg
+theme: theme-light
+logo: /assets/img/content/logo-type-white-transparent.svg
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build

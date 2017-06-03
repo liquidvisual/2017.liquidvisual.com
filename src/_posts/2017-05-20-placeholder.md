@@ -1,8 +1,11 @@
 ---
-layout: internal/post
-date: 2014-03-01
-title: Example content
-categories: jekyll example
+layout: child_layout/tutorials_item
+date: 2015-02-03
+title: Build a Completely CSS Driven Masonry Layout
+categories: Development
+hero: /assets/img/content/hero-home-9.jpg
+theme: theme-light
+logo: /assets/img/content/logo-type-white-transparent.svg
 ---
 
 <div class="message"> Howdy! This is an example blog post that shows several

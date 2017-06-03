@@ -14,13 +14,38 @@
 
 {% assign crumbs = page.url | split: '/' %}
 
-<nav class="lv-breadcrumb breadcrumb">
-    <a class="breadcrumb-item" href="/">Home</a>
-    {% for crumb in crumbs offset: 1 %}
-        {% if forloop.last %}
-            <span class="breadcrumb-item">{{ crumb | replace:'-',' ' }}</span>
-        {% else %}
-            <a class="breadcrumb-item" href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'-',' ' }}</a>
-        {% endif %}
-    {% endfor %}
-</nav>
+<section class="section-white section-bleed">
+
+
+        <nav class="breadcrumb">
+          <!-- <span class="float-left mr-1"><i class="fa fa-arrow-circle-left"></i>&nbsp; Back to</span> -->
+            <!-- <a class="breadcrumb-item" href="/">Home</a> -->
+            {% for crumb in crumbs offset: 1 %}
+                {% if forloop.last %}
+                    <!-- <span class="breadcrumb-item">{{ crumb | replace:'-',' ' }}</span> -->
+                {% else %}
+                    <a class="breadcrumb-item" href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}"><i class="fa fa-arrow-circle-left"></i>&nbsp; Back to {{ crumb | replace:'-',' ' }}</a>
+                {% endif %}
+            {% endfor %}
+
+            {% comment %}
+            <!-- TOOLS PANEL -->
+            <div class="d-flex align-items-center ml-auto">
+
+                <!-- COMMENT COUNTER -->
+                <div class="comment-counter mr-3">
+                    <i class="fa fa-comments"></i> <a href="{{page.url}}#disqus_thread">0 comments</a>
+                </div>
+
+                <!-- SOCIAL MEDIA -->
+                <ul class="social-media">
+                    <li><a class="facebook" href=""><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="twitter" href=""><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="google-plus" href=""><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+            </div>
+            {% endcomment %}
+
+        </nav>
+
+</section>

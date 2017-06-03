@@ -3,7 +3,7 @@ layout: base__homepage
 title: Home
 permalink: /
 regenerate: true
-hero: /assets/img/content/hero-home-2.jpg
+hero: /assets/img/content/hero-home-4.jpg
 hero_classes: is-tinted
 theme: theme-home
 ---

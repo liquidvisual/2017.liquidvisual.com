@@ -74,10 +74,30 @@ $hero-carousel-bullet-size: rem-calc(16)  !default;
      }
 
     //=========================================
-    // HAS HEIGHT FIXED HEIGHT
+    // HEIGHT PRESET 1
     //=========================================
 
+    &.has-height-preset-1,
     &.has-fixed-height {
+        // height: rem-calc(150); //$hero-height-sm;
+        height: auto;
+        min-height: 0;
+        background-position: center center;
+
+        @include media-breakpoint-up(md) { // added - refactor
+           height: rem-calc(400);
+        }
+
+        @include media-breakpoint-up(xl) {
+           height: rem-calc(480);
+        }
+    }
+
+    //=========================================
+    // HEIGHT PRESET 2
+    //=========================================
+
+    &.has-height-preset-2 {
         // height: rem-calc(150); //$hero-height-sm;
         height: auto;
         min-height: 0;
