@@ -1,0 +1,106 @@
+---
+layout: base__page_feature
+---
+
+<!-- TAGLINE -->
+<section class="pb-0 section section-light section-bleed" hidden>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-8 text-center">
+				<h2><span class="brand-primary-color">So tell me,</span> who are you?</h2>
+				<!-- <p>Not in the existential way, but what kind of role do you fill? Feel me?</p> -->
+
+				<a class="btn btn-secondary">Agency</a>
+				<a class="btn btn-secondary">Freelancer</a>
+			</div>
+
+		</div>
+		<hr class="divider mb-0">
+	</div>
+</section>
+
+<!-- CONTENT  -->
+<section class="section section-light section-bleed">
+	<div class="container">
+		<div class="row">
+			<div class="col-5">
+				{% include social_media.html %}
+				<!-- <img style="opacity: 0.3;" src="http://2011.liquidvisual.com/img/content/mitch-photo.jpg"> -->
+			</div>
+			<div class="col-md-7">
+				<div class="is-form">
+					{% include form_hire.html %}
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.availability-notice {
+		display: flex;
+		align-items: center;
+		padding: 20px;
+		margin-bottom: 30px;
+		/*border: 1px solid #e1e1e1;*/
+		background: #dadde0;
+	}
+
+	.availability-notice-orb {
+		width: 30px;
+		height: 30px;
+		background: #f45f5e;
+		border-radius: 100%;
+		margin-right: 20px;
+	}
+
+	.lv-page label > small {
+		font-size: 30px;
+		color: #44b1e5;
+	}
+
+	.lv-page input {
+		background: white !important;
+		border: 0 !important;
+		padding: 15px !important;
+		/*background: none !important;*/
+		/*border-left: 0;*/
+		/*border-right: 0;*/
+		/*border-top: 0;*/
+		/*border-bottom: 2px solid black;*/
+		border-radius: 0;
+		box-shadow: 2px 2px 3px 3px rgba(0,0,0, 0.05);
+	}
+
+	.lv-page .custom-checkbox,
+	.lv-page .custom-radio {
+		/*display: flex;*/
+		/*align-items: center;*/
+		margin-bottom: 15px;
+		padding-left: 0;
+	}
+
+	fieldset {
+		padding-bottom: 30px;
+		margin-bottom: 30px;
+		/*border-bottom: 1px solid black;*/
+	}
+
+	.lv-page .custom-control-indicator {
+		border-radius: 0;
+		padding: 15px;
+		margin-right: 15px;
+
+		position: static;
+		display: inline-block;
+		/*background: none;*/
+		background: white;
+		/*border: 2px solid black;*/
+	}
+
+	.is-form {
+		padding: 20px;
+		/*background: white;*/
+	}
+</style>
