@@ -1,0 +1,33 @@
+{% assign settings = site.data.settings %}
+{% assign social_media = settings.social_media %}
+{% assign preset = include.preset | default: 0 %}
+
+{% if preset == 1 %}
+	<ul class="social-media block-grid-xs-1 block-grid-md-2 mb-4">
+		{% for item in social_media %}
+			{% unless item.exclude %}
+				<li>
+					<a target="_blank" class="{{ item.title | slugify }}" title="{{ item.title }}" href="{{ item.url }}">
+						<div class="icon"><i class="{{ item.icon }}"></i></div>
+						<span class="text">
+							{{ item.title }}
+							<span class="text-anchor">{{ item.alias }}</span>
+						</span>
+					</a>
+				</li>
+			{% endunless %}
+		{% endfor %}
+	</ul>
+{% else %}
+	<ul class="social-media block-grid-4 block-grid-md-6 mb-4">
+		{% for item in social_media %}
+			{% unless item.exclude %}
+				<li>
+					<a title="{{ item.title }}" target="_blank" class="{{ item.title | slugify }}" title="{{ item.title }}" href="{{ item.url }}">
+						<div class="icon"><i class="{{ item.icon }}"></i></div>
+					</a>
+				</li>
+			{% endunless %}
+		{% endfor %}
+	</ul>
+{% endif %}

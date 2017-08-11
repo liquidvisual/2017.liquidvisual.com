@@ -12,29 +12,39 @@
 //-----------------------------------------------------------------
 
 .social-media {
-	display: flex;
 	list-style: none;
 	padding: 0;
 	margin: 0;
 
-	li {
-		// margin-right: rem-calc(5);
-	}
-
 	a {
 		display: flex;
 		align-items: center;
-		justify-content: center;
-		width: 44px;
-		// height: 44px;
-		line-height: 0;
-		// font-size: 34px;
-		font-size: 30px;
-		text-align: center;
-		border-radius: 100%;
-		transition: transform 200ms ease;
+		color: white;
+		font-size: rem-calc(12);
+		font-weight: 600;
 
-		&:hover {
+		.icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: rem-calc(40);
+			height: rem-calc(40);
+			margin-right: rem-calc(15);
+			border-radius: 100%;
+			font-size: rem-calc(24);
+			transition: transform 200ms ease;
+		}
+
+		.text {
+			color: rgba(white, 0.4);
+
+			.text-anchor {
+				display: block;
+				color: white;
+			}
+		}
+
+		&:hover .icon {
 			transform: scale(0.9);
 		}
 	}
@@ -43,45 +53,110 @@
 	// https://brandcolors.net
 	//=========================================
 
-	.dribbble  { color: #ea4c89; }
-	.facebook  { color: #3b5998; }
-	.github    { color: #9f7be1; }
-	.instagram { color: #405de6; }
-	.twitter   { color: #1da1f2; }
-	.youtube   { color: #cd201f; }
+	// .codepen    { color: black; }
+	// .dribbble   { color: #ea4c89; }
+	// .facebook   { color: #3b5998; }
+	// .github     { color: #9f7be1; }
+	// .google-pus { color: #dd4b39; }
+	// .instagram  { color: #405de6; }
+	// .linked-in  { color: #405de6; }
+	// .pinterest  { color: #bd081c; }
+	// .slack      { color: #e9a820; }
+	// .twitter    { color: #1da1f2; }
+	// .youtube    { color: #cd201f; }
+
+	.codepen .icon     { background: black; }
+	.dribbble .icon    { background: #ea4c89; }
+	.facebook .icon    { background: #3b5998; }
+	.github .icon      { background: #9f7be1; }
+	.google-plus .icon { background: #dd4b39; }
+	.instagram .icon   { background: #0077b5; }
+	.linked-in .icon   { background: #405de6; }
+	.pinterest .icon   { background: #bd081c; }
+	.slack .icon       { background: #e9a820; }
+	.trello .icon      { background: #0079bf; }
+	.twitter .icon     { background: #1da1f2; }
+	.youtube .icon     { background: #cd201f; }
 }
 
 //-----------------------------------------------------------------
 // CONTEXT
 //-----------------------------------------------------------------
 
-.lv-breadcrumb .social-media {
-	// align-self: center;
-	// margin-left: auto;
+.global-footer .social-media {
+	// display: flex;
 
-	li a {
-		width: 46px;
-		height: 30px;
-		border-radius: $border-radius-sm;
-		background: none;
-		color: white;
-		// border: 1px solid darken(#eceeef, 15%);
-		font-size: 18px;
+	margin: rem-calc(0);
 
-		&.google-plus {
-			background: #dd4b3e;
-
-		}
-
-		&.twitter {
-			background: #00aded;
-		}
-
-		&.facebook {
-			background: #325a97;
-		}
+	li {
+	    padding: rem-calc(0);
 	}
+
+	a {
+		color: white;
+	}
+
+	.icon {
+		background: none;
+	}
+
+	.codepen .icon {
+		color: white;
+	}
+
+	.trello {
+		display: none;
+	}
+
+	.codepen    { color: black; }
+	.dribbble   { color: #ea4c89; }
+	.facebook   { color: #3b5998; }
+	.github     { color: #9f7be1; }
+	.google-pus { color: #dd4b39; }
+	.instagram  { color: #405de6; }
+	.linked-in  { color: #405de6; }
+	.pinterest  { color: #bd081c; }
+	.slack      { color: #e9a820; }
+	.trello     { color: #0079bf; }
+	.twitter    { color: #1da1f2; }
+	.youtube    { color: #cd201f; }
 }
+
+//=========================================
+//
+//=========================================
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+// .lv-breadcrumb .social-media {
+// 	// align-self: center;
+// 	// margin-left: auto;
+
+// 	li a {
+// 		width: 46px;
+// 		height: 30px;
+// 		border-radius: $border-radius-sm;
+// 		background: none;
+// 		color: white;
+// 		// border: 1px solid darken(#eceeef, 15%);
+// 		font-size: 18px;
+
+// 		&.google-plus {
+// 			background: #dd4b3e;
+
+// 		}
+
+// 		&.twitter {
+// 			background: #00aded;
+// 		}
+
+// 		&.facebook {
+// 			background: #325a97;
+// 		}
+// 	}
+// }
 
 
 //-----------------------------------------------------------------

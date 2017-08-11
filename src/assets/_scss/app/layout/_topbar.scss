@@ -60,7 +60,7 @@ $dropdowns-have-anchor-borders : true;
 
 .lv-topbar ul {
     padding: 0; // reset
-    border: 1px solid white;
+    border: 1px solid white; //rgba(white, .4);
     margin: 0; // reset
     border-radius: $border-radius;
     background: rgba(white, 0.12);

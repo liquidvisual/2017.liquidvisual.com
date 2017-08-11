@@ -5,7 +5,7 @@ title: Install NPM and Jekyll Locally Without Sudo
 categories: Development
 hero: /assets/img/content/hero-home-9.jpg
 theme: theme-light
-logo: /assets/img/content/logo-type-white-transparent.svg
+logo: /assets/img/content/branding/logo-type-white-transparent.svg
 ---
 
 {% assign settings = site.data.settings %}

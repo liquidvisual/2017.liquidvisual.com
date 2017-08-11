@@ -1,5 +1,5 @@
 ---
-layout: base__page_feature
+layout: base__page
 ---
 
 <section class="section section-bleed" hiddenX>
@@ -17,7 +17,7 @@ layout: base__page_feature
 		<div class="spacer mb-5"></div>
 
 			<ul class="block-grid-lg-2 split-grid">
-				{% for item in site.posts  %}
+				{% for item in site.posts limit: 6 %}
 				<li>
 					<a href="{{ item.url }}">
 						<article class="d-flex">
@@ -49,7 +49,7 @@ layout: base__page_feature
 
 	.split-grid li:nth-child(odd) {
 		padding-right: 60px;
-		border-right: 2px solid #999;
+		border-right: 2px solid #cfd0d3;
 	}
 	.split-grid li:nth-child(even) {
 		padding-left: 60px;

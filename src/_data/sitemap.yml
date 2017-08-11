@@ -1,17 +1,37 @@
 - title: Home
   url: /
 
+- title: About
+  url: /about/
+  include_children_in_nav: true
+  children:
+    - title: How I Work
+      url: /about/how-i-work/
+
 - title: Services
   url: /services/
+  include_children_in_nav: true
+  children:
+    - title: Digital Agency
+      url: /services/digital-agency/
+      # landing page
+      # landing page
+
+    - title: Small Business
+      url: /services/small-business/
 
 - title: Projects
   url: /projects/
-
-- title: Toolbox
-  url: /toolbox/
 
 - title: Tutorials
   url: /tutorials/
 
 - title: Hire
   url: /hire/
+
+# - title: Clients
+#   url: /clients/
+#   include_children_in_nav: false
+#   children:
+#     - title: Project Planner
+#       url: /clients/project-planner/

@@ -1,106 +1,95 @@
 ---
-layout: base__page_feature
+layout: base__page
 ---
 
 <!-- TAGLINE -->
-<section class="pb-0 section section-light section-bleed" hidden>
+<section class="section pb-0 section-darker section-bleed">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-8 text-center">
-				<h2><span class="brand-primary-color">So tell me,</span> who are you?</h2>
-				<!-- <p>Not in the existential way, but what kind of role do you fill? Feel me?</p> -->
+				<h2><span class="brand-primary-color">So tell me,</span> which client are you?</h2>
+				<div class="spacer mb-4"></div>
 
-				<a class="btn btn-secondary">Agency</a>
-				<a class="btn btn-secondary">Freelancer</a>
+				<!-- TABS -->
+				<ul class="list-tabs" role="tablist">
+					<li class="nav-item">
+						<a class="active" data-toggle="tab" href="#digital-agency" role="tab">Digital Agency</a>
+					</li>
+					<li class="nav-item">
+						<a data-toggle="tab" href="#small-business" role="tab">Small Business</a>
+					</li>
+				</ul>
+
 			</div>
-
 		</div>
-		<hr class="divider mb-0">
 	</div>
 </section>
 
 <!-- CONTENT  -->
-<section class="section section-light section-bleed">
+<section class="section section-dark section-bleed">
 	<div class="container">
 		<div class="row">
 			<div class="col-5">
-				{% include social_media.html %}
-				<!-- <img style="opacity: 0.3;" src="http://2011.liquidvisual.com/img/content/mitch-photo.jpg"> -->
+
+				<!-- SPRITE BRAIN -->
+				<div class="sprite-brain">
+					<img width="100%" src="/assets/img/content/hire/brain-0.svg">
+					<img width="100%" src="/assets/img/content/hire/brain-1.svg">
+					<img width="100%" src="/assets/img/content/hire/brain-2.svg">
+					<img width="100%" src="/assets/img/content/hire/brain-3.svg">
+					<img width="100%" src="/assets/img/content/hire/brain-4.svg">
+					<img width="100%" src="/assets/img/content/hire/brain-5.svg">
+					<img width="100%" src="/assets/img/content/hire/brain-6.svg">
+				</div>
+
+				<div class="availability-notice">
+				    <div class="availability-notice-orb"><span class="ripple"></span></div>
+				    <div>
+				        <h4 class="mb-0">Current Availability</h4>
+				        <p class="mb-0">My brain is ready for work!</p>
+				    </div>
+				</div>
+
+				{% include snippets/social_media.html preset=1 %}
+
+				<!-- <p class="py-3"><img width="100%" src="/assets/img/layout/mitch-at.svg"></p> -->
+
+				<!-- RESOURCES -->
+				<ul class="social-media block-grid-xs-1 block-grid-md-2 mb-4">
+					<li>
+						<a class="icon-resume" title="Get CV" href="/resume/">
+							<div class="icon"><i class="fa fa-file"></i></div>
+							<span class="text">
+								My Resume
+								<span class="text-anchor">Grab it here</span>
+							</span>
+						</a>
+					</li>
+					<li>
+						<a class="icon-cv" title="Interview" href="/interview/">
+							<div class="icon"><i class="fa fa-coffee"></i></div>
+							<span class="text">
+								Simulate Interview
+								<span class="text-anchor">Engage!</span>
+							</span>
+						</a>
+					</li>
+				</ul>
+
 			</div>
-			<div class="col-md-7">
-				<div class="is-form">
-					{% include form_hire.html %}
+			<div class="col-md-7 pl-md-5">
+
+				<!-- TAB PANES -->
+				<div class="tab-content">
+					<div class="tab-pane active fade show" id="digital-agency" role="tabpanel">
+						{% include form_digital_agency.html %}
+					</div>
+					<div class="tab-pane fade" id="small-business" role="tabpanel">
+						{% include form_small_business.html %}
+					</div>
 				</div>
 
 			</div>
 		</div>
 	</div>
 </section>
-
-<style>
-	.availability-notice {
-		display: flex;
-		align-items: center;
-		padding: 20px;
-		margin-bottom: 30px;
-		/*border: 1px solid #e1e1e1;*/
-		background: #dadde0;
-	}
-
-	.availability-notice-orb {
-		width: 30px;
-		height: 30px;
-		background: #f45f5e;
-		border-radius: 100%;
-		margin-right: 20px;
-	}
-
-	.lv-page label > small {
-		font-size: 30px;
-		color: #44b1e5;
-	}
-
-	.lv-page input {
-		background: white !important;
-		border: 0 !important;
-		padding: 15px !important;
-		/*background: none !important;*/
-		/*border-left: 0;*/
-		/*border-right: 0;*/
-		/*border-top: 0;*/
-		/*border-bottom: 2px solid black;*/
-		border-radius: 0;
-		box-shadow: 2px 2px 3px 3px rgba(0,0,0, 0.05);
-	}
-
-	.lv-page .custom-checkbox,
-	.lv-page .custom-radio {
-		/*display: flex;*/
-		/*align-items: center;*/
-		margin-bottom: 15px;
-		padding-left: 0;
-	}
-
-	fieldset {
-		padding-bottom: 30px;
-		margin-bottom: 30px;
-		/*border-bottom: 1px solid black;*/
-	}
-
-	.lv-page .custom-control-indicator {
-		border-radius: 0;
-		padding: 15px;
-		margin-right: 15px;
-
-		position: static;
-		display: inline-block;
-		/*background: none;*/
-		background: white;
-		/*border: 2px solid black;*/
-	}
-
-	.is-form {
-		padding: 20px;
-		/*background: white;*/
-	}
-</style>

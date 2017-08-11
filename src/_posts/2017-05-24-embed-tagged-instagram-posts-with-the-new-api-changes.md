@@ -3,9 +3,10 @@ layout: child_layout/tutorials_item
 date: 2015-02-03
 title: Embed Tagged Instagram Posts into your Website
 categories: Development
-hero: /assets/img/content/hero-home-8.jpg
+hero: /assets/img/content/hero/hero-home-8.jpg
 theme: theme-light
-logo: /assets/img/content/logo-type-white-transparent.svg
+hero_text: /assets/img/layout/headings/heading-interview--light.svg
+logo: /assets/img/content/branding/logo-type--white-transparent.svg
 ---
 
 <p class="lead">Because responsive design is hard, first and foremost. These offshore businesses are dealing with hundreds of clients and the developers aren't being paid enough, so you end up with a dodgy end-product and a lame user experience.</p>

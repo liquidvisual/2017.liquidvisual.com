@@ -2,44 +2,18 @@
 layout: base
 ---
 
-{% assign hero = page.hero | default: "/assets/img/content/hero-home.jpg" %}
+{% include hero.html %}
 
-<!-- HERO -->
-<div class="lv-hero-wrapper {{ page.hero_classes }}" style="background-image: url('{{ hero }}')">
-	<div class="container-wrapper">
-		<div class="container">
-
-			<!-- HERO -->
-		    <div class="lv-hero has-fixed-height">
-		        <div class="lv-hero-item" style="background-image: url('{{ hero }}')">
-			        <div class="display-table">
-			            <div class="display-cell v-align-bottom">
-			            	<div class="container">
-			            		<div class="row">
-			            		    <div class="col-xl-11">
-			            		        <div class="lv-hero-item-caption animated fadeInLeft">
-			            		            <h1 class="display-2 m-b-0">{{ page.title }}</h1>
-			            		            <h4 class="m-b-0">Static sites built right, at last</h4>
-			            		        </div>
-			            		    </div>
-			            		</div>
-			            	</div>
-			            </div>
-			        </div>
-		        </div>
-		    </div>
-		</div>
-	</div>
-</div>
-
+{% comment %}
 <!-- BREADCRUMBS -->
 <section class="section-white section-bleed">
 	<div class="container-wrapper">
 	    <div class="container">
-			<h1>hello</h1>
+			<p class="mb-0 py-3">back to tutorials</p>
 	    </div>
 	</div>
 </section>
+{% endcomment %}
 
 <!-- MAIN CONTENT -->
 <div class="container-wrapper">

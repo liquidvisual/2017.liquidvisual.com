@@ -7,19 +7,24 @@
         * .has-fixed-height - used for internal pages to set a height
 {% endcomment %}
 
+{% assign hero = page.heroXXXXX | default: '/assets/img/content/hero/hero-1-placeholder.png' %}
+{% assign hero_classes = page.hero_classes %}
+
 <!-- HERO WRAPPER -->
-<div class="lv-hero-wrapper {{ page.hero_classes }}" style="background-image: url('{{ page.hero }}')">
+<div class="lv-hero-wrapper {{ hero_classes }}" style="background-image: url('{{ hero }}')">
     <div class="container-wrapper">
         <div class="container">
 
             <!-- HERO -->
             <div class="lv-hero">
-                <div class="lv-hero-item" style="background-image: url('{{ page.hero }}')">
+                <div class="lv-hero-item" style="background-image: url('{{ hero }}')">
                     <div class="container">
 
                         <!-- ZINE TITLE -->
                         <div class="zine-title">
-                            <img width="100%" src="/assets/img/content/live-design@2x.png" alt="live/design">
+                            <!-- <img width="100%" src="/assets/img/content/homepage/live-design@2x.png" alt="live/design"> -->
+                            <!-- <img width="100%" src="/assets/img/layout/headings/heading-liquidvisual--white.svg" alt="live/design"> -->
+                            <img width="100%" src="/assets/img/layout/headings/heading-freelancer--black.svg" alt="live/design">
                         </div>
 
                         <!-- ZINE BODY -->
@@ -29,7 +34,7 @@
 
                                     <!-- TAGLINE 01 -->
                                     <div class="zine-feature-tagline">
-                                        <h3 class="brand-secondary-color">You Deserve Better Communication</h3>
+                                        <h3 class="brand-black-transparent">You Deserve Better Communication</h3>
                                         <p>It's time to hire a freelancer who isn't afraid<br> to get their hands dirty.</p>
                                     </div>
 
@@ -57,7 +62,7 @@
                                     <!-- TAGLINE 02 -->
                                     <div class="zine-feature-tagline mb-5">
                                         <h3>Overcome Outsourcing Woes</h3>
-                                        <p class="text-highlight">Discover websites coded better with the static site generator and fully versioned.</p>
+                                        <p class="text-highlight">It's time to hire a freelancer that isn't afraid<br> to get their hands dirty.</p>
                                     </div>
 
                                     <!-- PRIMARY CTA HEADING -->
@@ -65,8 +70,8 @@
 
                                     <!-- TAGLINE 03 -->
                                     <div class="zine-feature-tagline">
-                                        <h3 class="brand-primary-color">Static Websites with Jekyll</h3>
-                                        <p>It's time to hire a freelancer that isn't afraid<br> to get his hands dirty.</p>
+                                        <h3 class="">Static Websites with Jekyll</h3>
+                                        <p class="text-highlight-white">Discover websites coded better with the static site generator and fully versioned.</p>
                                     </div>
 
                                 </div> <!-- /.col -->
@@ -81,7 +86,7 @@
                         <div class="zine-footer">
 
                             <!-- BARCODE -->
-                            <img class="zine-footer-barcode" src="/assets/img/content/barcode@2x.png" alt="Barcode">
+                            <img class="zine-footer-barcode" src="/assets/img/layout/barcode@2x.png" alt="Barcode">
 
                             <!-- DOWNWARDS ARROW -->
                             <!-- <a class="lv-hero-arrow-scroll" href="#tagline"><i class="fa fa-angle-down"></i></a> -->
@@ -92,12 +97,12 @@
                             <!-- ITEMS -->
                             <ul class="zine-footer-items">
                                 <li>
-                                    <h4>Freelancers</h4>
-                                    <p>Are you currently overworked?</p>
+                                    <h4>Startups</h4>
+                                    <p>Sick of tired templated designs?</p>
                                 </li>
                                 <li>
                                     <h4>Project Managers</h4>
-                                    <p>Do you need a reliable front-end dev?</p>
+                                    <p>Searching for a reliable front-end dev?</p>
                                 </li>
                                 <li>
                                     <h4>Agencies</h4>

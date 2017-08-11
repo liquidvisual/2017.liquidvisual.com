@@ -1,0 +1,245 @@
+{% assign settings = site.data.settings %}
+
+<!-- IF SUCCESS -->
+<div class="alert alert-success alert-dismissible fade show" role="alert" hidden>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>Success!</strong> Thanks for that. Your email has been added to the mailing list.
+</div>
+
+<!-- IF FAILURE -->
+<div class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>Oops!</strong> Something went wrong. Please check your details and try again.
+</div>
+
+<h2>Make A Booking</h2>
+
+<!-- <p>Everyone loves to fill out a form. Flex those form muscles and show me what you've got!</p> -->
+<p>If you're a project manager, lead or developer working at a digital agency, tell me what you need coded.</p>
+
+<div class="spacer mb-4"></div>
+
+<!-- FORM CONTACT -->
+<form id="contact" data-toggle="validator" name="Digital Agency Form" action="/hire/thanks/" novalidate netlify>
+    <fieldset>
+
+        <!-- NAME* -->
+        <div class="form-group">
+            <label for="name">Full Name<small>*</small></label>
+            <input class="form-control" id="name" name="Name" type="text" placeholder="" required>
+            <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; Your name is required.</small>
+        </div>
+
+        <!-- EMAIL* -->
+        <div class="form-group">
+            <label for="email">Email<small>*</small></label>
+            <input class="form-control" id="email" name="Email" type="email" placeholder="" required>
+            <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; A valid email is required.</small>
+        </div>
+
+        <!-- COMPANY / PRODUCT -->
+        <div class="form-group">
+            <label for="company-product">Company</label>
+            <input class="form-control" id="company-product" name="Company / Product" type="text" placeholder="">
+        </div>
+
+    </fieldset>
+    <fieldset>
+
+        <!-- SERVICES -->
+        <div class="form-group">
+            <label class="h5 mb-4">I will need...</label>
+
+            <div class="d-flex">
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <label class="custom-control-description">Multi-page website build <em>(from PSD)</em></label>
+                </label>
+            </div>
+
+            <div class="d-flex">
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <label class="custom-control-description">Single-page website build <em>(from PSD)</em></label>
+                </label>
+            </div>
+
+            <div class="d-flex">
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <label class="custom-control-description">Landing page build <em>(from PSD)</em></label>
+                </label>
+            </div>
+
+            <div class="d-flex">
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <label class="custom-control-description">Custom JavaScript component</label>
+                </label>
+            </div>
+
+            <div class="d-flex">
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <label class="custom-control-description">Existing website converted to Jekyll</label>
+                </label>
+            </div>
+
+            <div class="d-flex">
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <label class="custom-control-description">Something re-designed</label>
+                </label>
+            </div>
+
+            <div class="d-flex">
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <label class="custom-control-description">Other</label>
+                </label>
+            </div>
+
+        </div>
+
+        <!-- DEADLINE -->
+        <div class="form-group">
+            <label class="h5 mb-4">When's the deadline?</label>
+
+            <div class="d-flex">
+                <label class="custom-control custom-radio">
+                    <input type="radio" name="deadline" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Now now now!</span>
+                </label>
+            </div>
+
+            <div class="d-flex">
+                <label class="custom-control custom-radio">
+                    <input type="radio" name="deadline" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Within 2 weeks</span>
+                </label>
+            </div>
+
+            <div class="d-flex">
+                <label class="custom-control custom-radio">
+                    <input type="radio" name="deadline" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Within 3 weeks</span>
+                </label>
+            </div>
+
+            <div class="d-flex">
+                <label class="custom-control custom-radio">
+                    <input type="radio" name="deadline" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Within a month</span>
+                </label>
+            </div>
+
+            <div class="d-flex">
+                <label class="custom-control custom-radio">
+                    <input type="radio" name="deadline" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Next month or so</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- BUDGET -->
+        <div class="form-group">
+            <label class="h5 mb-4">What's the budget for this work?</label>
+
+            <div class="d-flex">
+                <label class="custom-control custom-radio">
+                    <input type="radio" name="budget" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Less than $500</span>
+                </label>
+            </div>
+
+            <div class="d-flex">
+                <label class="custom-control custom-radio">
+                    <input type="radio" name="budget" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">$500 - $1K</span>
+                </label>
+            </div>
+
+            <div class="d-flex">
+                <label class="custom-control custom-radio">
+                    <input type="radio" name="budget" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">$1K - $3K</span>
+                </label>
+            </div>
+
+            <div class="d-flex">
+                <label class="custom-control custom-radio">
+                    <input type="radio" name="budget" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">$3K - 5K</span>
+                </label>
+            </div>
+
+            <div class="d-flex">
+                <label class="custom-control custom-radio">
+                    <input type="radio" name="budget" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">$5 - $10K</span>
+                </label>
+            </div>
+
+            <div class="d-flex">
+                <label class="custom-control custom-radio">
+                    <input type="radio" name="budget" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">More than $10K</span>
+                </label>
+            </div>
+        </div>
+
+    </fieldset>
+    <fieldset>
+
+        <!-- MESSAGE -->
+        <div class="form-group">
+            <label for="message" class="h3 mb-3">Fill me in<small>*</small></label>
+            <p>Include the brief, notes, links to files, or anything else that will help me to quickly understand your job.</p>
+            <textarea class="form-control" id="message" name="Message" rows="4" placeholder="" required></textarea>
+            <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; A message is required.</small>
+        </div>
+
+        <!-- REFERRAL -->
+        <div class="form-group">
+            <label for="referral" class="h5 mb-3">How did you find me, stranger?</label>
+            <select class="form-control custom-select" name="Referral" id="referral">
+                <option disabled selected>Choose one</option>
+                <option value="Client">I'm an existing client</option>
+                <option value="Google">Google</option>
+                <option value="Twitter">Twitter</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Friend">Word of mouth</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+    </fieldset>
+
+    <p class="text-right text-asterisk"><small class="asterisk">*</small>required</p>
+
+    <!-- SUBMIT -->
+    <button type="submit" class="btn btn-primary mb-3">Send message <i class="fa fa-angle-right"></i></button>
+
+</form>

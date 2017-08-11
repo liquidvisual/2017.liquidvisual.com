@@ -1,11 +1,11 @@
 # GLOBAL SITE SETTINGS
 
-cname: ________.yourwebvisual.com
+cname: liquidvisual.yourwebvisual.com
 
 # META
-title: New Website
+title: liquidvisual
 seo_title:
-company:
+company: liquidvisual
 description:
 
 # SITE DEFAULTS
@@ -24,10 +24,54 @@ offices:
     address:
 
 # SOCIAL MEDIA
-facebook:
-linked_in:
-google_plus:
-instagram:
+social_media:
+  - title: Codepen
+    url: https://codepen.io/liquidvisual
+    alias: '@liquidvisual'
+    icon: fa fa-codepen
+
+  - title: Dribbble
+    url: https://dribbble.com/liquidvisual
+    alias: '@liquidvisual'
+    icon: fa fa-dribbble
+
+  - title: Facebook
+    url: https://facebook.com/liquidvisual
+    alias: '@liquidvisual'
+    icon: fa fa-facebook
+    exclude: true
+
+  - title: Github
+    url: https://github.com/liquidvisual
+    alias: '@liquidvisual'
+    icon: fa fa-github
+
+  - title: Instagram
+    url: https://www.instagram.com/liquidvisual
+    alias: '@liquidvisual'
+    icon: fa fa-instagram
+
+  - title: Pinterest
+    url: https://pinterest.com/liquidvisual
+    alias: '@liquidvisual'
+    icon: fa fa-pinterest
+    exclude: true
+
+  - title: Slack
+    url:
+    alias: '@liquidvisual'
+    icon: fa fa-slack
+    exclude: true
+
+  - title: Trello
+    url: https://trello.com/liquidvisual
+    alias: '@liquidv'
+    icon: fa fa-trello
+
+  - title: YouTube
+    url: https://youtube.com/liquidv
+    alias: '@liquidv'
+    icon: fa fa-youtube-play
 
 # GOOGLE
 google_analytics: "UA-XXXXXXXX-X"
