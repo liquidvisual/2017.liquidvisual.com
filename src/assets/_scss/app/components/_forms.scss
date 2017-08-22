@@ -15,6 +15,7 @@ input[type="text"],
 input[type="email"],
 input[type="phone"],
 input[type="password"],
+select,
 textarea {
 	-webkit-appearance: none; // removes shadow on iOS
 }
@@ -28,17 +29,19 @@ form[data-toggle="validator"] .error {
 	display: none;
 	width: 100%;
 	padding: rem-calc(5 10);
-	background: $brand-danger;
+	background: $red;
 	color: white;
 }
 
 form[data-toggle="validator"] .has-error > .form-control {
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
+	margin-bottom: 0;
 }
 
 form[data-toggle="validator"] .has-error > .error {
 	display: block;
+	margin-bottom: $spacer*1.5;
 }
 
 form label em {
@@ -100,6 +103,8 @@ label > small,
 
 .lv-page .custom-select {
 	background: #1b1b21 !important;
+	appearance: none;
+	-webkit-appearance: none;
 }
 
 .lv-page .custom-checkbox,

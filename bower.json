@@ -10,10 +10,10 @@
     "jquery.transit": "~0.9.12",
     "magnific-popup": "https://github.com/dimsemenov/Magnific-Popup.git#master",
     "slick.js": "~1.5.9",
-    "tether": "^1.2.0",
-    "bootstrap": "v4.0.0-alpha.6",
+    "bootstrap": "bootstrap#v4.0.0-beta",
     "bootstrap-validator": "^0.10.1",
-    "headroom": "https://npmcdn.com/headroom.js@0.8.0/dist/headroom.js"
+    "headroom": "https://npmcdn.com/headroom.js@0.8.0/dist/headroom.js",
+    "popper": "https://unpkg.com/popper.js"
   },
   "devDependencies": {}
 }

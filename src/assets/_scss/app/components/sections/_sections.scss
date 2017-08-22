@@ -13,11 +13,11 @@
 
 .section {
 	position: relative;
-	padding: ($spacer-y * 2) 0;
+	padding: ($spacer * 2) 0;
     background: $gray-light;
 
     @include media-breakpoint-up(md) {
-        padding: ($spacer-y * 3) 0;
+        padding: ($spacer * 3) 0;
     }
 
     >.container {

@@ -118,6 +118,7 @@ $hero-carousel-bullet-size: rem-calc(16)  !default;
 //-----------------------------------------------------------------
 
 .lv-hero-item {
+    position: relative; // risky?
     display: flex;
     // align-items: flex-end;
     // flex-direction: column;
@@ -188,7 +189,7 @@ $hero-carousel-bullet-size: rem-calc(16)  !default;
     animation: pulsate 0.8s ease-out 0.3s alternate infinite;
 
     @include media-breakpoint-up(lg) {
-        bottom: $spacer-y;
+        bottom: $spacer;
         width: rem-calc(50);
         height: rem-calc(50);
         line-height: rem-calc(55);
