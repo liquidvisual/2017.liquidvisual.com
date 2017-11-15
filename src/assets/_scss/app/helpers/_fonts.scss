@@ -11,6 +11,34 @@
 $font-path: "/assets/fonts" !default;
 
 //=========================================
+// Montserrat (bolder than Google fonts) ?
+//=========================================
+
+// Regular
+// @font-face {
+//     font-family: 'Monty';
+//     font-style: normal;
+//     font-weight: 400;
+//     src: url('#{$font-path}/Montserrat-Regular.eot');
+//     src: local('☺'),
+//         url('#{$font-path}/Montserrat-Regular.woff') format('woff'),
+//         url('#{$font-path}/Montserrat-Regular.tff') format('truetype'),
+//         url('#{$font-path}/Montserrat-Regular.svg') format('svg');
+// }
+
+// // Bold
+// @font-face {
+//     font-family: 'Monty';
+//     font-style: normal;
+//     font-weight: bold;
+//     src: url('#{$font-path}/Montserrat-Bold.eot');
+//     src: local('☺'),
+//         url('#{$font-path}/Montserrat-Bold.woff') format('woff'),
+//         url('#{$font-path}/Montserrat-Bold.tff') format('truetype'),
+//         url('#{$font-path}/Montserrat-Bold.svg') format('svg');
+// }
+
+//=========================================
 // Gotham Light (Used for text)
 //=========================================
 

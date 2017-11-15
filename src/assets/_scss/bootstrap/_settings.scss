@@ -291,7 +291,7 @@ $h6-font-size: rem-calc(18); //1rem !default;
 
 $headings-margin-bottom: $spacer; //($spacer / 2) !default;
 $headings-font-family:   'Montserrat'; // , inherit !default;
-$headings-font-weight:   600; //500 !default;
+$headings-font-weight:   700; //600; //500 !default;
 $headings-line-height:   1.2; //1.1 !default;
 $headings-color:         $gray-dark; //inherit !default;
 
@@ -300,7 +300,7 @@ $display2-size: rem-calc(53); //5.5rem !default;
 // $display3-size: 4.5rem !default;
 // $display4-size: 3.5rem !default;
 
-$display1-weight:     600; //300 !default;
+$display1-weight:     700; //300 !default;
 $display2-weight:     600; //300 !default;
 $display3-weight:     600; //300 !default;
 $display4-weight:     300; //300 !default;
