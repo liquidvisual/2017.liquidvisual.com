@@ -1,7 +1,7 @@
 /*
     HERO.CSS
 
-    - updated: 07.06.17
+    - updated: 08.06.17
 */
 //-----------------------------------------------------------------
 // VARIABLES
@@ -70,52 +70,59 @@ $hero-height-xl: rem-calc(768) !default;
 
     //=========================================
     // HEIGHT PRESET 1
-    // Used on internal pages
+    // used on internal pages
     //=========================================
 
     &.has-height-preset-1 {
-        // height: rem-calc(150); //$hero-height-sm;
         height: auto;
-        min-height: 0;
         background-position: center center;
 
-        @include media-breakpoint-up(md) { // added - refactor
-           height: rem-calc(400);
+        @include media-breakpoint-up(md) {
+           height: rem-calc(400); // [LOCKED]
         }
 
         @include media-breakpoint-up(xl) {
-           height: rem-calc(480);
+           height: rem-calc(480); // [LOCKED]
+        }
+
+        .lv-hero-item {
+            align-items: flex-end; // margin auto failed on ie10
+            min-height: 0; // reverse possible option below
+
+            @include media-breakpoint-down(sm) {
+                padding-top: 30%;
+            }
+        }
+
+        h1 {
+            position: relative;
+            top: rem-calc(3); // 2 is best but IE10
+            width: 100%;
         }
     }
 }
 
 //-----------------------------------------------------------------
-// HERO ITEM (SLIDES)
+// HERO ITEM (SLIDES) - mostly applies to ZINE COVER
 //-----------------------------------------------------------------
 
 .lv-hero-item {
-    position: relative; // risky?
+    position: relative; // [LOCKED]
     display: flex;
-    // align-items: flex-end;
-    // flex-direction: column;
     width: 100%; // [LOCKED]
     height: 100%; // [LOCKED]
-    // min-height: 100vh;
+    min-height: 100vh;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 
+    // allows cover hero to hug viewport if 100vh above
     > .container {
-        display: flex;
-        // height: 100%;
-        // align-items: flex-end;
-        flex-direction: column;
+        display: flex; // [LOCKED]
+        flex-direction: column; // [LOCKED]
     }
 
-    @include media-breakpoint-down(lg) {
-        // background-image: none !important; //override inline style  ????
-    }
-
+    // account for topbar on mobile
     @include media-breakpoint-down(sm) {
         padding-top: $header-height-sm; // [LOCKED]
     }

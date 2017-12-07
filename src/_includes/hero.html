@@ -2,8 +2,8 @@
 <!--
     LIQUIDVISUAL-HERO
 
-    - Updated: 06.07.17
-    - Notes:
+    - updated: 08.12.17
+    - notes:
         * .has-height-preset-1 - used for internal pages to set a height
 -->
 {% endcomment %}
@@ -20,22 +20,10 @@
             <!-- HERO -->
             <div class="lv-hero has-height-preset-1">
                 <div class="lv-hero-item" style="background-image: url('{{ hero }}')">
-                    <h1 class="mt-auto mb-0 spec-header"><img width="100%" src="{{ hero_text }}" alt="{{ page.title }}"></h1>
+                    <h1 class="mb-0"><img width="100%" src="{{ hero_text }}" alt="{{ page.title }}"></h1>
                 </div>
             </div>
 
         </div>
     </div>
 </div> <!-- /.lv-hero-wrapper -->
-
-<style>
-    .spec-header {
-        position: relative;
-        top: 5px;
-        width: 100%;
-    }
-
-    .container-wrapper {
-        overflow: hidden;
-    }
-</style>

@@ -193,11 +193,12 @@ $link-hover-decoration: none; //underline !default;
 $container-gutter: 30px; // LV
 
 $grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1140px + $container-gutter*4
+  xs: 0,      // [LOCKED]
+  sm: 576px,  // [LOCKED]
+  md: 768px,  // [LOCKED]
+  lg: 1024px, // 992px is smarter but 1024px snaps better [?]
+  xl: 1116px, // [LOCKED] appears as 1024px
+  xxl: 1440px // [LOCKED] most sensible
 ) !default;
 // @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 // @include _assert-starts-at-zero($grid-breakpoints);
@@ -208,10 +209,11 @@ $grid-breakpoints: (
 // // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-  sm: rem-calc(576),
-  md: rem-calc(768),
-  lg: rem-calc(1024),
-  xl: rem-calc(1140) + rem-calc($container-gutter*4) //1140px + $container-gutter*4,
+  sm: 576px,   // [LOCKED]
+  md: 768px,   // [LOCKED]
+  lg: 1024px,  // [LOCKED]
+  xl: 1116px,  // [LOCKED] APPEARS 1024px (same as tablet landscape)
+  xxl: 1260px, // [LOCKED] APPEARS 1170px
 ) !default;
 // @include _assert-ascending($container-max-widths, "$container-max-widths");
 
@@ -226,7 +228,8 @@ body {
             #{map-get($grid-breakpoints, sm)}|
             #{map-get($grid-breakpoints, md)}|
             #{map-get($grid-breakpoints, lg)}|
-            #{map-get($grid-breakpoints, xl)}";
+            #{map-get($grid-breakpoints, xl)}|
+            #{map-get($grid-breakpoints, xxl)}";
 }
 
 //--------------------------------------------------------------------

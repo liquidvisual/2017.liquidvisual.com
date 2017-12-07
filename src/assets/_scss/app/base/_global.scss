@@ -1,8 +1,7 @@
 /*
     GLOBAL.CSS
 
-    - Last updated: 22.05.17
-    - liquidvisual.com
+    - Last updated: 08.12.17
 */
 //-----------------------------------------------------------------
 // VARIABLES
@@ -36,6 +35,7 @@
 
 .container-wrapper {
 	position: relative;
+	overflow: hidden; // this prevents bottom shadow from extending into H1 - is safe?
 	z-index: 1;
 
 	//=========================================

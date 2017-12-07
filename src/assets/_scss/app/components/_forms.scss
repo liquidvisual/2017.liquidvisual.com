@@ -94,7 +94,7 @@ label > small,
 .lv-page input,
 .lv-page textarea {
 	border: 0 !important;
-	padding: 15px !important;
+	padding: rem-calc(15) !important;
 	margin-bottom: $spacer*1.5;
 	background: #1b1b21 !important;
 	border-radius: 0;
@@ -111,20 +111,20 @@ label > small,
 .lv-page .custom-radio {
 	/*display: flex;*/
 	/*align-items: center;*/
-	margin-bottom: 15px;
+	margin-bottom: rem-calc(15);
 	padding-left: 0;
 
 }
 
 fieldset {
 	// padding-bottom: 30px;
-	margin-bottom: 30px;
+	margin-bottom: rem-calc(30);
 }
 
 .custom-control-indicator {
 	border-radius: 0;
-	padding: 15px;
-	margin-right: 15px;
+	padding: rem-calc(15);
+	margin-right: rem-calc(15);
 	position: static;
 	display: inline-block;
 	background: #1b1b21 !important;

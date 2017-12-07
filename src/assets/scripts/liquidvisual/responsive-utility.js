@@ -15,7 +15,7 @@
     //-----------------------------------------------------------------
 
     var breakpoints = {};
-    var temporaryArray = ['xs','sm','md','lg','xl'];
+    var temporaryArray = ['xs','sm','md','lg','xl', 'xxl'];
 
     //-----------------------------------------------------------------
     // Draw Responsive Table
@@ -76,7 +76,8 @@
         if (screenWidth >= breakpoints.sm && screenWidth < breakpoints.md) device = "sm";
         if (screenWidth >= breakpoints.md && screenWidth < breakpoints.lg) device = "md";
         if (screenWidth >= breakpoints.lg && screenWidth < breakpoints.xl) device = "lg";
-        if (screenWidth >= breakpoints.xl) device = "xl";
+        if (screenWidth >= breakpoints.xl && screenWidth < breakpoints.xxl) device = "xl";
+        if (screenWidth >= breakpoints.xxl) device = "xxl";
 
         $('.lv-screen-data').html(screenWidth+" x "+screenHeight+"<br>"+device)
             .css({
