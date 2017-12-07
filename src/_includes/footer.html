@@ -1,23 +1,19 @@
 {% assign settings = site.data.settings %}
 
 <!-- FOOTER MIDDLE -->
-<section class="global-footer-body section section-darker section-bleed" hiddenX>
+<section class="global-footer-body section section-darker section-bleed">
 	<div class="container">
 		<div class="row">
 
 			<div class="col-md-4">
 				<h3 class="h5">Make a connection</h3>
-				<!-- <p><img width="150" src="/assets/img/content/branding/logo-type--default.svg"></p> -->
-				<!-- <h3 class="h5">About liquidvisual</h3> -->
 				<p>You've stumbled on the portfolio of freelance web designer, Mitch.</p>
-				<!-- <h4>hello@liquidvisual.com</h4> -->
-
-
-				<p class="py-2"><i class="fa fa-envelopeXX" style="color: #ef2163;"></i>&nbsp; <img width="230" src="/assets/img/layout/mitch-at.svg"></p>
+				<p class="py-2"><img width="230" src="/assets/img/layout/mitch-at.svg"></p>
 
 				{% include snippets/social_media.html %}
 			</div>
 
+			<!-- FOOTER LINKS -->
 			<div class="col-md-8">
 				<ul class="block-grid-md-4">
 					<li>
@@ -84,105 +80,5 @@
 
         <!-- BACK TO TOP -->
         <a class="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
-    </div>
-</section>
-
-<!-- FOOTER MIDDLE -->
-<section class="global-footer-body section section-darker section-bleed" hidden>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3">
-				<!-- <p><img width="150" src="/assets/img/content/branding/logo-type--default.svg"></p> -->
-				<!-- <h3 class="h5">About liquidvisual</h3> -->
-				<p>I'm Mitch, a Sydney based front-end designer set to improve your agency life.</p>
-				<!-- <h4>hello@liquidvisual.com</h4> -->
-				<p><i class="fa fa-envelope" style="color: #ef2163;"></i>&nbsp; <img width="230" src="/assets/img/layout/mitch-at.svg"></p>
-			</div>
-			<div class="col-md-9">
-				<ul class="block-grid-md-4">
-					<li>
-						<h3 class="h5">Case Studies</h3>
-						<ul class="list-unstyled">
-							<li><a href="">Big Red Sky</a></li>
-							<li><a href="">Blarg! News</a></li>
-							<li><a href="">Dan &amp; Mitch</a></li>
-							<li><a href="">Mal Winter</a></li>
-							<li><a href="">Artiqulet</a></li>
-						</ul>
-					</li>
-					<li>
-						<h3 class="h5">Services</h3>
-						<ul class="list-unstyled">
-							<li><a href="">PSD to HTML</a></li>
-							<li><a href="">Redesign</a></li>
-							<li><a href="">Websites</a></li>
-							<li><a href="">Graphics</a></li>
-							<li><a href="">Copywriting</a></li>
-						</ul>
-					</li>
-					<li>
-						<h3 class="h5">Recent</h3>
-						<ul class="list-unstyled">
-							<li><a href="">English Unlimited</a></li>
-							<li><a href="">Pricing</a></li>
-							<li><a href="">Blog Stuff</a></li>
-							<li><a href="">New Stuff</a></li>
-							<li><a href="">Jekyll</a></li>
-						</ul>
-					</li>
-					<li>
-						<h3 class="h5">Connect</h3>
-						{% include snippets/social_media.html %}
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- FOOTER TOP -->
-<section class="global-footer-body section section-darker section-bleed pb-3" hidden>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-lg-8 col-xl-8">
-                <div class="row">
-                    <div class="col-12 col-lg-6">
-
-                        <!-- ABOUT -->
-                        <h3>Make a connection</h3>
-                        <!-- <p><img width="150" src="/assets/img/content/logo-light@2x.png"></p> -->
-                        <p>Mitch is a Sydney based front-end designer set to improve your agency life. Expect reliable clear-cut communication and top-notch websites hand coded with obsession.</p>
-
-                        <!-- SOCIAL MEDIA -->
-                        {% include snippets/social_media.html %}
-
-                    </div>
-                    <div class="col-md-6 hidden-md-down">
-
-                        <!-- RECENT POSTS -->
-                        <h3>Recent Posts</h3>
-                        <ul class="list-unstyled mb-2">
-                            {% for item in site.posts | limit: 3 %}
-                                <li><a href="{{ item.url }}">{{ item.title | truncate: 55 }}</a></li>
-                            {% endfor %}
-                        </ul>
-
-                        <!-- READ MORE -->
-                        <p class="text-right"><a class="anchor-link" href="#">Read more <i class="fa fa-angle-right"></i></a></p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 col-xl-4">
-
-                <!-- JOIN THE MAILING LIST -->
-                <h3>Join the Mailing List</h3>
-                <p>Enter your email to receive occasional updates on liquidvisual products and other rubbish.</p>
-
-                <!-- SUBSCRIBE FORM -->
-                {% include form_subscribe.html %}
-
-            </div>
-        </div>
     </div>
 </section>

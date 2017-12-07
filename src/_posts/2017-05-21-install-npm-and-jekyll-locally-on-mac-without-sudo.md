@@ -13,7 +13,7 @@ logo: /assets/img/content/branding/logo-type-white-transparent.svg
 {% assign github_repo_name = settings.github_repo_name %}
 {% assign github_repo_path = settings.github_repo_path %}
 
-# Installation &amp; Setup
+# Installation &amp; Setup (late 2017)
 ---
 
 <div class="spacer m-b-2"></div>
@@ -30,14 +30,25 @@ You'll need the following to run the build process and leverage all its features
 * [Ruby](https://www.ruby-lang.org/en/){:target="_blank"} (1.9.3 or above)
 * [NodeJS](https://nodejs.org/){:target="_blank"}
 * [Python](https://www.python.org/downloads/){:target="_blank"} (optional)
+* OSX 10.10 or higher
+* Command Line Tools (CLT) for Xcode
 
-<div class="spacer m-b-2"></div>
+<div class="spacer mb-2"></div>
+### 00. Install Command Line Tools (CLT) for Xcode
+
+    xcode-select --install
+
+[Source](https://apple.stackexchange.com/questions/254380/macos-sierra-invalid-active-developer-path)
+
+<div class="spacer mb-2"></div>
 
 ### 01. Install Homebrew
 
-[Homebrew](http://brew.sh){:target="_blank"} is a package manager for MacOS. We'll use it to install Command Line Tools for [Git](https://git-scm.com){:target="_blank"} now, and later [NodeJS](https://nodejs.org/){:target="_blank"} and [Python](https://www.python.org){:target="_blank"} (optional). Pull up Terminal and paste the following:
+[Homebrew](http://brew.sh){:target="_blank"} is a package manager for MacOS. We'll use it to install Command Line Tools for [Git](https://git-scm.com){:target="_blank"} now, and later [NodeJS](https://nodejs.org/){:target="_blank"} and [Python](https://www.python.org){:target="_blank"} (Python optional). Pull up Terminal and paste the following:
 
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+Since we just installed Homebrew, we could have skipped brew update, but it's a good habit to run it before installing anything with Homebrew because Homebrew is updated regularly. [Source](https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/)
 
 Next, add the Homebrew location to your ```$PATH```. We'll create a __.bash_profile__ or edit an existing one.
 
@@ -52,6 +63,13 @@ Then add the following to your file and save. This will allow us to run future c
 Ruby typically comes installed with MacOS, although it's always good to have the latest version. We recommend installing *or updating* Ruby through [RVM](https://rvm.io){:target="_blank"}.
 
     \curl -sSL https://get.rvm.io | bash -s stable --ruby
+
+To start using RVM you need to run `source /Users/liquidvisual/.rvm/scripts/rvm`
+       in all your open shell windows, in rare cases you need to reopen all shell windows. ??
+
+add this to path:
+
+    [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 Next, **reboot the terminal window**. If successful you should be able to see the new version number.
 
@@ -139,6 +157,28 @@ You will need the git command line tools installed to utilise the ```grunt deplo
 * ```grunt deploy``` => pushes build to __github-pages__ branch
 
 <div class="spacer m-b-2"></div>
+
+## Troubleshooting
+
+### Node Sass failure
+
+ ```
+    Node Sass does not yet support your current environment
+```
+
+ try:
+
+ ```npm rebuild node-sass```
+
+ [https://github.com/sass/node-sass/issues/1764](link)
+
+ ### MacOS Sierra - invalid active developer path
+
+ try:
+
+ ```xcode-select --install```
+
+ [https://apple.stackexchange.com/questions/254380/macos-sierra-invalid-active-developer-path](link)
 
 <h2>On Windows <i class="fa fa-windows"></i></h2>
 

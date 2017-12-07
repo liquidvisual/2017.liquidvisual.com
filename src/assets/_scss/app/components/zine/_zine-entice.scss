@@ -1,0 +1,50 @@
+/*
+    ZINE-ENTICE.CSS
+
+    - updated: 07.12.17
+    - usage:
+
+    	<a class="zine-entice" href="#tagline"><i class="fa fa-angle-down"></i></a>
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// BOBBING ENTICE BUBBLE
+//-----------------------------------------------------------------
+
+// .zine-entice {
+//     position: absolute;
+//     left: calc(50% - 20px);
+//     bottom: 30px;
+//     width: rem-calc(40);
+//     height: rem-calc(40);
+//     border-radius: 100%;
+//     background: rgba(white, 0.3);
+//     font-size: rem-calc(30);
+//     line-height: rem-calc(45);
+//     text-align: center;
+//     color: black;
+//     z-index: 1;
+//     animation: pulsate 0.8s ease-out 0.3s alternate infinite;
+
+//     @include media-breakpoint-up(lg) {
+//         bottom: $spacer;
+//         width: rem-calc(50);
+//         height: rem-calc(50);
+//         line-height: rem-calc(55);
+//         font-size: rem-calc(40);
+//     }
+
+//     @keyframes pulsate {
+//         0% { transform: translateY(0); }
+//         100% { transform: translateY(10px); }
+//     }
+// }
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================

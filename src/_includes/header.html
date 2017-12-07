@@ -4,7 +4,7 @@
 
 <!-- LOGO -->
 <a class="logo" href="/" title="{{ settings.seo_title }}" itemprop="url">
-    <img class="" src="{{ page.logo | default: logo_default }}" alt="{{ settings.company_title }}" itemprop="logo"> <!-- controllable -->
+    <img src="{{ page.logo | default: logo_default }}" alt="{{ settings.company_title }}" itemprop="logo"> <!-- controllable -->
     <img class="hidden-xl-down img-md-up-override" src="{{ logo_default }}" alt="{{ settings.company_title }}" itemprop="logo" aria-hidden> <!-- Used on scroll (tablet +) -->
     <img class="hidden-xl-down img-sm-down-override" src="{{ logo_dark }}" alt="{{ settings.company_title }}" itemprop="logo" aria-hidden> <!-- Shows dark logo for white bg only (mobile) -->
 </a>

@@ -8,85 +8,34 @@
 -->
 {% endcomment %}
 
-{% comment %}
-
-
-{% assign hero = page.hero | default: "/assets/img/content/hero/hero-1-placeholder.png" %}
-{% assign hero_classes = page.hero_classes %}
-
-<!-- HERO WRAPPER -->
-<div class="lv-hero-wrapper">
-
-    <!-- HERO -->
-    <div class="lv-hero {{ hero_classes | default: 'has-height-preset-1' }}">
-        <div class="lv-hero-item" style="background-image: url('{{ hero }}')">
-
-            <!-- HERO CAPTION -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-lg-8">
-                        {% contentblock hero_caption no-convert %}
-                        {% ifnothascontent hero_caption %}
-                            <div class="lv-hero-item-caption">
-                                {% if page.title_override %}
-                                    <h2 class="h1">{{ page.title_override }}</h2>
-                                {% else %}
-                                    <h1>{{ page.title }}</h1>
-                                {% endif %}
-                            </div>
-                        {% endifnothascontent %}
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div> <!-- /.lv-hero -->
-
-    {% contentblock hero_addition no-convert %}
-
-</div> <!-- /.lv-hero-wrapper -->
-{% endcomment %}
-
-
 {% assign hero = page.heroXXX | default: "/assets/img/content/hero/hero-bg.png" %}
-
+{% assign hero_classes = page.hero_classes %}
 {% assign hero_text = page.hero_text %}
 
 <!-- HERO WRAPPER -->
-<div class="lv-hero-wrapper {{ page.hero_classes }}" style="background-image: url('{{ hero }}')">
+<div class="lv-hero-wrapper {{ hero_classes }}" style="background-image: url('{{ hero }}')">
     <div class="container-wrapper">
         <div class="container">
 
             <!-- HERO -->
-            <div class="lv-hero has-height-preset-2">
+            <div class="lv-hero has-height-preset-1">
                 <div class="lv-hero-item" style="background-image: url('{{ hero }}')">
-                    <!-- <div class="container"> -->
+                    <h1 class="mt-auto mb-0 spec-header"><img width="100%" src="{{ hero_text }}" alt="{{ page.title }}"></h1>
+                </div>
+            </div>
 
-                        <h1 class="mt-auto mb-0 spec-header"><img width="100%" src="{{ hero_text }}" alt="Tutorials"></h1>
-
-                </div> <!-- /.lv-hero-item -->
-            </div> <!-- /.lv-hero -->
-        </div> <!-- /.container -->
-    </div> <!-- /.container-wrapper -->
+        </div>
+    </div>
 </div> <!-- /.lv-hero-wrapper -->
-
-
-
 
 <style>
     .spec-header {
         position: relative;
         top: 5px;
-        /*left: -60px;*/
-        /*width: calc(100% + 110px);*/
         width: 100%;
-        /*display: block;*/
-        /*opacity: 0.9;*/
     }
 
     .container-wrapper {
-        /*z-index: 1;*/
-        /*overflow-y: hidden;*/
         overflow: hidden;
     }
 </style>

@@ -1,22 +1,18 @@
 # GLOBAL SITE SETTINGS
-
 cname: liquidvisual.yourwebvisual.com
+allow_robots: false
 
 # META
 title: liquidvisual
-seo_title:
+title_homepage:
 company: liquidvisual
 description:
 
-# SITE DEFAULTS
-site_tagline:
-
 # DEVELOPER
-allow_robots: false
 github_repo_owner: liquidvisual
 github_repo_path: https://github.com/liquidvisual/________
 github_repo_name:
-jekyll_version: 3.5.0
+jekyll_version: 3.6.2
 
 # OFFICES
 offices:
@@ -81,4 +77,4 @@ author:
   title: Mitch
   url: http://liquidvisual.com
   logo: /assets/img/ui/liquidvisual-logo.svg
-  description: liquidvisual
+  description: by liquidvisual

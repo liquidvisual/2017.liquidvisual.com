@@ -38,6 +38,7 @@ module.exports = function (grunt) {
     //-----------------------------------------------------
 
     yeoman: {
+      node_modules: './node_modules', // NEW
       app: 'src',
       dist: 'dist',
       assets: 'dist/assets',
@@ -83,7 +84,7 @@ module.exports = function (grunt) {
           notify: false,
           // Here you can disable/enable each feature individually
           ghostMode: {
-              clicks: false,
+              clicks: true,
               forms: true,
               scroll: false
           },
@@ -97,6 +98,7 @@ module.exports = function (grunt) {
             baseDir: [
               ".jekyll",
               ".tmp",
+              ".", // fuck yeah!!
               "<%= yeoman.app %>"
             ]
           },
@@ -118,6 +120,7 @@ module.exports = function (grunt) {
             '{.tmp,<%= yeoman.app %>}/assets/scripts/**/*.js',
             '{.tmp,<%= yeoman.app %>}/assets/webvisual/assets/scripts/**/*.js',
             '{<%= yeoman.app %>}/_bower_components/**/*.js',
+            '<%= yeoman.node_modules %>}',
             '<%= yeoman.app %>/assets/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
           ]
         },
@@ -176,7 +179,11 @@ module.exports = function (grunt) {
       options: {
         sourceMap: true,
         //imagePath: '',
-        includePaths: ['<%= yeoman.app %>/_bower_components/bootstrap/scss']
+        includePaths: [
+                        //'<%= yeoman.app %>/_bower_components/bootstrap/scss',
+                        '<%= yeoman.node_modules %>/bootstrap/scss',
+                        '<%= yeoman.node_modules %>'
+                      ]
       },
       dist: {
         files: [{

@@ -1,29 +1,25 @@
 /*
     HERO.CSS
 
-    - updated: 26.05.17
-    - notes:
-        * liquidvisual recommends bxSlider for hero carousels
-        * fixed overflow problem when removing JS
+    - updated: 07.06.17
 */
 //-----------------------------------------------------------------
 // VARIABLES
 //-----------------------------------------------------------------
 
-$hero-height-sm:            auto !default; // IMPORTANT: if carousel slides, you need a fixed height
-$hero-height-md:            rem-calc(575) !default;
-$hero-height-md-fixed:      rem-calc(575) !default;
-$hero-height-lg:            rem-calc(690) !default;
-$hero-height-xl:            rem-calc(768) !default;
-$hero-carousel-bullet-size: rem-calc(16)  !default;
+$hero-height-sm: auto !default;
+$hero-height-md: rem-calc(575) !default;
+$hero-height-lg: rem-calc(690) !default;
+$hero-height-xl: rem-calc(768) !default;
 
 //-----------------------------------------------------------------
 // HERO WRAPPER
+// creates the background parallax-ish effect on ALL heroes
 //-----------------------------------------------------------------
 
 .lv-hero-wrapper {
     position: relative;
-    background-color: #a4a4b5;
+    background-color: #a4a4b5; // todo: add to settings vars
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -32,6 +28,7 @@ $hero-carousel-bullet-size: rem-calc(16)  !default;
         background-attachment: fixed;
     }
 
+    // specified per page
     &.is-tinted {
         @include media-breakpoint-up(xl) {
             &:after {
@@ -48,13 +45,12 @@ $hero-carousel-bullet-size: rem-calc(16)  !default;
 }
 
 //-----------------------------------------------------------------
-// HERO - CONTROLS ALL HEIGHT
+// HERO - CONTROLS HEIGHT
 //-----------------------------------------------------------------
 
 .lv-hero {
-    // width: 100%; // added last minute - breaking?
     height: $hero-height-sm;
-    overflow: hidden; // causes problems without JS
+    overflow: hidden;
 
     @include media-breakpoint-up(md) {
         height: $hero-height-md;
@@ -62,43 +58,22 @@ $hero-carousel-bullet-size: rem-calc(16)  !default;
 
     @include media-breakpoint-up(lg) {
         height: $hero-height-lg;
-        // min-height: rem-calc(960);
     }
 
     @include media-breakpoint-up(xl) {
         height: $hero-height-xl;
-        // min-height: 100vh;
-        //
-        border-left: 1px solid rgba(black, 0.2);
-        border-right: 1px solid rgba(black, 0.2);
+        border: 1px solid rgba(black, 0.2);
+        border-top: 0;
+        border-bottom: 0;
         box-shadow: 0px -30px 50px 10px rgba(black, 0.2);
      }
 
     //=========================================
     // HEIGHT PRESET 1
+    // Used on internal pages
     //=========================================
 
-    &.has-height-preset-1,
-    &.has-fixed-height {
-        // height: rem-calc(150); //$hero-height-sm;
-        height: auto;
-        min-height: 0;
-        background-position: center center;
-
-        @include media-breakpoint-up(md) { // added - refactor
-           height: rem-calc(400);
-        }
-
-        @include media-breakpoint-up(xl) {
-           height: rem-calc(480);
-        }
-    }
-
-    //=========================================
-    // HEIGHT PRESET 2
-    //=========================================
-
-    &.has-height-preset-2 {
+    &.has-height-preset-1 {
         // height: rem-calc(150); //$hero-height-sm;
         height: auto;
         min-height: 0;
@@ -147,58 +122,5 @@ $hero-carousel-bullet-size: rem-calc(16)  !default;
 }
 
 //-----------------------------------------------------------------
-// HERO CAPTION
+//
 //-----------------------------------------------------------------
-
-.lv-hero-item-caption {
-    // display: inline-block; // more flexibility
-    // width: 100%; /* mobile */
-    margin: rem-calc(50 0 30 0);
-
-    @include media-breakpoint-up(md) {
-        margin: rem-calc(50 0);
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        color: white;
-    }
-
-    @include media-breakpoint-up(md) {
-        width: auto;
-    }
-}
-
-//-----------------------------------------------------------------
-// SCROLL ENTICE
-//-----------------------------------------------------------------
-
-.lv-hero-arrow-scroll {
-    position: absolute;
-    left: calc(50% - 20px);
-    bottom: 30px;
-    width: rem-calc(40);
-    height: rem-calc(40);
-    border-radius: 100%;
-    // background: rgba(black, 0.5);
-    background: rgba(white, 0.3);
-    font-size: rem-calc(30);
-    line-height: rem-calc(45);
-    text-align: center;
-    // color: rgba(white, 0.6);
-    color: black;
-    z-index: 1;
-    animation: pulsate 0.8s ease-out 0.3s alternate infinite;
-
-    @include media-breakpoint-up(lg) {
-        bottom: $spacer;
-        width: rem-calc(50);
-        height: rem-calc(50);
-        line-height: rem-calc(55);
-        font-size: rem-calc(40);
-    }
-
-    @keyframes pulsate {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(10px); }
-    }
-}

@@ -1,7 +1,9 @@
 {% comment %}
 <!--
-	Updated: 12.08.16
-	Note: data is pulled from src/data/sitemap.yml
+    LIQUIDVISUAL-NAVIGATION
+
+    Updated: 07.12.17
+    Note: data is pulled from src/data/sitemap.yml
     OUTPUT:
 
         <ul>
@@ -23,7 +25,7 @@
     {% comment %} Important: leave 'Home' out of the loop {% endcomment %}
     <li class="{% if page.url == "/" %} active {% endif %}">
         <a class="top-parent-anchor" href="/">
-            <i class="fi-home hidden-lg-down"></i>
+            <img class="hidden-lg-down" width="12" src="/assets/img/ui/fi-home.svg" alt="Home">
             <span class="text hidden-xl-up">Home</span>
         </a>
     </li>
@@ -31,8 +33,10 @@
     {% for item in sitemap | offset: 1 %}
 
         {% capture parent_classes %}
-            {% if forloop.index > 0 and page.url contains item.url %} active {% endif %}
+            {% if forloop.first and page.url == "/" %} active {% endif %}
+            {% if forloop.index > 1 and page.url contains item.url %} active {% endif %}
             {% if item.children %} has-dropdown {% endif %}
+            {% if item.children and item.children.size > 7 %} has-large-dropdown {% endif %}
             {% if item.children and forloop.index >= 4 %} has-dropdown-right-aligned {% endif %}
         {% endcapture %}
 
@@ -40,23 +44,15 @@
 
             {% comment %}
             <!-----------------------------------------------------------------
-            A. SET <SPAN> IF THE TOP-PARENT URL IS A HASH
-            B. SET <A> IF THE TOP-PARENT URL IS A PATH
-
-            REASON: DROPDOWN WILL REVEAL IF ANCHOR CLICKED (SCENARIO A)
-            DROPDOWN WILL REVEAL IF ARROW CLICKED (SCENARIO B)
+            TOP LEVEL
             ------------------------------------------------------------------>
+            FOR REFERENCE: {% if item.url contains "#" %}{% endif %}
             {% endcomment %}
 
-            {% if item.url contains "#" %}
-                <span class="top-parent-anchor">
-                    <span class="text">{{ item.title }}</span>
-                </span>
-            {% else %}
-                <a class="top-parent-anchor" href="{{ item.url }}">
-                    <span class="text">{{ item.title }}</span>
-                </a>
-            {% endif %}
+            <a class="top-parent-anchor" href="{{ item.url }}">
+                {% if item.icon %}<i class="{{ item.icon }} mr-1"></i>{% endif %}
+                <span class="text">{{ item.title }}</span>
+            </a>
 
             {% comment %}
             <!-----------------------------------------------------------------
@@ -66,7 +62,6 @@
 
             {% if item.children %}
                 <ul class="dropdown {% if item.include_children_in_nav %} is-nav-included {% endif %}" data-parent="{{ item.title }}">
-
                     {% for item in item.children %}
                         <li class="{% if item.children %} has-dropdown {% endif %}">
                             <a href="{{ item.url }}"><span class="text">{{ item.title }}</span></a>

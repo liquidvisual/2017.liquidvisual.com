@@ -6,8 +6,7 @@
 name: liquidvisual-boilerplate
 
 # Grunt handles images and assets.
-#exclude: ['img', 'css', 'scripts', 'builder-app/scripts', 'fonts',
- #         '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+# exclude: ['img', 'css', 'scripts', 'fonts', '**.ico']
 
 exclude: ['css', 'assets/scripts', 'assets/webvisual/assets/scripts']
 
