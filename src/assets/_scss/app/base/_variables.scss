@@ -1,7 +1,7 @@
 /*
     VARIABLES.CSS
 
-    - Last updated: 26.05.17
+    - updated: 08.12.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -9,19 +9,13 @@
 //-----------------------------------------------------------------
 
 $fa-font-path: "/assets/fonts";
-$header-height-sm: 60px; // optimal
+$header-height-sm: 60px;
 $header-height-md: 120px;
 $header-height-lg: 120px;
 
 //-----------------------------------------------------------------
-// HERO HEIGHT
+//
 //-----------------------------------------------------------------
-
-$hero-height-sm:            auto; //calc(100vh - #{$header-height-sm}); // IMPORTANT: if carousel slides, you need a fixed height
-$hero-height-md:            100vh;
-$hero-height-lg:            auto;
-$hero-height-xl:            auto; //1200px;
-
 //=========================================
 //
 //=========================================

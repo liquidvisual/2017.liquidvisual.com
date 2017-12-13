@@ -1,7 +1,7 @@
 /*
     FORMS.CSS
 
-    - Last updated: 06.10.16
+    - updated: 06.10.16
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -57,15 +57,15 @@ form label em {
 	align-items: center;
 	padding: $spacer;
 	margin-bottom: $spacer*1.5;
-	// border: 1px solid black;
 	background: rgba(white, 0.1);
 	border-radius: $border-radius;
 }
 
 .availability-notice-orb {
+	position: relative; // [LOCKED]
 	width: rem-calc(30);
 	height: rem-calc(30);
-	// background: #f45f5e;
+	// background: #f45f5e; // red
 	background: #73bc4c;
 	border-radius: 100%;
 	margin-right: $spacer;

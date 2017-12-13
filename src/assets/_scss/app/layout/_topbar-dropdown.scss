@@ -1,0 +1,169 @@
+/*
+    TOPBAR-DROPDOWN.CSS
+
+    - updated: 11.12.17
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// DROPDOWN
+//-----------------------------------------------------------------
+
+.lv-topbar .dropdown {
+    left: calc(50% - #{rem-calc(120)});
+    width: rem-calc(240);
+    background: none;
+    text-align: center;
+    padding-top: rem-calc(16);
+    box-shadow: none;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: rem-calc(10);
+        left: calc(50% - 15px);
+        width: rem-calc(30);
+        height: rem-calc(30);
+        background: #0c0c0c;
+        transform: rotate(45deg);
+        border-radius: 2px;
+        z-index: -1;
+    }
+
+    h5 {
+        font-size: rem-calc(14);
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+
+    h6 {
+        font-size: rem-calc(13);
+        color: white;
+        margin-bottom: rem-calc(5);
+    }
+
+    p {
+        margin-bottom: 0;
+        color: darken(white, 30%);
+        font-size: rem-calc(12);
+    }
+}
+
+//=========================================
+// DROPDOWN TEXT
+//=========================================
+
+.lv-topbar .dropdown .dropdown-text {
+    height: 0;
+    overflow: hidden;
+    transition: all 250ms ease;
+}
+
+//=========================================
+// MIDDLE LINE AND "OR"
+//=========================================
+
+.lv-topbar .dropdown li {
+    padding: rem-calc(20 4 30 4);
+    border-bottom: 1px solid rgba(white, 0.15);
+    background: #0c0c0c;
+    border-radius: 5px 5px 0 0;
+}
+
+.lv-topbar .dropdown li:last-child {
+    border: 0;
+    padding: rem-calc(30 4 20 4);
+    border-radius: 0 0 5px 5px;
+
+    &:after {
+        display: inline-block;
+        position: absolute;
+        top: rem-calc(-20);
+        left: calc(50% - #{rem-calc(20)});
+        content: "OR";
+        font-family: 'Oswald';
+        font-size: rem-calc(13.5);
+        background: #383838;
+        color: rgba(white, 0.8);
+        width: rem-calc(35);
+        height: rem-calc(35);
+        line-height: rem-calc(35);
+        border-radius: 100%;
+    }
+}
+
+//=========================================
+// SUBTITLE COLORS
+//=========================================
+
+.lv-topbar .dropdown li:nth-child(odd) h5 {
+    color: $brand-primary;
+}
+
+.lv-topbar .dropdown li:nth-child(even) h5 {
+    color: $brand-secondary;
+}
+
+//=========================================
+// HOVERS
+//=========================================
+
+.lv-topbar .dropdown li:hover {
+    background: lighten(#0c0c0c, 3%);
+
+    .dropdown-text {
+        height: rem-calc(100);
+        padding-top: $spacer;
+    }
+}
+
+//-----------------------------------------------------------------
+// DROPDOWN OFF-CANVAS
+//-----------------------------------------------------------------
+
+.lv-off-canvas .dropdown {
+
+    // background: #0c0c0c;
+
+    a {
+        height: auto;
+        padding: rem-calc(20 15 20 0);
+        line-height: 1;
+    }
+
+    .dropdown-text {
+        // display: none;
+
+        h5 {
+            margin: 0;
+        }
+
+        h6 {
+            margin-bottom: rem-calc(5);
+            font-size: rem-calc(14);
+            text-transform: uppercase;
+            // color: rgba(black, 0.4);
+            color: $brand-primary;
+        }
+
+        p {
+            color: darken(white, 20%);
+            margin: 0;
+            font-weight: normal;
+            font-size: rem-calc(14);
+        }
+    }
+
+    .text {
+        color: white;
+    }
+}
+
+//=========================================
+//
+//=========================================
+//=========================================
+//
+//=========================================

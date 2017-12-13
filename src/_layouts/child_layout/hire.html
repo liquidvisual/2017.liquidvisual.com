@@ -2,30 +2,22 @@
 layout: base__page
 ---
 
-<!-- TAGLINE -->
-<section class="section pb-0 section-darker section-bleed">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-md-8 text-center">
-				<h2><span class="brand-primary-color">So tell me,</span> which client are you?</h2>
-				<div class="spacer mb-4"></div>
+{% contentfor tagline %}
+	<h2><span class="brand-primary-color">So tell me,</span> which client are you?</h2>
+	<div class="spacer mb-4"></div>
 
-				<!-- TABS -->
-				<ul class="list-tabs nav" role="tablist">
-					<li class="nav-item">
-						<a class="active" href="#digital-agency" data-toggle="tab" role="tab">Digital Agency</a>
-					</li>
-					<li class="nav-item">
-						<a data-toggle="tab" href="#small-business" role="tab">Small Business</a>
-					</li>
-				</ul>
+	<!-- TABS -->
+	<ul class="list-tabs nav" role="tablist">
+		<li class="nav-item">
+			<a class="active" href="#digital-agency" data-toggle="tab" role="tab">Digital Agency</a>
+		</li>
+		<li class="nav-item">
+			<a data-toggle="tab" href="#small-business" role="tab">Small Business</a>
+		</li>
+	</ul>
+{% endcontentfor %}
 
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- CONTENT  -->
+<!-- SECTION DARK  -->
 <section class="section section-dark section-bleed">
 	<div class="container">
 		<div class="row">
@@ -57,7 +49,7 @@ layout: base__page
 				<!-- RESOURCES -->
 				<ul class="social-media block-grid-xs-1 block-grid-md-2 mb-4">
 					<li>
-						<a class="icon-resume" title="Get CV" href="/resume/">
+						<a class="icon-resume" title="Get CV" href="/hire/resume/">
 							<div class="icon"><i class="fa fa-file"></i></div>
 							<span class="text">
 								My Resume
@@ -66,7 +58,7 @@ layout: base__page
 						</a>
 					</li>
 					<li>
-						<a class="icon-cv" title="Interview" href="/interview/">
+						<a class="icon-cv" title="Interview" href="/hire/interview/">
 							<div class="icon"><i class="fa fa-coffee"></i></div>
 							<span class="text">
 								Simulate Interview

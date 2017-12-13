@@ -1,16 +1,17 @@
 /*
     HERO.CSS
 
-    - updated: 08.06.17
+    - updated: 12.12.17
+    - liquidvisual.com
 */
 //-----------------------------------------------------------------
 // VARIABLES
 //-----------------------------------------------------------------
 
-$hero-height-sm: auto !default;
-$hero-height-md: rem-calc(575) !default;
-$hero-height-lg: rem-calc(690) !default;
-$hero-height-xl: rem-calc(768) !default;
+$hero-height-sm: auto;
+$hero-height-md: 100vh;
+$hero-height-lg: auto;
+$hero-height-xl: auto;
 
 //-----------------------------------------------------------------
 // HERO WRAPPER
@@ -98,6 +99,7 @@ $hero-height-xl: rem-calc(768) !default;
             position: relative;
             top: rem-calc(3); // 2 is best but IE10
             width: 100%;
+            color: white;
         }
     }
 }

@@ -1,16 +1,16 @@
 /*
     HEADER.CSS
 
-    - Last updated: 06.10.16
+    - updated: 11.12.16
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
 // VARIABLES
 //-----------------------------------------------------------------
 
-$header-height-sm: 60px !default; // optimal
-$header-height-md: 130px !default;
-$header-height-lg: 220px !default;
+$header-height-sm: 60px  !default;
+$header-height-md: 120px !default;
+$header-height-lg: 120px !default;
 
 //-----------------------------------------------------------------
 // HEADROOM
@@ -18,73 +18,111 @@ $header-height-lg: 220px !default;
 
 .headroom {
     will-change: transform;
-    transition: transform 200ms linear, background 200ms ease, opacity 200ms ease;
-}
+    // transition: transform 250ms ease;
+    // transition: all 100ms ease;
 
-.headroom--pinned {
-    // transform: translateY(0%);
-}
-
-.headroom--unpinned {
-    opacity: 0;
-    // transform: translateY(-100%);
-    transition: none;
-}
-
-.headroom--top {
-	background: none; // Need for animation
+    @include media-breakpoint-up(md) {
+        transition: opacity 150ms ease,
+        			background-color 150ms ease,
+        			visibility 150ms ease;
+    }
 }
 
 //****************************************************
-// STYLING SCROLL HEADER
+
+.headroom--pinned {
+    transform: translateY(0%);
+}
+
+//****************************************************
+
+.headroom--unpinned {
+	@include media-breakpoint-down(sm) { // mobiles only
+	    // transform: translateY(-100%);
+	}
+
+
+
+    // @include media-breakpoint-up(md) {
+        opacity: 0;
+        visibility: hidden;
+    // }
+}
+
+//****************************************************
+// HEADROOM IS DISABLED FOR LARGE UP
 //****************************************************
 
 .headroom--not-top.headroom--pinned {
-	background: white;
-	box-shadow: 0 0 3px 1px rgba(black, 0.2); // added NEW
-
-	@include media-breakpoint-up(md) {
-	    background: rgba(#111, 0.9);
-	    box-shadow: none;
+	@include media-breakpoint-up(lg) {
+	    display: none;
+	    opacity: 0; // [LOCKED]
 	}
+}
+
+//****************************************************
+// HEADROOM TOP
+// header is transparent when at top
+//****************************************************
+
+.headroom--top.global-header {
+	background: none;
+	box-shadow: none;
+	transition: none;
 
 	.logo img {
-		display: none; // [LOCKED]
-
-		@include media-breakpoint-up(md) {
-		    padding: rem-calc(15 0); // shorter header
+		@include media-breakpoint-down(sm) {
+		    display: none !important;
 		}
 	}
 
-	//=========================================
-	// HAMBURGER
-	//=========================================
-
-	.global-mobile-menu {
-		@include media-breakpoint-up(md) {
-		    top: 30px;
-		}
-
-		.lv-hamburger-top,
-		.lv-hamburger-middle,
-		.lv-hamburger-bottom {
-			@include media-breakpoint-down(sm) {
-			    background: #222;
-			}
-		}
-	}
-
-	//=========================================
-	// OVERRIDES - for different logo types
-	//=========================================
-
-	.logo .img-sm-down-override {
+	.logo img.is-dynamic {
 		@include media-breakpoint-down(sm) {
 		    display: block !important;
 		}
 	}
+}
 
-	.logo .img-md-up-override {
+//****************************************************
+// HEADROOM TOP
+// logo is dark over white on mobile
+//****************************************************
+
+.headroom--topXXXX,
+.headroom--not-top {
+	.logo img.is-dark {
+		@include media-breakpoint-down(sm) {
+		    display: block !important;
+		}
+	}
+}
+
+//****************************************************
+// PINNED - WHILE SCROLLING DOWN
+// md-up has custom dark header
+//****************************************************
+
+.headroom--not-top.headroom--pinned {
+	@include media-breakpoint-up(md) {
+	    background: rgba(#111, 0.9);
+	}
+}
+
+//****************************************************
+// PINNED - WHILE SCROLLING DOWN
+// md-up: 'is-dynamic' is overriden always
+// logo is default over dark on portrait
+//****************************************************
+
+.headroom--not-top.headroom--pinned {
+	.logo img.is-dynamic {
+		@include media-breakpoint-up(md) {
+		    display: none !important;
+		}
+	}
+
+	// REMEMBER: VISIBILITY IS OPT-IN
+	.logo img.is-default {
 		@include media-breakpoint-up(md) {
 		    display: block !important;
 		}
@@ -96,15 +134,21 @@ $header-height-lg: 220px !default;
 //-----------------------------------------------------------------
 
 .global-header {
-	position: fixed; // covers more use cases
+	position: fixed;
 	top: 0;
 	width: 100%;
+	background: white; // white menu on mobile
+	box-shadow: 0 0 3px 1px rgba(black, 0.2);
 	z-index: 999;
+
+	@include media-breakpoint-up(md) {
+	    background: none;
+	    box-shadow: none;
+	}
 
 	> .container {
 		display: flex;
 		align-items: center;
-		position: relative; // for abs snapping
 
 		@include media-breakpoint-up(xl) {
 			padding: 0 $container-gutter*3; // [LOCKED]
@@ -120,12 +164,20 @@ $header-height-lg: 220px !default;
 	display: block; // improve hit area
 
 	img {
+		display: none; // [LOCKED] - applies to 'is-dynamic'
 		width: rem-calc(150);
 		padding: rem-calc(10 0);
 
 		@include media-breakpoint-up(md) {
+			display: block; // [LOCKED] - applies to 'is-dynamic'
 			width: rem-calc(200);
 		    padding: $spacer 0;
+		}
+
+		// non-dynamic logos are hidden by default on INIT
+		&.is-default,
+		&.is-dark {
+			display: none;
 		}
 	}
 }
@@ -136,19 +188,20 @@ $header-height-lg: 220px !default;
 
 .global-mobile-menu {
 	margin-left: auto;
-	line-height: 0; // fix bug?
+	line-height: 0; // [LOCKED]
+
+	.lv-hamburger-top,
+	.lv-hamburger-middle,
+	.lv-hamburger-bottom {
+		@include media-breakpoint-down(sm) {
+		    // background: #222;
+		}
+	}
 }
 
 //-----------------------------------------------------------------
-// DELAY KEYFRAMES
+//
 //-----------------------------------------------------------------
-
-// animation: delayGlobalHeaderExit 0.4s ease 300ms alternate 1 forwards;
-// @keyframes delayGlobalHeaderExit {
-//     from {}
-//     to { background: #202026; }
-// }
-
 //=========================================
 //
 //=========================================

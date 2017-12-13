@@ -1,7 +1,7 @@
 /*
     SOCIAL-MEDIA.CSS
 
-    - Last updated: 25.05.17
+    - updated: 25.05.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -77,11 +77,35 @@
 	.trello .icon      { background: #0079bf; }
 	.twitter .icon     { background: #1da1f2; }
 	.youtube .icon     { background: #cd201f; }
+
+	.instagram .icon {
+		background: radial-gradient(circle farthest-corner at 32% 106%, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+	}
 }
 
 //-----------------------------------------------------------------
 // CONTEXT
 //-----------------------------------------------------------------
+//=========================================
+// BREADCRUMB
+//=========================================
+
+.breadcrumb .social-media {
+	display: flex;
+
+	a {
+		.icon {
+			margin: rem-calc(0 0 0 10);
+			font-size: rem-calc(16);
+			width: rem-calc(34);
+			height: rem-calc(34);
+		}
+	}
+}
+
+//=========================================
+// FOOTER
+//=========================================
 
 .global-footer .social-media {
 	// display: flex;

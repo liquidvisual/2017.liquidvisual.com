@@ -1,27 +1,38 @@
 /*
     BREADCRUMBS.CSS
 
-    - Last updated: 29.04.17
+    - updated: 12.12.17
     - liquidvisual.com
 */
-//-----------------------------------------------------------------
-// VARIABLES
-//-----------------------------------------------------------------
 //--------------------------------------------------------------------
-//
+// VARIABLES
+//--------------------------------------------------------------------
+//--------------------------------------------------------------------
+// BREADCRUMB WRAPPER
+//--------------------------------------------------------------------
+
+.breadcrumb-wrapper {
+	position: relative;
+}
+
+//--------------------------------------------------------------------
+// BREADCRUMB
 //--------------------------------------------------------------------
 
 .breadcrumb {
 	display: flex;
 	align-items: center;
-	position: absolute;
-	top: -50px;
 	width: 100%;
-	padding: 0 $spacer;
+	margin: 0;
+	padding: rem-calc(25 0 15 0);
+	border-radius: 0;
+	background: none;
 	font-size: rem-calc(13);
 	font-weight: 500;
-	line-height: 50px;
+	// line-height: rem-calc(50);
+	line-height: 1;
 	text-transform: uppercase;
+	z-index: 100;
 
 	a {
 		color: #222;
@@ -29,16 +40,30 @@
 }
 
 //-----------------------------------------------------------------
+// SPRITE LONG DRIP
+//-----------------------------------------------------------------
+
+.breadcrumb-wrapper {
+	.sprite-long-drip {
+	    position: absolute;
+	    top: 100%;
+	    right: rem-calc(75);
+	    font-size: 4px; // pixels only
+	    z-index: 1;
+	}
+}
+
+//-----------------------------------------------------------------
 //
 //-----------------------------------------------------------------
 
-.breadcrumb-item + .breadcrumb-item::before {
+// .breadcrumb-item + .breadcrumb-item::before {
 	// content: "\f105";
-	content: "";
-	font-family: 'FontAwesome';
-	color: #222;
+	// content: "";
+	// font-family: 'FontAwesome';
+	// color: #222;
 	// font-weight: bold;
-}
+// }
 
 //-----------------------------------------------------------------
 //

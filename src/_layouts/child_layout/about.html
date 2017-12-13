@@ -2,25 +2,18 @@
 layout: base__page
 ---
 
-<!-- TAGLINE -->
-<section class="section section-darker section-bleed">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-md-9 text-center">
-				<h2><span class="brand-primary-color">I'm Mitch,</span> a front-end designer.</h2>
-				<p class="mb-0">I'm here to take the pain out of agency life with reliable clear-cut communication and top-notch website builds coded here (by me) in Sydney.</p>
-			</div>
-		</div>
-	</div>
-</section>
+{% contentfor tagline %}
+	<h2><span class="brand-primary-color">I'm Mitch,</span> a front-end designer.</h2>
+	<p class="mb-0">I'm here to take the pain out of agency life with reliable clear-cut communication and top-notch website builds coded here (by me) in Sydney.</p>
+{% endcontentfor %}
 
-<!-- CONTENT  -->
+<!-- SECTION DARK  -->
 <section class="section section-dark section-bleed">
 
 </section>
 
-<!-- BODY LIGHT -->
-<section class="section section-light section-bleed section-bio-1" hiddenX>
+<!-- SECTION LIGHT -->
+<section class="section section-light section-bleed section-bio-1">
 	<div class="container">
 		<div class="page-tear-top"></div>
 		<div class="row">
@@ -31,9 +24,7 @@ layout: base__page
 	</div>
 </section>
 
-<!-- ## Hey, I'm Mitch. A Sydney front-end designer to pick up the slack!
-
-
+<!-- TODO:
+ ## Hey, I'm Mitch. A Sydney front-end designer to pick up the slack!
  My designer background allows me to cut through those design related snags and make informed decisions about how your site should respond given the situation. A process that would otherwise hold up development with email chains topping the office swear jar.
-
 I'm Mitch and liquidvisual is my brand. Let's do business. -->

@@ -2,7 +2,7 @@
 <!--
     LIQUIDVISUAL-NAVIGATION
 
-    Updated: 07.12.17
+    Updated: 08.12.17
     Note: data is pulled from src/data/sitemap.yml
     OUTPUT:
 
@@ -25,7 +25,7 @@
     {% comment %} Important: leave 'Home' out of the loop {% endcomment %}
     <li class="{% if page.url == "/" %} active {% endif %}">
         <a class="top-parent-anchor" href="/">
-            <img class="hidden-lg-down" width="12" src="/assets/img/ui/fi-home.svg" alt="Home">
+            <img class="hidden-lg-down" width="10" src="/assets/img/ui/fi-home.svg" alt="Home">
             <span class="text hidden-xl-up">Home</span>
         </a>
     </li>
@@ -33,8 +33,7 @@
     {% for item in sitemap | offset: 1 %}
 
         {% capture parent_classes %}
-            {% if forloop.first and page.url == "/" %} active {% endif %}
-            {% if forloop.index > 1 and page.url contains item.url %} active {% endif %}
+            {% if page.url contains item.url %} active {% endif %}
             {% if item.children %} has-dropdown {% endif %}
             {% if item.children and item.children.size > 7 %} has-large-dropdown {% endif %}
             {% if item.children and forloop.index >= 4 %} has-dropdown-right-aligned {% endif %}
@@ -64,7 +63,18 @@
                 <ul class="dropdown {% if item.include_children_in_nav %} is-nav-included {% endif %}" data-parent="{{ item.title }}">
                     {% for item in item.children %}
                         <li class="{% if item.children %} has-dropdown {% endif %}">
-                            <a href="{{ item.url }}"><span class="text">{{ item.title }}</span></a>
+                            <a href="{{ item.url }}">
+
+                                <h5 class="text">{{ item.title }}</h5>
+
+                                {% if item.dropdown_text %}
+                                <div class="dropdown-text">
+                                    <h6>{{ item.dropdown_text[0].subtitle }}</h6>
+                                    <p>{{ item.dropdown_text[0].body }}</p>
+                                </div>
+                                {% endif %}
+
+                            </a>
 
                             {% comment %}
                             <!-----------------------------------------------------------------

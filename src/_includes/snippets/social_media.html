@@ -18,6 +18,24 @@
 			{% endunless %}
 		{% endfor %}
 	</ul>
+{% elsif preset == 2 %}
+	<ul class="social-media">
+	    <li>
+	    	<a title="Share Facebook" class="facebook" href="">
+	    		<div class="icon"><i class="fa fa-facebook"></i></div>
+	    	</a>
+	    </li>
+	    <li>
+	    	<a title="Tweet" class="twitter"  href="">
+	    		<div class="icon"><i class="fa fa-twitter"></i></div>
+	    	</a>
+	    </li>
+	    <li>
+	    	<a title="Share Google+" class="google-plus" href="">
+	    		<div class="icon"><i class="fa fa-google-plus"></i></div>
+	    	</a>
+	    </li>
+	</ul>
 {% else %}
 	<ul class="social-media block-grid-4 block-grid-md-6 mb-4">
 		{% for item in social_media %}

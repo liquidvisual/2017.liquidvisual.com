@@ -4,22 +4,34 @@ layout: base
 
 {% include hero.html %}
 
-{% comment %}
-<!-- BREADCRUMBS -->
-<section class="section-white section-bleed">
-	<div class="container-wrapper">
-	    <div class="container">
-			<p class="mb-0 py-3">back to tutorials</p>
-	    </div>
-	</div>
-</section>
-{% endcomment %}
-
-<!-- MAIN CONTENT -->
+<!-- CONTENT -->
 <div class="container-wrapper">
     <div class="container">
+
+    	<!-- BODY -->
         <main class="main-content">
+
+        	{% if page.breadcrumbs %}
+        		{% include snippets/breadcrumb.html %}
+        	{% endif %}
+
+			{% ifhascontent tagline %}
+	        	<!-- TAGLINE -->
+	        	<section class="section section-darker section-bleed">
+	        		<div class="container">
+	        			<div class="row justify-content-center">
+	        				<div class="col-md-10 col-lg-9 text-center">
+	        					{% contentblock tagline no-convert %}
+	        				</div>
+	        			</div>
+	        		</div>
+	        	</section>
+        	{% endifhascontent %}
+
         	{{ content }}
         </main>
+
     </div>
 </div>
+
+{% contentblock content_additional no-convert %}

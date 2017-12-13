@@ -1,7 +1,7 @@
 /*
     LISTS.CSS
 
-    - Last updated: 03.07.17
+    - updated: 03.07.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -67,6 +67,11 @@
     list-style: none;
     padding: 0; // [RESET]
     margin: 0; // [RESET]
+    margin-bottom: rem-calc(-40);
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: rem-calc(-60);
+    }
 
     .nav-item a {
         display: block;

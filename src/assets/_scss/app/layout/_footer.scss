@@ -1,7 +1,7 @@
 /*
     FOOTER.CSS
 
-    - Last updated: 26.05.17
+    - updated: 26.05.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -13,6 +13,7 @@
 
 .global-footer {
 	background: $gray-dark;
+	overflow: hidden; // fixes wide glitch
 
 	p, ul {
 		font-size: rem-calc(14);
@@ -132,7 +133,7 @@
 	// display: none;
 	position: absolute;
 	// top: 5px;
-	top: -10px;
+	top: rem-calc(-10);
 	right: 0;
 	background: #323232;
 	opacity: 0.5;

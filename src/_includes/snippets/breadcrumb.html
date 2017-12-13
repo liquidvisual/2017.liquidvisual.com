@@ -1,34 +1,27 @@
 {% comment %}
 <!--
-    Updated: 15.08.16
-    Basic output:
+    BREADCRUMB
 
-        <nav class="breadcrumb">
-          <a class="breadcrumb-item" href="#">Home</a>
-          <a class="breadcrumb-item" href="#">Library</a>
-          <a class="breadcrumb-item" href="#">Data</a>
-          <span class="breadcrumb-item active">Bootstrap</span>
+    updated: 12.12.17
+    output:
+
+        <nav aria-label="breadcrumb" role="navigation">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
         </nav>
 -->
 {% endcomment %}
 
 {% assign crumbs = page.url | split: '/' %}
 
-<section class="section-white section-bleed">
-
-        <!-- 2017 bootstrap -->
-        <!-- <nav aria-label="breadcrumb" role="navigation">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
-          </ol>
-        </nav> -->
-
-
+<!-- BREADCRUMBS -->
+<section class="breadcrumb-wrapper section py-0 section-bleed">
+    <div class="container">
         <nav class="breadcrumb">
-          <!-- <span class="float-left mr-1"><i class="fa fa-arrow-circle-left"></i>&nbsp; Back to</span> -->
-            <!-- <a class="breadcrumb-item" href="/">Home</a> -->
+
             {% for crumb in crumbs offset: 1 %}
                 {% if forloop.last %}
                     <!-- <span class="breadcrumb-item">{{ crumb | replace:'-',' ' }}</span> -->
@@ -37,24 +30,23 @@
                 {% endif %}
             {% endfor %}
 
-            {% comment %}
             <!-- TOOLS PANEL -->
             <div class="d-flex align-items-center ml-auto">
 
                 <!-- COMMENT COUNTER -->
-                <div class="comment-counter mr-3">
+                <div class="comment-counter mr-1">
                     <i class="fa fa-comments"></i> <a href="{{page.url}}#disqus_thread">0 comments</a>
                 </div>
 
-                <!-- SOCIAL MEDIA -->
-                <ul class="social-media">
-                    <li><a class="facebook" href=""><i class="fa fa-facebook"></i></a></li>
-                    <li><a class="twitter" href=""><i class="fa fa-twitter"></i></a></li>
-                    <li><a class="google-plus" href=""><i class="fa fa-google-plus"></i></a></li>
-                </ul>
+                {% include snippets/social_media.html preset=2 %}
             </div>
-            {% endcomment %}
-
         </nav>
 
+        <!-- DIVIDER -->
+        <div class="divider"></div>
+
+        <!-- SPRITE LONG DRIP -->
+        <div class="sprite-long-drip">
+
+    </div>
 </section>

@@ -1,7 +1,7 @@
 /*
     SPRITES.CSS
 
-    - Last updated: 16.12.16
+    - updated: 16.12.16
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -12,12 +12,13 @@
 //-----------------------------------------------------------------
 
 .sprite-long-drip {
+    // font-size: 13px; // use contexts to adjust this
     width: calc(#{em-calc(172)} - 1px); // squash rounding bug
     height: em-calc(480);
     background: url(/assets/img/layout/spritesheet-long-drip@2x.png) no-repeat;
     background-size: cover; //em-calc(6192);
-    // border: 1px solid red;
     overflow: hidden;
+    // box-shadow: 0px 0px 1px 3px red;
 }
 
 .has-loaded .sprite-long-drip {
@@ -68,11 +69,12 @@
 
 
 
-
+//-----------------------------------------------------------------
+// RIPPLE - used on hire page
+//-----------------------------------------------------------------
 
 .ripple {
-   position: relative;
-   font-size: 30px; // control size here
+   font-size: rem-calc(30); // control size here
    opacity: 0.8;
 }
 
@@ -84,7 +86,7 @@
    content: "";
    width: 1em;
    height: 1em;
-   border: 1px solid #73bc4c;
+   border: 1.5px solid #73bc4c;
    border-radius: 100%;
    transform: scale(0);
    animation: ripple 2s ease-out 0s infinite;

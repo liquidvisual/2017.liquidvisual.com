@@ -1,7 +1,7 @@
 ---
-layout: child_layout/projects
+layout: child_layout/hire__resume
 title: Resume
-permalink: /resume/
+permalink: /hire/resume/
 hero: /assets/img/content/hero/hero-bricks.jpg
 hero_classes: is-tinted
 theme:

@@ -1,7 +1,7 @@
 ---
 layout: child_layout/projects
 title: Interview
-permalink: /interview/
+permalink: /hire/interview/
 hero: /assets/img/content/hero/hero-bricks.jpg
 hero_classes: is-tinted
 theme:

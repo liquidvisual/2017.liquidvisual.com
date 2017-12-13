@@ -3,10 +3,10 @@
 
 - title: About
   url: /about/
-  include_children_in_nav: true
-  children:
-    - title: How I Work
-      url: /about/how-i-work/
+  # include_children_in_nav: false
+  # children:
+  #   - title: How I Work
+  #     url: /about/how-i-work/
 
 - title: Services
   url: /services/
@@ -14,11 +14,15 @@
   children:
     - title: Digital Agency
       url: /services/digital-agency/
-      # landing page
-      # landing page
+      dropdown_text:
+        - subtitle: Website Build
+          body: High performing static websites built with years of expertise. Full versioned.
 
     - title: Small Business
       url: /services/small-business/
+      dropdown_text:
+        - subtitle: Website Design Packages
+          body: Modern website design with personality. Hand coded in HTML5.
 
 - title: Projects
   url: /projects/
