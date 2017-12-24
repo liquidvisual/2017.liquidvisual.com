@@ -7,13 +7,9 @@
 //--------------------------------------------------------------------
 // VARIABLES
 //--------------------------------------------------------------------
-//--------------------------------------------------------------------
-// BREADCRUMB WRAPPER
-//--------------------------------------------------------------------
 
-.breadcrumb-wrapper {
-	position: relative;
-}
+// $breadcrumb-bg: desaturate(darken(#eff1f4, 3%), 3%);
+$breadcrumb-bg: white;
 
 //--------------------------------------------------------------------
 // BREADCRUMB
@@ -22,34 +18,96 @@
 .breadcrumb {
 	display: flex;
 	align-items: center;
+	position: relative; // [LOCKED] for z-index
 	width: 100%;
 	margin: 0;
-	padding: rem-calc(25 0 15 0);
+	padding: rem-calc(12 0);
+	// padding: rem-calc(25 0 15 0);
 	border-radius: 0;
 	background: none;
 	font-size: rem-calc(13);
 	font-weight: 500;
-	// line-height: rem-calc(50);
 	line-height: 1;
 	text-transform: uppercase;
 	z-index: 100;
+
+	// for hero breadcrumb effect
+	@include media-breakpoint-up(xl) {
+	    padding: rem-calc(0 0 12 0);
+	}
 
 	a {
 		color: #222;
 	}
 }
 
-//-----------------------------------------------------------------
-// SPRITE LONG DRIP
-//-----------------------------------------------------------------
+//--------------------------------------------------------------------
+// BREADRCUMB BG OVERFLOW
+//--------------------------------------------------------------------
 
-.breadcrumb-wrapper {
-	.sprite-long-drip {
+.breadcrumb-bg-overflow {
+	position: absolute;
+	top: 0;
+	left: -50%;
+	width: 200%;
+	height: calc(100% + 10px);
+	// border: 1px solid grey; // uncomment to see mask
+	overflow: hidden;
+	z-index: 1;
+
+	@include media-breakpoint-up(xl) {
+	    left: 0;
+	    width: 100%;
+	}
+
+	.breadcrumb-bg {
+		position: absolute;
+		width: 100%;
+		height: calc(100% - 10px);
+		background: $breadcrumb-bg;
+
+        // background-image: linear-gradient(-180deg, #FFFFFF 5%, darken(#E7E9ED, 2%) 130%);
+		box-shadow: 0 1px 4px 2px rgba(black, 0.03);
+		// border-bottom: 1px solid rgba(black, 0.1);
+	}
+}
+
+//=========================================
+// BREADCRUMB SHIFT UP EFFECT
+// This breaks rules, but no other way.
+// Illusion is in the hero.
+//=========================================
+
+.hero-bottom-breadcrumb-illusion {
+	@include media-breakpoint-up(xl) {
 	    position: absolute;
-	    top: 100%;
-	    right: rem-calc(75);
-	    font-size: 4px; // pixels only
-	    z-index: 1;
+	    bottom: 0;
+	    left: 0;
+	    width: 100%;
+	    height: rem-calc(12);
+	    background: $breadcrumb-bg;
+	}
+}
+
+//--------------------------------------------------------------------
+// IS-DARK
+//--------------------------------------------------------------------
+
+.is-dark .breadcrumb {
+	position: absolute;
+	padding-top: rem-calc(20);
+
+	a {
+		padding: rem-calc(10);
+		border-radius: $border-radius-sm;
+		background: $gray-dark;
+		color: rgba(white, 0.3);
+		transition: background 300ms ease, color 300ms ease;
+
+		&:hover {
+			background: lighten($gray-dark, 5%);
+			color: rgba(white, 0.5);
+		}
 	}
 }
 

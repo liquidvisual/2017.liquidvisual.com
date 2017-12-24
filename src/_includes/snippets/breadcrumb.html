@@ -2,7 +2,7 @@
 <!--
     BREADCRUMB
 
-    updated: 12.12.17
+    updated: 14.12.17
     output:
 
         <nav aria-label="breadcrumb" role="navigation">
@@ -17,8 +17,14 @@
 
 {% assign crumbs = page.url | split: '/' %}
 
+{% capture breadcrumb_classes %}
+    {% if page.theme != 'theme-light' %}
+        section-darker is-dark
+    {% endif %}
+{% endcapture %}
+
 <!-- BREADCRUMBS -->
-<section class="breadcrumb-wrapper section py-0 section-bleed">
+<section class="breadcrumb-wrapper section section-bleed py-0 {{ breadcrumb_classes }}">
     <div class="container">
         <nav class="breadcrumb">
 
@@ -30,23 +36,25 @@
                 {% endif %}
             {% endfor %}
 
-            <!-- TOOLS PANEL -->
-            <div class="d-flex align-items-center ml-auto">
+            {% if page.theme == 'theme-light' %}
+                <!-- TOOLS PANEL -->
+                <div class="d-flex align-items-center ml-auto">
 
-                <!-- COMMENT COUNTER -->
-                <div class="comment-counter mr-1">
-                    <i class="fa fa-comments"></i> <a href="{{page.url}}#disqus_thread">0 comments</a>
+                    <!-- COMMENT COUNTER -->
+                    <div class="comment-counter mr-1">
+                        <i class="fa fa-comments"></i> <a href="{{page.url}}#disqus_thread">0 comments</a>
+                    </div>
+
+                    {% include snippets/social_media.html preset=2 %}
                 </div>
+            {% endif %}
 
-                {% include snippets/social_media.html preset=2 %}
-            </div>
         </nav>
 
-        <!-- DIVIDER -->
-        <div class="divider"></div>
-
-        <!-- SPRITE LONG DRIP -->
-        <div class="sprite-long-drip">
+        <!-- BG OVERFLOW -->
+        <div class="breadcrumb-bg-overflow">
+            <div class="breadcrumb-bg"></div>
+        </div>
 
     </div>
 </section>

@@ -7,6 +7,7 @@ hero_classes: is-tinted
 theme:
 logo: /assets/img/content/branding/logo-type--white-transparent.svg
 hero_text: /assets/img/layout/headings/heading-small-business--light.svg
+breadcrumbs: true
 ---
 
 Small Biz

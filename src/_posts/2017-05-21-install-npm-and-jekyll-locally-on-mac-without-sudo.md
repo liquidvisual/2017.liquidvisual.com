@@ -1,10 +1,10 @@
 ---
 layout: child_layout/tutorials_item
 date: 2015-02-03
-title: Install NPM and Jekyll Locally Without Sudo
+title: Install NPM and Jekyll Locally Without Sudo and Without Fucking Bullshit You Clown Dick
 categories: Development
-hero: /assets/img/content/hero-home-9.jpg
-hero_classes: is-tintedX
+hero: /assets/img/content/hero/hero-pinky.png
+hero_classes: is-tutorial-item
 theme: theme-light
 logo: /assets/img/content/branding/logo-type--white-transparent.svg
 breadcrumbs: true

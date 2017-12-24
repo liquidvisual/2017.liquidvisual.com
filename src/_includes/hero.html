@@ -22,17 +22,29 @@
                 <div class="lv-hero-item" style="background-image: url('{{ hero }}')">
 
                     {% if hero_text %}
-                        <h1 class="mb-0"><img width="100%" src="{{ hero_text }}" alt="{{ page.title }}"></h1>
-                    {% else %}
-                        <div>
-                            <h1 class="display-2 p-4 mb-0">{{ page.title }}</h1>
-                            <p>Written by <b>Mitch</b> on Jan</p>
+                        <div class="lv-hero-item-caption">
+                            <h1 class="mb-0"><img width="100%" src="{{ hero_text }}" alt="{{ page.title }}"></h1>
                         </div>
+                    {% else %}
+                        <div class="lv-hero-item-caption">
+                            <div class="container mb-4">
+                                <div class="row">
+                                    <div class="col-lg-10">
+                                        <h1 class="display-2">{{ page.title }}</h1>
+                                        <p>by <a href="/hire/">Mitch Warren</a> | on {{ page.date | date: "%d %B %Y" }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    {% if page.breadcrumbs and page.theme == 'theme-light' %}
+                        <!-- BREADCRUMB ILLUSION -->
+                        <div class="hero-bottom-breadcrumb-illusion"></div>
                     {% endif %}
 
                 </div>
             </div>
-
         </div>
     </div>
 </div> <!-- /.lv-hero-wrapper -->

@@ -5,7 +5,8 @@ title: How to Make the Fucking Logo Bigger
 categories: Development
 hero: /assets/img/content/hero-home-9.jpg
 theme: theme-light
-logo: /assets/img/content/branding/logo-type-white-transparent.svg
+logo: /assets/img/content/branding/logo-type--white-transparent.svg
+breadcrumbs: true
 ---
 
 This morning I’d gone to bed just past 2AM, desperate for sleep after a day of travel. There had barely been a moment to pass out when I heard a knock at my hotel room door: seven strangers informed me that I’d been chosen for a secret meeting. The next thing I knew, I was outside in the snow and whipping wind. We met with a man named Mark, who warned us that a nefarious organization might be behind a series of murders that had started in the area. We would help him uncover those responsible, he said, but first we had to perform a ritual. One that would bind us together as members of an order so secret I can’t even reveal its name here.
