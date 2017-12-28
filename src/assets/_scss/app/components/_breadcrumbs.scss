@@ -39,6 +39,18 @@ $breadcrumb-bg: white;
 	a {
 		color: #222;
 	}
+
+	.breadcrumb-item i {
+		transition: opacity 200ms ease, color 200ms ease;
+	}
+
+	.breadcrumb-item {
+		&:hover i {
+			@include media-breakpoint-up(xl) {
+				color: $brand-primary;
+			}
+		}
+	}
 }
 
 //--------------------------------------------------------------------
@@ -95,14 +107,21 @@ $breadcrumb-bg: white;
 
 .is-dark .breadcrumb {
 	position: absolute;
-	padding-top: rem-calc(20);
+	padding-top: rem-calc(5);
 
-	a {
+	@include media-breakpoint-up(md) {
+	    padding-top: rem-calc(15);
+	}
+
+	.breadcrumb-item {
 		padding: rem-calc(10);
 		border-radius: $border-radius-sm;
-		background: $gray-dark;
 		color: rgba(white, 0.3);
 		transition: background 300ms ease, color 300ms ease;
+
+		@include media-breakpoint-up(md) {
+		    background: $gray-dark;
+		}
 
 		&:hover {
 			background: lighten($gray-dark, 5%);

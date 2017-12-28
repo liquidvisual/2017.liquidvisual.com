@@ -1,7 +1,7 @@
 /*
     HEADER.CSS
 
-    - updated: 11.12.16
+    - updated: 26.12.16
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -18,8 +18,7 @@ $header-height-lg: 120px !default;
 
 .headroom {
     will-change: transform;
-    // transition: transform 250ms ease;
-    // transition: all 100ms ease;
+    transition: transform 250ms ease;
 
     @include media-breakpoint-up(md) {
         transition: opacity 150ms ease,
@@ -29,24 +28,29 @@ $header-height-lg: 120px !default;
 }
 
 //****************************************************
+// PINNED - SCROLLING DOWN
+//****************************************************
 
 .headroom--pinned {
-    transform: translateY(0%);
+	@include media-breakpoint-down(md) { // mobile/tablet only
+	    transform: translateY(0%);
+	}
 }
 
 //****************************************************
+// UNPINNED - SCROLLING UP
+//****************************************************
 
 .headroom--unpinned {
-	@include media-breakpoint-down(sm) { // mobiles only
-	    // transform: translateY(-100%);
+	@include media-breakpoint-down(md) { // mobile/portrait only
+		transform: translateY(-100%);
+		transition-delay: 1000ms; // delay for UX
 	}
 
-
-
-    // @include media-breakpoint-up(md) {
-        opacity: 0;
-        visibility: hidden;
-    // }
+	@include media-breakpoint-up(md) {
+	    opacity: 0; // [LOCKED] - for lg up
+	    visibility: hidden; // [LOCKED]
+	}
 }
 
 //****************************************************
@@ -68,7 +72,6 @@ $header-height-lg: 120px !default;
 .headroom--top.global-header {
 	background: none;
 	box-shadow: none;
-	transition: none;
 
 	.logo img {
 		@include media-breakpoint-down(sm) {
@@ -88,7 +91,6 @@ $header-height-lg: 120px !default;
 // logo is dark over white on mobile
 //****************************************************
 
-.headroom--topXXXX,
 .headroom--not-top {
 	.logo img.is-dark {
 		@include media-breakpoint-down(sm) {
@@ -161,7 +163,7 @@ $header-height-lg: 120px !default;
 //-----------------------------------------------------------------
 
 .global-header .logo {
-	display: block; // improve hit area
+	display: block; // [LOCKED] improve hit area
 
 	img {
 		display: none; // [LOCKED] - applies to 'is-dynamic'
@@ -194,7 +196,7 @@ $header-height-lg: 120px !default;
 	.lv-hamburger-middle,
 	.lv-hamburger-bottom {
 		@include media-breakpoint-down(sm) {
-		    // background: #222;
+		    background: #222;
 		}
 	}
 }

@@ -1,7 +1,7 @@
 /*
     TOPBAR-DROPDOWN.CSS
 
-    - updated: 11.12.17
+    - updated: 26.12.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -13,7 +13,7 @@
 
 .lv-topbar .dropdown {
     left: calc(50% - #{rem-calc(120)});
-    width: rem-calc(240);
+    width: rem-calc(230);
     background: none;
     text-align: center;
     padding-top: rem-calc(16);
@@ -26,9 +26,9 @@
         left: calc(50% - 15px);
         width: rem-calc(30);
         height: rem-calc(30);
+        border-radius: 2px;
         background: #0c0c0c;
         transform: rotate(45deg);
-        border-radius: 2px;
         z-index: -1;
     }
 
@@ -125,22 +125,21 @@
 
 .lv-off-canvas .dropdown {
 
-    // background: #0c0c0c;
-
     a {
         height: auto;
         padding: rem-calc(20 15 20 0);
         line-height: 1;
     }
 
+    h5 {
+        font-family: $font-family-sans-serif !important;
+    }
+
     .dropdown-text {
         // display: none;
 
-        h5 {
-            margin: 0;
-        }
-
         h6 {
+            font-family: $font-family-sans-serif;
             margin-bottom: rem-calc(5);
             font-size: rem-calc(14);
             text-transform: uppercase;

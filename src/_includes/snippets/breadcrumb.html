@@ -32,7 +32,7 @@
                 {% if forloop.last %}
                     <!-- <span class="breadcrumb-item">{{ crumb | replace:'-',' ' }}</span> -->
                 {% else %}
-                    <a class="breadcrumb-item" href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}"><i class="fa fa-arrow-circle-left"></i>&nbsp; Back to {{ crumb | replace:'-',' ' }}</a>
+                    <a class="breadcrumb-item" href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}"><i class="fa fa-arrow-circle-left"></i>&nbsp; <span class="hidden-sm-down">Back to</span> {{ crumb | replace:'-',' ' }}</a>
                 {% endif %}
             {% endfor %}
 
@@ -41,8 +41,8 @@
                 <div class="d-flex align-items-center ml-auto">
 
                     <!-- COMMENT COUNTER -->
-                    <div class="comment-counter mr-1">
-                        <i class="fa fa-comments"></i> <a href="{{page.url}}#disqus_thread">0 comments</a>
+                    <div class="breadcrumb-item comment-counter mr-1">
+                        <i class="fa fa-comments"></i> <a href="{{page.url}}#disqus_thread">0 <span class="hidden-sm-down">comments</span></a>
                     </div>
 
                     {% include snippets/social_media.html preset=2 %}
