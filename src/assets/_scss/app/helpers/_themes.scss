@@ -1,21 +1,22 @@
 /*
     THEMES.CSS
 
-    - updated: 08.12.17
+    - updated: 29.12.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
 // VARIABLES
 //-----------------------------------------------------------------
-
-$purple-color: #3D3D4F;
-
 //-----------------------------------------------------------------
 // THEME LIGHT
 //-----------------------------------------------------------------
 
-.theme-light .lv-page {
-	background: desaturate(darken($gray-light, 8%), 10%); // purpley should be variable?
+.theme-light {
+	background-color: $gray-light; // for body before load
+
+	.lv-page { // for off-canvas
+		background: $gray-light; // desaturate?
+	}
 }
 
 //=========================================

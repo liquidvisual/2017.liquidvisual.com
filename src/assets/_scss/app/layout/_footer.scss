@@ -130,23 +130,16 @@
 //=========================================
 
 .back-to-top {
-	// display: none;
 	position: absolute;
-	// top: 5px;
 	top: rem-calc(-10);
 	right: 0;
 	background: #323232;
-	opacity: 0.5;
 	width: rem-calc(44);
 	height: rem-calc(44);
 	line-height: rem-calc(44);
 	border-radius: 100%;
-	// width: rem-calc(50);
-	// height: rem-calc(34);
-	// line-height: rem-calc(34);
 	text-align: center;
 	font-size: rem-calc(22);
-	// border-radius: $border-radius-sm $border-radius-sm 0 0;
 
 	i {
 		color: white;

@@ -1,6 +1,5 @@
 /* generated with grunt-sass-globbing */
 
-@import "animation";
 @import "breadcrumbs";
 @import "forms";
 @import "hero";
@@ -9,10 +8,15 @@
 @import "off-canvas";
 @import "panels";
 @import "social-media";
-@import "sprites-dmo";
 @import "sprites";
 @import "type";
 @import "sections/sections";
+@import "sections/sections__bio";
+@import "sections/sections__cereal-box";
+@import "sections/sections__dmo";
+@import "sections/sections__dmo_sprites";
+@import "sections/sections__editorial";
+@import "sections/sections__mad-magazines";
 @import "zine/zine-bubble";
 @import "zine/zine-cover";
 @import "zine/zine-entice";

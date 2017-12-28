@@ -7,15 +7,14 @@
 // LV COLORS
 //--------------------------------------------------------------------
 
-$brand-primary:             #EF2163 !default;
-$brand-secondary:           #1FB5C3 !default;
-$brand-tertiary:            #96577D !default;
+$brand-primary:             #EF2163;
+$brand-secondary:           #1FB5C3;
+$brand-tertiary:            #96577D;
 
 $gray-dark:                 #27272F; //#373a3c !default;
-$gray:                      #555; //#55595c !default;
+$gray-darker:               darken($gray-dark, 5%);
+$gray:                      #555;
 $gray-light:                #EFF1F4; //#818a91 !default;
-// $gray-lighter:              #eceeef !default;
-// $gray-lightest:             #f7f7f9 !default;
 
 //--------------------------------------------------------------------
 //
@@ -147,8 +146,8 @@ $spacer: rem-calc(20); //1rem !default;
 // //
 // // Settings for the `<body>` element.
 
-$body-bg:                   aqua; //darken($gray-dark, 3%); //$white !default;
-$body-color:                #555; //$gray-900 !default;
+$body-bg:                   $gray-dark; //$white !default;
+$body-color:                $gray-light; //$gray; //$gray-900 !default;
 
 // // Links
 // //
@@ -282,7 +281,7 @@ $headings-margin-bottom: $spacer; //($spacer / 2) !default;
 $headings-font-family:   'Montserrat'; // , inherit !default;
 $headings-font-weight:   700; //600; //500 !default;
 $headings-line-height:   1.2; //1.1 !default;
-$headings-color:         $gray-dark; //inherit !default;
+$headings-color:         white; //$gray-dark; //inherit !default;
 
 $display1-size: rem-calc(53); // [LOCKED]  66
 $display2-size: rem-calc(53); // [LOCKED]  53

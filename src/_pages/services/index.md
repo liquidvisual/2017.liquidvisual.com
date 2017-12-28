@@ -3,7 +3,7 @@ layout: child_layout/services
 title: Services
 permalink: /services/
 hero: /assets/img/content/hero/hero-bricks.jpg
-hero_classes: is-tinted
+hero_classes: has-bleed-tint
 theme:
 logo: /assets/img/content/branding/logo-type--white-transparent.svg
 hero_text: /assets/img/layout/headings/heading-services--light.svg

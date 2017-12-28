@@ -29,8 +29,8 @@ $hero-height-xl: auto;
         background-attachment: fixed;
     }
 
-    // specified per page
-    &.is-tinted {
+    // specified per page (hero_classes)
+    &.has-bleed-tint {
         @include media-breakpoint-up(xl) {
             &:after {
                 content: "";
