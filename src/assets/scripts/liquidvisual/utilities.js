@@ -1,5 +1,5 @@
 /*
-    UTILITIES.JS - Last updated: 16.03.16
+    UTILITIES.JS - Last updated: 02.01.18
 */
 //-----------------------------------------------------------------
 // Utilities
@@ -58,12 +58,8 @@
     }
 
     //-----------------------------------------------------------------
-    // Loader - to replace NProgress
+    //
     //-----------------------------------------------------------------
-
-    // $(window).on('load',function() {
-    //     $('[data-page-loader]').addClass('has-loaded');
-    // });
 
 }(jQuery));
 

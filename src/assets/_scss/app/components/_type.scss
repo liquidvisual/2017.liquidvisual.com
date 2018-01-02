@@ -1,7 +1,7 @@
 /*
     TYPE.CSS
 
-    - updated: 26.12.17
+    - updated: 31.12.17
     - liquidvisual.com
 */
 //--------------------------------------------------------------------
@@ -13,16 +13,15 @@
 
 html {
 	@include media-breakpoint-down(xl) { font-size: 14px; }
-
-	// @include media-breakpoint-down(sm) { font-size: 12px; }
 }
 
 //-----------------------------------------------------------------
 // ANCHORS
 //-----------------------------------------------------------------
 
-a {
+a, button {
 	font-weight: bold;
+	cursor: pointer;
 	transition: color ease 300ms, background-color ease 300ms;
 }
 
@@ -31,7 +30,7 @@ a {
 //-----------------------------------------------------------------
 
 p, ul, ol, td {
-	font-size: rem-calc(18); // 18?
+	font-size: rem-calc(18);
 }
 
 //=========================================
@@ -67,19 +66,23 @@ p.lead {
 // HEADINGS
 //-----------------------------------------------------------------
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
 	// word-wrap: break-word; // experiment
+	// transform: scaleX(0.93);
+	// transform-origin: left;
+	// -webkit-text-size-adjust: none;
 
 	small { // superfluous so far
 		font-family: $font-family-sans-serif;
 		font-weight: normal;
 		color: darken($gray-light, 35%);
 	}
-}
 
-.subheader {
-	font-weight: normal;
-	color: $brand-primary;
+	&.subheader {
+		font-weight: normal;
+		color: $brand-primary !important;
+	}
 }
 
 //-----------------------------------------------------------------
@@ -98,14 +101,14 @@ h1, h2, h3, h4, h5, h6 {
 // HEADINGS MOBILE
 //-----------------------------------------------------------------
 
-// @include media-breakpoint-down(sm) {
-//     // h1, .h1 { font-size: calc(#{$font-size-h1} - 60%); }
-//     // h2, .h2 { font-size: calc(#{$font-size-h2} - 60%); }
-//     // h3, .h3 { font-size: calc(#{$font-size-h3} - 30%); }
-//     // h4, .h4 { font-size: calc(#{$font-size-h4} - 20%); }
-//     // h5, .h5 { font-size: calc(#{$font-size-h5} - 10%); }
-//     // h6, .h6 { font-size: calc(#{$font-size-h6} - 10%); }
-// }
+@include media-breakpoint-down(sm) {
+    h1, .h1 { font-size: calc(#{$h1-font-size} - 64%); }
+    h2, .h2 { font-size: calc(#{$h2-font-size} - 40%); }
+    h3, .h3 { font-size: calc(#{$h3-font-size} - 20%); }
+    h4, .h4 { font-size: calc(#{$h4-font-size} - 24%); }
+    h5, .h5 { font-size: calc(#{$h5-font-size} - 15%); }
+    // h6, .h6 { font-size: calc(#{$h6-font-size} - 2%); }
+}
 
 @include media-breakpoint-down(sm) {
 	.display-1 { font-size: $h1-font-size; }

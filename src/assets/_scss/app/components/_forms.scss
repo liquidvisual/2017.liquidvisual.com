@@ -1,25 +1,12 @@
 /*
     FORMS.CSS
 
-    - updated: 06.10.16
+    - updated: 02.01.18
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
 // VARIABLES
 //-----------------------------------------------------------------
-//-----------------------------------------------------------------
-// FORMS
-//-----------------------------------------------------------------
-
-input[type="text"],
-input[type="email"],
-input[type="phone"],
-input[type="password"],
-select,
-textarea {
-	-webkit-appearance: none; // removes shadow on iOS
-}
-
 //-----------------------------------------------------------------
 // BOOTSTRAP VALIDATION
 // http://1000hz.github.io/bootstrap-validator/#validator-events
@@ -34,9 +21,9 @@ form[data-toggle="validator"] .error {
 }
 
 form[data-toggle="validator"] .has-error > .form-control {
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-	margin-bottom: 0;
+	// border-bottom-left-radius: 0;
+	// border-bottom-right-radius: 0;
+	// margin-bottom: 0;
 }
 
 form[data-toggle="validator"] .has-error > .error {
@@ -44,91 +31,61 @@ form[data-toggle="validator"] .has-error > .error {
 	margin-bottom: $spacer*1.5;
 }
 
-form label em {
+form label em,
+form label i {
 	color: rgba(white, 0.5);
+}
+
+//-----------------------------------------------------------------
+// ASTERISK
+//-----------------------------------------------------------------
+
+.asterisk {
+	font-size: rem-calc(30);
+	line-height: 0;
+	color: $blue;
 }
 
 //-----------------------------------------------------------------
 //
 //-----------------------------------------------------------------
 
-.availability-notice {
-	display: flex;
-	align-items: center;
-	padding: $spacer;
-	margin-bottom: $spacer*1.5;
-	background: rgba(white, 0.1);
-	border-radius: $border-radius;
-}
-
-.availability-notice-orb {
-	position: relative; // [LOCKED]
-	width: rem-calc(30);
-	height: rem-calc(30);
-	// background: #f45f5e; // red
-	background: #73bc4c;
-	border-radius: 100%;
-	margin-right: $spacer;
-}
-
-.lv-page label {
-	color: white;
-}
-
-label > small,
-.asterisk {
-	font-size: rem-calc(30);
-	color: #44b1e5; // NEED THIS VARIABLIZED
-	line-height: 0;
-}
-
-.text-asterisk {
-	color: rgba(white, 0.6);
-	font-size: rem-calc(14);
-
-	&::first-letter {
-		font-size: rem-calc(20);
-	}
-}
-
-.lv-page input,
-.lv-page textarea {
-	border: 0 !important;
-	padding: rem-calc(15) !important;
-	margin-bottom: $spacer*1.5;
-	background: #1b1b21 !important;
-	border-radius: 0;
-	box-shadow: 2px 2px 3px 3px rgba(0,0,0, 0.05);
-}
-
-.lv-page .custom-select {
-	background: #1b1b21 !important;
-	appearance: none;
-	-webkit-appearance: none;
-}
-
-.lv-page .custom-checkbox,
-.lv-page .custom-radio {
-	/*display: flex;*/
-	/*align-items: center;*/
-	margin-bottom: rem-calc(15);
-	padding-left: 0;
+input,
+textarea {
 
 }
 
-fieldset {
-	// padding-bottom: 30px;
-	margin-bottom: rem-calc(30);
-}
+// .lv-page input,
+// .lv-page textarea {
+// 	margin-bottom: $spacer*1.5;
+// 	box-shadow: 2px 2px 3px 3px rgba(0,0,0, 0.05);
+// }
 
-.custom-control-indicator {
-	border-radius: 0;
-	padding: rem-calc(15);
-	margin-right: rem-calc(15);
-	position: static;
-	display: inline-block;
-	background: #1b1b21 !important;
-}
+// .lv-page .custom-select {
+// 	background: #1b1b21 !important;
+// 	appearance: none;
+// 	-webkit-appearance: none;
+// }
+
+// .lv-page .custom-checkbox,
+// .lv-page .custom-radio {
+// 	margin-bottom: rem-calc(15);
+// 	padding-left: 0;
+
+// }
+
+// fieldset {
+// 	margin-bottom: rem-calc(30);
+// }
+
+// .custom-control-indicator {
+// 	border-radius: 0;
+// 	padding: rem-calc(15);
+// 	margin-right: rem-calc(15);
+// 	position: static;
+// 	display: inline-block;
+// 	background: #1b1b21 !important;
+// }
 
 //=========================================
 //

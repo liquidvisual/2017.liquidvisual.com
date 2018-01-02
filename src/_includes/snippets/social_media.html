@@ -3,7 +3,7 @@
 {% assign preset = include.preset | default: 0 %}
 
 {% if preset == 1 %}
-	<ul class="social-media block-grid-xs-1 block-grid-md-2 mb-4">
+	<ul class="social-media block-grid-xs-1 block-grid-lg-2 mb-4">
 		{% for item in social_media %}
 			{% unless item.exclude %}
 				<li>

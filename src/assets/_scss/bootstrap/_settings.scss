@@ -50,7 +50,7 @@ $gray-light:                #EFF1F4; //#818a91 !default;
 //   "900": $gray-900
 // ), $grays);
 
-$blue:    $brand-secondary; //#007bff !default;
+$blue:    #44b1e5; //$brand-secondary; //#007bff !default;
 // $indigo:  #6610f2 !default;
 // $purple:  #6f42c1 !default;
 // $pink:    #e83e8c !default;
@@ -78,7 +78,7 @@ $red:     #dc3545 !default;
 //   "gray-dark":  $gray-800
 // ), $colors);
 
-// $primary:       $blue !default;
+$primary:       $brand-secondary; //$blue !default;
 // $secondary:     $gray-600 !default;
 // $success:       $green !default;
 // $info:          $cyan !default;
@@ -155,7 +155,7 @@ $body-color:                $gray-light; //$gray; //$gray-900 !default;
 
 $link-color:                $brand-secondary; //theme-color("primary") !default;
 // $link-decoration:           none !default;
-// $link-hover-color:          darken($link-color, 15%) !default;
+$link-hover-color:          lighten($link-color, 15%); //darken($link-color, 15%) !default;
 $link-hover-decoration:     none; //underline !default;
 
 // // Paragraphs
@@ -170,7 +170,7 @@ $link-hover-decoration:     none; //underline !default;
 // // Define the minimum dimensions at which your layout will change,
 // // adapting to different screen sizes, for use in media queries.
 
-$container-gutter: 30px; // LV
+$container-gutter: 30px; // [LOCKED] - lv added
 
 $grid-breakpoints: (
   xs: 0,      // [LOCKED]
@@ -348,11 +348,11 @@ $lead-font-size:              rem-calc(23); //($font-size-base * 1.25) !default;
 // //
 // // For each of Bootstrap's buttons, define text, background and border color.
 
-// $input-btn-padding-y:         .375rem !default;
-// $input-btn-padding-x:         .75rem !default;
+$input-btn-padding-y:         rem-calc(13);  //.375rem !default;
+$input-btn-padding-x:         rem-calc(15); //.75rem !default;
 // $input-btn-line-height:       $line-height-base !default;
 
-// $input-btn-focus-width:       .2rem !default;
+// $input-btn-focus-width:       0; //.2rem !default;
 // $input-btn-focus-color:       rgba(theme-color("primary"), .25) !default;
 // $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
@@ -364,8 +364,8 @@ $lead-font-size:              rem-calc(23); //($font-size-base * 1.25) !default;
 // $input-btn-padding-x-lg:      1rem !default;
 // $input-btn-line-height-lg:    $line-height-lg !default;
 
-// $btn-font-weight:             $font-weight-normal !default;
-// $btn-box-shadow:              inset 0 1px 0 rgba($white,.15), 0 1px 1px rgba($black,.075) !default;
+$btn-font-weight:             600; //$font-weight-normal !default;
+// $btn-box-shadow:              2px 2px 10px 3px red; //inset 0 1px 0 rgba($white,.15), 0 1px 1px rgba($black,.075) !default;
 // $btn-active-box-shadow:       inset 0 3px 5px rgba($black,.125) !default;
 
 // $btn-link-disabled-color:     $gray-600 !default;
@@ -382,15 +382,15 @@ $lead-font-size:              rem-calc(23); //($font-size-base * 1.25) !default;
 
 // // Forms
 
-// $input-bg:                              $white !default;
+$input-bg:                              #1b1b21; //$white !default;
 // $input-disabled-bg:                     $gray-200 !default;
 
-// $input-color:                           $gray-700 !default;
+$input-color:                           $gray-light; //$gray-700 !default;
 // $input-border-color:                    $gray-400 !default;
-// $input-btn-border-width:                $border-width !default; // For form controls and buttons
-// $input-box-shadow:                      inset 0 1px 1px rgba($black,.075) !default;
+$input-btn-border-width:                0; //$border-width !default; // For form controls and buttons
+$input-box-shadow:                      2px 2px 3px 3px red; //inset 0 1px 1px rgba($black,.075) !default;
 
-// $input-border-radius:                   $border-radius !default;
+$input-border-radius:                   0; //$border-radius !default;
 // $input-border-radius-lg:                $border-radius-lg !default;
 // $input-border-radius-sm:                $border-radius-sm !default;
 

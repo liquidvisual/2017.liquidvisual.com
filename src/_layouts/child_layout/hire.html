@@ -21,7 +21,7 @@ layout: base__page
 <section class="section is-dark">
 	<div class="container">
 		<div class="row">
-			<div class="col-5">
+			<div class="col-md-5">
 
 				<!-- SPRITE BRAIN -->
 				<div class="sprite-brain">
@@ -34,20 +34,22 @@ layout: base__page
 					<img width="100%" src="/assets/img/content/hire/brain-6.svg">
 				</div>
 
-				<div class="availability-notice">
+				<!-- AVAILABILITY NOTICE -->
+				<div class="availability-notice mr-md-4 mr-lg-0 ">
 				    <div class="availability-notice-orb"><span class="ripple"></span></div>
 				    <div>
-				        <h4 class="mb-0">Current Availability</h4>
-				        <p class="mb-0">My brain is ready for work!</p>
+				        <h4 class="mb-0"><span class="hidden-md-down">Current</span> Availability</h4>
+				        <p class="mb-0">
+				        	<span class="hidden-md-down">My brain is ready for work!</span>
+				        	<span class="hidden-lg-up">Ready to work.</span>
+				        </p>
 				    </div>
 				</div>
 
 				{% include snippets/social_media.html preset=1 %}
 
-				<!-- <p class="py-3"><img width="100%" src="/assets/img/layout/mitch-at.svg"></p> -->
-
 				<!-- RESOURCES -->
-				<ul class="social-media block-grid-xs-1 block-grid-md-2 mb-4">
+				<ul class="social-media block-grid-xs-1 block-grid-lg-2 mb-4">
 					<li>
 						<a class="icon-resume" title="Get CV" href="/hire/resume/">
 							<div class="icon"><i class="fa fa-file"></i></div>
@@ -69,7 +71,7 @@ layout: base__page
 				</ul>
 
 			</div>
-			<div class="col-md-7 pl-md-5">
+			<div class="col-md-7 pl-lg-5">
 
 				<!-- TAB PANES -->
 				<div class="tab-content">

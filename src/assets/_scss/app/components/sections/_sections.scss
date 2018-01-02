@@ -28,7 +28,7 @@
 
 .section {
     position: relative;
-    padding: ($spacer * 2) 0;
+    padding: ($spacer * 2.5) 0;
     background-color: $red; // ALERT: MUST SET COLOR
 
     @include media-breakpoint-up(md) {

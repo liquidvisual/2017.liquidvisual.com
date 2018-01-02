@@ -29,18 +29,30 @@ $hero-height-xl: auto;
         background-attachment: fixed;
     }
 
+    //=========================================
+    // HAS NO GUTTERS
+    // heading will hug sides
+    //=========================================
+
+    &.has-no-gutters > .container-wrapper > .container {
+        @include media-breakpoint-down(lg) {
+            max-width: 100%;
+        }
+    }
+
+    //=========================================
     // specified per page (hero_classes)
-    &.has-bleed-tint {
+    //=========================================
+
+    &.has-bleed-tint:after {
         @include media-breakpoint-up(xl) {
-            &:after {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(black, 0.4);
-            }
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(black, 0.4);
         }
     }
 }
