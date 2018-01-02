@@ -46,29 +46,35 @@ layout: base__page
 				    </div>
 				</div>
 
-				{% include snippets/social_media.html preset=1 %}
+				<!-- SOCIAL DESKTOP -->
+				<div class="d-none d-md-block">
+					{% capture social %}
+						{% include snippets/social_media.html preset=1 %}
 
-				<!-- RESOURCES -->
-				<ul class="social-media block-grid-xs-1 block-grid-lg-2 mb-4">
-					<li>
-						<a class="icon-resume" title="Get CV" href="/hire/resume/">
-							<div class="icon"><i class="fa fa-file"></i></div>
-							<span class="text">
-								My Resume
-								<span class="text-anchor">Grab it here</span>
-							</span>
-						</a>
-					</li>
-					<li>
-						<a class="icon-cv" title="Interview" href="/hire/interview/">
-							<div class="icon"><i class="fa fa-coffee"></i></div>
-							<span class="text">
-								Simulate Interview
-								<span class="text-anchor">Engage!</span>
-							</span>
-						</a>
-					</li>
-				</ul>
+						<!-- RESOURCES -->
+						<ul class="social-media block-grid-xs-1 block-grid-lg-2 mb-4">
+							<li>
+								<a class="icon-resume" title="Get CV" href="/hire/resume/">
+									<div class="icon"><i class="fa fa-file"></i></div>
+									<span class="text">
+										My Resume
+										<span class="text-anchor">Grab it here</span>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="icon-cv" title="Interview" href="/hire/interview/">
+									<div class="icon"><i class="fa fa-coffee"></i></div>
+									<span class="text">
+										Simulate Interview
+										<span class="text-anchor">Engage!</span>
+									</span>
+								</a>
+							</li>
+						</ul>
+					{% endcapture %}
+					{{ social }}
+				</div>
 
 			</div>
 			<div class="col-md-7 pl-lg-5">
@@ -81,6 +87,11 @@ layout: base__page
 					<div id="small-business" class="tab-pane fade" role="tabpanel">
 						{% include form_small_business.html %}
 					</div>
+				</div>
+
+				<!-- SOCIAL MOBILE -->
+				<div class="hidden-md-up mt-5">
+					{{ social }}
 				</div>
 
 			</div>

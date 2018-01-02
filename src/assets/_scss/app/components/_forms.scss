@@ -12,28 +12,25 @@
 // http://1000hz.github.io/bootstrap-validator/#validator-events
 //-----------------------------------------------------------------
 
-form[data-toggle="validator"] .error {
-	display: none;
-	width: 100%;
-	padding: rem-calc(5 10);
-	background: $red;
-	color: white;
-}
+form[data-toggle="validator"] {
+	.error {
+		display: none;
+		padding: rem-calc(5 10 4 10);
+		background: $red;
+		font-weight: bold;
+		color: white;
+	}
 
-form[data-toggle="validator"] .has-error > .form-control {
-	// border-bottom-left-radius: 0;
-	// border-bottom-right-radius: 0;
-	// margin-bottom: 0;
-}
+	.has-error > .error {
+		display: block;
+		margin-bottom: $form-group-margin-bottom;
+	}
 
-form[data-toggle="validator"] .has-error > .error {
-	display: block;
-	margin-bottom: $spacer*1.5;
-}
-
-form label em,
-form label i {
-	color: rgba(white, 0.5);
+	// .has-error > .form-control {
+	// 	border-bottom-left-radius: 0;
+	// 	border-bottom-right-radius: 0;
+	// 	margin-bottom: 0;
+	// }
 }
 
 //-----------------------------------------------------------------
@@ -47,45 +44,21 @@ form label i {
 }
 
 //-----------------------------------------------------------------
-//
+// DEFAULTS
 //-----------------------------------------------------------------
 
-input,
-textarea {
-
+fieldset {
+	margin-bottom: $spacer;
 }
 
-// .lv-page input,
-// .lv-page textarea {
-// 	margin-bottom: $spacer*1.5;
-// 	box-shadow: 2px 2px 3px 3px rgba(0,0,0, 0.05);
-// }
+.custom-control {
+	margin-bottom: rem-calc(15);
+}
 
-// .lv-page .custom-select {
-// 	background: #1b1b21 !important;
-// 	appearance: none;
-// 	-webkit-appearance: none;
-// }
-
-// .lv-page .custom-checkbox,
-// .lv-page .custom-radio {
-// 	margin-bottom: rem-calc(15);
-// 	padding-left: 0;
-
-// }
-
-// fieldset {
-// 	margin-bottom: rem-calc(30);
-// }
-
-// .custom-control-indicator {
-// 	border-radius: 0;
-// 	padding: rem-calc(15);
-// 	margin-right: rem-calc(15);
-// 	position: static;
-// 	display: inline-block;
-// 	background: #1b1b21 !important;
-// }
+form label em,
+form label i {
+	color: rgba(white, 0.5);
+}
 
 //=========================================
 //
