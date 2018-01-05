@@ -1,8 +1,8 @@
 ---
 layout: child_layout/tutorials_item
 date: 2015-02-03
-title: How to Overcome Depression in Silicon Valley
-categories: Development
+title: How to Make the Fucking Logo Bigger
+categories: Design
 hero: /assets/img/content/hero-home-9.jpg
 theme: theme-light
 logo: /assets/img/content/branding/logo-type--white-transparent.svg

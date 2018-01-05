@@ -11,7 +11,7 @@
 // PANELS
 //--------------------------------------------------------------------
 
-.panel-white {
+.panel-box {
 	position: relative;
 	padding: $spacer*1.5;
 	background: white;
@@ -22,11 +22,11 @@
 	}
 
 	input {
-		background: rgba(black, 0.1) !important;
+		background: darken($gray-light, 2%);
 	}
 
-	.panel-body {
-		// position: relative;
+	.panel-box-body {
+		position: relative;
 		z-index: 1;
 	}
 }
@@ -35,15 +35,25 @@
 // SPRITE LONG DRIP
 //-----------------------------------------------------------------
 
-.panel-white {
-	.sprite-long-drip {
-	    position: absolute;
-	    top: 0;
-	    right: rem-calc(20);
-	    font-size: 4px; // pixels only
-	    // z-index: 1;
-	}
+.panel-box .sprite-small-drip {
+	position: absolute;
+    top: 0;
+    right: rem-calc(15);
+    width: rem-calc(40);
+    height: rem-calc(70);
+    background: url(/assets/img/layout/sprite-small-drip.svg) no-repeat top center;
+    background-size: contain;
 }
+
+// .panel-box {
+// 	.sprite-long-drip {
+// 	    position: absolute;
+// 	    top: 0;
+// 	    right: rem-calc(20);
+// 	    font-size: 4px; // pixels only
+// 	    // opacity: 0.4;
+// 	}
+// }
 
 //-----------------------------------------------------------------
 //

@@ -2,7 +2,7 @@
 layout: child_layout/tutorials_item
 date: 2015-02-03
 title: Create Awesome Video Titles with Adobe Animate and Media Encoder
-categories: Development
+categories: Design
 hero: /assets/img/content/hero-home-9.jpg
 theme: theme-light
 logo: /assets/img/content/branding/logo-type--white-transparent.svg

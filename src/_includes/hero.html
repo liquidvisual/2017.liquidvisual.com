@@ -2,7 +2,7 @@
 <!--
     LIQUIDVISUAL-HERO
 
-    - updated: 26.12.17
+    - updated: 05.01.18
     - notes:
         * .has-height-preset-1 - used for internal pages to set a height
         * page.hero_text is an image path (not actual text)
@@ -22,6 +22,7 @@
             <div class="lv-hero has-height-preset-1">
                 <div class="lv-hero-item" style="background-image: url('{{ hero }}')">
 
+                    <!-- HERO TEXT IMAGE -->
                     {% if hero_text %}
                         <div class="lv-hero-item-caption">
                             <h1 class="mb-0">
@@ -33,6 +34,16 @@
                             <div class="container mb-4">
                                 <div class="row">
                                     <div class="col-lg-10">
+
+                                        <!-- CATEGORY LABEL -->
+                                        {% if page.categories %}
+                                            {% assign categories = page.categories | sort %}
+                                            {% for category in categories %}
+                                                <a class="btn-category mr-2" href="/tutorials/categories/#{{ category | slugify }}">{{ category }}</a>
+                                            {% endfor %}
+                                        {% endif %}
+
+                                        <!-- DYNAMIC TEXT -->
                                         <h1 class="display-1">{{ page.title }}</h1>
                                         <p>by <a href="/hire/">{{ "Mitch Warren" }}</a>&nbsp;<span class="d-inline-block">| on {{ page.date | date: "%d %B %Y" }}</span></p>
                                     </div>

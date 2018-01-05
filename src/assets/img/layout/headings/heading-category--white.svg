@@ -1,0 +1,198 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="1021px" height="132px" viewBox="0 0 1021 132">
+<defs>
+<g id="Layer1_2_FILL">
+<path fill="#FFFFFF" stroke="none" d="
+M 6.2 72.15
+Q 6.2 87.1 16.25 96.85 26.3 106.65 41.8 106.65 57.3 106.65 68.7 93.8
+L 59.15 83.9
+Q 52.1 92.65 41.1 92.65 33 92.65 27.35 87 21.7 81.35 21.7 71.95 21.7 62.6 27.7 57.1 33.7 51.55 42.15 51.55 52.65 51.55 59.8 60.4
+L 69.15 49.85
+Q 57.95 37.3 41.45 37.3 26.65 37.3 16.45 47.25 6.2 57.25 6.2 72.15
+M 115.3 38.8
+L 100.75 38.8 71.8 105.9 87.7 105.9 93.95 91.4 122.1 91.4 128.3 105.9 144.25 105.9 115.3 38.8
+M 108.05 58.75
+L 116.4 78.25 99.65 78.25 108.05 58.75
+M 180.4 51.75
+L 199.45 51.75 199.45 38.8 146.4 38.8 146.4 51.75 165.45 51.75 165.45 105.9 180.4 105.9 180.4 51.75
+M 255.4 78.7
+L 255.4 65.95 225.35 65.95 225.35 52.15 258.75 52.15 258.75 38.8 210.35 38.8 210.35 105.9 259.8 105.9 259.8 92.65 225.35 92.65 225.35 78.7 255.4 78.7
+M 331.75 95.55
+L 331.75 71.75 316.7 71.75 316.7 90.15
+Q 311.5 93.15 303.7 93.15 296 93.15 290.35 87.45 284.75 81.7 284.75 72.2 284.75 62.7 290.6 56.85 296.45 51.1 305 51.1 309.4 51.1 313.2 52.55 317 54.05 321.5 58
+L 329.25 46.75
+Q 318.6 37.3 304.2 37.3 289.7 37.3 279.5 47.25 269.25 57.25 269.25 72.15 269.25 87.1 279.3 96.85 289.3 106.65 304.15 106.65 321.75 106.65 331.75 95.55
+M 401.55 47.2
+Q 391.35 37.3 376.5 37.3 361.6 37.3 351.45 47.2 341.25 57.15 341.25 71.9 341.25 86.7 351.45 96.6 361.6 106.55 376.5 106.55 391.35 106.55 401.55 96.6 411.7 86.7 411.7 71.9 411.7 57.15 401.55 47.2
+M 356.65 71.95
+Q 356.65 63 362.4 56.65 368.15 50.3 376.55 50.3 384.95 50.3 390.7 56.65 396.5 63 396.5 71.95 396.5 80.95 390.7 87.25 384.95 93.55 376.55 93.55 368.15 93.55 362.4 87.25 356.65 80.95 356.65 71.95
+M 472.1 44.05
+Q 465.45 38.8 449.8 38.8
+L 424.35 38.8 424.35 105.9 439.35 105.9 439.35 84.5 449.7 84.5 464.55 105.9 483 105.9 466 81.9
+Q 478.75 77.2 478.75 61.1 478.75 49.35 472.1 44.05
+M 439.35 71.55
+L 439.35 51.65 450.55 51.65
+Q 457.75 51.65 460.65 53.7 463.55 55.7 463.55 61.15 463.55 66.55 460.75 69.05 457.95 71.55 450.25 71.55
+L 439.35 71.55
+M 546.25 38.8
+L 530 38.8 515.5 63.75 501.05 38.8 484.75 38.8 508 79.4 508 105.9 523 105.9 523 79.4 546.25 38.8 Z"/>
+</g>
+
+<font horiz-adv-x="2048">
+<!--  Font Name: Montserrat-Regular
+Vendor ID: pyrs
+Copyright (c) 2011-2012, Julieta Ulanovsky (julieta.ulanovsky@gmail.com), with Reserved Font Names 'Montserrat'
+http://scripts.sil.org/OFL
+URL for more Information: http://www.adobe.com/go/font_vendor_id?ID=pyrs&Name=Montserrat&PSName=Montserrat-Regular&applanguage=en_US-->
+<font-face font-family="Montserrat_Regular_Regular" units-per-em="2048" ascent="1982.46875" descent="514.0625"/>
+
+<glyph unicode="C" horiz-adv-x="1507.3280029296875" d="
+M 505 366
+Q 358 512 358 730 358 948 506 1089 653 1229 870 1229 993 1229 1084 1190 1176 1151 1278 1053
+L 1432 1221
+Q 1208 1466 876 1466 543 1466 325 1253 106 1040 106 721 106 401 321 193 534 -16 859 -16 1184 -16 1411 236
+L 1255 395
+Q 1157 303 1067 261 977 219 852 219 651 219 505 366 Z"/>
+
+<glyph unicode="A" horiz-adv-x="1519.615966796875" d="
+M 1118 326
+L 1262 0 1520 0 889 1432 631 1432 0 0 258 0 401 326 1118 326 Z
+M 500 549
+L 760 1139 1020 549 500 549 Z"/>
+
+<glyph unicode="T" horiz-adv-x="1236.991943359375" d="
+M 1174 1210
+L 1174 1432 63 1432 63 1210 498 1210 498 0 739 0 739 1210 1174 1210 Z"/>
+
+<glyph unicode="E" horiz-adv-x="1339.3919677734375" d="
+M 199 1432
+L 199 0 1229 0 1229 227 440 227 440 610 1126 610 1126 825 440 825 440 1204 1204 1204 1204 1432 199 1432 Z"/>
+
+<glyph unicode="G" horiz-adv-x="1550.3360595703125" d="
+M 1190 303
+Q 1053 215 849 215 645 215 502 353 358 492 358 720 358 948 506 1089 653 1229 870 1229 983 1229 1068 1201 1153 1174 1237 1102
+L 1366 1286
+Q 1161 1466 852 1466 543 1466 325 1253 106 1040 106 721 106 401 321 193 534 -16 852 -16 1229 -16 1432 207
+L 1432 696 1190 696 1190 303 Z"/>
+
+<glyph unicode="O" horiz-adv-x="1720.3199462890625" d="
+M 1614 726
+Q 1614 1042 1397 1254 1180 1466 860 1466 541 1466 324 1254 106 1042 106 726 106 410 324 198 541 -14 860 -14 1180 -14 1397 198 1614 410 1614 726 Z
+M 1366 726
+Q 1366 510 1220 358 1073 207 860 207 647 207 501 358 354 510 354 726 354 942 501 1094 647 1245 860 1245 1073 1245 1220 1094 1366 942 1366 726 Z"/>
+
+<glyph unicode="R" horiz-adv-x="1490.9439697265625" d="
+M 741 700
+L 440 700 440 1212 748 1212
+Q 942 1212 1018 1160 1094 1108 1094 968 1094 827 1020 764 946 700 741 700 Z
+M 1200 1321
+Q 1059 1432 731 1432
+L 199 1432 199 0 440 0 440 481 758 481 1100 0 1407 0 1032 520
+Q 1341 612 1341 967 1341 1210 1200 1321 Z"/>
+
+<glyph unicode="I" horiz-adv-x="638.9760131835938" d="
+M 199 0
+L 440 0 440 1432 199 1432 199 0 Z"/>
+
+<glyph unicode="S" horiz-adv-x="1290.239990234375" d="
+M 846 1206
+Q 954 1169 1018 1112
+L 1147 1294
+Q 1049 1376 913 1421 778 1466 641 1466 428 1466 284 1359 139 1251 139 1053 139 854 266 758 330 707 412 675 494 643 651 605 809 567 873 521 938 475 938 392 938 309 869 259 801 209 684 209 450 209 233 397
+L 82 215
+Q 342 -16 678 -16 907 -16 1049 100 1190 217 1190 404 1190 592 1078 688 967 784 746 838 526 891 459 937 391 983 391 1070 391 1157 459 1200 526 1243 632 1243 737 1243 846 1206 Z"/>
+</font>
+</defs>
+
+<g transform="matrix( 1, 0, 0, 1, -46.1,-218) ">
+<clipPath id="Mask_Mask_1">
+<rect x="-2" y="-2" width="643" height="121.05" fill="#FFFFFF" stroke="none"/>
+</clipPath>
+
+<text clip-path="url(#Mask_Mask_1)" writing-mode="lr"><tspan x="0" y="92.95" baseline-shift="0%" kerning="auto" font-family="Montserrat_Regular_Regular" font-size="96" fill="#FFFFFF" xml:space="preserve">CATEGORIES</tspan></text>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 613.85,-239) ">
+<clipPath id="Mask_Mask_2">
+<rect x="-2" y="-2" width="74.85" height="121.05" fill="#FFFFFF" stroke="none"/>
+</clipPath>
+
+<text clip-path="url(#Mask_Mask_2)" writing-mode="lr"><tspan x="0" y="92.95" baseline-shift="0%" kerning="auto" font-family="Montserrat_Regular_Regular" font-size="96" fill="#FFFFFF" xml:space="preserve">C</tspan></text>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 684.5,-239) ">
+<clipPath id="Mask_Mask_3">
+<rect x="-2" y="-2" width="75.4" height="121.05" fill="#FFFFFF" stroke="none"/>
+</clipPath>
+
+<text clip-path="url(#Mask_Mask_3)" writing-mode="lr"><tspan x="0" y="92.95" baseline-shift="0%" kerning="auto" font-family="Montserrat_Regular_Regular" font-size="96" fill="#FFFFFF" xml:space="preserve">A</tspan></text>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 755.7,-239) ">
+<clipPath id="Mask_Mask_4">
+<rect x="-2" y="-2" width="62.15" height="121.05" fill="#FFFFFF" stroke="none"/>
+</clipPath>
+
+<text clip-path="url(#Mask_Mask_4)" writing-mode="lr"><tspan x="0" y="92.95" baseline-shift="0%" kerning="auto" font-family="Montserrat_Regular_Regular" font-size="96" fill="#FFFFFF" xml:space="preserve">T</tspan></text>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 813.65,-239) ">
+<clipPath id="Mask_Mask_5">
+<rect x="-2" y="-2" width="66.95" height="121.05" fill="#FFFFFF" stroke="none"/>
+</clipPath>
+
+<text clip-path="url(#Mask_Mask_5)" writing-mode="lr"><tspan x="0" y="92.95" baseline-shift="0%" kerning="auto" font-family="Montserrat_Regular_Regular" font-size="96" fill="#FFFFFF" xml:space="preserve">E</tspan></text>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 876.4,-239) ">
+<clipPath id="Mask_Mask_6">
+<rect x="-2" y="-2" width="76.85" height="121.05" fill="#FFFFFF" stroke="none"/>
+</clipPath>
+
+<text clip-path="url(#Mask_Mask_6)" writing-mode="lr"><tspan x="0" y="92.95" baseline-shift="0%" kerning="auto" font-family="Montserrat_Regular_Regular" font-size="96" fill="#FFFFFF" xml:space="preserve">G</tspan></text>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 949.05,-239) ">
+<clipPath id="Mask_Mask_7">
+<rect x="-2" y="-2" width="84.8" height="121.05" fill="#FFFFFF" stroke="none"/>
+</clipPath>
+
+<text clip-path="url(#Mask_Mask_7)" writing-mode="lr"><tspan x="0" y="92.95" baseline-shift="0%" kerning="auto" font-family="Montserrat_Regular_Regular" font-size="96" fill="#FFFFFF" xml:space="preserve">O</tspan></text>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 1029.65,-239) ">
+<clipPath id="Mask_Mask_8">
+<rect x="-2" y="-2" width="74.05" height="121.05" fill="#FFFFFF" stroke="none"/>
+</clipPath>
+
+<text clip-path="url(#Mask_Mask_8)" writing-mode="lr"><tspan x="0" y="92.95" baseline-shift="0%" kerning="auto" font-family="Montserrat_Regular_Regular" font-size="96" fill="#FFFFFF" xml:space="preserve">R</tspan></text>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 1099.5,-239) ">
+<clipPath id="Mask_Mask_9">
+<rect x="-2" y="-2" width="34.15" height="121.05" fill="#FFFFFF" stroke="none"/>
+</clipPath>
+
+<text clip-path="url(#Mask_Mask_9)" writing-mode="lr"><tspan x="0" y="92.95" baseline-shift="0%" kerning="auto" font-family="Montserrat_Regular_Regular" font-size="96" fill="#FFFFFF" xml:space="preserve">I</tspan></text>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 1129.45,-239) ">
+<clipPath id="Mask_Mask_10">
+<rect x="-2" y="-2" width="66.95" height="121.05" fill="#FFFFFF" stroke="none"/>
+</clipPath>
+
+<text clip-path="url(#Mask_Mask_10)" writing-mode="lr"><tspan x="0" y="92.95" baseline-shift="0%" kerning="auto" font-family="Montserrat_Regular_Regular" font-size="96" fill="#FFFFFF" xml:space="preserve">E</tspan></text>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 1192.2,-239) ">
+<clipPath id="Mask_Mask_11">
+<rect x="-2" y="-2" width="64.65" height="121.05" fill="#FFFFFF" stroke="none"/>
+</clipPath>
+
+<text clip-path="url(#Mask_Mask_11)" writing-mode="lr"><tspan x="0" y="92.95" baseline-shift="0%" kerning="auto" font-family="Montserrat_Regular_Regular" font-size="96" fill="#FFFFFF" xml:space="preserve">S</tspan></text>
+</g>
+
+<g transform="matrix( 1.89056396484375, 0, 0, 1.89056396484375, -11.7,-69.6) ">
+<use xlink:href="#Layer1_2_FILL"/>
+</g>
+</svg>

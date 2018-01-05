@@ -23,7 +23,7 @@
 <div class="spacer mb-4"></div>
 
 <!-- FORM CONTACT -->
-<form id="contact" data-toggle="validator" name="Digital Agency Form" action="/hire/thanks/" novalidate netlify>
+<form id="contact" name="Digital Agency Form" action="/hire/thanks/" data-toggle="validator" novalidate netlify>
     <fieldset>
 
        <!-- NAME* -->
@@ -32,6 +32,19 @@
            <input class="form-control" name="Name" type="text" placeholder="" required>
            <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; Your name is required.</small>
        </label>
+
+        <!-- EMAIL* -->
+        <label class="form-group d-block">
+            <p class="mb-2">Email<small class="asterisk">*</small></p>
+            <input class="form-control" name="Email" type="email" placeholder="" required>
+            <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; A valid email is required.</small>
+        </label>
+
+        <!-- COMPANY -->
+        <label class="form-group d-block">
+            <p class="mb-2">Company</p>
+            <input class="form-control" name="Company" type="text" placeholder="" required>
+        </label>
 
         {% comment %}
         <!-- TEST *** -->
@@ -50,25 +63,12 @@
             <button class="btn btn-primary">Would You Buy<br>This Button?</button>&nbsp;</p>
         {% endcomment %}
 
-        <!-- EMAIL* -->
-        <label class="form-group d-block">
-            <p class="mb-2">Email<small class="asterisk">*</small></p>
-            <input class="form-control" name="Email" type="email" placeholder="" required>
-            <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; A valid email is required.</small>
-        </label>
-
-        <!-- COMPANY / PRODUCT -->
-        <label class="form-group d-block">
-            <p class="mb-2">Company</p>
-            <input class="form-control" name="Company / Product" type="text" placeholder="" required>
-        </label>
-
     </fieldset>
     <fieldset>
 
         <!-- SERVICES -->
-        <div class="form-group pb-1">
-            <label class="h5 mb-4">You will need...</label>
+        <div class="form-group">
+            <label class="h5 mb-4">I will need...</label>
 
             <label class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input">
@@ -107,7 +107,7 @@
         </div>
 
         <!-- DEADLINE -->
-        <div class="form-group pb-1">
+        <div class="form-group" hidden>
             <label class="h5 mb-4">When's the deadline?</label>
 
             <label class="custom-control custom-radio">
@@ -137,7 +137,7 @@
         </div>
 
         <!-- BUDGET -->
-        <div class="form-group">
+        <div class="form-group" hidden>
             <label class="h5 mb-4">What's the budget for this work?</label>
 
             <label class="custom-control custom-radio">

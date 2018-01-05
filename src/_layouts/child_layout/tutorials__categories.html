@@ -1,0 +1,27 @@
+---
+layout: base__page
+---
+
+{% assign categories = site.categories | sort %}
+
+<section class="section is-light">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10">
+
+				{% for category in categories %}
+					{% capture category_name %}{{ category | first }}{% endcapture %}
+
+					<!-- CATEGORY TITLES -->
+					<h3 id="#{{ category_name | slugify }}">{{ category_name }}</h3>
+					<ul class="list-unstyled">
+						{% for post in site.categories[category_name] %}
+							<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+						{% endfor %}
+					</ul>
+				{% endfor %}
+
+			</div>
+		</div>
+	</div>
+</section>

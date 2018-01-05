@@ -2,6 +2,8 @@
 layout: base__page
 ---
 
+{% assign categories = site.categories | sort %}
+
 <!-- SECTION -->
 <section class="section is-light has-light-bleed">
 	<div class="container">
@@ -12,40 +14,40 @@ layout: base__page
 			<div class="col-lg-4 pl-lg-5">
 
 				<!-- SUBSCRIBE BOX -->
-				<div class="panel-white mb-4">
+				<div class="panel-box">
 
 					<!-- PANEL BODY -->
-					<div class="panel-body">
+					<div class="panel-box-body">
 						<h3>Subscribe Now</h3>
-						<p>Receive Danny's newsletter to stay on top of the latest posts.</p>
+						<p>Stay up to date with future tutorials.</p>
 						{% include form_subscribe.html %}
 					</div>
 
-					<!-- SPRITE LONG DRIP -->
-					<div class="sprite-long-drip"></div>
+					<!-- SPRITE SMALL DRIP -->
+					<div class="sprite-small-drip"></div>
 				</div>
 
-				<h3>Categories</h3>
-				{% for category in site.categories %}
-					{% capture category_name %}{{ category | first }}{% endcapture %}
-					<h4 class="category-head">{{ category_name }}</h4>
-				{% endfor %}
+				<div class="spacer my-3"></div>
 
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<!-- CATEGORIES -->
+				<a href="/tutorials/categories/"><h3>Categories</h3></a>
+				<ul class="list-unstyled">
+					{% for category in categories %}
+					    <li class="list-unstyled">
+					    	<a href="/tutorials/categories/#{{ category | first | slugify }}">{{ category | first }}</a>
+					    </li>
+					{% endfor %}
+				</ul>
 
 			</div>
 		</div>
 
 		<hr class="mb-4">
 
-		{% if page.comments %}
+		<!-- COMMENTS ENABLED -->
+		{% unless page.comments == false %}
 			{% include disqus.html %}
-		{% endif %}
+		{% endunless %}
 
 	</div>
 </section>

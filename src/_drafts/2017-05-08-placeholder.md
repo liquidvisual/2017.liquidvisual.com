@@ -1,8 +1,8 @@
 ---
 layout: child_layout/tutorials_item
 date: 2015-02-03
-title: 25 Handy AF Resources for Web Development
-categories: Development
+title: The Easiest Way to Handle Breadcrumbs in Jekyll
+categories: Jekyll
 hero: /assets/img/content/hero-home-9.jpg
 theme: theme-light
 logo: /assets/img/content/branding/logo-type--white-transparent.svg

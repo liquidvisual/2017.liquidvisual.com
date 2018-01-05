@@ -60,6 +60,24 @@ form label i {
 	color: rgba(white, 0.5);
 }
 
+//-----------------------------------------------------------------
+// FILTER
+// Used in /tutorials/
+//-----------------------------------------------------------------
+
+.lv-page .select-filter {
+	// display: inline-block;
+	// width: auto;
+	line-height: 1;
+	background: white;
+	background: $gray-light;
+	border: 2px solid #cfd0d3;
+	color: #444;
+	// height: auto;
+	border-radius: $border-radius;
+	// box-shadow: 0 1px 4px 2px rgba(black, 0.03);
+}
+
 //=========================================
 //
 //=========================================

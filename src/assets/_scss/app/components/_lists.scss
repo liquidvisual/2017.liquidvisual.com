@@ -89,8 +89,29 @@
 }
 
 //-----------------------------------------------------------------
-//
+// SPLIT GRID
+// Used in tutorials
 //-----------------------------------------------------------------
+
+.split-grid {
+    @include media-breakpoint-up(md) {
+        position: relative;
+
+        li:nth-child(even) { padding-left: rem-calc(60);  }
+        li:nth-child(odd)  { padding-right: rem-calc(60); }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: calc(50% - 1px);
+            width: 2px;
+            height: calc(100% - 20px);
+            background: #cfd0d3;
+        }
+    }
+}
+
 //=========================================
 //
 //=========================================

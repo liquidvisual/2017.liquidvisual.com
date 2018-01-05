@@ -2,7 +2,7 @@
 layout: child_layout/tutorials_item
 date: 2015-02-03
 title: Implement Horizontal Scrolling with JQuery Mousewheel
-categories: Development
+categories: JavaScript
 hero: /assets/img/content/branding/hero-home-9.jpg
 theme: theme-light
 logo: /assets/img/content/branding/logo-type--white-transparent.svg
