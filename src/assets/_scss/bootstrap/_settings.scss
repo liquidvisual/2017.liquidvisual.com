@@ -200,7 +200,7 @@ $container-max-widths: (
   md: 768px,   // [LOCKED]
   lg: 1024px,  // [LOCKED]
   xl: 1116px,  // [LOCKED] APPEARS 1024px (same as tablet landscape)
-  xxl: 1260px, // [LOCKED] APPEARS 1170px
+  xxl: 1260px  // [LOCKED] PERFECT - APPEARS 1170px (lines up with landscape zoom)
 ) !default;
 
 // @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -300,7 +300,7 @@ $display3-weight:     700; //300 !default;
 $display4-weight:     700; //300 !default;
 // $display-line-height:         $headings-line-height !default;
 
-$lead-font-size:              rem-calc(23); //($font-size-base * 1.25) !default;
+$lead-font-size:              rem-calc(24); //rem-calc(23); //($font-size-base * 1.25) !default;
 // $lead-font-weight:            300 !default;
 
 // $small-font-size:             80% !default;
@@ -708,14 +708,14 @@ $custom-select-border-radius:       0; //$border-radius !default;  // 02.01.18 -
 
 // $tooltip-max-width:           200px !default;
 // $tooltip-color:               $white !default;
-// $tooltip-bg:                  $black !default;
+$tooltip-bg:                  $brand-primary; //$black !default;
 // $tooltip-opacity:             .9 !default;
 // $tooltip-padding-y:           .25rem !default;
 // $tooltip-padding-x:           .5rem !default;
-// $tooltip-margin:              0 !default;
+$tooltip-margin:              rem-calc(6); //0 !default;
 
-// $tooltip-arrow-width:         .8rem !default;
-// $tooltip-arrow-height:        .4rem !default;
+$tooltip-arrow-width:         rem-calc(16); //.8rem !default;
+$tooltip-arrow-height:        rem-calc(8); //.4rem !default;
 // $tooltip-arrow-color:         $tooltip-bg !default;
 
 

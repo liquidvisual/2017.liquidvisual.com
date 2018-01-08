@@ -1,7 +1,7 @@
 /*
     PANELS.CSS
 
-    - updated: 19.12.17
+    - updated: 09.01.18
     - liquidvisual.com
 */
 //--------------------------------------------------------------------
@@ -21,8 +21,9 @@
 		font-size: rem-calc(16);
 	}
 
-	input {
+	.form-control {
 		background: darken($gray-light, 2%);
+		color: $gray;
 	}
 
 	.panel-box-body {
@@ -35,25 +36,25 @@
 // SPRITE LONG DRIP
 //-----------------------------------------------------------------
 
-.panel-box .sprite-small-drip {
-	position: absolute;
-    top: 0;
-    right: rem-calc(15);
-    width: rem-calc(40);
-    height: rem-calc(70);
-    background: url(/assets/img/layout/sprite-small-drip.svg) no-repeat top center;
-    background-size: contain;
-}
-
-// .panel-box {
-// 	.sprite-long-drip {
-// 	    position: absolute;
-// 	    top: 0;
-// 	    right: rem-calc(20);
-// 	    font-size: 4px; // pixels only
-// 	    // opacity: 0.4;
-// 	}
+// .panel-box .sprite-small-drip {
+// 	position: absolute;
+//     top: 0;
+//     right: rem-calc(8);
+//     width: rem-calc(40);
+//     height: rem-calc(70);
+//     background: url(/assets/img/layout/sprite-small-drip.svg) no-repeat top center;
+//     background-size: contain;
 // }
+
+.panel-box {
+	.sprite-long-drip {
+	    position: absolute;
+	    top: 0;
+	    right: rem-calc(12);
+	    font-size: 4px; // pixels only
+	    opacity: 0.4;
+	}
+}
 
 //-----------------------------------------------------------------
 //

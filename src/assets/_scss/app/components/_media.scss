@@ -19,9 +19,11 @@
 
         &:hover,
         &:active {
-            $hover-yellow: rgba(#a4a4b5, 0.15); //rgba($yellow, 0.3);
-            background: $hover-yellow;
-            box-shadow: 0 0 0 20px $hover-yellow;
+            @include media-breakpoint-up(xl) {
+                $hover-yellow: rgba(#a4a4b5, 0.15); //rgba($yellow, 0.3);
+                background: $hover-yellow;
+                box-shadow: 0 0 0 20px $hover-yellow;
+            }
         }
     }
 }

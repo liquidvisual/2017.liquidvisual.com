@@ -17,6 +17,10 @@
     <!-- CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,500,700|Source+Code+Pro:500,600|Oswald:300,500,600">
 
+    <!-- PRIORITY SCRIPTS -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="/tutorials/posts.js"></script>
+
     <!-- build:css({src,.tmp}) /assets/css/minified.css -->
     <link rel="stylesheet" href="/css/main.css">
     <!-- endbuild -->
@@ -44,10 +48,12 @@
         {{ content }}
 
         <!-- FOOTER -->
-        <div class="container">
-            <footer class="global-footer">
-                {% include footer.html %}
-            </footer>
+        <div class="global-footer-wrapper">
+            <div class="container">
+                <footer class="global-footer">
+                    {% include footer.html %}
+                </footer>
+            </div>
         </div>
 
     </div> <!-- /.lv-page -->

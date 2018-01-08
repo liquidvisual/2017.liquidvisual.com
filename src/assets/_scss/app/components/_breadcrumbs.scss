@@ -41,6 +41,9 @@ $breadcrumb-bg: white;
 	}
 
 	.breadcrumb-item i {
+		position: relative;
+		top: 1px;
+		font-size: rem-calc(17);
 		transition: opacity 200ms ease, color 200ms ease;
 	}
 

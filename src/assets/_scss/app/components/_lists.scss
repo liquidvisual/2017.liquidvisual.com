@@ -30,7 +30,7 @@
         font-size: rem-calc(20);
         font-weight: 500;
         color: rgba($gray-light, 0.8);
-        border-radius: $border-radius $border-radius 0 0;
+        // border-radius: $border-radius $border-radius 0 0;
         transition: none;
 
         &.active {
@@ -57,7 +57,7 @@
             top: 20px;
             left: calc(50% - 1px);
             width: 1px; // [LOCKED]
-            height: calc(100% - 20px);
+            height: calc(100% - 35px); // [LOCKED] - looks right
             background: #cfd0d3;
         }
     }
@@ -97,7 +97,7 @@
         content: counter(li, decimal-leading-zero);
         margin: rem-calc(0 25 0 0);
         font-family: 'Oswald';
-        font-size: rem-calc(30);
+        font-size: rem-calc(28);
         font-weight: 500;
         line-height: 1;
         color: $brand-primary;

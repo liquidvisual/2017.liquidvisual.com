@@ -7,5 +7,6 @@ hero_classes: has-no-gutters has-bleed-tint
 theme:
 logo: /assets/img/content/branding/logo-type--white-transparent.svg
 hero_text: /assets/img/layout/headings/heading-thanks--darker.svg
+breadcrumbs: true
 ---
 

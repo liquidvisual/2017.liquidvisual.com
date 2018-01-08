@@ -17,10 +17,11 @@
 </div>
 
 <!-- FORM SUBSCRIBE -->
-<form data-toggle="validatorX">
-    <div class="form-group mb-3">
-        <input class="form-control" name="Email" type="email" placeholder="Your email" required>
+<form data-toggle="validatorX" novalidateX netlify>
+    <div class="form-group has-icon mb-3">
+        <i class="fa fa-envelope"></i>
+        <input class="form-control" name="Email" type="email" placeholder="Email" required>
         <!-- <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; A valid email is required.</small> -->
     </div>
-    <button type="submit" class="btn btn-primary btn-block mb-0">Subscribe</button>
+    <button type="submit" class="btn btn-primary btn-block mb-0"><span class="text-hover">Do it!</span><span class="text-default">Subscribe</span></button>
 </form>

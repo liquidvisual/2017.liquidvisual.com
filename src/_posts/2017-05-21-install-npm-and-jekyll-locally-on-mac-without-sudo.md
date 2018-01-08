@@ -15,7 +15,7 @@ breadcrumbs: true
 
 <!-- This project is built with [Jekyll v{{ settings.jekyll_version }}](http://jekyllrb.com){:target="_blank"} - a popular static site generator endorsed by the good folks at Github. For package management we use [Bower](http://bower.io){:target="_blank"}, and [Grunt.js](http://gruntjs.com){:target="_blank"} - a JavaScript task runner. -->
 
-<p class="lead">This project is built with <a target="_blank" href="http://jekyllrb.com">Jekyll v{{ settings.jekyll_version }}</a> - a popular static site generator endorsed by the good folks at Github. For package management we use <a target="_blank" href="http://bower.io">Bower</a>, and <a target="_blank" href="http://gruntjs.com">Grunt.js</a> - a JavaScript task runner.</p>
+This project is built with <a target="_blank" href="http://jekyllrb.com">Jekyll v{{ settings.jekyll_version }}</a> - a popular static site generator endorsed by the good folks at Github. For package management we use <a target="_blank" href="http://bower.io">Bower</a>, and <a target="_blank" href="http://gruntjs.com">Grunt.js</a> - a JavaScript task runner.
 
 <!-- <div class="spacer mb-4"></div> -->
 

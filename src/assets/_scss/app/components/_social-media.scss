@@ -28,11 +28,10 @@
 			align-items: center;
 			justify-content: center;
 			width: rem-calc(40);
-			// min-width: rem-calc(40);
 			height: rem-calc(40);
-			// min-height: rem-calc(40);
 			margin-right: rem-calc(15);
 			border-radius: 100%;
+			// border-radius: $border-radius/2;
 			font-size: rem-calc(24);
 			transition: transform 200ms ease;
 		}

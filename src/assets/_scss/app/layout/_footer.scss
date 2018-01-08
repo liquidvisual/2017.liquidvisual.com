@@ -1,12 +1,32 @@
 /*
     FOOTER.CSS
 
-    - updated: 26.05.17
+    - updated: 08.01.18
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
 // VARIABLES
 //-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// FOOTER WRAPPER
+//-----------------------------------------------------------------
+
+.global-footer-wrapper {
+	@include media-breakpoint-up(xl) {
+	    position: fixed;
+	    bottom: 0;
+	    width: 100%;
+	    z-index: -1;
+	}
+}
+
+// RELATED
+.lv-page {
+	// @include media-breakpoint-up(md) { padding-bottom: rem-calc(420); }
+	// @include media-breakpoint-up(lg) { padding-bottom: rem-calc(380); }
+	@include media-breakpoint-up(xl) { padding-bottom: rem-calc(380); }
+}
+
 //-----------------------------------------------------------------
 // FOOTER
 //-----------------------------------------------------------------
@@ -14,6 +34,10 @@
 .global-footer {
 	background: $gray-dark;
 	overflow: hidden; // fixes wide glitch
+
+	@include media-breakpoint-up(xl) {
+	    box-shadow: 0px -30px  50px 10px rgba(black, 0.2); // [LOCKED] - same as global.scss
+	}
 
 	p, ul {
 		font-size: rem-calc(14);
@@ -133,13 +157,19 @@
 	position: absolute;
 	top: rem-calc(-10);
 	right: 0;
-	background: #323232;
-	width: rem-calc(44);
-	height: rem-calc(44);
-	line-height: rem-calc(44);
-	border-radius: 100%;
+	// background: #323232;
+	background: darken(white, 80%);
+	width: rem-calc(40);
+	height: rem-calc(40);
+	line-height: rem-calc(40);
+	// border-radius: 100%;
+	border-radius: $border-radius;
 	text-align: center;
 	font-size: rem-calc(22);
+
+	@include media-breakpoint-up(xl) {
+	    right: rem-calc(46);
+	}
 
 	i {
 		color: white;

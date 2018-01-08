@@ -35,6 +35,14 @@
 		background: lighten($brand-secondary, 15%) !important; // [LOCKED]
 		border-bottom: 3px solid darken($brand-secondary, 15%);
 		transform: scale(1.02);
+
+		.text-default {
+			display: none;
+		}
+
+		.text-hover {
+			display: inline-block;
+		}
 	}
 
 	&:active {
@@ -45,6 +53,11 @@
 		box-shadow: none;
 		transition: none;
 		transform: scale(1.01);
+	}
+
+	// Allow hover to take control - must appear first
+	.text-hover {
+		display: none;
 	}
 }
 
@@ -60,11 +73,15 @@
 
 	&:hover,
 	&:active {
+		position: relative;
+		top: 2px;
 		box-shadow: none;
+		margin-top: -3px; // tricky
 	}
 
 	&:active {
 		border-bottom: 2px solid darken($brand-secondary, 15%) !important;
+		margin-top: -2px;
 	}
 }
 

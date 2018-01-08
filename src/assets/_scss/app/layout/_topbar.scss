@@ -78,9 +78,10 @@
     text-decoration: none;
     font-weight: 500; // [LOCKED]
 
-    @include media-breakpoint-up(xl) {
-        font-weight: 400; // [LOCKED] - ipad large curated
-    }
+    // I think this is the only place where mont. 500 is used
+    // @include media-breakpoint-up(xl) {
+        // font-weight: 400; // [LOCKED] - ipad large curated
+    // }
 }
 
 //-----------------------------------------------------------------
@@ -92,10 +93,6 @@
     padding: rem-calc(0 20);
     line-height: 44px; // [LOCKED]
     color: white;
-
-    // display: flex;
-    // height: 100%;
-    // align-items: center;
 
     img {
         position: relative; // [LOCKED]

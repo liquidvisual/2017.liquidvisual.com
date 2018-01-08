@@ -44,6 +44,26 @@ form[data-toggle="validator"] {
 }
 
 //-----------------------------------------------------------------
+// FORM GROUPS WITH ICONS
+//-----------------------------------------------------------------
+
+.form-group.has-icon {
+	position: relative;
+
+	> i {
+		position: absolute;
+		top: rem-calc(24);
+		left: rem-calc(15);
+		line-height: 0;
+		color: rgba(black, 0.4);
+
+		+ input {
+			padding-left: rem-calc(40);
+		}
+	}
+}
+
+//-----------------------------------------------------------------
 // DEFAULTS
 //-----------------------------------------------------------------
 

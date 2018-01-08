@@ -3,11 +3,13 @@
 {% assign preset = include.preset | default: 0 %}
 
 {% if preset == 1 %}
+
+	<!-- SOCIAL MEDIA (HIRE) -->
 	<ul class="social-media block-grid-xs-2 block-grid-md-1 block-grid-lg-2 mb-4">
 		{% for item in social_media %}
 			{% unless item.exclude %}
 				<li>
-					<a target="_blank" class="{{ item.title | slugify }}" title="{{ item.title }}" href="{{ item.url }}">
+					<a title="{{ item.title }}" href="{{ item.url }}" target="_blank" class="{{ item.title | slugify }}">
 						<div class="icon"><i class="{{ item.icon }}"></i></div>
 						<span class="text">
 							{{ item.title }}
@@ -19,29 +21,38 @@
 		{% endfor %}
 	</ul>
 {% elsif preset == 2 %}
+
+	<!-- SHARE LINKS -->
+	<!-- https://developers.google.com/+/web/share/#sharelink -->
+
 	<ul class="social-media">
 	    <li>
-	    	<a title="Share Facebook" class="facebook" href="">
+	    	<a target="_blank" title="Share Facebook" class="facebook" href="https://www.facebook.com/sharer/sharer.php?u="
+	    		onclick="window.open(this.href + document.URL, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;">
 	    		<div class="icon"><i class="fa fa-facebook"></i></div>
 	    	</a>
 	    </li>
 	    <li>
-	    	<a title="Tweet" class="twitter"  href="">
+	    	<a target="_blank" title="Tweet" class="twitter" href="https://twitter.com/home?status="
+	    		onclick="window.open(this.href + document.URL, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;">
 	    		<div class="icon"><i class="fa fa-twitter"></i></div>
 	    	</a>
 	    </li>
 	    <li>
-	    	<a title="Share Google+" class="google-plus" href="">
+	    	<a target="_blank" title="Share Google+" class="google-plus" href="https://plus.google.com/share?url="
+	    		onclick="window.open(this.href + document.URL, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;">
 	    		<div class="icon"><i class="fa fa-google-plus"></i></div>
 	    	</a>
 	    </li>
 	</ul>
 {% else %}
-	<ul class="social-media block-grid-4 block-grid-md-6 mb-4">
+
+	<!-- SOCIAL MEDIA (FOOTER) -->
+	<ul class="social-media block-grid-4 block-grid-md-6 pr-xl-5 mb-4">
 		{% for item in social_media %}
 			{% unless item.exclude %}
 				<li>
-					<a title="{{ item.title }}" target="_blank" class="{{ item.title | slugify }}" title="{{ item.title }}" href="{{ item.url }}">
+					<a title="{{ item.title }}" href="{{ item.url }}" target="_blank" class="{{ item.title | slugify }}">
 						<div class="icon"><i class="{{ item.icon }}"></i></div>
 					</a>
 				</li>
