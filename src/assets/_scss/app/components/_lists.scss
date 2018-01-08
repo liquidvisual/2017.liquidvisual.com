@@ -1,7 +1,7 @@
 /*
     LISTS.CSS
 
-    - updated: 07.01.18
+    - updated: 08.01.18
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -9,6 +9,7 @@
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 // LIST TABS
+// used in /hire/
 //-----------------------------------------------------------------
 
 .list-tabs {
@@ -39,38 +40,41 @@
 }
 
 //-----------------------------------------------------------------
-// SPLIT GRID
-// Used in tutorials
+// LIST SPLIT (2x)
+// used in /tutorials/
 //-----------------------------------------------------------------
 
-.split-grid {
+.list-split {
     @include media-breakpoint-up(md) {
         position: relative;
 
-        li:nth-child(even) { padding-left: rem-calc(60);  }
-        li:nth-child(odd)  { padding-right: rem-calc(60); }
+        li:nth-child(even) { padding-left: rem-calc(30);  }
+        li:nth-child(odd)  { padding-right: rem-calc(30); }
 
         &:after {
             content: "";
             position: absolute;
             top: 20px;
             left: calc(50% - 1px);
-            width: 1px;
+            width: 1px; // [LOCKED]
             height: calc(100% - 20px);
             background: #cfd0d3;
         }
     }
 
     @include media-breakpoint-up(lg) {
+        li:nth-child(even) { padding-left: rem-calc(60);  }
+        li:nth-child(odd)  { padding-right: rem-calc(60); }
+
         &:after {
-            width: 2px;
+            width: 2px; // [LOCKED]
         }
     }
 }
 
 //-----------------------------------------------------------------
 // LIST STYLED
-// Used in tutorials
+// used in /tutorials/
 //-----------------------------------------------------------------
 
 .list-numbered,
@@ -80,27 +84,32 @@
     padding: 0; // [RESET]
 
     li {
-        display: flex;
-        margin-bottom: $spacer/1.5;
+        display: flex; // [LOCKED] - needed for wysiwyg
+        margin-bottom: $spacer/1.5; // [LOCKED]
     }
 
-    li:before {
+    li:before,
+    li .list-digit {
         position: relative;
         top: 1px;
         float: left; // [LOCKED]
         counter-increment: li;
-        // content: counter(li, decimal-leading-zero);
+        content: counter(li, decimal-leading-zero);
         margin: rem-calc(0 25 0 0);
         font-family: 'Oswald';
-        font-size: rem-calc(25);
+        font-size: rem-calc(30);
         font-weight: 500;
         line-height: 1;
         color: $brand-primary;
     }
-}
 
-.list-numbered li[data-index]:before {
-    // content: attr(data-index decimal-leading-zero);
+    // li .list-digit { color: orange; }
+
+    &.has-custom-digit li:before {
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
 }
 
 //-----------------------------------------------------------------
