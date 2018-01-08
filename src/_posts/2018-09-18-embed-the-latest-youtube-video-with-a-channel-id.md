@@ -1,9 +1,9 @@
 ---
 layout: child_layout/tutorials_item
 date: 2015-02-03
-title: Embed Tagged Instagram Posts into your Website
+title: Embed the Latest YouTube Video with a Channel ID
 categories: Development
-hero: /assets/img/content/hero/hero-home-8.jpg
+hero: /assets/img/content/hero/youtube.jpg
 theme: theme-light
 logo: /assets/img/content/branding/logo-type--white-transparent.svg
 breadcrumbs: true

@@ -1,62 +1,12 @@
 /*
     LISTS.CSS
 
-    - updated: 03.07.17
+    - updated: 07.01.18
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
 // VARIABLES
 //-----------------------------------------------------------------
-//-----------------------------------------------------------------
-// LISTS
-//-----------------------------------------------------------------
-
-.block-list {
-    list-style: none;
-    padding: 0;
-
-    li {
-        border-bottom: 1px solid #ccc;
-        padding: rem-calc(30 0);
-    }
-
-    // Prevent gaps eg. News
-    li:first-child {
-        padding-top: 0;
-    }
-}
-
-//-----------------------------------------------------------------
-// BLOCK GRID CONDENSED
-//-----------------------------------------------------------------
-
-.block-grid-condensed {
-    margin: rem-calc(-10);
-
-    li {
-        padding: rem-calc(10);
-    }
-}
-
-//-----------------------------------------------------------------
-// LIST MASONRY
-//-----------------------------------------------------------------
-
-.list-masonry {
-    column-gap: 10px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-
-    @include media-breakpoint-up(md) {
-        column-count: 2;
-    }
-
-    @include media-breakpoint-up(xl) {
-        column-count: 3;
-    }
-}
-
 //-----------------------------------------------------------------
 // LIST TABS
 //-----------------------------------------------------------------
@@ -79,7 +29,7 @@
         font-size: rem-calc(20);
         font-weight: 500;
         color: rgba($gray-light, 0.8);
-        // border-radius: $border-radius $border-radius 0 0;
+        border-radius: $border-radius $border-radius 0 0;
         transition: none;
 
         &.active {
@@ -105,12 +55,103 @@
             position: absolute;
             top: 20px;
             left: calc(50% - 1px);
-            width: 2px;
+            width: 1px;
             height: calc(100% - 20px);
             background: #cfd0d3;
         }
     }
+
+    @include media-breakpoint-up(lg) {
+        &:after {
+            width: 2px;
+        }
+    }
 }
+
+//-----------------------------------------------------------------
+// LIST STYLED
+// Used in tutorials
+//-----------------------------------------------------------------
+
+.list-numbered,
+.wysiwyg ol {
+    list-style-type: none;
+    counter-reset: li;
+    padding: 0; // [RESET]
+
+    li {
+        display: flex;
+        margin-bottom: $spacer/1.5;
+    }
+
+    li:before {
+        position: relative;
+        top: 1px;
+        float: left; // [LOCKED]
+        counter-increment: li;
+        // content: counter(li, decimal-leading-zero);
+        margin: rem-calc(0 25 0 0);
+        font-family: 'Oswald';
+        font-size: rem-calc(25);
+        font-weight: 500;
+        line-height: 1;
+        color: $brand-primary;
+    }
+}
+
+.list-numbered li[data-index]:before {
+    // content: attr(data-index decimal-leading-zero);
+}
+
+//-----------------------------------------------------------------
+// LISTS
+//-----------------------------------------------------------------
+
+// .block-list {
+//     list-style: none;
+//     padding: 0;
+
+//     li {
+//         border-bottom: 1px solid #ccc;
+//         padding: rem-calc(30 0);
+//     }
+
+//     // Prevent gaps eg. News
+//     li:first-child {
+//         padding-top: 0;
+//     }
+// }
+
+//-----------------------------------------------------------------
+// BLOCK GRID CONDENSED
+//-----------------------------------------------------------------
+
+// .block-grid-condensed {
+//     margin: rem-calc(-10);
+
+//     li {
+//         padding: rem-calc(10);
+//     }
+// }
+
+//-----------------------------------------------------------------
+// LIST MASONRY
+//-----------------------------------------------------------------
+
+// .list-masonry {
+//     column-gap: 10px;
+//     padding: 0;
+//     margin: 0;
+//     list-style: none;
+
+//     @include media-breakpoint-up(md) {
+//         column-count: 2;
+//     }
+
+//     @include media-breakpoint-up(xl) {
+//         column-count: 3;
+//     }
+// }
 
 //=========================================
 //

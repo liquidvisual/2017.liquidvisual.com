@@ -63,6 +63,12 @@ social_media:
     url: https://trello.com/liquidvisual
     alias: '@liquidv'
     icon: fa fa-trello
+    exclude: true
+
+  - title: Twitter
+    url: https://twitter.com/WriteMitch
+    alias: '@WriteMitch'
+    icon: fa fa-twitter
 
   - title: YouTube
     url: https://youtube.com/liquidv

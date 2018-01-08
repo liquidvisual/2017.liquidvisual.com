@@ -4,18 +4,12 @@ date: 2015-02-03
 title: Install NPM and Jekyll Locally Without Sudo
 categories: Development
 hero: /assets/img/content/hero/hero-pinky.png
-hero_classes: is-tutorial-item
 theme: theme-light
 logo: /assets/img/content/branding/logo-type--white-transparent.svg
 breadcrumbs: true
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<p class="lead dropcap">Because responsive design is hard, first and foremost. These offshore businesses are dealing with hundreds of clients and the developers aren't being paid enough, so you end up with a dodgy end-product and a lame user experience.</p>
 
 {% assign settings = site.data.settings %}
 

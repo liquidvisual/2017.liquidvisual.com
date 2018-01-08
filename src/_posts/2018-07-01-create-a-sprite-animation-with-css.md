@@ -1,9 +1,9 @@
 ---
 layout: child_layout/tutorials_item
 date: 2015-02-03
-title: Embed Tagged Instagram Posts into your Website
-categories: Development
-hero: /assets/img/content/hero/hero-home-8.jpg
+title: Create a Sprite Animation with CSS
+categories: CSS
+hero: /assets/img/content/hero-home-9.jpg
 theme: theme-light
 logo: /assets/img/content/branding/logo-type--white-transparent.svg
 breadcrumbs: true
