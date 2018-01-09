@@ -130,6 +130,7 @@ $hero-height-xl: auto;
 
 //-----------------------------------------------------------------
 // HERO ITEM CAPTION
+// Used only right now on tutorial item
 //-----------------------------------------------------------------
 
 .lv-hero-item-caption {
@@ -150,6 +151,11 @@ $hero-height-xl: auto;
         width: 100%;
         color: white;
         text-transform: none;
+    }
+
+    p {
+        font-size: rem-calc(16);
+        font-weight: 600; // good for now?
     }
 
     a {

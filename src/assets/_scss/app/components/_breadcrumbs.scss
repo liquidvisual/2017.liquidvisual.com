@@ -116,8 +116,9 @@ $breadcrumb-bg: white;
 	    padding-top: rem-calc(15);
 	}
 
+	// BREADCRUMB BACK BUTTON(S)
 	.breadcrumb-item {
-		padding: rem-calc(10);
+		padding: rem-calc(6 10 10 10); // [LOCKED] - adjusted for icon line-height
 		border-radius: $border-radius-sm;
 		color: rgba(white, 0.3);
 		transition: background 300ms ease, color 300ms ease;

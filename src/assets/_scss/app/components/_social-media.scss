@@ -66,7 +66,7 @@
 	// .twitter    { color: #1da1f2; }
 	// .youtube    { color: #cd201f; }
 
-	.codepen .icon     { background: black; }
+	.codepen .icon     { background: black;   }
 	.dribbble .icon    { background: #ea4c89; }
 	.facebook .icon    { background: #3b5998; }
 	.github .icon      { background: #9f7be1; }
@@ -78,6 +78,22 @@
 	.trello .icon      { background: #0079bf; }
 	.twitter .icon     { background: #1da1f2; }
 	.youtube .icon     { background: #cd201f; }
+
+	//=========================================
+	// DISQUS
+	//=========================================
+
+	.disqus .icon {
+		width: auto !important; // override breadcrumb context
+		padding: rem-calc(0 12);
+		border: 2px solid lighten($gray, 50%); //darken($gray-light, 30%);
+		border-radius: rem-calc(50);
+		color: $gray;
+	}
+
+	//=========================================
+	// INSTAGRAM
+	//=========================================
 
 	.instagram .icon {
 		background: radial-gradient(circle farthest-corner at 32% 106%, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
@@ -98,8 +114,10 @@
 		.icon {
 			margin: rem-calc(0 0 0 10);
 			font-size: rem-calc(16);
-			width: rem-calc(34);
-			height: rem-calc(34);
+			// width: rem-calc(35);
+			// height: rem-calc(35);
+			width: rem-calc(38);
+			height: rem-calc(38);
 		}
 	}
 }

@@ -18,9 +18,9 @@
 {% assign crumbs = page.url | split: '/' %}
 
 {% capture breadcrumb_classes %}
-    {% if page.theme != 'theme-light' %}
+    {% unless page.theme == 'theme-light' %}
         is-dark
-    {% endif %}
+    {% endunless %}
 {% endcapture %}
 
 <!-- BREADCRUMBS -->
@@ -41,9 +41,9 @@
                 <div class="d-flex align-items-center ml-auto">
 
                     <!-- COMMENT COUNTER -->
-                    <div class="breadcrumb-item comment-counter mr-1">
+                    <!-- <div class="breadcrumb-item comment-counter mr-1">
                         <i class="fa fa-comments"></i>&nbsp; <a href="{{page.url}}#disqus_thread">0 <span class="hidden-sm-down">comments</span></a>
-                    </div>
+                    </div> -->
 
                     {% include snippets/social_media.html preset=2 %}
                 </div>

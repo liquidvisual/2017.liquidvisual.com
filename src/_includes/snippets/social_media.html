@@ -24,8 +24,17 @@
 
 	<!-- SHARE LINKS -->
 	<!-- https://developers.google.com/+/web/share/#sharelink -->
+	<!-- https://stackoverflow.com/questions/16243972/showing-disqus-comment-count-in-a-div-or-span-not-a-href -->
 
 	<ul class="social-media">
+		<li>
+		    <a title="Comments" class="disqus" href="#disqus_thread">
+		        <span class="icon">
+		            <i class="fa fa-comments"></i>&nbsp;
+		            <span class="disqus-comment-count" data-disqus-url="{{page.url}}#disqus_thread">0</span>
+		        </span>
+		    </a>
+		</li>
 	    <li>
 	    	<a target="_blank" title="Share Facebook" class="facebook" href="https://www.facebook.com/sharer/sharer.php?u="
 	    		onclick="window.open(this.href + document.URL, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;">

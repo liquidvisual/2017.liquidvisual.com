@@ -22,7 +22,7 @@ layout: base__page
 					<div class="panel-box-body">
 						<h3>Fancy a Sub?</h3>
 						<p><small>Not the sandwich, goofus! Subscribe my stupid mailing list!</small></p>
-						{% include form_subscribe.html %}
+						{% include forms/form_subscribe.html %}
 					</div>
 
 					<!-- SPRITE SMALL DRIP -->
@@ -49,7 +49,7 @@ layout: base__page
 
 		<!-- COMMENTS ENABLED -->
 		{% unless page.comments == false %}
-			<!-- { % include disqus.html %} -->
+			<!-- { % include snippets/comments.html %} -->
 		{% endunless %}
 
 	</div>

@@ -45,7 +45,15 @@
 
                                         <!-- DYNAMIC TEXT -->
                                         <h1 class="display-1">{{ page.title }}</h1>
-                                        <p><img width="32" class="rounded-circle" src="/assets/img/content/avatars/avatar-mitch@2x.jpg" alt="Mitch">&nbsp; by <a href="/hire/">{{ "Mitch Warren" }}</a>&nbsp;<span class="d-inline-block">| on {{ page.date | date: "%d %B %Y" }}</span></p>
+
+                                        <!-- AUTHOR AVATAR -->
+                                        <p class="d-flex align-items-center">
+                                            <img width="32" class="rounded-circle mr-2" src="/assets/img/content/avatars/avatar-mitch@2x.jpg" alt="Mitch">
+                                             <span>
+                                                by <a href="/hire/">{{ "Mitch Warren" }}</a> <span class="d-inline-block"> | {{ page.date | date: "%d %B %Y" }}</span>
+                                             </span>
+                                        </p>
+
                                     </div>
                                 </div>
                             </div>

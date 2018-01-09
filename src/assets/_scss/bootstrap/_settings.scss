@@ -180,7 +180,7 @@ $container-gutter: 30px; // [LOCKED] - lv added
 
 $grid-breakpoints: (
   xs: 0,      // [LOCKED]
-  sm: 576px,  // [LOCKED]
+  sm: 375px,  // [RE-LOCKED] - size of iphone 6 (was 576px)
   md: 768px,  // [LOCKED]
   lg: 1024px, // 992px is smarter but 1024px snaps better [?]
   xl: 1116px, // [LOCKED] appears as 1024px
@@ -196,7 +196,7 @@ $grid-breakpoints: (
 // // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-  sm: 576px,   // [LOCKED]
+  sm: 540px,   // [LOCKED] - was 576 but switched to bootstrap default
   md: 768px,   // [LOCKED]
   lg: 1024px,  // [LOCKED]
   xl: 1116px,  // [LOCKED] APPEARS 1024px (same as tablet landscape)

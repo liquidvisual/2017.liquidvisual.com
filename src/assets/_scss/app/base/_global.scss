@@ -1,7 +1,7 @@
 /*
     GLOBAL.CSS
 
-    - updated: 11.12.17
+    - updated: 09.01.18
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -12,6 +12,10 @@
 //-----------------------------------------------------------------
 
 .container {
+	@include media-breakpoint-up(sm) {
+	    padding: 0 $container-gutter/1.5; // [LOCKED] - iPhone6 up has slight gutter
+	}
+
 	@include media-breakpoint-up(md) {
 	    padding: 0 $container-gutter; // [LOCKED]
 	}
