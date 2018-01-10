@@ -4,17 +4,18 @@ layout: base__page
 
 {% contentfor tagline %}
 	<h2><span class="brand-primary-color">So tell me,</span> which client are you?</h2>
-	<div class="spacer mb-4"></div>
+	<div class="spacer mb-3 mb-sm-4"></div>
 
-	<!-- TABS -->
-	<ul class="list-tabs nav" role="tablist">
+	<!-- HIRE TABS -->
+	<ul class="hire-tabs nav" role="tablist">
 		<li class="nav-item">
-			<a class="active" href="#digital-agency" data-toggle="tab" role="tab">Digital Agency</a>
+			<a class="active" data-toggle="tab" href="#digital-agency"  role="tab">Digital Agency</a>
 		</li>
 		<li class="nav-item">
 			<a data-toggle="tab" href="#small-business" role="tab">Small Business</a>
 		</li>
 	</ul>
+
 {% endcontentfor %}
 
 <!-- SECTION DARK  -->
@@ -35,13 +36,13 @@ layout: base__page
 				</div>
 
 				<!-- AVAILABILITY NOTICE -->
-				<div class="availability-notice mr-md-4 mr-lg-0 ">
-				    <div class="availability-notice-orb"><span class="ripple"></span></div>
+				<div class="info-panel mr-md-4 mr-lg-0 mb-5 mb-md-4">
+				    <div class="availability-orb"><span class="ripple"></span></div>
 				    <div>
 				        <h4 class="mb-0"><span class="hidden-md-down">Current</span> Availability</h4>
 				        <p class="mb-0">
-				        	<span class="hidden-md-down">My brain is ready for work!</span>
-				        	<span class="hidden-lg-up">Ready to work.</span>
+				        	<span class="hidden-md-down">Ready to take on new projects</span>
+				        	<span class="hidden-lg-up">Ready for work.</span>
 				        </p>
 				    </div>
 				</div>
@@ -50,7 +51,9 @@ layout: base__page
 				<div class="d-none d-md-block">
 					{% capture social %}
 						{% include snippets/social_media.html preset=1 %}
+						{{ social }}
 
+						{% comment %}
 						<!-- RESOURCES -->
 						<!-- <ul class="social-media block-grid-xs-1 block-grid-lg-2 mb-4">
 							<li>
@@ -72,8 +75,8 @@ layout: base__page
 								</a>
 							</li>
 						</ul> -->
+						{% endcomment %}
 					{% endcapture %}
-					{{ social }}
 				</div>
 
 			</div>
@@ -90,7 +93,9 @@ layout: base__page
 				</div>
 
 				<!-- SOCIAL MOBILE -->
-				<div class="hidden-md-up mt-5">
+				<div class="hidden-md-up">
+					<div class="spacer mb-5"></div>
+					<hr>
 					{{ social }}
 				</div>
 

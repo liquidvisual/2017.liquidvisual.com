@@ -1,0 +1,45 @@
+/*
+    TABS.CSS
+
+    - updated: 10.01.18
+    - liquidvisual.com
+*/
+//--------------------------------------------------------------------
+// VARIABLES
+//--------------------------------------------------------------------
+//--------------------------------------------------------------------
+// LIST TABS
+// used in /hire/
+//--------------------------------------------------------------------
+
+.hire-tabs {
+	display: flex;
+	flex-wrap: nowrap; // LOCKED - override nav class
+	justify-content: center;
+    margin-bottom: rem-calc(-50);
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: rem-calc(-60);
+    }
+
+    .nav-item a {
+        display: block;
+        padding: rem-calc(15 30);
+        // border-radius: $border-radius $border-radius 0 0;
+        font-size: rem-calc(20);
+        font-weight: 500;
+        color: rgba($gray-light, 0.8);
+        transition: none;
+
+        &.active {
+            background: $gray-dark;
+        }
+    }
+}
+
+//--------------------------------------------------------------------
+//
+//--------------------------------------------------------------------
+//=========================================
+//
+//=========================================

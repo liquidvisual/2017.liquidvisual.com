@@ -57,22 +57,21 @@
 }
 
 //-----------------------------------------------------------------
-//
-//-----------------------------------------------------------------
-//-----------------------------------------------------------------
-// AVAILABILITY NOTICE (refactor elsewhere)
+// INFO PANEL
+// used in /hire/ for availability
 //-----------------------------------------------------------------
 
-.availability-notice {
+.info-panel {
 	display: flex;
 	align-items: center;
 	padding: $spacer;
-	margin-bottom: $spacer*1.5;
+	margin-bottom: $spacer;
 	background: rgba(white, 0.1);
 	border-radius: $border-radius;
 }
 
-.availability-notice-orb {
+// refactor elsewhere
+.availability-orb {
 	position: relative; // [LOCKED]
 	width: rem-calc(30);
 	min-width: rem-calc(30);
