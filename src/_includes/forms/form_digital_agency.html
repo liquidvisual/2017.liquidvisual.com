@@ -1,11 +1,12 @@
 {% assign settings = site.data.settings %}
 
+{% comment %}
 <!-- IF SUCCESS -->
 <div class="alert alert-success alert-dismissible fade show" role="alert" hidden>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
-    <strong>Success!</strong> Thanks for that. Your email has been added to the mailing list.
+    <strong>Success!</strong><br> Thanks for that. You've been added to the mailing list.
 </div>
 
 <!-- IF FAILURE -->
@@ -13,8 +14,9 @@
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
-    <strong>Oops!</strong> Something went wrong. Please check your details and try again.
+    <strong>Oops!</strong><br> Something went wrong. Please try again.
 </div>
+{% endcomment %}
 
 <h2>Make A Booking</h2>
 
@@ -23,7 +25,7 @@
 <div class="spacer mb-4"></div>
 
 <!-- FORM CONTACT -->
-<form id="contact" name="Digital Agency Form" action="/hire/thanks/" data-toggle="validator" novalidate netlify>
+<form id="contact-digital-agency" name="Digital Agency Form" action="/hire/thanks/" data-toggle="validator" novalidate netlify>
     <fieldset>
 
        <!-- NAME* -->
@@ -43,7 +45,7 @@
         <!-- COMPANY -->
         <label class="form-group d-block">
             <p class="mb-2">Company</p>
-            <input class="form-control" name="Company" type="text" placeholder="" required>
+            <input class="form-control" name="Company" type="text" placeholder="">
         </label>
 
     </fieldset>
@@ -54,37 +56,37 @@
             <label class="h5 mb-4">I will need...</label>
 
             <label class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input">
+                <input class="custom-control-input" type="checkbox" name="Services" value="Multi-page website build">
                 <p class="custom-control-label">Multi-page website build <em>(from PSD)</em></p>
             </label>
 
             <label class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input">
+                <input class="custom-control-input" type="checkbox" name="Services" value="Single-page website build">
                 <p class="custom-control-label">Single-page website build <em>(from PSD)</em></p>
             </label>
 
             <label class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input">
+                <input class="custom-control-input" type="checkbox" name="Services" value="Landing page build">
                 <p class="custom-control-label">Landing page build <em>(from PSD)</em></p>
             </label>
 
             <label class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input">
+                <input class="custom-control-input" type="checkbox" name="Services" value="Custom JavaScript component">
                 <p class="custom-control-label">Custom JavaScript component</p>
             </label>
 
             <label class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input">
+                <input class="custom-control-input" type="checkbox" name="Services" value="Existing website converted to Jekyll">
                 <p class="custom-control-label">Existing website converted to Jekyll</p>
             </label>
 
             <label class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input">
+                <input class="custom-control-input" type="checkbox" name="Services" value="Something re-designed">
                 <p class="custom-control-label">Something re-designed</p>
             </label>
 
             <label class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input">
+                <input class="custom-control-input" type="checkbox" name="Services" value="Other">
                 <p class="custom-control-label">Other</p>
             </label>
         </div>
@@ -94,27 +96,27 @@
             <label class="h5 mb-4">When's the deadline?</label>
 
             <label class="custom-control custom-radio">
-              <input type="radio" name="deadline" class="custom-control-input">
+              <input class="custom-control-input" type="radio" name="Deadline" value="Now now now!">
               <p class="custom-control-label">Now now now!</p>
             </label>
 
             <label class="custom-control custom-radio">
-              <input type="radio" name="deadline" class="custom-control-input">
+              <input class="custom-control-input" type="radio" name="Deadline" value="Within 2 weeks">
               <p class="custom-control-label">Within 2 weeks</p>
             </label>
 
             <label class="custom-control custom-radio">
-              <input type="radio" name="deadline" class="custom-control-input">
+              <input class="custom-control-input" type="radio" name="Deadline" value="Within 3 weeks">
               <p class="custom-control-label">Within 3 weeks</p>
             </label>
 
             <label class="custom-control custom-radio">
-              <input type="radio" name="deadline" class="custom-control-input">
+              <input class="custom-control-input" type="radio" name="Deadline" value="Within a month">
               <p class="custom-control-label">Within a month</p>
             </label>
 
             <label class="custom-control custom-radio">
-              <input type="radio" name="deadline" class="custom-control-input">
+              <input class="custom-control-input" type="radio" name="Deadline" value="Next month or so">
               <p class="custom-control-label">Next month or so</p>
             </label>
         </div>
@@ -124,32 +126,32 @@
             <label class="h5 mb-4">What's the budget for this work?</label>
 
             <label class="custom-control custom-radio">
-              <input type="radio" name="budget" class="custom-control-input">
+              <input class="custom-control-input" type="radio" name="Budget" value="Less than $500">
               <p class="custom-control-label">Less than $500</p>
             </label>
 
             <label class="custom-control custom-radio">
-              <input type="radio" name="budget" class="custom-control-input">
+              <input class="custom-control-input" type="radio" name="Budget" value="$500 - $1K">
               <p class="custom-control-label">$500 - $1K</p>
             </label>
 
             <label class="custom-control custom-radio">
-              <input type="radio" name="budget" class="custom-control-input">
+              <input class="custom-control-input" type="radio" name="Budget" value="$1K - $3K">
               <p class="custom-control-label">$1K - $3K</p>
             </label>
 
             <label class="custom-control custom-radio">
-              <input type="radio" name="budget" class="custom-control-input">
-              <p class="custom-control-label">$3K - 5K</p>
+              <input class="custom-control-input" type="radio" name="Budget" value="$3K - $5K">
+              <p class="custom-control-label">$3K - $5K</p>
             </label>
 
             <label class="custom-control custom-radio">
-              <input type="radio" name="budget" class="custom-control-input">
-              <p class="custom-control-label">$5 - $10K</p>
+              <input class="custom-control-input" type="radio" name="Budget" value="$5K - $10K">
+              <p class="custom-control-label">$5K - $10K</p>
             </label>
 
             <label class="custom-control custom-radio">
-              <input type="radio" name="budget" class="custom-control-input">
+              <input class="custom-control-input" type="radio" name="Budget" value="More than $10K">
               <p class="custom-control-label">More than $10K</p>
             </label>
         </div>
@@ -162,7 +164,7 @@
             <h5>What's the brief?<small class="asterisk">*</small></h5>
             <p class="mb-3">Include the brief, notes, links to files, or anything else that will help me to quickly understand your job.</p>
             <textarea class="form-control" name="Message" rows="6" placeholder="" required></textarea>
-            <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; Your name is required.</small>
+            <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; Please tell me more.</small>
         </label>
 
     </fieldset>
