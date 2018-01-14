@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="description" content="">
+    <base href="/">
+    <title>Categories - liquidvisual</title>
+
+    <!-- CDN -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,500,700|Source+Code+Pro:500,600|Oswald:300,500,600">
+
+    <!-- PRIORITY SCRIPTS -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="/tutorials/posts.js"></script>
+    <link rel="stylesheet" href="/assets/css/minified.css">
+</head>
+<body class="theme-light">
+
+    <!-- PAGE LOADER -->
+    <div id="lv-page-loader" class="lv-page-loader">
+        <div class="lv-page-loader-spinner">
+            <div class="lv-page-loader-spinner-ripple"></div>
+        </div>
+    </div>
+
+    <!-- WON'T SHOW IF JAVASCRIPT IS DISABLED -->
+    <script>
+    var loader = document.getElementById('lv-page-loader');
+    loader.style.display = 'flex';
+    // Prevent loader from getting stuck if body takes too long
+    setTimeout(function() {
+        loader.className += ' force-finish';
+    }, 1500);
+    </script>
+    <div class="lv-page">
+
+        <!-- HEADER -->
+        <header class="global-header fixed-top">
+            <div class="container">
+
+                <!-- LOGO -->
+                <a class="logo" href="/" title="" itemprop="url">
+                    <img class="is-dynamic" src="/assets/img/content/branding/logo-type--white-transparent.svg" alt="" itemprop="logo">
+
+                    <!-- controllable -->
+                    <img class="is-default" src="/assets/img/content/branding/logo-type--default.svg" alt="" itemprop="logo" aria-hidden>
+
+                    <!-- Used on scroll (tablet +) -->
+                    <img class="is-dark" src="/assets/img/content/branding/logo-type--dark.svg" alt="" itemprop="logo" aria-hidden>
+
+                    <!-- Shows dark logo for white bg only (mobile) -->
+                    </a>
+
+                <!-- HAMBURGER -->
+                <div class="global-mobile-menu d-lg-none">
+                    <div class="lv-hamburger" data-menu-toggle>
+                        <span class="lv-hamburger-top"></span>
+                        <span class="lv-hamburger-middle"></span>
+                        <span class="lv-hamburger-bottom"></span>
+                    </div>
+                </div>
+
+                <!-- NAVIGATION -->
+                <nav class="global-navigation hidden-md-down">
+                    <div class="lv-topbar">
+                        <ul>
+                            <li class="">
+                                <a class="top-parent-anchor" href="/">
+                                    <img class="hidden-md-down" width="10" src="/assets/img/ui/fi-home.svg" alt="Home">
+                                    <span class="text hidden-lg-up">Home</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a class="top-parent-anchor" href="/about/">
+                                    <span class="text">About</span>
+                                </a>
+                            </li>
+                            <li class="has-dropdown">
+                                <a class="top-parent-anchor" href="/services/">
+                                    <span class="text">Services</span>
+                                </a>
+                                <ul class="dropdown is-nav-included" data-parent="Services">
+                                    <li class="">
+                                        <a href="/services/digital-agency/">
+                                            <h5 class="text">Digital Agency</h5>
+                                            <div class="dropdown-text">
+                                                <h6>Website Build</h6>
+                                                <p>High performing static websites built with years of expertise. Full versioned.</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="/services/small-business/">
+                                            <h5 class="text">Small Business</h5>
+                                            <div class="dropdown-text">
+                                                <h6>Website Design Packages</h6>
+                                                <p>Modern website design with personality. Hand coded in HTML5.</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a class="top-parent-anchor" href="/projects/">
+                                    <span class="text">Projects</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a class="top-parent-anchor" href="/tutorials/">
+                                    <span class="text">Tutorials</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a class="top-parent-anchor" href="/hire/">
+                                    <span class="text">Hire</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- HERO WRAPPER -->
+        <div class="lv-hero-wrapper has-no-gutters has-bleed-tintX" style="background-image: url('/assets/img/content/hero/hero-bg.png')">
+            <div class="container-wrapper">
+                <div class="container">
+
+                    <!-- HERO -->
+                    <div class="lv-hero has-height-preset-1">
+                        <div class="lv-hero-item" style="background-image: url('/assets/img/content/hero/hero-bg.png')">
+
+                            <!-- HERO TEXT IMAGE -->
+                            <div class="lv-hero-item-caption">
+                                <h1 class="mb-0">
+                                    <img width="100%" src="/assets/img/layout/headings/heading-category--white.svg" alt="Categories">
+                                </h1>
+                            </div>
+
+                            <!-- BREADCRUMB ILLUSION -->
+                            <div class="hero-bottom-breadcrumb-illusion"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /.lv-hero-wrapper -->
+        
+<!-- CONTENT --><div class="container-wrapper">
+            <div class="container">
+
+                <!-- BODY -->
+                <main class="main-content">
+
+                    <!-- is-light has-light-bleed -->
+                    
+<!-- BREADCRUMBS --><section class="breadcrumb-wrapper section py-0 is-light has-light-bleed">
+                        <div class="container">
+                            <nav class="breadcrumb">
+
+                                <!-- CRUMBS -->
+                                <a class="breadcrumb-item" href="/tutorials/">
+                                    <i class="fa fa-arrow-circle-left"></i>&nbsp;
+                                    <span class="hidden-sm-down">Back to</span> tutorials</a>
+
+                                <!-- <span class="breadcrumb-item">categories</span> -->
+                                
+<!-- TOOLS PANEL --><div class="d-flex align-items-center ml-auto">
+
+                                    <!-- SHARE LINKS -->
+                                    
+<!-- https://developers.google.com/+/web/share/#sharelink -->
+<!-- https://stackoverflow.com/questions/16243972/showing-disqus-comment-count-in-a-div-or-span-not-a-href --><ul class="social-media">
+                                        <li>
+                                            <a title="Comments" class="disqus" href="#disqus_thread">
+                                                <span class="icon">
+                                                    <i class="fa fa-comments"></i>&nbsp;
+                                                    <span class="disqus-comment-count" data-disqus-url="/tutorials/categories/#disqus_thread">0</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" title="Share Facebook" class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=" onclick="window.open(this.href + document.URL, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false">
+                                                <div class="icon">
+                                                    <i class="fa fa-facebook"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" title="Tweet" class="twitter" href="https://twitter.com/home?status=" onclick="window.open(this.href + document.URL, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false">
+                                                <div class="icon">
+                                                    <i class="fa fa-twitter"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" title="Share Google+" class="google-plus" href="https://plus.google.com/share?url=" onclick="window.open(this.href + document.URL, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false">
+                                                <div class="icon">
+                                                    <i class="fa fa-google-plus"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+
+                            <!-- BG OVERFLOW -->
+                            <div class="breadcrumb-bg-overflow">
+                                <div class="breadcrumb-bg"></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section is-light">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-10">
+
+                                    <!-- CATEGORY TITLES -->
+                                    <h3 id="#css">CSS</h3>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="/tutorials/create-a-sprite-animation-with-css/">Create a Sprite Animation with CSS</a>
+                                        </li>
+                                    </ul>
+
+                                    <!-- CATEGORY TITLES -->
+                                    <h3 id="#development">Development</h3>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="/tutorials/how-to-correctly-mark-up-your-companys-logo/">How to Correctly Mark Up Your Company's Logo</a>
+                                        </li>
+                                        <li>
+                                            <a href="/tutorials/embed-the-latest-youtube-video-with-a-channel-id/">Embed the Latest YouTube Video with a Channel ID</a>
+                                        </li>
+                                        <li>
+                                            <a href="/tutorials/embed-a-google-map-into-your-website-without-an-api-key/">Embed a Google Map into your Website Without an API Key</a>
+                                        </li>
+                                        <li>
+                                            <a href="/tutorials/embed-tagged-instagram-posts-with-the-new-api-changes/">Embed Tagged Instagram Posts into your Website</a>
+                                        </li>
+                                        <li>
+                                            <a href="/tutorials/install-npm-and-jekyll-locally-on-mac-without-sudo/">Install NPM and Jekyll Locally Without Sudo</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="global-footer-wrapper">
+            <div class="container">
+                <footer class="global-footer">
+
+                    <!-- FOOTER MIDDLE -->
+                    <section class="global-footer-body section is-darker has-darker-bleed">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h3 class="h5">Make a connection</h3>
+                                    <p>You've stumbled on the portfolio of freelance web designer, Mitch.</p>
+                                    <p class="py-2 pr-5 pr-md-3 pr-lg-5">
+                                        <img width="100%" src="/assets/img/layout/mitch-at.svg">
+                                    </p>
+
+                                    <!-- SOCIAL MEDIA (FOOTER) -->
+                                    <ul class="social-media block-grid-4 block-grid-md-6 pr-xl-5 mb-4">
+                                        <li>
+                                            <a title="Codepen" href="https://codepen.io/liquidvisual" target="_blank" class="codepen">
+                                                <div class="icon">
+                                                    <i class="fa fa-codepen"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="Dribbble" href="https://dribbble.com/liquidvisual" target="_blank" class="dribbble">
+                                                <div class="icon">
+                                                    <i class="fa fa-dribbble"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="Github" href="https://github.com/liquidvisual" target="_blank" class="github">
+                                                <div class="icon">
+                                                    <i class="fa fa-github"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="Instagram" href="https://www.instagram.com/liquidvisual" target="_blank" class="instagram">
+                                                <div class="icon">
+                                                    <i class="fa fa-instagram"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="Twitter" href="https://twitter.com/WriteMitch" target="_blank" class="twitter">
+                                                <div class="icon">
+                                                    <i class="fa fa-twitter"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="YouTube" href="https://youtube.com/liquidv" target="_blank" class="youtube">
+                                                <div class="icon">
+                                                    <i class="fa fa-youtube-play"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- FOOTER LINKS -->
+                                <div class="col-md-8">
+                                    <ul class="block-grid-xs-2 block-grid-md-4">
+                                        <li>
+                                            <h3 class="h5">Quick Links</h3>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="/about/">About</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/services/">Services</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/projects/">Projects</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/tutorials/">Tutorials</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/hire/">Hire</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h3 class="h5">Services</h3>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="/services/digital-agency/">Digital Agencies</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/services/small-business/">Small Business</a>
+                                                </li>
+                                            </ul>
+                                            <br>
+                                            <h3 class="h5">Additional</h3>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="/hire-me/my-resume/">My Resume</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/hire-me/simulated-interview/">Simulated Interview</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h3 class="h5">Something</h3>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="">Something</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Something</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Something</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Something</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Something</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h3 class="h5">Other Sites</h3>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="">Blarg! News</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.danandmitch.com">Dan and Mitch</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Kleptobreaker</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.soberfish.com">Soberfish</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.mitchinghour.com">The Mitching Hour</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- FOOTER BOTTOM -->
+                    <section class="global-footer-bottom section is-darker">
+                        <div class="container">
+
+                            <!-- DIVIDER -->
+                            <div class="divider"></div>
+
+                            <!-- COPYRIGHT -->
+                            <small>&copy;
+                                <b>2018</b> - liquidvisual</small>
+                            <a class="author-logo" target="_blank" href="http://liquidvisual.com"></a>
+
+                            <!-- BACK TO TOP -->
+                            <a class="back-to-top" href="#">
+                                <i class="fa fa-angle-up"></i>
+                            </a>
+                        </div>
+                    </section>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- /.lv-page -->
+    
+<!-- OFF-CANVAS MENU --><nav class="lv-off-canvas" data-off-canvas-menu aria-hidden="true">
+        <ul>
+            <li class="">
+                <a class="top-parent-anchor" href="/">
+                    <img class="hidden-md-down" width="10" src="/assets/img/ui/fi-home.svg" alt="Home">
+                    <span class="text hidden-lg-up">Home</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="top-parent-anchor" href="/about/">
+                    <span class="text">About</span>
+                </a>
+            </li>
+            <li class="has-dropdown">
+                <a class="top-parent-anchor" href="/services/">
+                    <span class="text">Services</span>
+                </a>
+                <ul class="dropdown is-nav-included" data-parent="Services">
+                    <li class="">
+                        <a href="/services/digital-agency/">
+                            <h5 class="text">Digital Agency</h5>
+                            <div class="dropdown-text">
+                                <h6>Website Build</h6>
+                                <p>High performing static websites built with years of expertise. Full versioned.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/services/small-business/">
+                            <h5 class="text">Small Business</h5>
+                            <div class="dropdown-text">
+                                <h6>Website Design Packages</h6>
+                                <p>Modern website design with personality. Hand coded in HTML5.</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="top-parent-anchor" href="/projects/">
+                    <span class="text">Projects</span>
+                </a>
+            </li>
+            <li class="active">
+                <a class="top-parent-anchor" href="/tutorials/">
+                    <span class="text">Tutorials</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="top-parent-anchor" href="/hire/">
+                    <span class="text">Hire</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--[if lte IE 9]>
+    <div class="lv-alert-bar">
+        <p>You're using an outdated browser. Please <a title="Click me, you know you want to." href="http://outdatedbrowser.com">upgrade your browser</a> to improve your experience.</p>
+        <span class="lv-alert-bar-close-btn">&times;</span>
+    </div>
+    <![endif]-->
+
+    <!-- **** JAVASCRIPT **** -->
+    <script src="/assets/scripts/minified.js"></script>
+
+    <!-- NO JAVASCRIPT WARNING -->
+    <noscript>
+        <div class="lv-alert-bar">
+            <p>Your browser has Javascript disabled. Some features may be limited.</p>
+        </div>
+    </noscript>
+</body>
+</html>

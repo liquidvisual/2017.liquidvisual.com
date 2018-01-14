@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="description" content="Because responsive design is hard, first and foremost. These offshore businesses are dealing with hundreds of clients and the developers aren't being paid en...">
+    <base href="/">
+    <title>Install NPM and Jekyll Locally Without Sudo - liquidvisual</title>
+
+    <!-- CDN -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,500,700|Source+Code+Pro:500,600|Oswald:300,500,600">
+
+    <!-- PRIORITY SCRIPTS -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="/tutorials/posts.js"></script>
+    <link rel="stylesheet" href="/assets/css/minified.css">
+</head>
+<body class="theme-light">
+
+    <!-- PAGE LOADER -->
+    <div id="lv-page-loader" class="lv-page-loader">
+        <div class="lv-page-loader-spinner">
+            <div class="lv-page-loader-spinner-ripple"></div>
+        </div>
+    </div>
+
+    <!-- WON'T SHOW IF JAVASCRIPT IS DISABLED -->
+    <script>
+    var loader = document.getElementById('lv-page-loader');
+    loader.style.display = 'flex';
+    // Prevent loader from getting stuck if body takes too long
+    setTimeout(function() {
+        loader.className += ' force-finish';
+    }, 1500);
+    </script>
+    <div class="lv-page">
+
+        <!-- HEADER -->
+        <header class="global-header fixed-top">
+            <div class="container">
+
+                <!-- LOGO -->
+                <a class="logo" href="/" title="" itemprop="url">
+                    <img class="is-dynamic" src="/assets/img/content/branding/logo-type--white-transparent.svg" alt="" itemprop="logo">
+
+                    <!-- controllable -->
+                    <img class="is-default" src="/assets/img/content/branding/logo-type--default.svg" alt="" itemprop="logo" aria-hidden>
+
+                    <!-- Used on scroll (tablet +) -->
+                    <img class="is-dark" src="/assets/img/content/branding/logo-type--dark.svg" alt="" itemprop="logo" aria-hidden>
+
+                    <!-- Shows dark logo for white bg only (mobile) -->
+                    </a>
+
+                <!-- HAMBURGER -->
+                <div class="global-mobile-menu d-lg-none">
+                    <div class="lv-hamburger" data-menu-toggle>
+                        <span class="lv-hamburger-top"></span>
+                        <span class="lv-hamburger-middle"></span>
+                        <span class="lv-hamburger-bottom"></span>
+                    </div>
+                </div>
+
+                <!-- NAVIGATION -->
+                <nav class="global-navigation hidden-md-down">
+                    <div class="lv-topbar">
+                        <ul>
+                            <li class="">
+                                <a class="top-parent-anchor" href="/">
+                                    <img class="hidden-md-down" width="10" src="/assets/img/ui/fi-home.svg" alt="Home">
+                                    <span class="text hidden-lg-up">Home</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a class="top-parent-anchor" href="/about/">
+                                    <span class="text">About</span>
+                                </a>
+                            </li>
+                            <li class="has-dropdown">
+                                <a class="top-parent-anchor" href="/services/">
+                                    <span class="text">Services</span>
+                                </a>
+                                <ul class="dropdown is-nav-included" data-parent="Services">
+                                    <li class="">
+                                        <a href="/services/digital-agency/">
+                                            <h5 class="text">Digital Agency</h5>
+                                            <div class="dropdown-text">
+                                                <h6>Website Build</h6>
+                                                <p>High performing static websites built with years of expertise. Full versioned.</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="/services/small-business/">
+                                            <h5 class="text">Small Business</h5>
+                                            <div class="dropdown-text">
+                                                <h6>Website Design Packages</h6>
+                                                <p>Modern website design with personality. Hand coded in HTML5.</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a class="top-parent-anchor" href="/projects/">
+                                    <span class="text">Projects</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a class="top-parent-anchor" href="/tutorials/">
+                                    <span class="text">Tutorials</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a class="top-parent-anchor" href="/hire/">
+                                    <span class="text">Hire</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- HERO WRAPPER -->
+        <div class="lv-hero-wrapper" style="background-image: url('/assets/img/content/hero/hero-bg.png')">
+            <div class="container-wrapper">
+                <div class="container">
+
+                    <!-- HERO -->
+                    <div class="lv-hero has-height-preset-1">
+                        <div class="lv-hero-item" style="background-image: url('/assets/img/content/hero/hero-bg.png')">
+
+                            <!-- HERO TEXT IMAGE -->
+                            <div class="lv-hero-item-caption">
+                                <div class="container mb-4">
+                                    <div class="row">
+                                        <div class="col-lg-10">
+
+                                            <!-- CATEGORY LABEL -->
+                                            <a class="btn-category mr-2" href="/tutorials/categories/#development">Development</a>
+
+                                            <!-- DYNAMIC TEXT -->
+                                            <h1 class="display-1">Install NPM and Jekyll Locally Without Sudo</h1>
+
+                                            <!-- AUTHOR AVATAR -->
+                                            <p class="d-flex align-items-center">
+                                                <img width="32" class="rounded-circle mr-2" src="/assets/img/content/avatars/avatar-mitch@2x.jpg" alt="Mitch">
+                                                <span>by
+                                                    <a href="/hire/">Mitch Warren</a>
+                                                    <span class="d-inline-block">| 03 February 2015</span>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- BREADCRUMB ILLUSION -->
+                            <div class="hero-bottom-breadcrumb-illusion"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /.lv-hero-wrapper -->
+        
+<!-- CONTENT --><div class="container-wrapper">
+            <div class="container">
+
+                <!-- BODY -->
+                <main class="main-content">
+
+                    <!-- is-light has-light-bleed -->
+                    
+<!-- BREADCRUMBS --><section class="breadcrumb-wrapper section py-0 is-light has-light-bleed">
+                        <div class="container">
+                            <nav class="breadcrumb">
+
+                                <!-- CRUMBS -->
+                                <a class="breadcrumb-item" href="/tutorials/">
+                                    <i class="fa fa-arrow-circle-left"></i>&nbsp;
+                                    <span class="hidden-sm-down">Back to</span> tutorials</a>
+
+                                <!-- <span class="breadcrumb-item">install npm and jekyll locally on mac without sudo</span> -->
+                                
+<!-- TOOLS PANEL --><div class="d-flex align-items-center ml-auto">
+
+                                    <!-- SHARE LINKS -->
+                                    
+<!-- https://developers.google.com/+/web/share/#sharelink -->
+<!-- https://stackoverflow.com/questions/16243972/showing-disqus-comment-count-in-a-div-or-span-not-a-href --><ul class="social-media">
+                                        <li>
+                                            <a title="Comments" class="disqus" href="#disqus_thread">
+                                                <span class="icon">
+                                                    <i class="fa fa-comments"></i>&nbsp;
+                                                    <span class="disqus-comment-count" data-disqus-url="/tutorials/install-npm-and-jekyll-locally-on-mac-without-sudo/#disqus_thread">0</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" title="Share Facebook" class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=" onclick="window.open(this.href + document.URL, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false">
+                                                <div class="icon">
+                                                    <i class="fa fa-facebook"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" title="Tweet" class="twitter" href="https://twitter.com/home?status=" onclick="window.open(this.href + document.URL, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false">
+                                                <div class="icon">
+                                                    <i class="fa fa-twitter"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" title="Share Google+" class="google-plus" href="https://plus.google.com/share?url=" onclick="window.open(this.href + document.URL, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false">
+                                                <div class="icon">
+                                                    <i class="fa fa-google-plus"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+
+                            <!-- BG OVERFLOW -->
+                            <div class="breadcrumb-bg-overflow">
+                                <div class="breadcrumb-bg"></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- SECTION -->
+                    <section class="section is-light has-light-bleed">
+                        <div class="container">
+                            <div class="row no-gutters">
+                                <div class="col-lg-9 pr-lg-5">
+                                    <div class="pr-lg-3">
+                                        <p class="lead dropcap">Because responsive design is hard, first and foremost. These offshore businesses are dealing with hundreds of clients and the developers aren't being paid enough, so you end up with a dodgy end-product and a lame user experience.</p>
+
+                                        <!-- This project is built with [Jekyll v3.6.2](http://jekyllrb.com){:target="_blank"} - a popular static site generator endorsed by the good folks at Github. For package management we use [Bower](http://bower.io){:target="_blank"}, and [Grunt.js](http://gruntjs.com){:target="_blank"} - a JavaScript task runner. -->
+                                        <p>This project is built with
+                                            <a target="_blank" href="http://jekyllrb.com">Jekyll v3.6.2</a> - a popular static site generator endorsed by the good folks at Github. For package management we use
+                                            <a target="_blank" href="http://bower.io">Bower</a>, and
+                                            <a target="_blank" href="http://gruntjs.com">Grunt.js</a> - a JavaScript task runner.</p>
+
+                                        <!-- <div class="spacer mb-4"></div> -->
+                                        <h2 id="requirements">Requirements</h2>
+                                        <p>You’ll need the following to run the build process and leverage all its features.</p>
+                                        <ul>
+                                            <li>
+                                                <a href="https://git-scm.com" target="_blank">Git</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.ruby-lang.org/en/" target="_blank">Ruby</a> (1.9.3 or above)</li>
+                                            <li>
+                                                <a href="https://nodejs.org/" target="_blank">NodeJS</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.python.org/downloads/" target="_blank">Python</a> (optional)</li>
+                                            <li>MacOS 10.10 or higher</li>
+                                            <li>Command Line Tools (CLT) for Xcode</li>
+                                        </ul>
+                                        <div class="spacer mb-3"></div>
+                                        <h3 id="1-install-command-line-tools-for-xcode">1. Install Command Line Tools for Xcode</h3>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code>xcode-select <span class="nt">--install</span>
+</code></pre></div>
+                                        </div>
+                                        <div class="language-js highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code><span class="c1">//-----------------------------------------------------------------</span>
+<span class="c1">// PIXEL GRADIENT</span>
+<span class="c1">//-----------------------------------------------------------------</span>
+<span class="kd">function</span> <span class="nx">pixelGradient</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"h1.subheader, h2.subheader, h3.subheader, .pixel-grad"</span><span class="p">).</span><span class="nx">pxgradient</span><span class="p">({</span>
+        <span class="na">step</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="c1">// Step Color. The smaller the number, the greater the load. Default: 10</span>
+        <span class="na">colors</span><span class="p">:</span> <span class="p">[</span><span class="s2">"#F12D66"</span><span class="p">,</span><span class="s2">"#20B5C3"</span><span class="p">],</span>
+        <span class="na">dir</span><span class="p">:</span> <span class="s2">"x"</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+                                        </div>
+                                        <p>
+                                            <a href="https://apple.stackexchange.com/questions/254380/macos-sierra-invalid-active-developer-path">Source</a>
+                                        </p>
+                                        <div class="spacer mb-3"></div>
+                                        <h3 id="2-install-homebrew">2. Install Homebrew</h3>
+                                        <p>
+                                            <a href="http://brew.sh" target="_blank">Homebrew</a> is a package manager for MacOS. We’ll use it to install Command Line Tools for
+                                            <a href="https://git-scm.com" target="_blank">Git</a> now, and later
+                                            <a href="https://nodejs.org/" target="_blank">NodeJS</a> and
+                                            <a href="https://www.python.org" target="_blank">Python</a> (Python optional). Pull up Terminal and paste the following:</p>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code>/usr/bin/ruby <span class="nt">-e</span> <span class="s2">"</span><span class="k">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">"</span>
+</code></pre></div>
+                                        </div>
+                                        <p>Since we just installed Homebrew, we could have skipped brew update, but it’s a good habit to run it before installing anything with Homebrew because Homebrew is updated regularly.
+                                            <a href="https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/">Source</a>
+                                        </p>
+                                        <p>Next, add the Homebrew location to your <code class="highlighter-rouge">$PATH</code>. We’ll create a
+                                            <strong>.bash_profile</strong> or edit an existing one.</p>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code>touch ~/.bash_profile<span class="p">;</span> open ~/.bash_profile
+</code></pre></div>
+                                        </div>
+                                        <p>Then add the following to your file and save. This will allow us to run future commands without giving Administrator access.</p>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"/usr/local/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
+</code></pre></div>
+                                        </div>
+                                        <h3 id="3-ruby">3. Ruby</h3>
+                                        <p>Ruby typically comes installed with MacOS, although it’s always good to have the latest version. We recommend installing
+                                            <em>or updating</em> Ruby through
+                                            <a href="https://rvm.io" target="_blank">RVM</a>.</p>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code><span class="se">\c</span>url <span class="nt">-sSL</span> https://get.rvm.io | bash <span class="nt">-s</span> stable <span class="nt">--ruby</span>
+</code></pre></div>
+                                        </div>
+                                        <p>To start using RVM you need to run</p>
+                                        <p><code class="highlighter-rouge">source /Users/liquidvisual/.rvm/scripts/rvm</code></p>
+                                        <p>in all your open shell windows, in rare cases you need to reopen all shell windows. ??</p>
+                                        <p>add this to path:</p>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code><span class="o">[[</span> <span class="nt">-s</span> <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.rvm/scripts/rvm"</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.rvm/scripts/rvm"</span> <span class="c"># Load RVM into a shell session *as a function*</span>
+</code></pre></div>
+                                        </div>
+                                        <p>Next,
+                                            <strong>reboot the terminal window</strong>. If successful you should be able to see the new version number.</p>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code>ruby <span class="nt">-v</span>
+</code></pre></div>
+                                        </div>
+                                        <p>MacOS will have RubyGems installed by default, but we’ll grab the latest version.</p>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code>gem update <span class="nt">--system</span>
+</code></pre></div>
+                                        </div>
+                                        <p>To test your RubyGems install, you can now use it to grab
+                                            <a href="http://bundler.io">Bundler</a>. We use Bundler to install Ruby dependencies such as
+                                            <a href="https://jekyllrb.com" target="_blank">Jekyll</a>.</p>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code>gem install bundler
+</code></pre></div>
+                                        </div>
+                                        <h3 id="4-nodejs">4. NodeJS</h3>
+                                        <p>Next, install Node with Homebrew. Please be patient, as this can take some time.</p>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code>brew install <span class="nt">-v</span> node
+</code></pre></div>
+                                        </div>
+                                        <p>To test your Node install, try installing
+                                            <a href="http://gruntjs.com/" target="_blank">Grunt</a> which will be used to run the build process.</p>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code>npm install <span class="nt">-g</span> grunt-cli
+</code></pre></div>
+                                        </div>
+                                        <p>Next install
+                                            <a href="http://bower.io" target="_blank">Bower</a>. We use Bower to retrieve front-end dependencies such as Bootstrap, JQuery and others.</p>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code>npm install <span class="nt">-g</span> bower
+</code></pre></div>
+                                        </div>
+                                        <h3 id="5-python">5. Python</h3>
+                                        <p>MacOS will have Python installed by default, but we’ll grab the latest version. In this case
+                                            <strong>Python is optional</strong>. We use it in our Grunt File to create an ad-hoc local server to immediately serve the contents of our processed build.</p>
+                                        <p>If successful, you should be able to see the version.</p>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code>python
+</code></pre></div>
+                                        </div>
+                                        <div class="spacer mb-3"></div>
+                                        <h2 id="start-the-server">Start the Server</h2>
+                                        <p>Once everything is installed, you can clone the codebase or
+                                            <a href="" target="_blank">download</a> the contents from our Github repo.</p>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code>git clone git@github.com:liquidvisual/.git
+</code></pre></div>
+                                        </div>
+                                        <p>Now that you have the project, we can download its dependencies.</p>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code><span class="nb">cd 
+</span>bower install     <span class="c"># =&gt; for front-end dependencies (Eg. Bootstrap, JQuery etc)</span>
+bundle install    <span class="c"># =&gt; for Ruby dependencies (Eg. Jekyll)</span>
+npm install       <span class="c"># =&gt; for Node dependencies (Eg. Grunt)</span>
+</code></pre></div>
+                                        </div>
+                                        <p>Next we’ll create a local server by running the Grunt task <code class="highlighter-rouge">grunt serve</code>. Any changes to the files (eg. SCSS, JS etc) will trigger a page refresh in the browser.</p>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code>grunt serve
+</code></pre></div>
+                                        </div>
+                                        <p>If successful, your favorite browser should launch with
+                                            <a href="http://localhost:9000">http://localhost:9000</a>.</p>
+                                        <div class="spacer mb-3"></div>
+                                        <h3 id="for-production">For Production</h3>
+                                        <p>The following task <code class="highlighter-rouge">grunt build</code> will compile everything into the final end-product. Files will concatenate and minify, assets will be compressed to produce a
+                                            <strong>/dist</strong> folder, which can then be uploaded directly to a server.</p>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code>grunt build    <span class="c"># =&gt; to concat and minify etc</span>
+</code></pre></div>
+                                        </div>
+                                        <p>To view the contents of the compiled build in the browser, you can run the following task. This will run <code class="highlighter-rouge">grunt build</code> followed by creating an ad-hoc local server with Python.</p>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code>grunt host    <span class="c"># =&gt; Now browse to http://localhost:8000</span>
+</code></pre></div>
+                                        </div>
+                                        <p>If successful, your favorite browser should launch with
+                                            <a href="http://localhost:8000">http://localhost:8000</a>. Please note the change from port 9000 to
+                                            <em>8000</em>.</p>
+                                        <div class="spacer mb-3"></div>
+                                        <h2 id="deploy-on-github-pages">Deploy on Github Pages</h2>
+                                        <p>You will need the git command line tools installed to utilise the <code class="highlighter-rouge">grunt deploy</code> task, which runs a <code class="highlighter-rouge">grunt build</code> and pushes the contents to the
+                                            <strong>github-pages</strong> branch in your Github repo. You’ll need to configure your repo’s path in the
+                                            <strong>Gruntfile.js</strong> however.</p>
+                                        <div class="spacer mb-3"></div>
+                                        <h2 id="summary-of-grunt-tasks">Summary of Grunt Tasks</h2>
+                                        <ol>
+                                            <li>
+                                                <p><code class="highlighter-rouge">grunt serve</code> for
+                                                    <strong>development</strong>, serves in browser</p>
+                                            </li>
+                                            <li>
+                                                <p><code class="highlighter-rouge">grunt build</code> for
+                                                    <strong>production</strong>, creates output folder</p>
+                                            </li>
+                                            <li>
+                                                <p><code class="highlighter-rouge">grunt host</code> runs build then serves in browser</p>
+                                            </li>
+                                            <li>
+                                                <p><code class="highlighter-rouge">grunt deploy</code> pushes build to
+                                                    <strong>github-pages</strong> branch</p>
+                                            </li>
+                                        </ol>
+                                        <div class="spacer mb-3"></div>
+                                        <h2 id="troubleshooting">Troubleshooting</h2>
+                                        <h3 id="node-sass-failure">Node Sass failure</h3>
+                                        <div class="language-shell highlighter-rouge">
+                                            <div class="highlight"><pre class="highlight"><code>Node Sass does not yet support your current environment
+</code></pre></div>
+                                        </div>
+                                        <p>try:</p>
+                                        <p><code class="highlighter-rouge">npm rebuild node-sass</code></p>
+                                        <p>
+                                            <a href="link">https://github.com/sass/node-sass/issues/1764</a>
+                                        </p>
+                                        <h3 id="macos-sierra---invalid-active-developer-path">MacOS Sierra - invalid active developer path</h3>
+                                        <p>try:</p>
+                                        <p><code class="highlighter-rouge">xcode-select --install</code></p>
+                                        <p>
+                                            <a href="link">https://apple.stackexchange.com/questions/254380/macos-sierra-invalid-active-developer-path</a>
+                                        </p>
+                                        <h2>On Windows
+                                            <i class="fa fa-windows"></i>
+                                        </h2>
+                                        <p>Installation is relatively straight forward on Mac or Linux. On Windows however, it will require a few different steps. Unfortunately we don’t yet offer a Windows walkthrough, but these resources should help:</p>
+                                        <ul>
+                                            <li>
+                                                <a href="http://jekyllrb.com/docs/windows/#installation">Jekyll Docs on Windows</a>
+                                            </li>
+                                            <li>
+                                                <a href="http://jekyll-windows.juthilo.com">Step by Step Guide</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+
+                                    <!-- SUBSCRIBE BOX -->
+                                    <div class="panel-box">
+
+                                        <!-- PANEL BODY -->
+                                        <div class="panel-box-body">
+                                            <h3>Fancy a Sub?</h3>
+                                            <p>
+                                                <small>Not the sandwich, goofus! Subscribe my stupid mailing list!</small>
+                                            </p>
+
+                                            <!-- FORM SUBSCRIBE -->
+                                            <form data-toggle="validatorX" novalidatex netlify>
+                                                <div class="form-group has-icon mb-3">
+                                                    <i class="fa fa-envelope"></i>
+                                                    <input class="form-control" name="Email" type="email" placeholder="Email" required>
+
+                                                    <!-- <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; A valid email is required.</small> -->
+                                                    </div>
+                                                <button type="submit" class="btn btn-primary btn-block mb-0">
+                                                    <span class="text-hover">Do it!</span>
+                                                    <span class="text-default">Subscribe</span>
+                                                </button>
+                                            </form>
+                                        </div>
+
+                                        <!-- SPRITE SMALL DRIP -->
+                                        
+<!-- <div class="sprite-small-drip"></div> --><div class="sprite-long-drip"></div>
+                                    </div>
+                                    <div class="spacer my-3"></div>
+
+                                    <!-- CATEGORIES -->
+                                    <a href="/tutorials/categories/">
+                                        <h3>Categories</h3>
+                                    </a>
+                                    <ul class="list-unstyled">
+                                        <li class="list-unstyled">
+                                            <a href="/tutorials/categories/#css">CSS</a>
+                                        </li>
+                                        <li class="list-unstyled">
+                                            <a href="/tutorials/categories/#development">Development</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr class="mb-4">
+
+                            <!-- COMMENTS ENABLED -->
+                            
+<!-- { % include snippets/comments.html %} --></div>
+                    </section>
+                </main>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="global-footer-wrapper">
+            <div class="container">
+                <footer class="global-footer">
+
+                    <!-- FOOTER MIDDLE -->
+                    <section class="global-footer-body section is-darker has-darker-bleed">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h3 class="h5">Make a connection</h3>
+                                    <p>You've stumbled on the portfolio of freelance web designer, Mitch.</p>
+                                    <p class="py-2 pr-5 pr-md-3 pr-lg-5">
+                                        <img width="100%" src="/assets/img/layout/mitch-at.svg">
+                                    </p>
+
+                                    <!-- SOCIAL MEDIA (FOOTER) -->
+                                    <ul class="social-media block-grid-4 block-grid-md-6 pr-xl-5 mb-4">
+                                        <li>
+                                            <a title="Codepen" href="https://codepen.io/liquidvisual" target="_blank" class="codepen">
+                                                <div class="icon">
+                                                    <i class="fa fa-codepen"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="Dribbble" href="https://dribbble.com/liquidvisual" target="_blank" class="dribbble">
+                                                <div class="icon">
+                                                    <i class="fa fa-dribbble"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="Github" href="https://github.com/liquidvisual" target="_blank" class="github">
+                                                <div class="icon">
+                                                    <i class="fa fa-github"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="Instagram" href="https://www.instagram.com/liquidvisual" target="_blank" class="instagram">
+                                                <div class="icon">
+                                                    <i class="fa fa-instagram"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="Twitter" href="https://twitter.com/WriteMitch" target="_blank" class="twitter">
+                                                <div class="icon">
+                                                    <i class="fa fa-twitter"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="YouTube" href="https://youtube.com/liquidv" target="_blank" class="youtube">
+                                                <div class="icon">
+                                                    <i class="fa fa-youtube-play"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- FOOTER LINKS -->
+                                <div class="col-md-8">
+                                    <ul class="block-grid-xs-2 block-grid-md-4">
+                                        <li>
+                                            <h3 class="h5">Quick Links</h3>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="/about/">About</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/services/">Services</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/projects/">Projects</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/tutorials/">Tutorials</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/hire/">Hire</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h3 class="h5">Services</h3>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="/services/digital-agency/">Digital Agencies</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/services/small-business/">Small Business</a>
+                                                </li>
+                                            </ul>
+                                            <br>
+                                            <h3 class="h5">Additional</h3>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="/hire-me/my-resume/">My Resume</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/hire-me/simulated-interview/">Simulated Interview</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h3 class="h5">Something</h3>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="">Something</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Something</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Something</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Something</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Something</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h3 class="h5">Other Sites</h3>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="">Blarg! News</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.danandmitch.com">Dan and Mitch</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Kleptobreaker</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.soberfish.com">Soberfish</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.mitchinghour.com">The Mitching Hour</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- FOOTER BOTTOM -->
+                    <section class="global-footer-bottom section is-darker">
+                        <div class="container">
+
+                            <!-- DIVIDER -->
+                            <div class="divider"></div>
+
+                            <!-- COPYRIGHT -->
+                            <small>&copy;
+                                <b>2018</b> - liquidvisual</small>
+                            <a class="author-logo" target="_blank" href="http://liquidvisual.com"></a>
+
+                            <!-- BACK TO TOP -->
+                            <a class="back-to-top" href="#">
+                                <i class="fa fa-angle-up"></i>
+                            </a>
+                        </div>
+                    </section>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- /.lv-page -->
+    
+<!-- OFF-CANVAS MENU --><nav class="lv-off-canvas" data-off-canvas-menu aria-hidden="true">
+        <ul>
+            <li class="">
+                <a class="top-parent-anchor" href="/">
+                    <img class="hidden-md-down" width="10" src="/assets/img/ui/fi-home.svg" alt="Home">
+                    <span class="text hidden-lg-up">Home</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="top-parent-anchor" href="/about/">
+                    <span class="text">About</span>
+                </a>
+            </li>
+            <li class="has-dropdown">
+                <a class="top-parent-anchor" href="/services/">
+                    <span class="text">Services</span>
+                </a>
+                <ul class="dropdown is-nav-included" data-parent="Services">
+                    <li class="">
+                        <a href="/services/digital-agency/">
+                            <h5 class="text">Digital Agency</h5>
+                            <div class="dropdown-text">
+                                <h6>Website Build</h6>
+                                <p>High performing static websites built with years of expertise. Full versioned.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/services/small-business/">
+                            <h5 class="text">Small Business</h5>
+                            <div class="dropdown-text">
+                                <h6>Website Design Packages</h6>
+                                <p>Modern website design with personality. Hand coded in HTML5.</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="top-parent-anchor" href="/projects/">
+                    <span class="text">Projects</span>
+                </a>
+            </li>
+            <li class="active">
+                <a class="top-parent-anchor" href="/tutorials/">
+                    <span class="text">Tutorials</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="top-parent-anchor" href="/hire/">
+                    <span class="text">Hire</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--[if lte IE 9]>
+    <div class="lv-alert-bar">
+        <p>You're using an outdated browser. Please <a title="Click me, you know you want to." href="http://outdatedbrowser.com">upgrade your browser</a> to improve your experience.</p>
+        <span class="lv-alert-bar-close-btn">&times;</span>
+    </div>
+    <![endif]-->
+
+    <!-- **** JAVASCRIPT **** -->
+    <script src="/assets/scripts/minified.js"></script>
+
+    <!-- NO JAVASCRIPT WARNING -->
+    <noscript>
+        <div class="lv-alert-bar">
+            <p>Your browser has Javascript disabled. Some features may be limited.</p>
+        </div>
+    </noscript>
+</body>
+</html>
