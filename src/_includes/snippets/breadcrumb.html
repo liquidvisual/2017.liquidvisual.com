@@ -21,13 +21,22 @@
     {% unless page.theme == 'theme-light' %}
         is-dark
     {% endunless %}
+    {% if page.theme == 'theme-light' %}
+        is-light has-light-bleed
+    {% endif %}
+    {% if page.theme == 'theme-light-minimal' %}
+        is-light-minimal has-light-bleed
+    {% endif %}
 {% endcapture %}
 
+<!-- is-light has-light-bleed -->
+
 <!-- BREADCRUMBS -->
-<section class="breadcrumb-wrapper section is-light has-light-bleed py-0 {{ breadcrumb_classes }}">
+<section class="breadcrumb-wrapper section  py-0 {{ breadcrumb_classes }}">
     <div class="container">
         <nav class="breadcrumb">
 
+            <!-- CRUMBS -->
             {% for crumb in crumbs offset: 1 %}
                 {% if forloop.last %}
                     <!-- <span class="breadcrumb-item">{{ crumb | replace:'-',' ' }}</span> -->
@@ -36,15 +45,9 @@
                 {% endif %}
             {% endfor %}
 
+            <!-- TOOLS PANEL -->
             {% if page.theme == 'theme-light' %}
-                <!-- TOOLS PANEL -->
                 <div class="d-flex align-items-center ml-auto">
-
-                    <!-- COMMENT COUNTER -->
-                    <!-- <div class="breadcrumb-item comment-counter mr-1">
-                        <i class="fa fa-comments"></i>&nbsp; <a href="{{page.url}}#disqus_thread">0 <span class="hidden-sm-down">comments</span></a>
-                    </div> -->
-
                     {% include snippets/social_media.html preset=2 %}
                 </div>
             {% endif %}

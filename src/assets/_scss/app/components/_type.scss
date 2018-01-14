@@ -39,7 +39,7 @@ a, button {
 //-----------------------------------------------------------------
 
 p, ul, ol, td {
-	font-size: rem-calc(19);
+	font-size: rem-calc(19); // [LOCKED]
 }
 
 //=========================================
@@ -127,13 +127,16 @@ h1, h2, h3, h4, h5, h6,
 // DIVIDER / HR
 //-----------------------------------------------------------------
 
-hr,
 .divider {
 	margin: $spacer*1.5 0 $spacer*2 0;
 	height: 2px;
 	border: 0;
 	background: $brand-primary;
 	background: linear-gradient(to right,  $brand-primary 0%,$brand-secondary 100%);
+}
+
+hr {
+	border-width: 2px;
 }
 
 //-----------------------------------------------------------------

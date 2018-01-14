@@ -43,7 +43,7 @@ module.exports = function (grunt) {
       dist: 'dist',
       assets: 'dist/assets',
       port: '9000',
-      git: 'https://github.com/liquidvisual/liquidvisual-2017.git',
+      git: 'https://github.com/liquidvisual/2017.liquidvisual.com.git',
     },
 
     //-----------------------------------------------------

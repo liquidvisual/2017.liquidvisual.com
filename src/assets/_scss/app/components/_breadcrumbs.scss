@@ -87,6 +87,10 @@ $breadcrumb-bg: white;
 	}
 }
 
+.is-light-minimal .breadcrumb-bg-overflow .breadcrumb-bg {
+	box-shadow: none; // refactor
+}
+
 //=========================================
 // BREADCRUMB SHIFT UP EFFECT
 // This breaks rules, but no other way.
@@ -130,6 +134,30 @@ $breadcrumb-bg: white;
 		&:hover {
 			background: lighten($gray-dark, 5%);
 			color: rgba(white, 0.5);
+		}
+	}
+}
+
+//--------------------------------------------------------------------
+// IS-DARK
+//--------------------------------------------------------------------
+
+.is-light-minimal .breadcrumb {
+
+	// BREADCRUMB BACK BUTTON(S)
+	.breadcrumb-item {
+		color: #222;
+		// border: 2px solid #dcdee1;
+		transition: background 300ms ease, color 300ms ease;
+
+		@include media-breakpoint-up(md) {
+		    background: transparent;
+		}
+
+		&:hover {
+			// background: #dcdee1;
+			background: none;
+			color: #222;
 		}
 	}
 }

@@ -11,7 +11,8 @@
 // THEME LIGHT
 //-----------------------------------------------------------------
 
-.theme-light {
+.theme-light,
+.theme-light-minimal {
 	background-color: $gray-light; // for body before load
 
 	.lv-page { // for off-canvas
