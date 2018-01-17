@@ -1,7 +1,7 @@
 {% assign settings = site.data.settings %}
 
 <!-- FOOTER MIDDLE -->
-<section class="global-footer-body section is-darker has-darker-bleed">
+<section class="global-footer-body spec-section is-darker has-darker-bleed">
 	<div class="container">
 		<div class="row">
 
@@ -67,17 +67,18 @@
 </section>
 
 <!-- FOOTER BOTTOM -->
-<section class="global-footer-bottom section is-darker">
+<section class="global-footer-bottom spec-section is-darker has-darker-bleed">
     <div class="container">
+    	<div class="position-relative">
+			<!-- DIVIDER -->
+	    	<div class="divider"></div>
 
-		<!-- DIVIDER -->
-    	<div class="divider"></div>
+	        <!-- COPYRIGHT -->
+			<small>&copy; <b>{{ site.time | date: '%Y' }}</b> - liquidvisual</small>
+	        <a class="author-logo" target="_blank" href="{{ settings.author.url }}"></a>
 
-        <!-- COPYRIGHT -->
-		<small>&copy; <b>{{ site.time | date: '%Y' }}</b> - liquidvisual</small>
-        <a class="author-logo" target="_blank" href="{{ settings.author.url }}"></a>
-
-        <!-- BACK TO TOP -->
-        <a class="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+	        <!-- BACK TO TOP -->
+	        <a class="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+    	</div>
     </div>
 </section>

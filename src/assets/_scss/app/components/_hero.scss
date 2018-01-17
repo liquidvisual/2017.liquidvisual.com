@@ -1,7 +1,7 @@
 /*
     HERO.CSS
 
-    - updated: 26.12.17
+    - updated: 16.01.18
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -19,41 +19,22 @@ $hero-height-xl: auto;
 //-----------------------------------------------------------------
 
 .lv-hero-wrapper {
-    position: relative;
-    background-color: #a4a4b5; // todo: add to settings vars
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-
-    @include media-breakpoint-up(xl) {
-        background-attachment: fixed;
+    &.spec-section > .container {
+        padding-top: 0;
+        padding-bottom: 0;
     }
+}
 
-    //=========================================
-    // HAS NO GUTTERS
-    // heading img will hug sides
-    //=========================================
+//=========================================
+// EDGE TO EDGE
+// heading img will hug sides
+//=========================================
 
-    &.has-no-gutters > .container-wrapper > .container {
-        @include media-breakpoint-down(lg) {
-            max-width: 100%;
-        }
-    }
+.lv-hero-wrapper.is-edge-to-edge > .container {
+    padding: 0;
 
-    //=========================================
-    // specified per page (hero_classes)
-    //=========================================
-
-    &.has-bleed-tint:after {
-        @include media-breakpoint-up(xl) {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(black, 0.4);
-        }
+    @include media-breakpoint-down(lg) {
+        max-width: 100%;
     }
 }
 
@@ -63,7 +44,7 @@ $hero-height-xl: auto;
 
 .lv-hero {
     height: $hero-height-sm;
-    overflow: hidden;
+    // overflow: hidden; // need?
 
     @include media-breakpoint-up(md) {
         height: $hero-height-md;
@@ -75,8 +56,7 @@ $hero-height-xl: auto;
 
     @include media-breakpoint-up(xl) {
         height: $hero-height-xl;
-        box-shadow: 0px -30px 50px 10px rgba(black, 0.2);
-     }
+    }
 
     //=========================================
     // HEIGHT PRESET 1
@@ -108,9 +88,9 @@ $hero-height-xl: auto;
     width: 100%; // [LOCKED]
     height: 100%; // [LOCKED]
     min-height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-size: cover;
 
     // account for topbar on mobile
     @include media-breakpoint-down(sm) {

@@ -13,9 +13,8 @@
 
 .section-cereal-box {
     // background-image: url(/assets/img/content/homepage/cereal-fucker.png) no-repeat;
-    background-image: url(/assets/img/content/homepage/cereal-fucker@2x.jpg);
-    // background-size: cover;
-    min-height: rem-calc(700);
+    background-image: url(/assets/img/content/homepage/cereal-fucker@2x.jpg) !important;
+    height: rem-calc(700);
 
     h2 {
         color: white;

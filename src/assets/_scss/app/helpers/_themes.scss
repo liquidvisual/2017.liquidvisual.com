@@ -1,22 +1,38 @@
 /*
     THEMES.CSS
 
-    - updated: 29.12.17
+    - updated: 17.01.18
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
 // VARIABLES
 //-----------------------------------------------------------------
+
+$gray-light-bleed: desaturate(darken($gray-light, 4%), 1%); // coincides with bleed colors in section
+
 //-----------------------------------------------------------------
 // THEME LIGHT
 //-----------------------------------------------------------------
 
-.theme-light,
-.theme-light-minimal {
-	background-color: $gray-light; // for body before load
+.theme-light {
+	background-color: $gray-light-bleed; // for body before load
 
 	.lv-page { // for off-canvas
-		background: $gray-light; // desaturate?
+		background: $gray-light-bleed;
+	}
+}
+
+//-----------------------------------------------------------------
+// THEME 404
+//-----------------------------------------------------------------
+
+.theme-404 {
+	.lv-hero.has-height-preset-1 {
+		height: auto;
+
+		h1 {
+			top: rem-calc(5);
+		}
 	}
 }
 

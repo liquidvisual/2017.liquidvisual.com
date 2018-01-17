@@ -12,9 +12,8 @@
 //-----------------------------------------------------------------
 
 .section-mad-magazines {
-    min-height: rem-calc(1200);
-    background: url(/assets/img/content/homepage/mad@60.jpg) no-repeat bottom;
-    background-size: cover;
+    height: rem-calc(1200);
+    background-image: url(/assets/img/content/homepage/mad@60.jpg) !important;
 
     h2 {
         color: white;

@@ -12,8 +12,8 @@
 //-----------------------------------------------------------------
 
 .section-bio-1 {
-    min-height: 700px;
-    background-image: url(/assets/img/content/homepage/bio-1@2x.jpg);
+    height: 700px;
+    background-image: url(/assets/img/content/homepage/bio-1@2x.jpg) !important;
 
     h2 {
         position: relative;
@@ -27,7 +27,7 @@
 //-----------------------------------------------------------------
 
 .section-bio-2 {
-    background-image: url(/assets/img/content/homepage/mitch-perturbed-2-@2x.jpg);
+    background-image: url(/assets/img/content/homepage/mitch-perturbed-2-@2x.jpg) !important;
 
     h2 {
         color: #222;

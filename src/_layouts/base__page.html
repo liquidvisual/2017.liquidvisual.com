@@ -4,34 +4,27 @@ layout: base
 
 {% include hero.html %}
 
-<!-- CONTENT -->
-<div class="container-wrapper">
-    <div class="container">
+{% if page.breadcrumbs %}
+	{% include snippets/breadcrumb.html %}
+{% endif %}
 
-    	<!-- BODY -->
-        <main class="main-content">
+<!-- BODY -->
+<main class="main-body">
 
-			{% if page.breadcrumbs %}
-				{% include snippets/breadcrumb.html %}
-			{% endif %}
+	{% ifhascontent tagline %}
+    	<!-- TAGLINE -->
+    	<section class="spec-section is-darker has-darker-bleed">
+    		<div class="container">
+    			<div class="row justify-content-center">
+    				<div class="col-md-11 col-lg-9 text-center">
+    					{% contentblock tagline no-convert %}
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+	{% endifhascontent %}
 
-			{% ifhascontent tagline %}
-	        	<!-- TAGLINE -->
-	        	<section class="section is-darker">
-	        		<div class="container">
-	        			<div class="row justify-content-center">
-	        				<div class="col-md-11 col-lg-9 text-center">
-	        					{% contentblock tagline no-convert %}
-	        				</div>
-	        			</div>
-	        		</div>
-	        	</section>
-        	{% endifhascontent %}
-
-        	{{ content }}
-        </main>
-
-    </div>
-</div>
+	{{ content }}
+</main>
 
 {% contentblock content_additional no-convert %}

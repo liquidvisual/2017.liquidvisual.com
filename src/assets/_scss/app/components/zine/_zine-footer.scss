@@ -11,9 +11,14 @@
 // ZINE FOOTER
 //-----------------------------------------------------------------
 
-// .zine-footer {
-
-// }
+.zine-footer {
+	position: absolute;
+	// left: -45px;
+	left: 0;
+	bottom: 0;
+	// width: 100%;
+	width: calc(100% + 45px);
+}
 
 //-----------------------------------------------------------------
 // ZINE FOOTER BARCODE (IMG)
@@ -21,7 +26,7 @@
 
 img.zine-footer-barcode {
 	position: relative;
-	left: rem-calc(-15); // magic
+	// left: rem-calc(-15); // magic
 	box-sizing: content-box;
     width: rem-calc(100);
     padding: rem-calc(4 10 4 4);
@@ -30,16 +35,16 @@ img.zine-footer-barcode {
     z-index: 1;
 
     @include media-breakpoint-up(md) {
-    	left: rem-calc(-40); // magic
+    	// left: rem-calc(-40); // magic
         width: rem-calc(150);
     }
 
     @include media-breakpoint-up(xl) {
-        left: rem-calc(-54); // magic
+        left: -45px; //rem-calc(-51); // magic
     }
 
     @include media-breakpoint-up(xxl) {
-        left: rem-calc(-44); // magic
+        // left: rem-calc(-44); // magic
     }
 }
 

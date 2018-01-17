@@ -152,9 +152,10 @@ $header-height-lg: 120px !default;
 		display: flex;
 		align-items: center;
 
-		@include media-breakpoint-up(xl) {
-			padding: 0 $container-gutter*3; // [LOCKED]
-		}
+		// removed for new breakpoints
+		// @include media-breakpoint-up(xl) {
+		// 	padding: 0 $container-gutter*3; // [LOCKED]
+		// }
 	}
 }
 
