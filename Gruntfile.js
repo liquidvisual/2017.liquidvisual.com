@@ -22,6 +22,7 @@ module.exports = function (grunt) {
   //-----------------------------------------------------
 
   require('jit-grunt')(grunt, {
+    babel: 'grunt-babel',
     browsersync: 'grunt-browser-sync',
     buildcontrol: 'grunt-build-control',
     prettify: 'grunt-prettify',
@@ -311,7 +312,24 @@ module.exports = function (grunt) {
       css: ['<%= yeoman.assets %>/css/**/*.css']
     },
     //-----------------------------------------------------
-    // HTML MINIFY (Disabled)
+    // BABEL
+    // https://github.com/babel/babel/issues/5455
+    //-----------------------------------------------------
+    babel: {
+      options: {
+        // sourceMap: false,
+        // minified: false,
+        // comments: false,
+        // presets: ['env']
+      },
+      dist: {
+        files: {
+          '<%= yeoman.assets %>/scripts/minified.js': '<%= yeoman.assets %>/scripts/minified.js'
+        },
+      }
+    },
+    //-----------------------------------------------------
+    // HTML MINIFY
     //-----------------------------------------------------
     htmlmin: {
        dist: {
@@ -600,6 +618,7 @@ module.exports = function (grunt) {
     //'filerev',
     'usemin',
     'postcss',
+    'babel',
     'htmlmin', // best not to use this?
     'prettify',
     ]);
