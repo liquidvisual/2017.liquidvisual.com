@@ -9,17 +9,34 @@
     'use strict';
 
     //-----------------------------------------------------------------
+    // GOOGLE MAP - PREVENT SCROLL TRAP
+    //-----------------------------------------------------------------
+
+    var $googleMap = $('.lv-google-map');
+
+    if ($googleMap.length) {
+
+        $googleMap.click(function () {
+            $googleMap.find('iframe').css('pointer-events', 'auto');
+        });
+
+        $googleMap.mouseleave(function() {
+          $googleMap.find('iframe').css('pointer-events', 'none');
+        });
+    }
+
+    //-----------------------------------------------------------------
     // Developer: COMMAND+S for screen width
     //-----------------------------------------------------------------
 
-    $(document).keypress(function(event) {
-        if (event.which == 115 && (event.ctrlKey||event.metaKey)||(event.which == 19)) {
-            event.preventDefault();
-            alert("(w) "+$(window).width()+" (h) "+$(window).height());
-            return false;
-        }
-        return true;
-    });
+    // $(document).keypress(function(event) {
+    //     if (event.which == 115 && (event.ctrlKey||event.metaKey)||(event.which == 19)) {
+    //         event.preventDefault();
+    //         alert("(w) "+$(window).width()+" (h) "+$(window).height());
+    //         return false;
+    //     }
+    //     return true;
+    // });
 
     //-----------------------------------------------------------------
     // ScrollTo - Anything with a hash
@@ -39,23 +56,6 @@
     //         }
     //     }
     // });
-
-    //-----------------------------------------------------------------
-    // GOOGLE MAP - PREVENT SCROLL TRAP
-    //-----------------------------------------------------------------
-
-    var $googleMap = $('.lv-google-map');
-
-    if ($googleMap.length) {
-
-        $googleMap.click(function () {
-            $googleMap.find('iframe').css('pointer-events', 'auto');
-        });
-
-        $googleMap.mouseleave(function() {
-          $googleMap.find('iframe').css('pointer-events', 'none');
-        });
-    }
 
     //-----------------------------------------------------------------
     //

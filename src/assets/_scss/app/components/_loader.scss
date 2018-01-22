@@ -37,7 +37,7 @@ html.has-loaded .lv-page-loader {
 // DEV LOADER TURNED OFF FOR SPEED
 //-----------------------------------------------------------------
 
-html[data-dev-mode] .lv-page-loader {
+html[development] .lv-page-loader {
     visibility: hidden;
 }
 

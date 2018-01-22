@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en" {{ site.environment }}>
+<html lang="en" {{ site.environment }}>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.data.settings.description }}{% endif %}">
-    <base href="/">
     <title>
         {% if page.url == '/' %}
-            {{ site.data.settings.seo_title }}
+            {{ site.data.settings.title_homepage }}
         {% else %}
             {{ page.title }} - {{ site.data.settings.title }}
         {% endif %}
@@ -18,7 +16,7 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,500,700|Source+Code+Pro:500,600|Oswald:300,500,600">
 
     <!-- PRIORITY SCRIPTS -->
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue{% unless site.environment == 'development' %}.min{% endunless %}.js"></script>
     <script src="/tutorials/posts.js"></script>
 
     <!-- build:css({src,.tmp}) /assets/css/minified.css -->
@@ -68,13 +66,12 @@
 
     <!-- **** JAVASCRIPT **** -->
 
-    <!-- build:js(src) /assets/scripts/minified.js -->
-    <script src="../node_modules/jquery/dist/jquery.js"></script>
-    <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="../node_modules/bootstrap-validator/dist/validator.js"></script>
-    <script src="../node_modules/magnific-popup/dist/jquery.magnific-popup.js"></script>
-    <script src="/assets/scripts/liquidvisual/equal-height.js"></script>
+    <!-- build:js({src,.}) /assets/scripts/minified.js -->
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/node_modules/bootstrap-validator/dist/validator.js"></script>
+    <script src="/node_modules/magnific-popup/dist/jquery.magnific-popup.js"></script>
     <script src="/assets/scripts/liquidvisual/utilities.js"></script>
     <script src="/assets/scripts/liquidvisual/responsive-utility.js"></script>
     <script src="/assets/scripts/vendor/headroom.js"></script>
@@ -82,6 +79,8 @@
     <script src="/assets/scripts/off-canvas.js"></script>
     <script src="/assets/scripts/main.js"></script>
     <!-- endbuild -->
+
+    {% include snippets/google_analytics.html %}
 
     <!-- NO JAVASCRIPT WARNING -->
     <noscript>

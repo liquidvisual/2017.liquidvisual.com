@@ -1,5 +1,5 @@
 /*
-    MAIN.JS - Last updated: 18.05.17
+    MAIN.JS - Last updated: 22.01.17
 */
 //-----------------------------------------------------------------
 // VARIABLES
@@ -12,6 +12,10 @@ $(window).on('load', function() {
     $('html').addClass('has-loaded');
     pixelGradient();
 });
+
+//-----------------------------------------------------------------
+// ONLOAD - TOOLTIP
+//-----------------------------------------------------------------
 
 $(function () {
     $('[data-toggle="tooltip"]').tooltip();

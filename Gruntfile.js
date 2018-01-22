@@ -18,18 +18,17 @@ module.exports = function (grunt) {
   //-----------------------------------------------------
   // LOAD TASKS FASTER
   // https://medium.com/@lmartins/faster-grunt-workflow-ced193c2900b
+  // Uncomment if plugins can't be resolved in automatic mapping
   //-----------------------------------------------------
 
   require('jit-grunt')(grunt, {
-
-    // Uncomment if plugins can't be resolved in automatic mapping
-    buildcontrol: 'grunt-build-control',
-    sass_globbing: 'grunt-sass-globbing', // does this speed this up?
-    sass: 'grunt-sass',
     browsersync: 'grunt-browser-sync',
-    useminPrepare: 'grunt-usemin',
+    buildcontrol: 'grunt-build-control',
+    prettify: 'grunt-prettify',
+    sass: 'grunt-sass',
+    sass_globbing: 'grunt-sass-globbing', // [LOCKED]
     shell: 'grunt-shell',
-    prettify: 'grunt-prettify'
+    useminPrepare: 'grunt-usemin',
   });
 
   grunt.initConfig({
@@ -295,12 +294,17 @@ module.exports = function (grunt) {
       options: {
         dest: '<%= yeoman.dist %>'
       },
-      html: ['<%= yeoman.dist %>/index.html',
-      		 '<%= yeoman.dist %>/manage/index.html']
+      html: [
+        '<%= yeoman.dist %>/index.html',
+      	'<%= yeoman.dist %>/manage/index.html'
+      ]
     },
     usemin: {
       options: {
-        assetsDirs: ['<%= yeoman.assets %>', '<%= yeoman.dist %>'],
+        assetsDirs: [
+          '<%= yeoman.assets %>',
+          '<%= yeoman.dist %>'
+        ],
       },
       html: ['<%= yeoman.dist %>/**/*.html'],
       // Ensures image paths are revved inside CSS files

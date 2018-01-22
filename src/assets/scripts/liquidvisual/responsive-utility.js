@@ -1,7 +1,7 @@
 /*
-    RESPONSIVE-UTILITY.JS - Last updated: 17.01.16
+    RESPONSIVE-UTILITY.JS - Last updated: 22.01.18
 
-    - Notes: Needs refactor
+    - Notes: Needs refactor (Vue possibly?)
 */
 //-----------------------------------------------------------------
 // Responsive Utility
@@ -99,7 +99,7 @@
     // Display if body has 'dev-mode' attribute
     //-----------------------------------------------------------------
 
-    if ($('html[data-dev-mode]').length) {
+    if ($('html[development]').length) {
 
         // Launch it
         responsiveHelper();

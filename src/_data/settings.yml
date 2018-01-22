@@ -4,14 +4,14 @@ allow_robots: false
 
 # META
 title: liquidvisual
-title_homepage:
+title_homepage: Freelance Web Designer | Custom Website Builds Sydney
 company: liquidvisual
-description:
+description: Mitch is a Sydney based freelance front-end web designer who specialises in custom website builds for digital agencies in Australia.
 
 # DEVELOPER
 github_repo_owner: liquidvisual
-github_repo_path: https://github.com/liquidvisual/________
-github_repo_name:
+github_repo_path: https://github.com/liquidvisual/liquidvisual-2017
+github_repo_name: liquidvisual-2017
 jekyll_version: 3.6.2
 
 # OFFICES
@@ -76,7 +76,7 @@ social_media:
     icon: fa fa-youtube-play
 
 # GOOGLE
-google_analytics: "UA-XXXXXXXX-X"
+google_analytics: 'UA-26850234-1'
 
 # AUTHOR
 author:
