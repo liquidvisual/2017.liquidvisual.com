@@ -29,6 +29,7 @@ module.exports = function (grunt) {
     sass: 'grunt-sass',
     sass_globbing: 'grunt-sass-globbing', // [LOCKED]
     shell: 'grunt-shell',
+    uglify: 'grunt-contrib-uglify-es',
     useminPrepare: 'grunt-usemin',
   });
 
