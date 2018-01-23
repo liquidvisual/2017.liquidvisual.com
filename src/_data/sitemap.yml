@@ -26,6 +26,55 @@
 
 - title: Projects
   url: /projects/
+  include_children_in_nav: false
+  children:
+    - title: Another Nerdy Podcast
+      url: /projects/#coming-soon/
+
+    - title: BobbleHedz
+      url: /projects/#coming-soon/
+
+    - title: Project Narayan
+      url: /projects/#coming-soon/
+
+    - title: Loadshift
+      url: /projects/#coming-soon/
+
+    - title: Orgami Email Series
+      url: /projects/#coming-soon/
+
+    - title: Rezillia
+      url: /projects/#coming-soon/
+
+    - title: English Unlimited
+      url: /projects/#coming-soon/
+
+    - title: Jazzles Learning System
+      url: /projects/#coming-soon/
+
+    - title: Thomson Reuters
+      url: /projects/#coming-soon/
+
+    - title: Dan & Mitch
+      url: /projects/#coming-soon/
+
+    - title: Anne Uy
+      url: /projects/#coming-soon/
+
+    - title: Mal Winter
+      url: /projects/#coming-soon/
+
+    - title: Branding
+      url: /projects/#coming-soon/
+
+    - title: Slayday
+      url: /projects/#coming-soon/
+
+    - title: Flashden Series
+      url: /projects/#coming-soon/
+
+    - title: The Mitching Hour
+      url: /projects/#coming-soon/
 
 - title: Tutorials
   url: /tutorials/

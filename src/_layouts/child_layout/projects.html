@@ -2,9 +2,27 @@
 layout: base__page
 ---
 
+{% assign sitemap = site.data.sitemap %}
+
 {% contentfor tagline %}
-	<h2><span class="brand-primary-color">Welcome,</span> make yourself comfortable.</h2>
-	<p class="mb-0">I'm here to take the pain out of agency life with reliable clear-cut communication and top-notch website builds coded here (by me) in Sydney.</p>
+	<!-- <h2><span class="brand-primary-color">Welcome,</span> make yourself comfortable.</h2>
+	<p class="mb-0">I'm here to take the pain out of agency life with reliable clear-cut communication and top-notch website builds coded here (by me) in Sydney.</p> -->
+
+	<!-- PROJECTS CONTENTS -->
+	<div class="section-projects-contents">
+		<img width="340" src="/assets/img/content/contents-box.svg" alt="Contents">
+		<ul class="list-set-1 list-unstyled">
+			{% for item in sitemap[3].children limit: 10 %}
+				<li><span>{% if forloop.index < 10 %}0{% endif %}{{forloop.index}}.</span> <a href="{{ item.url }}">{{ item.title }}</a></li>
+			{% endfor %}
+		</ul>
+		<ul class="list-set-2">
+			{% for item in sitemap[3].children offset: 10 %}
+				<li><span>{{ forloop.index | plus: 10 }}.</span> <a href="{{ item.url }}">{{ item.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+
 {% endcontentfor %}
 
 <!-- SECTION DARK -->

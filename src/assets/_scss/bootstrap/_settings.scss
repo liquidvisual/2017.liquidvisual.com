@@ -218,7 +218,7 @@ $container-max-widths: (
   sm: 540px,   // [LOCKED] - was 576 but switched to bootstrap default
   md: 768px,   // [LOCKED]
   lg: 1024px,  // [LOCKED]
-  xl: 1024px,  // [LOCKED] APPEARS 1024px (same as tablet landscape)
+  xl: 1025px,  // [LOCKED] APPEARS 1024px (same as tablet landscape)
   xxl: 1170px //1260px  // [LOCKED] PERFECT - APPEARS 1170px (lines up with landscape zoom)
 ) !default;
 
