@@ -3,28 +3,119 @@ layout: base__page
 ---
 
 {% assign sitemap = site.data.sitemap %}
-
+{% comment %}
 {% contentfor tagline %}
-	<!-- <h2><span class="brand-primary-color">Welcome,</span> make yourself comfortable.</h2>
-	<p class="mb-0">I'm here to take the pain out of agency life with reliable clear-cut communication and top-notch website builds coded here (by me) in Sydney.</p> -->
-
 	<!-- PROJECTS CONTENTS -->
 	<div class="section-projects-contents">
-		<img width="340" src="/assets/img/content/contents-box.svg" alt="Contents">
-		<ul class="list-set-1 list-unstyled">
+
+		<!-- CONTENTS -->
+		<p class="image mb-4">
+			<img width="330" src="/assets/img/content/contents-box.svg" alt="Contents">
+		</p>
+
+		<!-- LIST SET 1 -->
+		<ul class="list-set-1 list-unstyled text-md-right mb-0">
 			{% for item in sitemap[3].children limit: 10 %}
-				<li><span>{% if forloop.index < 10 %}0{% endif %}{{forloop.index}}.</span> <a href="{{ item.url }}">{{ item.title }}</a></li>
+				<li><span class="number">{% if forloop.index < 10 %}0{% endif %}{{forloop.index}}.</span> <a href="{{ item.url }}">{{ item.title }}</a></li>
 			{% endfor %}
 		</ul>
-		<ul class="list-set-2">
+
+		<!-- LIST SET 2 -->
+		<ul class="list-set-2 list-unstyled text-md-left">
 			{% for item in sitemap[3].children offset: 10 %}
-				<li><span>{{ forloop.index | plus: 10 }}.</span> <a href="{{ item.url }}">{{ item.title }}</a></li>
+				<li><span class="number">{{ forloop.index | plus: 10 }}.</span> <a href="{{ item.url }}">{{ item.title }}</a></li>
 			{% endfor %}
 		</ul>
 	</div>
-
 {% endcontentfor %}
+{% endcomment %}
 
+<!-- ANP | BOBBLEHEDZ | NARAYAN -->
+<section class="spec-section is-dark">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-9">
+
+				<!-- ANOTHER NERDY PODCAST -->
+				<div class="btn-tile-wrapper is-left-aligned">
+					<div class="row no-gutters align-items-center">
+						<div class="col-6">
+							<a class="btn-tile" href="#">
+								<img width="100%" src="/assets/img/content/placeholder-330x330.png">
+							</a>
+						</div>
+						<div class="col-6">
+							<div class="text">
+								<p>Animated titles for a gaming podcast on YouTube &amp; Twitch.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- BOBBLEHEDZ -->
+				<div class="btn-tile-wrapper is-right-aligned">
+					<div class="row no-gutters align-items-center">
+						<div class="col-6 text-md-right">
+							<div class="text">
+								<p>A brief jaunt through novelty, nostalgia and digital trinkets. <a href="">Read more</a></p>
+							</div>
+						</div>
+						<div class="col-6">
+							<a class="btn-tile" href="#">
+								<img width="100%" src="/assets/img/content/placeholder-330x330.png">
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- PROJECT NARAYAN -->
+				<div class="btn-tile-wrapper is-left-aligned">
+					<div class="row no-gutters align-items-center">
+						<div class="col-6">
+							<a class="btn-tile" href="#">
+								<img width="100%" src="/assets/img/content/placeholder-330x330.png">
+								<span class="btn-tile-bg" style="background-image: url(/assets/img/content/narayan/narayan@2x.jpg)"></span>
+							</a>
+						</div>
+						<div class="col-6">
+							<div class="text">
+								<p>A cyberpunk themed hacking simulator game for the browser.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+{% comment %}
+<!-- LOADSHIFT -->
+<section class="spec-section is-light">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7 pr-md-5">
+				<p><img width="100%" src="/assets/img/content/loadshift/placeholder@2x.png" alt="Loadshift Truck"></p>
+			</div>
+			<div class="col-md-5">
+				<br><br>
+				<h2 class="text-md-center"><img  src="/assets/img/content/loadshift/loadshift-logo-2.svg" alt="Loadshift"></h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.<p>
+
+				<p>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p class="text-md-center"><a class="btn btn-primary" href="http://loadshift-2017.yourwebvisual.com">Visit Loadshift</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+{% endcomment %}
+
+{% comment %}
 <!-- SECTION DARK -->
 <section class="spec-section is-dark">
 	<div class="container">
@@ -100,3 +191,4 @@ layout: base__page
 		<p>Section Image</p>
 	</div>
 </section>
+{% endcomment %}

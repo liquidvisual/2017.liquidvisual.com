@@ -1,4 +1,5 @@
 {% assign settings = site.data.settings %}
+{% assign featured_work = site.data.sitemap[3].children | where: "featured", true | sort: "title" %}
 
 <!-- FOOTER MIDDLE -->
 <section class="global-footer-body spec-section is-darker has-darker-bleed">
@@ -41,13 +42,11 @@
 						</ul>
 					</li>
 					<li>
-						<h3 class="h5">Something</h3>
+						<h3 class="h5">Featured Work</h3>
 						<ul class="list-unstyled">
-							<li><a href="">Something</a></li>
-							<li><a href="">Something</a></li>
-							<li><a href="">Something</a></li>
-							<li><a href="">Something</a></li>
-							<li><a href="">Something</a></li>
+							{% for item in featured_work limit: 6 %}
+								<li><a href="">{{ item.title }}</a></li>
+							{% endfor %}
 						</ul>
 					</li>
 					<li>

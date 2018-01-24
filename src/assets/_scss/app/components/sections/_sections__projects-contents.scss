@@ -12,11 +12,79 @@
 //-----------------------------------------------------------------
 
 .section-projects-contents {
+    position: relative; // [LOCKED]
+
+    @include media-breakpoint-up(md) {
+        display: inline-block;
+        padding: rem-calc(20 20 60 20); // [LOCKED] - controls the bottom padding
+        left: rem-calc(60);
+    }
+
+    //=========================================
+    // IMAGE TEXT BOX
+    //=========================================
+
+    .image {
+        position: relative; // [LOCKED]
+
+        img {
+            @include media-breakpoint-down(sm) {
+                width: 70%;
+            }
+        }
+
+        //=========================================
+        // BLOCK OUT BOTTOM EDGE OF BORDER
+        //=========================================
+
+        &:after {
+            @include media-breakpoint-up(md) {
+                content: "";
+                position: absolute;
+                bottom: rem-calc(-19);
+                right: 0;
+                width: rem-calc(145);
+                height: rem-calc(20);
+                background: $gray-darker;
+            }
+        }
+    }
+
+    //=========================================
+    // LISTS
+    //=========================================
 
     .list-set-1,
     .list-set-2 {
-        list-style: none;
-        // background: red;
+        font-size: rem-calc(16);
+
+        @include media-breakpoint-up(md) {
+            position: absolute;
+            width: rem-calc(300);
+        }
+
+        a {
+            color: darken(white, 30%);
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+    .list-set-1 {
+        top: rem-calc(50);
+        right: 100%;
+    }
+
+    .list-set-2 {
+        bottom: rem-calc(-2);
+        left: calc(100% - #{rem-calc(150)});
+    }
+
+    .number {
+        color: $brand-primary;
+        font-weight: 600;
     }
 }
 

@@ -36,9 +36,11 @@
 
     - title: Project Narayan
       url: /projects/#coming-soon/
+      featured: true
 
     - title: Loadshift
       url: /projects/#coming-soon/
+      featured: true
 
     - title: Orgami Email Series
       url: /projects/#coming-soon/
@@ -48,12 +50,15 @@
 
     - title: English Unlimited
       url: /projects/#coming-soon/
+      featured: true
 
     - title: Jazzles Learning System
       url: /projects/#coming-soon/
+      featured: true
 
     - title: Thomson Reuters
       url: /projects/#coming-soon/
+      featured: true
 
     - title: Dan & Mitch
       url: /projects/#coming-soon/
