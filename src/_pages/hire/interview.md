@@ -1,5 +1,5 @@
 ---
-layout: child_layout/projects
+layout: child_layout/works
 title: Interview
 permalink: /hire/interview/
 hero: /assets/img/content/hero/hero-bricks.jpg

@@ -25,61 +25,61 @@
           body: Modern website design with personality. Hand coded in HTML5.
 
 - title: Works
-  url: /projects/
+  url: /works/
   include_children_in_nav: false
   children:
     - title: Another Nerdy Podcast
-      url: /projects/#coming-soon/
+      url: /works/#coming-soon/
 
     - title: BobbleHedz
-      url: /projects/#coming-soon/
+      url: /works/#coming-soon/
 
     - title: Project Narayan
-      url: /projects/#coming-soon/
+      url: /works/#coming-soon/
       featured: true
 
     - title: Loadshift
-      url: /projects/#coming-soon/
+      url: /works/#coming-soon/
       featured: true
 
     - title: Orgami Email Series
-      url: /projects/#coming-soon/
+      url: /works/#coming-soon/
 
     - title: Rezillia
-      url: /projects/#coming-soon/
+      url: /works/#coming-soon/
 
     - title: English Unlimited
-      url: /projects/#coming-soon/
+      url: /works/#coming-soon/
       featured: true
 
     - title: Jazzles Learning System
-      url: /projects/#coming-soon/
+      url: /works/#coming-soon/
       featured: true
 
     - title: Thomson Reuters
-      url: /projects/#coming-soon/
+      url: /works/#coming-soon/
       featured: true
 
     - title: Dan & Mitch
-      url: /projects/#coming-soon/
+      url: /works/#coming-soon/
 
     - title: Anne Uy
-      url: /projects/#coming-soon/
+      url: /works/#coming-soon/
 
     - title: Mal Winter
-      url: /projects/#coming-soon/
+      url: /works/#coming-soon/
 
     - title: Branding
-      url: /projects/#coming-soon/
+      url: /works/#coming-soon/
 
     - title: Slayday
-      url: /projects/#coming-soon/
+      url: /works/#coming-soon/
 
     - title: Flashden Series
-      url: /projects/#coming-soon/
+      url: /works/#coming-soon/
 
     - title: The Mitching Hour
-      url: /projects/#coming-soon/
+      url: /works/#coming-soon/
 
 - title: Tutorials
   url: /tutorials/

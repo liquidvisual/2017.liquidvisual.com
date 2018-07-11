@@ -1,7 +1,7 @@
 ---
-layout: child_layout/projects
+layout: child_layout/works
 title: Projects
-permalink: /projects/
+permalink: /works/
 hero: /assets/img/content/hero/grad-3.png
 hero_classes: has-bleed-tint
 theme:
