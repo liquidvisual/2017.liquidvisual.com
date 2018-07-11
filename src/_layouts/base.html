@@ -75,10 +75,52 @@
     <script src="/assets/scripts/liquidvisual/utilities.js"></script>
     <script src="/assets/scripts/liquidvisual/responsive-utility.js"></script>
     <script src="/assets/scripts/vendor/headroom.js"></script>
+    <script src="/assets/scripts/vendor/parallax.js"></script>
     <script src="/assets/scripts/vendor/pxgradient-1.0.3.js"></script>
     <script src="/assets/scripts/off-canvas.js"></script>
     <script src="/assets/scripts/main.js"></script>
     <!-- endbuild -->
+
+    <script>
+
+        // PARALLAX.JS
+        // var target = $('.has-parallax')[0];
+
+        // var $targets = $('.has-parallax').each(function(){
+        //     $el = $(this)[0];
+        //     var parallax = new Parallax($el, {
+        //         limitX: 10,
+        //         limitY: 10,
+        //         pointerEvents: true,
+        //         relativeInput: true,
+        //         hoverOnly: true
+        //     });
+        // });
+
+        var targetElements = document.getElementsByClassName('has-parallax');
+        // or, if you insist on using jQuery
+        // var targetElements = $('.target').get();
+
+        var scenes = [];
+        for (var i = 0; i < targetElements.length; i++) {
+            scenes.push(new Parallax(targetElements[i], {
+                limitX: 10,
+                limitY: 10,
+                pointerEvents: true,
+                relativeInput: true,
+                hoverOnly: true
+            }));
+        }
+
+
+        // var parallax = new Parallax(target, {
+        //     limitX: 10,
+        //     limitY: 10,
+        //     relativeInput: true,
+        //     hoverOnly: true
+        // });
+
+    </script>
 
     {% include snippets/google_analytics.html %}
 

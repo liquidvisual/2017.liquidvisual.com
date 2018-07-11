@@ -24,7 +24,7 @@
         - subtitle: Website Design Packages
           body: Modern website design with personality. Hand coded in HTML5.
 
-- title: Projects
+- title: Works
   url: /projects/
   include_children_in_nav: false
   children:

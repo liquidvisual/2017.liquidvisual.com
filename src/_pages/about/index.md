@@ -2,7 +2,7 @@
 layout: child_layout/about
 title: About
 permalink: /about/
-hero: /assets/img/content/hero/hero-fire-2.jpg
+hero: /assets/img/content/hero/swirl-5.png
 hero_classes: has-bleed-tint
 theme:
 logo: /assets/img/content/branding/logo-type--white-transparent.svg

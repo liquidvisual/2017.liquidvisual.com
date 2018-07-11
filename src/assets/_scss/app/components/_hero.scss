@@ -10,8 +10,9 @@
 
 $hero-height-sm: auto;
 $hero-height-md: 100vh;
-$hero-height-lg: auto;
-$hero-height-xl: auto;
+$hero-height-lg: 1140px; //auto;
+$hero-height-xl: 1010px; //auto;
+$hero-height-xxl: 1140px; //auto;
 
 //-----------------------------------------------------------------
 // HERO WRAPPER
@@ -58,6 +59,10 @@ $hero-height-xl: auto;
         height: $hero-height-xl;
     }
 
+    @include media-breakpoint-up(xxl) {
+        height: $hero-height-xxl;
+    }
+
     //=========================================
     // HEIGHT PRESET 1
     // used on internal pages
@@ -87,7 +92,7 @@ $hero-height-xl: auto;
     display: flex;
     width: 100%; // [LOCKED]
     height: 100%; // [LOCKED]
-    min-height: 100vh;
+    // min-height: 100vh;
     // background-repeat: no-repeat;
     // background-position: center center;
     // background-size: cover;

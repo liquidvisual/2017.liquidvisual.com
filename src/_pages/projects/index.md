@@ -2,11 +2,11 @@
 layout: child_layout/projects
 title: Projects
 permalink: /projects/
-hero: /assets/img/content/hero/hero-rocket-sky.jpg
+hero: /assets/img/content/hero/grad-3.png
 hero_classes: has-bleed-tint
 theme:
-logo: /assets/img/content/branding/logo-type--white-transparent.svg
-hero_text: /assets/img/layout/headings/heading-projects--darker.svg
+logo: /assets/img/content/branding/logo-type--darker.svg
+hero_text: /assets/img/layout/headings/heading-works--darker.svg
 ---
 
 <h3>Websites</h3>

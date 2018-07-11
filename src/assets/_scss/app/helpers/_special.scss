@@ -10,6 +10,45 @@
 //-----------------------------------------------------------------
 // SPECIAL
 //-----------------------------------------------------------------
+
+.imac-monitor {
+	position: relative;
+	z-index: 1;
+
+	.imac-monitor-bg {
+		position: absolute;
+		top: rem-calc(15);
+		left: 50%;
+		width: 92%;
+		height: 65%;
+		background-size: cover;
+		transform: translateX(-50%);
+		z-index: -1;
+	}
+}
+
+.sans-fancy {
+	// font-family: 'Noto Sans';
+	font-family: 'Libre Baskerville';
+	font-weight: 400;
+	text-transform: capitalize;
+}
+
 //=========================================
 //
 //=========================================
+
+// .particles {
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 100%;
+// 	// opacity: 0.4;
+// 	// z-index: 1;
+// }
+
+.shadow {
+	display: block;
+	box-shadow: 0 0 10px 10px 20px rgba(black, 0.2);
+}

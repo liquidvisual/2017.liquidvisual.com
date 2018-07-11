@@ -124,6 +124,10 @@ Next, install Node with Homebrew. Please be patient, as this can take some time.
 brew install -v node
 ```
 
+```shell
+ npm -g update npm
+ ```
+
 To test your Node install, try installing [Grunt](http://gruntjs.com/){:target="_blank"} which will be used to run the build process.
 
 ```shell

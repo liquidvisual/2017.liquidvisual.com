@@ -3,7 +3,8 @@ layout: base__page
 ---
 
 {% assign sitemap = site.data.sitemap %}
-{% comment %}
+
+{% comment %}{% endcomment %}
 {% contentfor tagline %}
 	<!-- PROJECTS CONTENTS -->
 	<div class="section-projects-contents">
@@ -28,7 +29,16 @@ layout: base__page
 		</ul>
 	</div>
 {% endcontentfor %}
-{% endcomment %}
+
+<script>
+
+/* TODO: * separate tiles from their backgrounds even further,
+		 * fix the inside parallax - with seinfeld might have to re-export with more
+		 * active pull in for 'CLICK'
+		 * add falling shards for orgami background
+		 * mobile test
+
+</script>
 
 <!-- ANP | BOBBLEHEDZ | NARAYAN -->
 <section class="spec-section is-dark">
@@ -39,10 +49,22 @@ layout: base__page
 				<!-- ANOTHER NERDY PODCAST -->
 				<div class="btn-tile-wrapper is-left-aligned">
 					<div class="row no-gutters align-items-center">
-						<div class="col-6">
-							<a class="btn-tile" href="#">
-								<img width="100%" src="/assets/img/content/placeholder-330x330.png">
-							</a>
+						<div class="col-6 pl-lg-5">
+
+							<!-- PARALLAX HOVER -->
+							<div class="parallax-hover has-parallax">
+								<div class="layer" data-depth="0.6">
+									<a class="btn-tile" href="#">
+										<span class="has-parallax">
+											<span class="layer" data-depth="0.3">
+												<img width="100%" src="/assets/img/content/placeholder-330x330.png">
+												<span class="btn-tile-bg" style="background-image: url(/assets/img/content/another-nerdy-podcast/another-nerdy-podcast@2x.gif)"></span>
+											</span>
+										</span>
+									</a>
+								</div>
+							</div>
+
 						</div>
 						<div class="col-6">
 							<div class="text">
@@ -57,13 +79,25 @@ layout: base__page
 					<div class="row no-gutters align-items-center">
 						<div class="col-6 text-md-right">
 							<div class="text">
-								<p>A brief jaunt through novelty, nostalgia and digital trinkets. <a href="">Read more</a></p>
+								<p>A brief jaunt through novelty, nostalgia and digital trinkets. <a href="/projects/digital-trinkets/">Read more</a></p>
 							</div>
 						</div>
-						<div class="col-6">
-							<a class="btn-tile" href="#">
-								<img width="100%" src="/assets/img/content/placeholder-330x330.png">
-							</a>
+						<div class="col-6 pr-lg-5">
+
+							<!-- PARALLAX HOVER -->
+							<div class="parallax-hover has-parallax">
+								<div class="layer" data-depth="0.6">
+									<a class="btn-tile" href="/projects/digital-trinkets/" style="background-color: white;">
+										<span class="has-parallax">
+											<span class="layer" data-depth="0.3">
+												<img width="100%" src="/assets/img/content/placeholder-330x330.png">
+												<span class="btn-tile-bg" style="background-image: url(/assets/img/content/flashden/bobblehedz@2x.jpg)"></span>
+											</span>
+										</span>
+									</a>
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</div>
@@ -71,11 +105,22 @@ layout: base__page
 				<!-- PROJECT NARAYAN -->
 				<div class="btn-tile-wrapper is-left-aligned">
 					<div class="row no-gutters align-items-center">
-						<div class="col-6">
-							<a class="btn-tile" href="#">
-								<img width="100%" src="/assets/img/content/placeholder-330x330.png">
-								<span class="btn-tile-bg" style="background-image: url(/assets/img/content/narayan/narayan@2x.jpg)"></span>
-							</a>
+						<div class="col-6 pl-lg-5">
+
+							<!-- PARALLAX HOVER -->
+							<div class="parallax-hover has-parallax">
+								<div class="layer" data-depth="0.6">
+									<a class="btn-tile" href="#">
+										<span class="has-parallax">
+											<span class="layer" data-depth="0.3">
+												<img width="100%" src="/assets/img/content/placeholder-330x330.png">
+												<span class="btn-tile-bg" style="background-image: url(/assets/img/content/narayan/narayan@2x.jpg)"></span>
+											</span>
+										</span>
+									</a>
+								</div>
+							</div>
+
 						</div>
 						<div class="col-6">
 							<div class="text">
@@ -91,31 +136,106 @@ layout: base__page
 </section>
 
 {% comment %}
+
+
 <!-- LOADSHIFT -->
 <section class="spec-section is-light">
 	<div class="container">
-		<div class="row">
+		<div class="row pt-4">
 			<div class="col-md-7 pr-md-5">
-				<p><img width="100%" src="/assets/img/content/loadshift/placeholder@2x.png" alt="Loadshift Truck"></p>
+
+				<!-- IMAC MONITOR -->
+				<div class="imac-monitor mb-4">
+					<img width="100%" src="/assets/img/content/loadshift/loadshift-monitor@2x.png" alt="Loadshift Website">
+					<span class="imac-monitor-bg" style="background-image: url(/assets/img/content/loadshift/loadshift-slide-1@2x.jpg)"></span>
+				</div>
+
 			</div>
 			<div class="col-md-5">
 				<br><br>
-				<h2 class="text-md-center"><img  src="/assets/img/content/loadshift/loadshift-logo-2.svg" alt="Loadshift"></h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.<p>
-
-				<p>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<h2 class="text-md-center mb-4"><img  src="/assets/img/content/loadshift/loadshift-logo-2.svg" alt="Loadshift"></h2>
+				<p>Endless nights were spent perfecting the new web presence for Australia's heavy haulage marketplace. Designed completely in-browser, the goal was to provide an intuitive and pragmatic experience for users new to the mobile web.</p>
+				<br>
 				<p class="text-md-center"><a class="btn btn-primary" href="http://loadshift-2017.yourwebvisual.com">Visit Loadshift</a></p>
 			</div>
 		</div>
 	</div>
 </section>
-{% endcomment %}
 
-{% comment %}
+
+<!-- ORGAMI EMAIL SERIES -->
+<section class="spec-section section-orgami-series is-light">
+	<div class="container">
+
+		<!-- BG FILL -->
+		<div class="bg-fill"></div>
+
+		<div class="row">
+			<div class="col-md-6 pl-5 pt-4">
+				<div class="col"><h2 class="h1">Orgami Email Series</h2></div>
+				<div class="col-md-10">
+					<p>A small startup from San Francisco were months away from a full product rebrand. During the interim they commissioned me to design a series of funky little templates to capture the essense of their transitioning brand whilst keeping essentially white label.</p>
+					<br>
+					<p><a class="btn btn-primary" href="http://loadshift-2017.yourwebvisual.com">View the Series</a></p>
+				</div>
+			</div>
+			<div class="col-md-5 ml-auto pl-5">
+
+				<!-- ORGAMI TILE TOP -->
+				<div class="orgami-tile-top pl-2">
+
+					<!-- PARALLAX NO-HOVER -->
+					<div class="has-parallax">
+						<div class="layer" data-depth="0.6">
+							<a class="btn-tile" href="#">
+								<span class="btn-tile-bg has-parallax">
+									<span data-depth="1.0" class="layer btn-tile-bg"
+									style="top: -8%; background-image: url(/assets/img/content/orgami-email-series/tile-icarus_layer-3@2x.png)"></span>
+								</span>
+								<img width="100%" src="/assets/img/content/orgami-email-series/tile-icarus_layer-1@72.svg">
+							</a>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- ORGAMI TILE BOTTOM -->
+				<div class="orgami-tile-bottom pl-3">
+
+				 	<!-- PARALLAX NO-HOVER -->
+				 	<div class="has-parallax">
+				 		<div class="layer" data-depth="0.3">
+				 			<a class="btn-tile" href="#" style="background-color: #3d3e53;">
+				 				<span class="btn-tile-bg has-parallax">
+				 					<span data-depth="0.6" class="layer btn-tile-bg" style="background-image: url(/assets/img/content/orgami-email-series/tile-squirrels_layer-0@2x.png)"></span>
+				 				</span>
+				 				<!-- <img width="100%" src="/assets/img/content/orgami-email-series/tile-squirrels_layer-1@72.svg"> -->
+				 				<img width="100%" src="/assets/img/content/placeholder-330x330.png">
+				 			</a>
+				 		</div>
+				 	</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- TAGLINE (MAKE COMPONENT?) -->
+<section class="spec-section is-darker has-darker-bleed">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-11 col-lg-9 text-center">
+				<h2><span class="brand-primary-color">No great artist ever,</span> Lorem ipsum dolor sit amet. Lorem blah blah blah.</h2>
+				<!-- <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod -->
+				<!-- tempor incididunt ut labore et dolore magna.</p> -->
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
 <!-- SECTION DARK -->
 <section class="spec-section is-dark">
 	<div class="container">

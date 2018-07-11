@@ -1,67 +1,51 @@
 /*
     ZINE-COVER.CSS
 
-    - Last updated: 15.12.16
+    - Last updated: 07.07.18, 15.12.16
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
 // VARIABLES
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
-// ZINE BODY
+// ZINE
 //-----------------------------------------------------------------
 
-.zine-body {
-    margin: auto 0;
-    font-weight: bold;
-    color: white;
-
-    h1, h2, h3, h4, h5, h6 {
-        color: white;
-    }
-}
-
-.zine-footer {
-    // margin-top: auto;
-    // margin: 0;
+.zine {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    // border: 2px dashed aqua;
 }
 
 //-----------------------------------------------------------------
-// ZINE TITLE
+// ZINE TITLE (FREELANCER)
 //-----------------------------------------------------------------
 
 .zine-title {
-    margin-top: rem-calc(50);
-    margin-bottom: rem-calc(30);
+    margin: rem-calc(50 0);
     opacity: 0.8;
-    // margin-bottom: rem-calc(140);
 
     @include media-breakpoint-up(md) {
         margin-top: rem-calc(130);
     }
+}
 
-    h1 {
-        color: white;
-        font-size: rem-calc(190);
-        font-weight: 100;
-        color: white;
+//-----------------------------------------------------------------
+// ZINE BODY
+//-----------------------------------------------------------------
+
+.zine-body {
+    font-weight: bold; // [LOCKED]
+    color: white;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: white; // needed?
     }
 }
 
 //-----------------------------------------------------------------
-// HERO CAPTION
-// There are only captions on standard heros
-//-----------------------------------------------------------------
-
-// .lv-hero-item-caption {
-
-// 	p {
-// 		color: white;
-// 	}
-// }
-
-//-----------------------------------------------------------------
-// ZINE FEATURE BORDER
+// ZINE FEATURE BORDER (MAIN CLAIM)
 //-----------------------------------------------------------------
 
 .zine-feature-border {
@@ -77,8 +61,8 @@
 //-----------------------------------------------------------------
 
 .zine-feature-tagline {
-    max-width: rem-calc(450);
     display: inline-block;
+    max-width: rem-calc(450);
     margin-bottom: $spacer;
 
     h1, h2, h3, h4, h5, h6 {
@@ -91,7 +75,7 @@
         display: inline;
         position: relative;
         background: $brand-primary;
-        font-family: $headings-font-family;
+        // font-family: $headings-font-family;
         font-size: rem-calc(16);
         color: white;
         box-shadow: 0 0 0 rem-calc(10) $brand-primary;
@@ -101,7 +85,7 @@
     .text-highlight-white {
     	background: white;
     	box-shadow: 0 0 0 rem-calc(10) white;
-    	color: black;
+    	color: #222;
     	opacity: 0.8;
     }
 }
@@ -111,7 +95,8 @@
 //=========================================
 
 .text-right {
-    .zine-feature-tagline .text-highlight {
+    .zine-feature-tagline .text-highlight,
+    .zine-feature-tagline .text-highlight-white {
         left: rem-calc(-10);
     }
 }

@@ -2,10 +2,10 @@
 layout: child_layout/services
 title: Services
 permalink: /services/
-hero: /assets/img/content/hero/hero-bricks.jpg
+hero: /assets/img/content/hero/grad-2.png
 hero_classes: has-bleed-tint
 theme:
-logo: /assets/img/content/branding/logo-type--white-transparent.svg
+logo: /assets/img/content/branding/logo-type--darker.svg
 hero_text: /assets/img/layout/headings/heading-services--light.svg
 ---
 
