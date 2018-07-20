@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no">
     <meta name="description" content="My lucky stars ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,...">
-    <base href="/">
     <title>How to Correctly Mark Up Your Company's Logo - liquidvisual</title>
 
     <!-- CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,500,700|Source+Code+Pro:500,600|Oswald:300,500,600">
 
     <!-- PRIORITY SCRIPTS -->
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
     <script src="/tutorials/posts.js"></script>
     <link rel="stylesheet" href="/assets/css/minified.css">
 </head>
@@ -41,17 +39,16 @@
             <div class="container">
 
                 <!-- LOGO -->
-                <a class="logo" href="/" title="" itemprop="url">
-                    <img class="is-dynamic" src="/assets/img/content/branding/logo-type--white-transparent.svg" alt="" itemprop="logo">
+                <a class="logo" href="/" title="liquidvisual Web Development Sydney" itemprop="url">
 
-                    <!-- controllable -->
-                    <img class="is-default" src="/assets/img/content/branding/logo-type--default.svg" alt="" itemprop="logo" aria-hidden>
+                    <!-- Controllable -->
+                    <img class="is-dynamic" src="/assets/img/content/branding/logo-type--white-transparent.svg" alt="liquidvisual Web Development Sydney" itemprop="logo">
 
                     <!-- Used on scroll (tablet +) -->
-                    <img class="is-dark" src="/assets/img/content/branding/logo-type--dark.svg" alt="" itemprop="logo" aria-hidden>
+                    <img class="is-default" src="/assets/img/content/branding/logo-type--default.svg" alt="liquidvisual Web Development Sydney" itemprop="logo" aria-hidden>
 
                     <!-- Shows dark logo for white bg only (mobile) -->
-                    </a>
+                    <img class="is-dark" src="/assets/img/content/branding/logo-type--dark.svg" alt="liquidvisual Web Development Sydney" itemprop="logo" aria-hidden> </a>
 
                 <!-- HAMBURGER -->
                 <div class="global-mobile-menu d-lg-none">
@@ -73,467 +70,452 @@
                                 </a>
                             </li>
                             <li class="">
-                                <a class="top-parent-anchor" href="/about/">
-                                    <span class="text">About</span>
-                                </a>
-                            </li>
-                            <li class="has-dropdown">
-                                <a class="top-parent-anchor" href="/services/">
-                                    <span class="text">Services</span>
-                                </a>
-                                <ul class="dropdown is-nav-included" data-parent="Services">
-                                    <li class="">
-                                        <a href="/services/digital-agency/">
-                                            <h5 class="text">Digital Agency</h5>
-                                            <div class="dropdown-text">
-                                                <h6>Website Build</h6>
-                                                <p>High performing static websites built with years of expertise. Full versioned.</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="/services/small-business/">
-                                            <h5 class="text">Small Business</h5>
-                                            <div class="dropdown-text">
-                                                <h6>Website Design Packages</h6>
-                                                <p>Modern website design with personality. Hand coded in HTML5.</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="">
-                                <a class="top-parent-anchor" href="/projects/">
-                                    <span class="text">Projects</span>
-                                </a>
-                            </li>
-                            <li class="active">
-                                <a class="top-parent-anchor" href="/tutorials/">
-                                    <span class="text">Tutorials</span>
-                                </a>
-                            </li>
-                            <li class="">
+
+                                <!-- TOP LEVEL -->
                                 <a class="top-parent-anchor" href="/hire/">
-                                    <span class="text">Hire</span>
+                                    <span class="text">Hire Me</span>
                                 </a>
+
+                                <!-- SECOND LEVEL -->
+                                </li>
+
+                            <!-- SOCIAL MEDIA (OPTIONAL) -->
+                            <li class="is-off-canvas-only pt-2">
+
+                                <!-- SOCIAL MEDIA -->
+                                <div class="social-media">
+                                    <a title="Codepen" href="https://codepen.io/liquidvisual" target="_blank" class="d-inline-block codepen">
+                                        <div class="icon">
+                                            <i class="fa fa-codepen"></i>
+                                        </div>
+                                    </a>
+                                    <a title="Dribbble" href="https://dribbble.com/liquidvisual" target="_blank" class="d-inline-block dribbble">
+                                        <div class="icon">
+                                            <i class="fa fa-dribbble"></i>
+                                        </div>
+                                    </a>
+                                    <a title="Github" href="https://github.com/liquidvisual" target="_blank" class="d-inline-block github">
+                                        <div class="icon">
+                                            <i class="fa fa-github"></i>
+                                        </div>
+                                    </a>
+                                    <a title="Instagram" href="https://www.instagram.com/liquidvisual" target="_blank" class="d-inline-block instagram">
+                                        <div class="icon">
+                                            <i class="fa fa-instagram"></i>
+                                        </div>
+                                    </a>
+                                    <a title="Twitter" href="https://twitter.com/WriteMitch" target="_blank" class="d-inline-block twitter">
+                                        <div class="icon">
+                                            <i class="fa fa-twitter"></i>
+                                        </div>
+                                    </a>
+                                    <a title="YouTube" href="https://youtube.com/liquidv" target="_blank" class="d-inline-block youtube">
+                                        <div class="icon">
+                                            <i class="fa fa-youtube-play"></i>
+                                        </div>
+                                    </a>
+                                </div>
                             </li>
-                        </ul>
+
+                            <!-- SEARCH (OPTIONAL) -->
+                            
+<!-- <li class="is-off-canvas-only"> -->
+<!-- { % include components/forms/form_search.html %} -->
+<!-- </li> --></ul>
                     </div>
                 </nav>
             </div>
         </header>
 
         <!-- HERO WRAPPER -->
-        <div class="lv-hero-wrapper" style="background-image: url('/assets/img/content/hero/hero-bg.png')">
-            <div class="container-wrapper">
-                <div class="container">
+        <section class="lv-hero-wrapper spec-section is-dark has-image-bg has-fixed-bleed" style="background-image: url('/assets/img/content/hero-home-9.jpg')">
+            <div class="container">
 
-                    <!-- HERO -->
-                    <div class="lv-hero has-height-preset-1">
-                        <div class="lv-hero-item" style="background-image: url('/assets/img/content/hero/hero-bg.png')">
+                <!-- HERO -->
+                <div class="lv-hero has-height-preset-1">
+                    <div class="lv-hero-item">
 
-                            <!-- HERO TEXT IMAGE -->
-                            <div class="lv-hero-item-caption">
-                                <div class="container mb-4">
-                                    <div class="row">
-                                        <div class="col-lg-10">
+                        <!-- HERO CAPTION #2 -->
+                        <div class="lv-hero-item-caption mb-4">
+                            <div class="row">
+                                <div class="col-lg-10">
 
-                                            <!-- CATEGORY LABEL -->
-                                            <a class="btn-category mr-2" href="/tutorials/categories/#development">Development</a>
+                                    <!-- CATEGORY LABEL -->
+                                    <a class="btn-category mr-2" href="/tutorials/categories/#development">Development</a>
 
-                                            <!-- DYNAMIC TEXT -->
-                                            <h1 class="display-1">How to Correctly Mark Up Your Company's Logo</h1>
+                                    <!-- DYNAMIC TEXT -->
+                                    <h1 class="display-1">How to Correctly Mark Up Your Company's Logo</h1>
 
-                                            <!-- AUTHOR AVATAR -->
-                                            <p class="d-flex align-items-center">
-                                                <img width="32" class="rounded-circle mr-2" src="/assets/img/content/avatars/avatar-mitch@2x.jpg" alt="Mitch">
-                                                <span>by
-                                                    <a href="/hire/">Mitch Warren</a>
-                                                    <span class="d-inline-block">| 03 February 2015</span>
-                                                </span>
-                                            </p>
-                                        </div>
-                                    </div>
+                                    <!-- AUTHOR AVATAR -->
+                                    <p class="d-flex align-items-center">
+                                        <img width="32" class="rounded-circle mr-2" src="/assets/img/content/avatars/avatar-mitch@2x.jpg" alt="Mitch">
+                                        <span>by
+                                            <a href="/hire/">Mitch Warren</a>
+                                            <span class="d-inline-block">| 03 February 2015</span>
+                                        </span>
+                                    </p>
                                 </div>
                             </div>
-
-                            <!-- BREADCRUMB ILLUSION -->
-                            <div class="hero-bottom-breadcrumb-illusion"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- /.lv-hero-wrapper -->
-        
-<!-- CONTENT --><div class="container-wrapper">
-            <div class="container">
+        <!-- BREADCRUMBS -->
+        <section class="breadcrumb-wrapper spec-section is-light has-light-bleed is-white">
+            <div class="container py-0">
+                <nav class="breadcrumb">
 
-                <!-- BODY -->
-                <main class="main-content">
+                    <!-- CRUMBS -->
+                    <a class="breadcrumb-item" href="/tutorials/">
+                        <i class="fa fa-arrow-circle-left"></i>&nbsp;
+                        <span class="hidden-sm-down">Back to</span> tutorials</a>
 
-                    <!-- is-light has-light-bleed -->
-                    
-<!-- BREADCRUMBS --><section class="breadcrumb-wrapper section py-0 is-light has-light-bleed">
-                        <div class="container">
-                            <nav class="breadcrumb">
+                    <!-- SHARE LINKS -->
+                    <div class="d-flex align-items-center ml-auto">
 
-                                <!-- CRUMBS -->
-                                <a class="breadcrumb-item" href="/tutorials/">
-                                    <i class="fa fa-arrow-circle-left"></i>&nbsp;
-                                    <span class="hidden-sm-down">Back to</span> tutorials</a>
-
-                                <!-- <span class="breadcrumb-item">how to correctly mark up your companys logo</span> -->
-                                
-<!-- TOOLS PANEL --><div class="d-flex align-items-center ml-auto">
-
-                                    <!-- SHARE LINKS -->
-                                    
+                        <!-- SHARE LINKS -->
+                        
 <!-- https://developers.google.com/+/web/share/#sharelink -->
 <!-- https://stackoverflow.com/questions/16243972/showing-disqus-comment-count-in-a-div-or-span-not-a-href --><ul class="social-media">
-                                        <li>
-                                            <a title="Comments" class="disqus" href="#disqus_thread">
-                                                <span class="icon">
-                                                    <i class="fa fa-comments"></i>&nbsp;
-                                                    <span class="disqus-comment-count" data-disqus-url="/tutorials/how-to-correctly-mark-up-your-companys-logo/#disqus_thread">0</span>
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a target="_blank" title="Share Facebook" class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=" onclick="window.open(this.href + document.URL, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false">
-                                                <div class="icon">
-                                                    <i class="fa fa-facebook"></i>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a target="_blank" title="Tweet" class="twitter" href="https://twitter.com/home?status=" onclick="window.open(this.href + document.URL, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false">
-                                                <div class="icon">
-                                                    <i class="fa fa-twitter"></i>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a target="_blank" title="Share Google+" class="google-plus" href="https://plus.google.com/share?url=" onclick="window.open(this.href + document.URL, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false">
-                                                <div class="icon">
-                                                    <i class="fa fa-google-plus"></i>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </nav>
+                            <li>
+                                <a title="Comments" class="disqus" href="#disqus_thread">
+                                    <span class="icon">
+                                        <i class="fa fa-comments"></i>&nbsp;
+                                        <span class="disqus-comment-count" data-disqus-url="/tutorials/how-to-correctly-mark-up-your-companys-logo/#disqus_thread">0</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Share Facebook" class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=" onclick="window.open(this.href + document.URL, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;">
+                                    <div class="icon">
+                                        <i class="fa fa-facebook"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Tweet" class="twitter" href="https://twitter.com/home?status=" onclick="window.open(this.href + document.URL, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;">
+                                    <div class="icon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Share Google+" class="google-plus" href="https://plus.google.com/share?url=" onclick="window.open(this.href + document.URL, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;">
+                                    <div class="icon">
+                                        <i class="fa fa-google-plus"></i>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
 
-                            <!-- BG OVERFLOW -->
-                            <div class="breadcrumb-bg-overflow">
-                                <div class="breadcrumb-bg"></div>
+                <!-- BG OVERFLOW -->
+                <div class="breadcrumb-bg-overflow">
+                    <div class="breadcrumb-bg"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BODY -->
+        <main class="main-body">
+
+            <!-- SECTION -->
+            <section class="spec-section is-light has-light-bleed">
+                <div class="container">
+                    <div class="row no-gutters">
+                        <div class="col-lg-9 pr-lg-5">
+                            <div class="pr-lg-3">
+                                <p class="lead dropcap">My lucky stars ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                                <h1 id="header-1">Header 1</h1>
+                                <h2 id="header-2">Header 2</h2>
+                                <h3 id="header-3">Header 3</h3>
+                                <h4 id="header-4">Header 4</h4>
+                                <h5 id="header-5">Header 5</h5>
+                                <h6 id="header-6">Header 6</h6>
+                                <hr>
+                                <h1 class="display-1">Display 1</h1>
+                                <h2 class="display-2">Display 2
+                                    <br>
+                                    <small>neurotic oswald</small>
+                                </h2>
+                                <h3 class="display-3">Display 3</h3>
+                                <h4 class="display-4">Display 4</h4>
+                                <h5 class="display-5">Display 5</h5>
+                                <h6 class="display-6">Display 6</h6>
+                                <hr>
+                                <h1>Header 1
+                                    <small>small text</small>
+                                </h1>
+                                <h2>Header 2
+                                    <small>small text</small>
+                                </h2>
+                                <h3>Header 3
+                                    <small>small text</small>
+                                </h3>
+                                <h4>Header 4
+                                    <small>small text</small>
+                                </h4>
+                                <h5>Header 5
+                                    <small>small text</small>
+                                </h5>
+                                <h6>Header 6
+                                    <small>small text</small>
+                                </h6>
+                                <hr>
+                                <h1 id="h1-the-quick-brown-fox-jumps-over-the-lazy-dog">H1. The Quick Brown Fox Jumps Over the Lazy Dog</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
+                                <h2 id="h2-the-quick-brown-fox-jumps-over-the-lazy-dog">H2. The Quick Brown Fox Jumps Over the Lazy Dog</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
+                                <h3 id="h3-the-quick-brown-fox-jumps-over-the-lazy-dog">H3. The Quick Brown Fox Jumps Over the Lazy Dog</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
+                                <h4 id="h4-the-quick-brown-fox-jumps-over-the-lazy-dog">H4. The Quick Brown Fox Jumps Over the Lazy Dog</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
+                                <h5 id="h5-the-quick-brown-fox-jumps-over-the-lazy-dog">H5. The Quick Brown Fox Jumps Over the Lazy Dog</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
+                                <h6 id="h6-the-quick-brown-fox-jumps-over-the-lazy-dog">H6. The Quick Brown Fox Jumps Over the Lazy Dog</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
+                                <hr>
+                                <h1 id="h1-the-quick-brown-fox-jumps-over-the-lazy-dog-1">H1. The Quick Brown Fox Jumps Over the Lazy Dog</h1>
+                                <h2 id="h2-the-quick-brown-fox-jumps-over-the-lazy-dog-1">H2. The Quick Brown Fox Jumps Over the Lazy Dog</h2>
+                                <h3 id="h3-the-quick-brown-fox-jumps-over-the-lazy-dog-1">H3. The Quick Brown Fox Jumps Over the Lazy Dog</h3>
+                                <h4 id="h4-the-quick-brown-fox-jumps-over-the-lazy-dog-1">H4. The Quick Brown Fox Jumps Over the Lazy Dog</h4>
+                                <h5 id="h5-the-quick-brown-fox-jumps-over-the-lazy-dog-1">H5. The Quick Brown Fox Jumps Over the Lazy Dog</h5>
+                                <h6 id="h6-the-quick-brown-fox-jumps-over-the-lazy-dog-1">h6. The Quick Brown Fox Jumps Over the Lazy Dog</h6>
+                                <hr>
+                                <h1 class="subheader">Subheader 1</h1>
+                                <h2 class="subheader">Subheader 2</h2>
+                                <h3 class="subheader">Subheader 3</h3>
+                                <h4 class="subheader">Subheader 4</h4>
+                                <h5 class="subheader">Subheader 5</h5>
+                                <h6 class="subheader">Subheader 6</h6>
                             </div>
                         </div>
-                    </section>
+                        <div class="col-lg-3">
 
-                    <!-- SECTION -->
-                    <section class="section is-light has-light-bleed">
-                        <div class="container">
-                            <div class="row no-gutters">
-                                <div class="col-lg-9 pr-lg-5">
-                                    <div class="pr-lg-3">
-                                        <p class="lead dropcap">My lucky stars ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                                        <h1 id="header-1">Header 1</h1>
-                                        <h2 id="header-2">Header 2</h2>
-                                        <h3 id="header-3">Header 3</h3>
-                                        <h4 id="header-4">Header 4</h4>
-                                        <h5 id="header-5">Header 5</h5>
-                                        <h6 id="header-6">Header 6</h6>
-                                        <hr>
-                                        <h1 class="display-1">Display 1</h1>
-                                        <h2 class="display-2">Display 2
-                                            <br>
-                                            <small>neurotic oswald</small>
-                                        </h2>
-                                        <h3 class="display-3">Display 3</h3>
-                                        <h4 class="display-4">Display 4</h4>
-                                        <h5 class="display-5">Display 5</h5>
-                                        <h6 class="display-6">Display 6</h6>
-                                        <hr>
-                                        <h1>Header 1
-                                            <small>small text</small>
-                                        </h1>
-                                        <h2>Header 2
-                                            <small>small text</small>
-                                        </h2>
-                                        <h3>Header 3
-                                            <small>small text</small>
-                                        </h3>
-                                        <h4>Header 4
-                                            <small>small text</small>
-                                        </h4>
-                                        <h5>Header 5
-                                            <small>small text</small>
-                                        </h5>
-                                        <h6>Header 6
-                                            <small>small text</small>
-                                        </h6>
-                                        <hr>
-                                        <h1 id="h1-the-quick-brown-fox-jumps-over-the-lazy-dog">H1. The Quick Brown Fox Jumps Over the Lazy Dog</h1>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
-                                        <h2 id="h2-the-quick-brown-fox-jumps-over-the-lazy-dog">H2. The Quick Brown Fox Jumps Over the Lazy Dog</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
-                                        <h3 id="h3-the-quick-brown-fox-jumps-over-the-lazy-dog">H3. The Quick Brown Fox Jumps Over the Lazy Dog</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
-                                        <h4 id="h4-the-quick-brown-fox-jumps-over-the-lazy-dog">H4. The Quick Brown Fox Jumps Over the Lazy Dog</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
-                                        <h5 id="h5-the-quick-brown-fox-jumps-over-the-lazy-dog">H5. The Quick Brown Fox Jumps Over the Lazy Dog</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
-                                        <h6 id="h6-the-quick-brown-fox-jumps-over-the-lazy-dog">H6. The Quick Brown Fox Jumps Over the Lazy Dog</h6>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
-                                        <hr>
-                                        <h1 id="h1-the-quick-brown-fox-jumps-over-the-lazy-dog-1">H1. The Quick Brown Fox Jumps Over the Lazy Dog</h1>
-                                        <h2 id="h2-the-quick-brown-fox-jumps-over-the-lazy-dog-1">H2. The Quick Brown Fox Jumps Over the Lazy Dog</h2>
-                                        <h3 id="h3-the-quick-brown-fox-jumps-over-the-lazy-dog-1">H3. The Quick Brown Fox Jumps Over the Lazy Dog</h3>
-                                        <h4 id="h4-the-quick-brown-fox-jumps-over-the-lazy-dog-1">H4. The Quick Brown Fox Jumps Over the Lazy Dog</h4>
-                                        <h5 id="h5-the-quick-brown-fox-jumps-over-the-lazy-dog-1">H5. The Quick Brown Fox Jumps Over the Lazy Dog</h5>
-                                        <h6 id="h6-the-quick-brown-fox-jumps-over-the-lazy-dog-1">h6. The Quick Brown Fox Jumps Over the Lazy Dog</h6>
-                                        <hr>
-                                        <h1 class="subheader">Subheader 1</h1>
-                                        <h2 class="subheader">Subheader 2</h2>
-                                        <h3 class="subheader">Subheader 3</h3>
-                                        <h4 class="subheader">Subheader 4</h4>
-                                        <h5 class="subheader">Subheader 5</h5>
-                                        <h6 class="subheader">Subheader 6</h6>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
+                            <!-- SUBSCRIBE BOX -->
+                            <div class="panel-box">
 
-                                    <!-- SUBSCRIBE BOX -->
-                                    <div class="panel-box">
-
-                                        <!-- PANEL BODY -->
-                                        <div class="panel-box-body">
-                                            <h3>Fancy a Sub?</h3>
-                                            <p>
-                                                <small>Not the sandwich, goofus! Subscribe my stupid mailing list!</small>
-                                            </p>
-
-                                            <!-- FORM SUBSCRIBE -->
-                                            <form data-toggle="validatorX" novalidatex netlify>
-                                                <div class="form-group has-icon mb-3">
-                                                    <i class="fa fa-envelope"></i>
-                                                    <input class="form-control" name="Email" type="email" placeholder="Email" required>
-
-                                                    <!-- <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; A valid email is required.</small> -->
-                                                    </div>
-                                                <button type="submit" class="btn btn-primary btn-block mb-0">
-                                                    <span class="text-hover">Do it!</span>
-                                                    <span class="text-default">Subscribe</span>
-                                                </button>
-                                            </form>
-                                        </div>
-
-                                        <!-- SPRITE SMALL DRIP -->
-                                        
-<!-- <div class="sprite-small-drip"></div> --><div class="sprite-long-drip"></div>
-                                    </div>
-                                    <div class="spacer my-3"></div>
-
-                                    <!-- CATEGORIES -->
-                                    <a href="/tutorials/categories/">
-                                        <h3>Categories</h3>
-                                    </a>
-                                    <ul class="list-unstyled">
-                                        <li class="list-unstyled">
-                                            <a href="/tutorials/categories/#css">CSS</a>
-                                        </li>
-                                        <li class="list-unstyled">
-                                            <a href="/tutorials/categories/#development">Development</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <hr class="mb-4">
-
-                            <!-- COMMENTS ENABLED -->
-                            
-<!-- { % include snippets/comments.html %} --></div>
-                    </section>
-                </main>
-            </div>
-        </div>
-
-        <!-- FOOTER -->
-        <div class="global-footer-wrapper">
-            <div class="container">
-                <footer class="global-footer">
-
-                    <!-- FOOTER MIDDLE -->
-                    <section class="global-footer-body section is-darker has-darker-bleed">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <h3 class="h5">Make a connection</h3>
-                                    <p>You've stumbled on the portfolio of freelance web designer, Mitch.</p>
-                                    <p class="py-2 pr-5 pr-md-3 pr-lg-5">
-                                        <img width="100%" src="/assets/img/layout/mitch-at.svg">
+                                <!-- PANEL BODY -->
+                                <div class="panel-box-body">
+                                    <h3>Fancy a Sub?</h3>
+                                    <p>
+                                        <small>Not the sandwich, goofus! Subscribe my stupid mailing list!</small>
                                     </p>
 
-                                    <!-- SOCIAL MEDIA (FOOTER) -->
-                                    <ul class="social-media block-grid-4 block-grid-md-6 pr-xl-5 mb-4">
-                                        <li>
-                                            <a title="Codepen" href="https://codepen.io/liquidvisual" target="_blank" class="codepen">
-                                                <div class="icon">
-                                                    <i class="fa fa-codepen"></i>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a title="Dribbble" href="https://dribbble.com/liquidvisual" target="_blank" class="dribbble">
-                                                <div class="icon">
-                                                    <i class="fa fa-dribbble"></i>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a title="Github" href="https://github.com/liquidvisual" target="_blank" class="github">
-                                                <div class="icon">
-                                                    <i class="fa fa-github"></i>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a title="Instagram" href="https://www.instagram.com/liquidvisual" target="_blank" class="instagram">
-                                                <div class="icon">
-                                                    <i class="fa fa-instagram"></i>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a title="Twitter" href="https://twitter.com/WriteMitch" target="_blank" class="twitter">
-                                                <div class="icon">
-                                                    <i class="fa fa-twitter"></i>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a title="YouTube" href="https://youtube.com/liquidv" target="_blank" class="youtube">
-                                                <div class="icon">
-                                                    <i class="fa fa-youtube-play"></i>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                    <!-- FORM SUBSCRIBE -->
+                                    <form data-toggle="validatorX" novalidatex netlify>
+                                        <div class="form-group has-icon mb-3">
+                                            <i class="fa fa-envelope"></i>
+                                            <input class="form-control" name="Email" type="email" placeholder="Email" required>
+
+                                            <!-- <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; A valid email is required.</small> -->
+                                            </div>
+                                        <button type="submit" class="btn btn-primary btn-block mb-0">
+                                            <span class="text-hover">Do it!</span>
+                                            <span class="text-default">Subscribe</span>
+                                        </button>
+                                    </form>
                                 </div>
 
-                                <!-- FOOTER LINKS -->
-                                <div class="col-md-8">
-                                    <ul class="block-grid-xs-2 block-grid-md-4">
-                                        <li>
-                                            <h3 class="h5">Quick Links</h3>
-                                            <ul class="list-unstyled">
-                                                <li>
-                                                    <a href="/about/">About</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/services/">Services</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/projects/">Projects</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/tutorials/">Tutorials</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/hire/">Hire</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <h3 class="h5">Services</h3>
-                                            <ul class="list-unstyled">
-                                                <li>
-                                                    <a href="/services/digital-agency/">Digital Agencies</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/services/small-business/">Small Business</a>
-                                                </li>
-                                            </ul>
-                                            <br>
-                                            <h3 class="h5">Additional</h3>
-                                            <ul class="list-unstyled">
-                                                <li>
-                                                    <a href="/hire-me/my-resume/">My Resume</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/hire-me/simulated-interview/">Simulated Interview</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <h3 class="h5">Something</h3>
-                                            <ul class="list-unstyled">
-                                                <li>
-                                                    <a href="">Something</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Something</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Something</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Something</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Something</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <h3 class="h5">Other Sites</h3>
-                                            <ul class="list-unstyled">
-                                                <li>
-                                                    <a href="">Blarg! News</a>
-                                                </li>
-                                                <li>
-                                                    <a href="https://www.danandmitch.com">Dan and Mitch</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Kleptobreaker</a>
-                                                </li>
-                                                <li>
-                                                    <a href="https://www.soberfish.com">Soberfish</a>
-                                                </li>
-                                                <li>
-                                                    <a href="https://www.mitchinghour.com">The Mitching Hour</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <!-- SPRITE SMALL DRIP -->
+                                
+<!-- <div class="sprite-small-drip"></div> --><div class="sprite-long-drip"></div>
                             </div>
-                        </div>
-                    </section>
+                            <div class="spacer my-3"></div>
 
-                    <!-- FOOTER BOTTOM -->
-                    <section class="global-footer-bottom section is-darker">
-                        <div class="container">
-
-                            <!-- DIVIDER -->
-                            <div class="divider"></div>
-
-                            <!-- COPYRIGHT -->
-                            <small>&copy;
-                                <b>2018</b> - liquidvisual</small>
-                            <a class="author-logo" target="_blank" href="http://liquidvisual.com"></a>
-
-                            <!-- BACK TO TOP -->
-                            <a class="back-to-top" href="#">
-                                <i class="fa fa-angle-up"></i>
+                            <!-- CATEGORIES -->
+                            <a href="/tutorials/categories/">
+                                <h3>Categories</h3>
                             </a>
+                            <ul class="list-unstyled">
+                                <li class="list-unstyled">
+                                    <a href="/tutorials/categories/#css">CSS</a>
+                                </li>
+                                <li class="list-unstyled">
+                                    <a href="/tutorials/categories/#development">Development</a>
+                                </li>
+                            </ul>
                         </div>
-                    </section>
-                </footer>
-            </div>
-        </div>
+                    </div>
+                    <hr class="mb-4">
+
+                    <!-- COMMENTS ENABLED -->
+                    
+<!-- { % include snippets/comments.html %} --></div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="global-footer">
+
+            <!-- { % assign featured_work = site.data.sitemap[3].children | where: "featured", true | sort: "title" %} -->
+            
+<!-- FOOTER MIDDLE --><section class="global-footer-body spec-section is-darker has-darker-bleed">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+
+                            <!-- GREETINGS -->
+                            <h3 class="h5">Greetings Human</h3>
+                            <p>You've stumbled on the portfolio of freelance web designer, Mitch.</p>
+                            <p class="py-2 pr-5 pr-md-3 pr-lg-5">
+                                <img width="100%" src="/assets/img/layout/mitch-at.svg">
+                            </p>
+
+                            <!-- SOCIAL MEDIA (FOOTER) -->
+                            <ul class="social-media block-grid-4 block-grid-md-6 pr-xl-5 mb-4">
+                                <li>
+                                    <a title="Codepen" href="https://codepen.io/liquidvisual" target="_blank" class="codepen">
+                                        <div class="icon">
+                                            <i class="fa fa-codepen"></i>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="Dribbble" href="https://dribbble.com/liquidvisual" target="_blank" class="dribbble">
+                                        <div class="icon">
+                                            <i class="fa fa-dribbble"></i>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="Github" href="https://github.com/liquidvisual" target="_blank" class="github">
+                                        <div class="icon">
+                                            <i class="fa fa-github"></i>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="Instagram" href="https://www.instagram.com/liquidvisual" target="_blank" class="instagram">
+                                        <div class="icon">
+                                            <i class="fa fa-instagram"></i>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="Twitter" href="https://twitter.com/WriteMitch" target="_blank" class="twitter">
+                                        <div class="icon">
+                                            <i class="fa fa-twitter"></i>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="YouTube" href="https://youtube.com/liquidv" target="_blank" class="youtube">
+                                        <div class="icon">
+                                            <i class="fa fa-youtube-play"></i>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-8">
+
+                            <!-- FOOTER LINKS -->
+                            <ul class="block-grid-xs-2 block-grid-md-3 block-grid-lg-4">
+                                <li>
+
+                                    <!-- QUICK LINKS -->
+                                    <h3 class="h5">Quick Links</h3>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="/hire/">Hire Me</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+
+                                    <!-- SERVICES -->
+                                    <h3 class="h5">Services</h3>
+                                    <ul class="list-unstyled mb-4">
+                                        <li>
+                                            <a href="/services/digital-agency/">Digital Agencies</a>
+                                        </li>
+                                        <li>
+                                            <a href="/services/small-business/">Small Business</a>
+                                        </li>
+                                    </ul>
+
+                                    <!-- ADDITIONAL -->
+                                    <h3 class="h5">Additional</h3>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="/hire-me/my-resume/">My Resume</a>
+                                        </li>
+                                        <li>
+                                            <a href="/hire-me/simulated-interview/">Simulated Interview</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="hidden-xs-down">
+
+                                    <!-- FEATURED WORKS -->
+                                    <h3 class="h5">Featured Works</h3>
+                                    <ul class="list-unstyled"></ul>
+                                </li>
+                                <li class="hidden-xs-down">
+
+                                    <!-- OTHER SITES -->
+                                    <h3 class="h5">Other Sites</h3>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="">Blarg! News</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.danandmitch.com">Dan and Mitch</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.soberfish.com">Soberfish</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.mitchinghour.com">The Mitching Hour</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://theweddingwarren.com.au">The Wedding Warren</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOOTER BOTTOM -->
+            <section class="global-footer-bottom spec-section is-darker has-darker-bleed">
+                <div class="container">
+                    <div class="position-relative">
+
+                        <!-- DIVIDER -->
+                        <div class="divider"></div>
+
+                        <!-- COPYRIGHT -->
+                        <small>&copy;
+                            <b>
+                                <date class="mr-2">
+                                    <script>
+                                    document.write(new Date().getFullYear())
+                                    </script>
+                                </date>
+                            </b>
+                            <noscript>
+                                <b>2018</b>
+                            </noscript>
+
+                            <!-- <img width="18" height="18" src="/assets/img/ui/liquidvisual-logo.svg" alt="Powered by Mitch">&nbsp; -->
+                            
+<!-- <a class="author-logo" target="_blank" href="http://liquidvisual.com">liquidvisual.com</a> --></small>
+
+                        <!-- BACK TO TOP -->
+                        <a class="back-to-top" href="#">
+                            <i class="fa fa-angle-up"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </footer>
     </div>
 
     <!-- /.lv-page -->
@@ -547,51 +529,58 @@
                 </a>
             </li>
             <li class="">
-                <a class="top-parent-anchor" href="/about/">
-                    <span class="text">About</span>
-                </a>
-            </li>
-            <li class="has-dropdown">
-                <a class="top-parent-anchor" href="/services/">
-                    <span class="text">Services</span>
-                </a>
-                <ul class="dropdown is-nav-included" data-parent="Services">
-                    <li class="">
-                        <a href="/services/digital-agency/">
-                            <h5 class="text">Digital Agency</h5>
-                            <div class="dropdown-text">
-                                <h6>Website Build</h6>
-                                <p>High performing static websites built with years of expertise. Full versioned.</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="/services/small-business/">
-                            <h5 class="text">Small Business</h5>
-                            <div class="dropdown-text">
-                                <h6>Website Design Packages</h6>
-                                <p>Modern website design with personality. Hand coded in HTML5.</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="">
-                <a class="top-parent-anchor" href="/projects/">
-                    <span class="text">Projects</span>
-                </a>
-            </li>
-            <li class="active">
-                <a class="top-parent-anchor" href="/tutorials/">
-                    <span class="text">Tutorials</span>
-                </a>
-            </li>
-            <li class="">
+
+                <!-- TOP LEVEL -->
                 <a class="top-parent-anchor" href="/hire/">
-                    <span class="text">Hire</span>
+                    <span class="text">Hire Me</span>
                 </a>
+
+                <!-- SECOND LEVEL -->
+                </li>
+
+            <!-- SOCIAL MEDIA (OPTIONAL) -->
+            <li class="is-off-canvas-only pt-2">
+
+                <!-- SOCIAL MEDIA -->
+                <div class="social-media">
+                    <a title="Codepen" href="https://codepen.io/liquidvisual" target="_blank" class="d-inline-block codepen">
+                        <div class="icon">
+                            <i class="fa fa-codepen"></i>
+                        </div>
+                    </a>
+                    <a title="Dribbble" href="https://dribbble.com/liquidvisual" target="_blank" class="d-inline-block dribbble">
+                        <div class="icon">
+                            <i class="fa fa-dribbble"></i>
+                        </div>
+                    </a>
+                    <a title="Github" href="https://github.com/liquidvisual" target="_blank" class="d-inline-block github">
+                        <div class="icon">
+                            <i class="fa fa-github"></i>
+                        </div>
+                    </a>
+                    <a title="Instagram" href="https://www.instagram.com/liquidvisual" target="_blank" class="d-inline-block instagram">
+                        <div class="icon">
+                            <i class="fa fa-instagram"></i>
+                        </div>
+                    </a>
+                    <a title="Twitter" href="https://twitter.com/WriteMitch" target="_blank" class="d-inline-block twitter">
+                        <div class="icon">
+                            <i class="fa fa-twitter"></i>
+                        </div>
+                    </a>
+                    <a title="YouTube" href="https://youtube.com/liquidv" target="_blank" class="d-inline-block youtube">
+                        <div class="icon">
+                            <i class="fa fa-youtube-play"></i>
+                        </div>
+                    </a>
+                </div>
             </li>
-        </ul>
+
+            <!-- SEARCH (OPTIONAL) -->
+            
+<!-- <li class="is-off-canvas-only"> -->
+<!-- { % include components/forms/form_search.html %} -->
+<!-- </li> --></ul>
     </nav>
 
     <!--[if lte IE 9]>
@@ -603,6 +592,50 @@
 
     <!-- **** JAVASCRIPT **** -->
     <script src="/assets/scripts/minified.js"></script>
+    <script>
+    // PARALLAX.JS
+    // var target = $('.has-parallax')[0];
+    // var $targets = $('.has-parallax').each(function(){
+    //     $el = $(this)[0];
+    //     var parallax = new Parallax($el, {
+    //         limitX: 10,
+    //         limitY: 10,
+    //         pointerEvents: true,
+    //         relativeInput: true,
+    //         hoverOnly: true
+    //     });
+    // });
+    var targetElements = document.getElementsByClassName('has-parallax');
+    // or, if you insist on using jQuery
+    // var targetElements = $('.target').get();
+    var scenes = [];
+    for (var i = 0; i < targetElements.length; i++) {
+        scenes.push(new Parallax(targetElements[i], {
+            limitX: 10,
+            limitY: 10,
+            pointerEvents: true,
+            relativeInput: true,
+            hoverOnly: true
+        }));
+    }
+    // var parallax = new Parallax(target, {
+    //     limitX: 10,
+    //     limitY: 10,
+    //     relativeInput: true,
+    //     hoverOnly: true
+    // });
+    </script>
+
+    <!-- GLOBAL SITE TAG (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-26850234-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-26850234-1');
+    </script>
 
     <!-- NO JAVASCRIPT WARNING -->
     <noscript>
