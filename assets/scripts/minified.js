@@ -4083,9 +4083,9 @@ function pixelGradient() {
     for (var i, r = "", o = window.getComputedStyle(document.getElementsByTagName("body")[0]).getPropertyValue("content").replace(/\\a/g, "").replace(/ /g, "").replace(/'/g, "").replace(/"/g, "").split("|"), s = 0; s < o.length; s++) {
       t[n[s]] = Number(o[s].replace("px", "")), r += "<tr><td>" + n[s] + "</td><td>" + o[s] + "</td></tr>";
     }i = '<table class="table breakpoints-table" style="width: 300px;">' + r + "</table>", e('[data-js="lv-responsive-table"]').append(i);
-  }(), e("html[development]").length && (i(), e(window).resize(function () {
+  }(), i(), e(window).resize(function () {
     i();
-  }));
+  });
 }(jQuery), function (e, t) {
   "use strict";
   var n = { bind: !!function () {}.bind, classList: "classList" in t.documentElement, rAF: !!(e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame) };function i(e) {
