@@ -1,0 +1,58 @@
+/*
+    SECTIONS__ZINE.CSS
+
+    - updated: 25.07.18
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// ZINE
+//-----------------------------------------------------------------
+
+.section-zine {
+    height: 100%; // [LOCKED]
+    // background-image: url(/assets/img/content/hero/hero-bg.png);
+    background-image: url(/assets/img/content/hero/pink-blur-bg.jpg);
+
+    @include media-breakpoint-only(xs) {
+        min-height: 508px; // iPhone 5
+        max-height: 540px;
+    }
+
+    // SM ONLY
+    @include media-breakpoint-only(sm) {
+        min-height: 565px;
+        max-height: 640px; // close to iPhoneX
+    }
+
+    // MD ONLY
+    @include media-breakpoint-only(md) {
+        min-height: 856px;
+        max-height: 1024px; //960px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        height: auto; // rem-calc(1140);
+    }
+
+    > .container {
+        padding-top: 0; // [OVERRIDE]
+        padding-bottom: 0; // [OVERRIDE]
+
+        @include media-breakpoint-down(lg) { // LANDSCAPE DOWN
+            position: static; // [RESET]
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================

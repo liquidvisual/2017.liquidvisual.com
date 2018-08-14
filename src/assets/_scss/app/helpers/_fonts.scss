@@ -11,6 +11,34 @@
 $font-path: "/assets/fonts" !default;
 
 //-----------------------------------------------------------------
+// Gotham (Used for headings)
+//-----------------------------------------------------------------
+
+// Medium
+// @font-face {
+//     font-family: 'Gotham';
+//     font-style: normal;
+//     font-weight: normal;
+//     src: url('#{$font-path}/Gotham-Medium.eot');
+//     src: local('☺'),
+//         url('#{$font-path}/Gotham-Medium.woff') format('woff'),
+//         url('#{$font-path}/Gotham-Medium.ttf') format('truetype'),
+//         url('#{$font-path}/Gotham-Medium.svg') format('svg');
+// }
+
+// // Bold
+// @font-face {
+//     font-family: 'Gotham';
+//     font-style: normal;
+//     font-weight: bold;
+//     src: url('#{$font-path}/Gotham-Bold.ttf.eot');
+//     src: local('☺'),
+//         url('#{$font-path}/Gotham-Bold.woff') format('woff'),
+//         url('#{$font-path}/Gotham-Bold.tff') format('truetype'),
+//         url('#{$font-path}/Gotham-Bold.svg') format('svg');
+// }
+
+//-----------------------------------------------------------------
 // Gotham Light (Used for text)
 //-----------------------------------------------------------------
 

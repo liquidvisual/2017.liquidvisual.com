@@ -1,12 +1,50 @@
 /*
     GLOBAL.CSS
 
-    - updated: 15.01.18
+    - updated: 25.07.18
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
 // VARIABLES
 //-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// 100vh ALTERNATIVE
+//-----------------------------------------------------------------
+
+html,
+body,
+.lv-page {
+	height: 100%;
+    // min-height: 100%; // uncomment to allow to be larger than 100%
+}
+
+//-----------------------------------------------------------------
+// ANTIALIAS
+//-----------------------------------------------------------------
+
+body {
+	 -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	         font-smoothing: antialised;
+}
+
+//-----------------------------------------------------------------
+// ACCOMODATE FIXED FOOTER
+//-----------------------------------------------------------------
+
+.lv-page:after {
+	@include media-breakpoint-up(md) {
+		content: "";
+		display: block;
+	    // height: rem-calc(646); // [LOCKED] - tested
+	    height: rem-calc(450); // will require tweaking whenever footer changes
+	}
+
+	@include media-breakpoint-up(lg) {
+	    height: rem-calc(418); // [LOCKED] - tested
+	}
+}
+
 //-----------------------------------------------------------------
 // GRID CONTAINER (GENERAL)
 //-----------------------------------------------------------------

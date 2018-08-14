@@ -193,7 +193,7 @@ $grid-breakpoints: (
   xs: 0,      // [LOCKED]
   sm: 375px,  // [RE-LOCKED] - size of iphone 6 (was 576px)
   md: 768px,  // [LOCKED]
-  lg: 1024px, // 992px is smarter but 1024px snaps better [?]
+  lg: 992px, //1024px, // 992px is smarter but 1024px snaps better [?]
   xl: 1114px, // 1024px + 40px * 2 | prev: 1116px, // [LOCKED] appears as 1024px
   xxl: 1440px // [LOCKED] most sensible
 ) !default;
@@ -216,7 +216,7 @@ $grid-breakpoints: (
 
 $container-max-widths: (
   sm: 540px,   // [LOCKED] - was 576 but switched to bootstrap default
-  md: 768px,   // [LOCKED]
+  md: 100%, //768px,   // [LOCKED]
   lg: 1024px,  // [LOCKED]
   xl: 1025px,  // [LOCKED] APPEARS 1024px (same as tablet landscape)
   xxl: 1170px //1260px  // [LOCKED] PERFECT - APPEARS 1170px (lines up with landscape zoom)
@@ -237,7 +237,7 @@ $container-max-widths: (
 // JS will use for dev tools
 //--------------------------------------------------------------------
 
-body {
+html[development] body {
   content: "#{map-get($grid-breakpoints, xs)}|
             #{map-get($grid-breakpoints, sm)}|
             #{map-get($grid-breakpoints, md)}|

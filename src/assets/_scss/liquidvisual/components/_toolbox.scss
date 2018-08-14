@@ -1,28 +1,15 @@
 /*
 	TOOLBOX.CSS
 
-	- updated: 18.03.16
+	- updated: 25.07.18
 	- liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
 
-$font-smoothing:           antialiased !default;
 $primary-color:            $brand-primary !default;
 $include-developer-styles: true !default;
-
-//-----------------------------------------------------------------
-// Font Smoothing
-//-----------------------------------------------------------------
-
-@if $font-smoothing == "antialiased" {
-	body {
-		 -webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		         font-smoothing: antialised;
-	}
-}
 
 //-----------------------------------------------------------------
 // Text Selection (keep separate)
@@ -44,37 +31,6 @@ $include-developer-styles: true !default;
 // Helper Classes
 //-----------------------------------------------------------------
 //=========================================
-// Display
-//=========================================
-
-.display-table {
-	display: table;
-	width: 100%;
-	height: 100%;
-}
-
-.display-table-cell,
-.display-cell {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.align-top,
-.v-align-top {
-	vertical-align: top;
-}
-
-.align-bottom,
-.v-align-bottom {
-	vertical-align: bottom;
-}
-
-.align-middle,
-.v-align-middle {
-	vertical-align: middle;
-}
-
-//=========================================
 // Prevent Flicker on Webkit
 //=========================================
 
@@ -83,20 +39,6 @@ $include-developer-styles: true !default;
 	-webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000;
 	-webkit-transform-style: preserve-3d;
-}
-
-//=========================================
-// First char in sentence is pronounced
-//=========================================
-
-.lv-dropcap:first-letter {
-	float: left;
-	padding-top: 4px;
-	padding-right: 10px;
-	padding-left: 3px;
-	line-height: 90px;
-	font-size: 100px;
-	color: $primary-color;
 }
 
 //=========================================

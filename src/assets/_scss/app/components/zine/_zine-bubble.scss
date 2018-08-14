@@ -1,7 +1,7 @@
 /*
     ZINE-BUBBLE.CSS
 
-    - Last updated: 15.12.16
+    - Last updated: 25.07.18
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -14,7 +14,6 @@
 .zine-feature-bubble {
 	display: flex;
 	align-items: center;
-	justify-content: center;
 	position: relative;
 	top: rem-calc(6);
 	width: em-calc(415);
@@ -69,10 +68,10 @@
 	}
 
 	.zine-feature-bubble-intro {
+		top: em-calc(60);
+		left: calc(50% - #{em-calc(180/2)});
 		max-width: em-calc(180);
 		line-height: 1;
-		top: em-calc(54);
-		left: calc(50% - #{em-calc(180/2)});
 		font-size: em-calc(16);
 		text-align: left;
 	}
@@ -82,9 +81,9 @@
 	//=========================================
 
 	.zine-feature-bubble-body {
-		bottom: em-calc(40);
-		right: em-calc(90);
-		width: em-calc(210);
+		bottom: em-calc(30);
+		right: em-calc(80);
+		width: em-calc(215);
 		line-height: 1.2;
 		font-size: em-calc(13);
 		font-family: $font-family-sans-serif;
@@ -106,7 +105,7 @@
 		padding: em-calc(0 22);
 		border-radius: 100%;
 		text-align: center;
-		background: lighten($brand-secondary, 5%); //#27bcdd;
+		background: lighten($brand-secondary, 5%);
 		overflow: hidden; // [SAFEGUARD]
 
 		.text {

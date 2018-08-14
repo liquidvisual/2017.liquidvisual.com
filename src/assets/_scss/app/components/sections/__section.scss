@@ -9,7 +9,8 @@
         .section
             &.is-dark
             &.is-darker
-            &.is-darker
+            &.is-light
+            &.is-white
             &.has-dark-bleed
             &.has-darker-bleed
             &.has-light-bleed
@@ -63,7 +64,10 @@
     //=========================================
 
     > .container {
-        position: relative; // [LOCKED] - since padding targets the container
+        display: flex; // this might work ?
+        flex-direction: column; // ?
+
+        position: relative; // [LOCKED] - since padding targets the container - need to position abs elements inside container
         height: 100%; // [LOCKED] - allows height to be set on the section
         padding-top:    ($spacer * 2.5); // [LOCKED]
         padding-bottom: ($spacer * 2.5); // [LOCKED]

@@ -4,8 +4,9 @@ allow_robots: false
 
 # META
 title: liquidvisual
-title_homepage: Freelance Web Designer | Custom Website Builds Sydney
-company: liquidvisual
+title_homepage: Freelance Web Developer in Sydney | Mitch Warren
+# title_homepage: liquidvisual | Freelance Web Developer + Design in Sydney
+company: liquidvisual Web Development Sydney
 description: Mitch is a Sydney based freelance front-end web designer who specialises in custom website builds for digital agencies in Australia.
 
 # DEVELOPER
@@ -25,6 +26,7 @@ social_media:
     url: https://codepen.io/liquidvisual
     alias: '@liquidvisual'
     icon: fa fa-codepen
+    exclude: true
 
   - title: Dribbble
     url: https://dribbble.com/liquidvisual
@@ -71,9 +73,10 @@ social_media:
     icon: fa fa-twitter
 
   - title: YouTube
-    url: https://youtube.com/liquidv
-    alias: '@liquidv'
+    url: https://www.youtube.com/channel/UC4S74VhUhaL1HGv3kxYyH6Q
+    alias: '@danandmitch'
     icon: fa fa-youtube-play
+    # exclude: true
 
 # GOOGLE
 google_analytics: 'UA-26850234-1'

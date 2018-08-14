@@ -1,5 +1,5 @@
 /*
-    RESPONSIVE-UTILITY.JS - Last updated: 22.01.18
+    RESPONSIVE-UTILITY.JS - Last updated: 20.07.18
 
     - Notes: Needs refactor (Vue possibly?)
 */
@@ -68,8 +68,12 @@
         if ($('.lv-screen-data').length != 1) {
             $body.append('<div class="lv-screen-data"></div>');
         }
-        var screenWidth = $(window).width();
-        var screenHeight = $(window).height();
+        var screenWidth = window.innerWidth; // NEW
+        var screenHeight = window.innerHeight;
+
+        var queryWidth = $(window).width(); // old
+        var queryHeight = $(window).height();
+
         var device;
 
         if (screenWidth < breakpoints.sm) device = "xs";
@@ -79,11 +83,11 @@
         if (screenWidth >= breakpoints.xl && screenWidth < breakpoints.xxl) device = "xl";
         if (screenWidth >= breakpoints.xxl) device = "xxl";
 
-        $('.lv-screen-data').html(screenWidth+" x "+screenHeight+"<br>"+device)
+        $('.lv-screen-data').html(queryWidth+" x "+queryHeight+"<br><small>"+screenWidth+" x "+screenHeight+"</small><br>"+device)
             .css({
                 'position': 'fixed',
                 'top': 0,
-                'padding': '10px 20px',
+                'padding': '5px 10px',
                 'background': 'rgba(0,0,0,0.5)',
                 'font-family': 'Helvetica Neue',
                 'font-size': '14px',

@@ -3,4 +3,12 @@ output: true
 ---
 
 User-agent: *
-{% if site.data.settings.allow_robots %}Allow: /{% else %}Disallow: /{% endif %}
+Disallow: /admin/
+Disallow: /about/
+Disallow: /services/
+Disallow: /services/*
+Disallow: /tutorials/
+Disallow: /tutorials/*
+Disallow: /works/
+Disallow: /works/*
+Disallow: /hire/*

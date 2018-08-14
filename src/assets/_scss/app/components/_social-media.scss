@@ -28,6 +28,7 @@
 			align-items: center;
 			justify-content: center;
 			width: rem-calc(40);
+			min-width: rem-calc(40); // [LOCKED]
 			height: rem-calc(40);
 			margin-right: rem-calc(15);
 			border-radius: 100%;
@@ -147,9 +148,9 @@
 		color: white;
 	}
 
-	.trello {
-		display: none;
-	}
+	// .trello {
+	// 	display: none; ?
+	// }
 
 	.codepen    { color: black; }
 	.dribbble   { color: #ea4c89; }
@@ -163,6 +164,27 @@
 	.trello     { color: #0079bf; }
 	.twitter    { color: #1da1f2; }
 	.youtube    { color: #cd201f; }
+}
+
+//=========================================
+// OFFCANVAS - refactor whole social
+//=========================================
+
+.lv-off-canvas .social-media {
+	padding: rem-calc(20 0);
+
+	a {
+		margin-bottom: rem-calc(10);
+		padding: 0;
+	}
+}
+
+//-----------------------------------------------------------------
+// CONTEXT
+//-----------------------------------------------------------------
+
+.lv-off-canvas .social-media {
+	margin: $spacer 0;
 }
 
 //-----------------------------------------------------------------

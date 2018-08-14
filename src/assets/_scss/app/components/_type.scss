@@ -13,6 +13,8 @@
 
 html {
 	@include media-breakpoint-down(xl) { font-size: 14px; }
+	@include media-breakpoint-down(md) { font-size: 12px; }
+	@include media-breakpoint-down(sm) { font-size: 14px; }
 }
 
 //-----------------------------------------------------------------
@@ -40,7 +42,11 @@ a, button {
 //-----------------------------------------------------------------
 
 p, ul, ol, td {
-	font-size: rem-calc(19); // [LOCKED]
+	font-size: rem-calc(17);
+
+	@include media-breakpoint-up(md) {
+	    font-size: rem-calc(19); // [LOCKED]
+	}
 }
 
 //=========================================

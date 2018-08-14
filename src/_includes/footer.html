@@ -1,65 +1,78 @@
 {% assign settings = site.data.settings %}
-{% assign featured_work = site.data.sitemap[3].children | where: "featured", true | sort: "title" %}
+{% assign sitemap = site.data.sitemap %}
+<!-- { % assign featured_work = site.data.sitemap[3].children | where: "featured", true | sort: "title" %} -->
 
 <!-- FOOTER MIDDLE -->
 <section class="global-footer-body spec-section is-darker has-darker-bleed">
 	<div class="container">
 		<div class="row">
-
 			<div class="col-md-4">
-				<h3 class="h5">Make a connection</h3>
+
+				<!-- GREETINGS -->
+				<h3 class="h5">Greetings Human</h3>
 				<p>You've stumbled on the portfolio of freelance web designer, Mitch.</p>
 				<p class="py-2 pr-5 pr-md-3 pr-lg-5"><img width="100%" src="/assets/img/layout/mitch-at.svg"></p>
 
 				{% include snippets/social_media.html %}
-			</div>
 
-			<!-- FOOTER LINKS -->
+			</div>
 			<div class="col-md-8">
-				<ul class="block-grid-xs-2 block-grid-md-4">
+
+				<!-- SPRITE LONG DRIP (TEMPORARY) -->
+				<div class="sprite-long-drip"></div>
+
+				{% comment %}
+				<!-- FOOTER LINKS -->
+				<ul class="block-grid-xs-2 block-grid-md-3 block-grid-lg-4" hidden>
 					<li>
+						<!-- QUICK LINKS -->
 						<h3 class="h5">Quick Links</h3>
 						<ul class="list-unstyled">
-							<li><a href="/about/">About</a></li>
-							<li><a href="/services/">Services</a></li>
-							<li><a href="/projects/">Projects</a></li>
-							<li><a href="/tutorials/">Tutorials</a></li>
-							<li><a href="/hire/">Hire</a></li>
+							{% for item in sitemap | offset: 1 %}
+								<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+							{% endfor %}
 						</ul>
 					</li>
 					<li>
+						<!-- SERVICES -->
 						<h3 class="h5">Services</h3>
-						<ul class="list-unstyled">
+						<ul class="list-unstyled mb-4">
 							<li><a href="/services/digital-agency/">Digital Agencies</a></li>
 							<li><a href="/services/small-business/">Small Business</a></li>
 						</ul>
-						<br>
 
+						<!-- ADDITIONAL -->
 						<h3 class="h5">Additional</h3>
 						<ul class="list-unstyled">
 							<li><a href="/hire-me/my-resume/">My Resume</a></li>
 							<li><a href="/hire-me/simulated-interview/">Simulated Interview</a></li>
 						</ul>
 					</li>
-					<li>
-						<h3 class="h5">Featured Work</h3>
+					<li class="hidden-xs-down">
+
+						<!-- FEATURED WORKS -->
+						<h3 class="h5">Featured Works</h3>
 						<ul class="list-unstyled">
-							{% for item in featured_work limit: 6 %}
+							{% for item in featured_work | limit: 6 %}
 								<li><a href="">{{ item.title }}</a></li>
 							{% endfor %}
 						</ul>
 					</li>
-					<li>
+					<li class="hidden-xs-down">
+
+						<!-- OTHER SITES -->
 						<h3 class="h5">Other Sites</h3>
 						<ul class="list-unstyled">
-							<li><a href="">Blarg! News</a></li>
+							<!-- <li><a href="">Blarg! News</a></li> -->
 							<li><a href="https://www.danandmitch.com">Dan and Mitch</a></li>
-							<li><a href="">Kleptobreaker</a></li>
-							<li><a href="https://www.soberfish.com">Soberfish</a></li>
+							<!-- <li><a href="https://www.soberfish.com">Soberfish</a></li> -->
 							<li><a href="https://www.mitchinghour.com">The Mitching Hour</a></li>
+							<li><a href="http://theweddingwarren.com.au">The Wedding Warren</a></li>
 						</ul>
 					</li>
 				</ul>
+				{% endcomment %}
+
 			</div>
 		</div>
 	</div>
@@ -69,12 +82,18 @@
 <section class="global-footer-bottom spec-section is-darker has-darker-bleed">
     <div class="container">
     	<div class="position-relative">
+
 			<!-- DIVIDER -->
 	    	<div class="divider"></div>
 
 	        <!-- COPYRIGHT -->
-			<small>&copy; <b>{{ site.time | date: '%Y' }}</b> - liquidvisual</small>
-	        <a class="author-logo" target="_blank" href="{{ settings.author.url }}"></a>
+			<small>
+				&copy;
+				<b><date class="mr-2"><script>document.write(new Date().getFullYear())</script></date></b>
+				<noscript><b>{{ site.time | date: '%Y' }}</b></noscript> Under Construction
+				<!-- <img width="18" height="18" src="{{ settings.author.logo }}" alt="Powered by {{ settings.author.title }}">&nbsp; -->
+	        	<!-- <a class="author-logo" target="_blank" href="{{ settings.author.url }}">liquidvisual.com</a> -->
+			</small>
 
 	        <!-- BACK TO TOP -->
 	        <a class="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>

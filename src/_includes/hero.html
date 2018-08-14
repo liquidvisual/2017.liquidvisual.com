@@ -10,28 +10,33 @@
 {% endcomment %}
 
 {% assign hero = page.hero | default: "/assets/img/content/hero/hero-bg.png" %}
-{% assign hero_classes = page.hero_classes %}
 {% assign hero_text = page.hero_text %}
 
-{% capture computed_classes %}
+{% capture hero_classes %}
+    {{ page.hero_classes }}
     {% if hero_text %} is-edge-to-edge {% endif %}
 {% endcapture %}
 
-<section class="lv-hero-wrapper spec-section is-dark has-image-bg has-fixed-bleed {{ hero_classes }} {{ computed_classes }}" style="background-image: url('{{ hero }}')">
+<!-- HERO WRAPPER -->
+<section class="lv-hero-wrapper spec-section is-dark has-image-bg has-fixed-bleed {{ hero_classes }}" style="background-image: url('{{ hero }}')">
     <div class="container">
 
         <!-- HERO -->
         <div class="lv-hero has-height-preset-1">
             <div class="lv-hero-item">
 
-                <!-- HERO TEXT IMAGE -->
                 {% if hero_text %}
+
+                    <!-- HERO CAPTION #1 -->
                     <div class="lv-hero-item-caption">
                         <h1 class="mb-0">
                             <img width="100%" src="{{ hero_text }}" alt="{{ page.title }}">
                         </h1>
                     </div>
+
                 {% else %}
+
+                    <!-- HERO CAPTION #2 -->
                     <div class="lv-hero-item-caption mb-4">
                         <div class="row">
                             <div class="col-lg-10">

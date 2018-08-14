@@ -1,7 +1,7 @@
 /*
     ZINE-COVER.CSS
 
-    - Last updated: 07.07.18, 15.12.16
+    - Last updated: 25.07.18
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -12,10 +12,12 @@
 //-----------------------------------------------------------------
 
 .zine {
+    // position: relative; // [REFERENCE] - overflow
     display: flex;
     flex-direction: column;
-    width: 100%;
+    height: 100%;
     // border: 2px dashed aqua;
+    overflow: hidden; // [LOCKED] - prevent spillage from zine-body padding
 }
 
 //-----------------------------------------------------------------
@@ -23,8 +25,9 @@
 //-----------------------------------------------------------------
 
 .zine-title {
-    margin: rem-calc(50 0);
-    opacity: 0.8;
+    margin: rem-calc(80 0 50 0); // [LOCKED]
+    // border: 2px dashed aqua;
+    opacity: 0.8; // [LOCKED]
 
     @include media-breakpoint-up(md) {
         margin-top: rem-calc(130);
@@ -36,6 +39,9 @@
 //-----------------------------------------------------------------
 
 .zine-body {
+    margin: auto 0;
+    padding-bottom: rem-calc(140);
+    // border: 2px dashed yellow;
     font-weight: bold; // [LOCKED]
     color: white;
 
@@ -49,10 +55,15 @@
 //-----------------------------------------------------------------
 
 .zine-feature-border {
+    width: 100%; // IE11 Fix
     padding: $spacer;
     border: 3px solid rgba(white, 0.8);
     color: white;
     background: rgba(white, 0.15);
+
+    @include media-breakpoint-down(sm) {
+        font-size: rem-calc(30);
+    }
 }
 
 //-----------------------------------------------------------------
@@ -62,12 +73,39 @@
 
 .zine-feature-tagline {
     display: inline-block;
-    max-width: rem-calc(450);
+    max-width: rem-calc(350); // better
     margin-bottom: $spacer;
+
+    @include media-breakpoint-up(md) {
+        max-width: rem-calc(460); // was 450 - creates 3 lines on cover (too much to read)
+    }
 
     h1, h2, h3, h4, h5, h6 {
         text-transform: uppercase;
         margin-bottom: rem-calc(16);
+
+        @include media-breakpoint-down(sm) {
+            font-size: rem-calc(20);
+        }
+    }
+
+    p {
+        font-size: rem-calc(20);
+
+        @include media-breakpoint-down(sm) {
+            font-size: rem-calc(13) !important;
+        }
+    }
+
+    // targeting mostly iPhoneX and tall phones
+    &.is-mobile-plus-only {
+        display: none;
+
+        // https://mediag.com/news/popular-screen-resolutions-designing-for-all/
+        // 375px = iPhone 7,8 | 622px = equal Y padding | 767.98 is SM
+        @media only screen and (min-width: 375px) and (min-height: 622px) and (max-width: 767.98px) {
+            display: block;
+        }
     }
 
     .text-highlight,
@@ -75,18 +113,17 @@
         display: inline;
         position: relative;
         background: $brand-primary;
-        // font-family: $headings-font-family;
         font-size: rem-calc(16);
+        line-height: 1.8; // closest could get it
         color: white;
         box-shadow: 0 0 0 rem-calc(10) $brand-primary;
-        box-decoration-break: clone; // *
+        box-decoration-break: clone; // [LOCKED]
     }
 
     .text-highlight-white {
-    	background: white;
-    	box-shadow: 0 0 0 rem-calc(10) white;
+    	background: #e7dee3; // offwhite
+    	box-shadow: 0 0 0 rem-calc(10) #e7dee3;
     	color: #222;
-    	opacity: 0.8;
     }
 }
 
@@ -105,14 +142,8 @@
 //
 //-----------------------------------------------------------------
 
-.brand-primary {
-    color: $brand-primary;
-    color: rgba(black, 0.5);
-}
-
 .brand-black-transparent {
     color: rgba(black, 0.5) !important;
-
 }
 
 //-----------------------------------------------------------------
