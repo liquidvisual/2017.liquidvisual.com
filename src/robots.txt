@@ -12,3 +12,5 @@ Disallow: /tutorials/*
 Disallow: /works/
 Disallow: /works/*
 Disallow: /hire/*
+
+Sitemap: https://www.liquidvisual.com/sitemap.xml
