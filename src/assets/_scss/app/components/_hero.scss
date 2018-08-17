@@ -24,6 +24,12 @@ $hero-height-xxl: 1140px; //auto;
         padding-top: 0;
         padding-bottom: 0;
     }
+
+    // background: #e3e6eb !important;
+
+    &:after {
+        // display: none;
+    }
 }
 
 //=========================================
@@ -134,8 +140,8 @@ $hero-height-xxl: 1140px; //auto;
         position: relative;
         top: rem-calc(3); // 2 is best but IE10
         width: 100%;
-        color: white;
-        text-transform: none;
+        // color: white;
+        font-weight: 900;
     }
 
     p {

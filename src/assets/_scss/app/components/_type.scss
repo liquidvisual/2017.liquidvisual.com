@@ -45,7 +45,7 @@ p, ul, ol, td {
 	font-size: rem-calc(17);
 
 	@include media-breakpoint-up(md) {
-	    font-size: rem-calc(19); // [LOCKED]
+	    // font-size: rem-calc(19); // [LOCKED] - need? check tuts item
 	}
 }
 
@@ -55,10 +55,44 @@ p, ul, ol, td {
 
 p.lead {
 	margin-bottom: $spacer*2;
+	font-weight: 500;
 
 	@include media-breakpoint-down(sm) {
 	    font-size: rem-calc(21); // [LOCKED] - special order
 	}
+}
+
+//=========================================
+// PULL QUOTE
+//=========================================
+
+.pullquote {
+	padding: rem-calc(20 20);
+	font-size: $lead-font-size;
+	font-weight: 500;
+	font-style: italic;
+	color: $brand-primary;
+
+	@include media-breakpoint-down(sm) {
+	    font-size: rem-calc(21); // [LOCKED] - special order
+	}
+
+	@include media-breakpoint-up(md) {
+		position: relative;
+		width: 50%;
+		margin: rem-calc(10 30 15 -75);
+	    float: left;
+	}
+
+	// &:before {
+	// 	content: "‛‛";
+	// 	position: absolute;
+	// 	bottom: rem-calc(5);
+	// 	left: rem-calc(-40);
+	// 	font-family: Georgia, TimesNewRoman, "Times New Roman", Times serif;
+	// 	font-size: rem-calc(100);
+	// 	color: darken($gray-light, 5%);
+	// }
 }
 
 //=========================================
@@ -69,6 +103,7 @@ p.lead {
 	margin: rem-calc(0 5 0 -5);
 	float: left;
 	font-size: rem-calc(64); // [LOCKED] - check other browsers
+	font-weight: 400;
 	line-height: 1;
 	// line-height: rem-calc(60);
 	color: $brand-primary;

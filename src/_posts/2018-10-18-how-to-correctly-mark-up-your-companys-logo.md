@@ -3,7 +3,7 @@ layout: child_layout/tutorials_item
 date: 2015-02-03
 title: How to Correctly Mark Up Your Company's Logo
 categories: Development
-hero: /assets/img/content/hero-home-9.jpg
+hero: /assets/img/content/hero/swirl-5.png
 theme: theme-light
 logo: /assets/img/content/branding/logo-type--white-transparent.svg
 breadcrumbs: true

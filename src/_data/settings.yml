@@ -4,8 +4,7 @@ allow_robots: false
 
 # META
 title: liquidvisual
-title_homepage: Freelance Web Developer in Sydney | Mitch Warren
-# title_homepage: liquidvisual | Freelance Web Developer + Design in Sydney
+title_homepage: Freelance Web Designer + Developer in Sydney | Mitch Warren
 company: liquidvisual Web Development Sydney
 description: Mitch is a Sydney based freelance front-end web designer who specialises in custom website builds for digital agencies in Australia.
 
@@ -84,6 +83,6 @@ google_analytics: 'UA-26850234-1'
 # AUTHOR
 author:
   title: Mitch
-  url: http://liquidvisual.com
+  url: https://www.liquidvisual.com
   logo: /assets/img/ui/liquidvisual-logo.svg
   description: by liquidvisual

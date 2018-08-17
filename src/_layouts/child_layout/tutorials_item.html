@@ -7,13 +7,28 @@ layout: base__page
 <!-- SECTION -->
 <section class="spec-section is-light has-light-bleed">
 	<div class="container">
+
+
+			<!-- <div class="row px-4X"> -->
+				<!-- <div class="col-md-9"> -->
+					{{ content }}
+				<!-- </div> -->
+			<!-- </div> -->
+
+
+
+
+		{% comment %}
 		<div class="row no-gutters">
 			<div class="col-lg-9 pr-lg-5">
 				<div class="pr-lg-3">
 					{{ content }}
 				</div>
 			</div>
-			<div class="col-lg-3">
+		{% endcomment %}
+
+			{% comment %}
+			<div class="col-lg-3" hidden>
 
 				<!-- SUBSCRIBE BOX -->
 				<div class="panel-box">
@@ -44,6 +59,7 @@ layout: base__page
 
 			</div>
 		</div>
+		{% endcomment %}
 
 		<hr class="mb-4">
 

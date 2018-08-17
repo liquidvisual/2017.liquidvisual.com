@@ -106,6 +106,30 @@ $font-path: "/assets/fonts" !default;
         url('#{$font-path}/GothamRnd-Book.svg') format('svg');
 }
 
+// Book Medium
+@font-face {
+    font-family: 'Gotham Rounded Book';
+    font-style: normal;
+    font-weight: 500;
+    src: url('#{$font-path}/GothamRnd-Medium.eot');
+    src: local('☺'),
+        url('#{$font-path}/GothamRnd-Medium.woff') format('woff'),
+        url('#{$font-path}/GothamRnd-Medium.tff') format('truetype'),
+        url('#{$font-path}/GothamRnd-Medium.svg') format('svg');
+}
+
+// Book Medium Italic
+@font-face {
+    font-family: 'Gotham Rounded Book';
+    font-style: italic;
+    font-weight: 500;
+    src: url('#{$font-path}/GothamRnd-MedIta.eot');
+    src: local('☺'),
+        url('#{$font-path}/GothamRnd-MedIta.woff') format('woff'),
+        url('#{$font-path}/GothamRnd-MedIta.tff') format('truetype'),
+        url('#{$font-path}/GothamRnd-MedIta.svg') format('svg');
+}
+
 // Book Bold
 @font-face {
     font-family: 'Gotham Rounded Book';

@@ -1,7 +1,8 @@
 ---
 layout: child_layout/hire
-title: Hire Me
+title: Hire Me | Freelance Web Developer | Sydney Australia
 permalink: /hire/
+description: Experienced web designer & developer offering custom website builds for creative agencies in Sydney Australia.
 hero: /assets/img/content/hero/swirl-5.png
 hero_classes: has-bleed-tint
 theme:

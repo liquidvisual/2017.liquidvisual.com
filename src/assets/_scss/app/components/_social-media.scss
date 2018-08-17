@@ -115,10 +115,13 @@
 		.icon {
 			margin: rem-calc(0 0 0 10);
 			font-size: rem-calc(16);
-			// width: rem-calc(35);
-			// height: rem-calc(35);
-			width: rem-calc(38);
-			height: rem-calc(38);
+
+			// width: rem-calc(38);
+			// height: rem-calc(38);
+
+			width: 34px; // done
+			height: 34px;
+			min-width: 34px;
 		}
 	}
 }
