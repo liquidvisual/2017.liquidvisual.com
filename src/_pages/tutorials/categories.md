@@ -8,4 +8,5 @@ theme: theme-light
 logo: /assets/img/content/branding/logo-type--white-transparent.svg
 hero_text: /assets/img/layout/headings/heading-category--white.svg
 breadcrumbs: true
+sitemap: false
 ---

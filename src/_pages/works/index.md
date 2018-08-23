@@ -8,4 +8,5 @@ hero_classes: has-bleed-tint
 theme:
 logo: /assets/img/content/branding/logo-type--darker.svg
 hero_text: /assets/img/layout/headings/heading-works--darker.svg
+sitemap: false
 ---

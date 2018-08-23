@@ -8,5 +8,6 @@ theme:
 logo: /assets/img/content/branding/logo-type--darker.svg
 hero_text: /assets/img/layout/headings/heading-thanks--darker.svg
 breadcrumbs: true
+sitemap: false
 ---
 

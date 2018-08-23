@@ -8,6 +8,7 @@ theme:
 logo: /assets/img/content/branding/logo-type--white-transparent.svg
 hero_text: /assets/img/layout/headings/heading-small-business--light.svg
 breadcrumbs: true
+sitemap: false
 ---
 
 Small Biz

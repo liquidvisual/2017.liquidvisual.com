@@ -11,7 +11,6 @@ Disallow: /tutorials/
 Disallow: /tutorials/*
 Disallow: /works/
 Disallow: /works/*
-Disallow: /hire/resume/
 Disallow: /hire/interview/
 
 Sitemap: https://www.liquidvisual.com/sitemap.xml
