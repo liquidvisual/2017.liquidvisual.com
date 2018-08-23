@@ -2,135 +2,133 @@
 layout: base__page
 ---
 
-{% comment %}
-{% contentfor tagline %}
-	<h2><span class="brand-primary-color">Need a Resume?</span> Sure, here it is.</h2>
-	<!-- <p class="mb-0">There's nothing here right now, but this is where you'll find it.</p> -->
-	<a href="" class="btn btn-secondary">Print</a>&nbsp; &nbsp; <a class="btn btn-secondary" href="">Download</a>
-{% endcontentfor %}
-{% endcomment %}
+{% assign title = page.title_override %}
+{% assign subtitle = page.subtitle %}
+{% assign bio = page.bio %}
+{% assign details = page.details %}
 
-<!-- SECTION DARK -->
-<section class="spec-section is-light has-light-bleed">
+<!-- SECTION LIGHT -->
+<section class="spec-section section-resume is-light has-light-bleed">
 	<div class="container">
 
-		<!-- HEADER -->
-		<header class="mb-4">
-			<div class="row">
-				<div class="col-md-8 ml-auto">
-					<h1 class="mb-1 display-1 text-capitalize">Mitchell Warren</span></h1>
-					<h6 class="text-muted">Front-end Developer &amp; Designer</h6>
-				</div>
-			</div>
-		</header>
+		<!-- ROW + COLUMNS -->
+		<div class="row">
+			<div class="col-md-8 pl-lg-4 ml-auto">
 
-		<!-- PROFILE -->
+				<!-- MITCH WARREN -->
+				<header class="mb-5 text-center text-md-left">
+					<h1 class="mb-1 display-1 text-capitalize">{{ title }}</span></h1>
+					<p class="h6 text-muted">{{ subtitle }}</p>
+				</header>
+
+				{% comment %}
+					<!-- TOOLBAR -->
+					<div class="toolbar">
+						<button class="btn" title="Print this" data-toggle="tooltip" onclick="window.print()"><i class="fa fa-print"></i></button>
+						<button id="download" class="btn" title="Download this" data-toggle="tooltip"><i class="fa fa-download"></i></button>
+					</div>
+				{% endcomment %}
+
+			</div>
+		</div>
+
+		<!-- ROW + COLUMNS -->
 		<div class="row">
 			<div class="col-md-4">
 
-				<div class="panel-grey" style="padding: 30px 30px 30px 45px; background: rgba(0,0,0,0.08); position: relative; left: -45px;">
-					<p class="text-center" style="margin-top: -80px;"><img style="border: 1px solid #dcdee1;" width="50%" class="rounded-circle mr-2" src="/assets/img/content/avatars/avatar-mitch@2x.jpg" alt="Mitch"></p>
+				<!-- DETAILS PANEL -->
+				<div class="details-panel mr-md-2 pt-4 pb-2">
 
-					<br>
-
-					<div class="d-flex">
-						<i class="fa fa-tablet mr-3"></i>
-						<div>
-							<h6 class="mb-0">Website</h6>
-							<p><a href="">www.liquidvisual.com</a></p>
-						</div>
+					<!-- PHOTO -->
+					<div class="details-panel-photo text-center mr-md-4 mb-3 mb-md-4">
+						<img width="55%" class="d-print-none" src="/assets/img/content/avatars/avatar-mitch@2x.jpg" alt="Mitch">
+						<img width="40%" class="d-none d-print-inline-block" style="background: white;" src="/assets/img/content/branding/logo-mark--black.svg" alt="Logo">
 					</div>
 
-					<div class="d-flex">
-						<i class="fa fa-envelope mr-3"></i>
-						<div>
-							<h6 class="mb-0">Email</h6>
-							<p><a href="">mitch liquidvisual com</a></p>
+					<!-- DETAILS -->
+					{% for item in details %}
+						<div class="mb-4">
+
+							<!-- HEADING -->
+							<h2 class="h6 font-family-oswald text-uppercase mb-3">
+								{{ item.title }}
+							</h2>
+
+							<!-- WYSIWYG -->
+							<div class="wysiwyg">
+								{{ item.body }}
+							</div>
 						</div>
-					</div>
-
-					<div class="d-flex">
-						<i class="fa fa-mobile mr-3"></i>
-						<div>
-							<h6 class="mb-0">Phone</h6>
-							<p><a href="">040...</a></p>
-						</div>
-					</div>
-
-					<br><br>
-
-					<h2 class="h4 font-family-oswald">PROFILE</h2>
-					<p>I'm a freelance web developer from Sydney who specialises in building clean, usable, modern websites, supporting a range of devices and browsers. With mobile-first strategy my builds are smarter, faster and more adaptable and reach wider audiences. I have a deep understanding of emerging trends in technology, experience in design and a keen enthusiasm for the web.</p>
-
-					<h2 class="h4 font-family-oswald">SKILLS</h2>
-					<ul>
-						<li>Web design</li>
-						<li>Front-end web development</li>
-						<li>Product development</li>
-						<li>Creative direction</li>
-						<li>SEO</li>
-						<li>HTML5 / CSS3</li>
-						<li>JavaScript</li>
-						<li>Vue.js</li>
-						<li>Animate</li>
-						<li>Final Cut Pro</li>
-						<li>Photoshop</li>
-						<li>Sketch</li>
-					</ul>
-
-
+					{% endfor %}
 
 				</div>
 
+				<!-- CONTACT PANEL -->
+				<div class="contact-panel mr-2 mb-5">
+
+					<!-- CONTACT -->
+					<h2 class="h6 font-family-oswald text-uppercase mb-3">
+						Contact
+					</h2>
+
+					<!-- CONTACT DETAILS -->
+					<img class="mt-1" src="/assets/img/layout/safe-contact-transparent@2x.png" draggable="false" ondragstart="return false;" alt="Contact Details">
+
+					{% comment %}
+						EG. <div class="d-flex align-items-center mb-2">
+							<i class="fa fa-envelope-o"></i>
+							<b>Email here</b>
+						</div>
+					{% endcomment %}
+
+				</div>
 			</div>
-			<div class="col-md-8">
+			<div class="col-md-8 pl-lg-4">
 
-				<h2 class="h5 font-family-oswald mb-2" style="font-weight: 500;">EXPERIENCE</h2>
+				<!-- BIO SECTION -->
+				{% for item in bio %}
+					<section class="mb-5">
 
-				<hr class="mt-0">
-				<br>
+						<!-- BIO GROUP HEADER -->
+						<header class="mb-4">
+							<h2 class="bio-group-header h6 font-family-oswald text-uppercase mb-2">{{ item.title }}</h2>
+							<hr class="mt-0 mb-5">
+						</header>
 
-				<b class="font-family-oswald float-right">PRESENT</b>
-				<h4 class="subheader mb-1">Freelance Web Developer</h4>
-				<p><b>liquidvisual</b></p>
-				<p>Building complex and custom website builds for multiple clients and agencies. Performing maintenance and regular updates for small to large scale websites. Building Vue.js apps that integrate with APIs and leveraging static site generators to scaffold websites quickly for client previews. Expertise in future proofing websites with advanced responsive design and mobile strategy. Providing cost effective solutions for agencies seeking scalable, high quality front-end site builds.</p>
+						<!-- BIO ARTICLE -->
+						{% for item in item.children %}
+							<article>
 
+								{% if item.title %}
+									<!-- BIO ARTICLE HEADER -->
+									<header class="mb-2 mb-md-3">
+										<div class="row">
+											<div class="col-md-4 order-md-last text-md-right">
+												<span class="d-inline-block mb-3 text-timeframe font-family-oswald">{{ item.timeframe }}</span>
+											</div>
+											<div class="col-md-8 order-md-first">
+												<h3 class="h4 subheader mb-2">{{ item.title }}</h3>
+												<h4 class="h6 font-family-sans-serif text-body-color text-body-color">{{ item.subtitle }}</h4>
+											</div>
+										</div>
+									</header>
+								{% endif %}
 
-				<hr>
+								<!-- WYSIWYG -->
+								<div class="wysiwyg">
+									{{ item.body | markdownify }}
+								</div>
 
-				<b class="float-right font-family-oswald">2013 - 2015</b>
-				<h4 class="subheader mb-1">Web Developer / Consultant</h4>
-				<!-- <p><b>Thomson Reuters</b></p> -->
-				<p><b>Thomson Reuters</b></p>
+							</article>
 
-				<p>Contracted to future proof web sites with advanced responsive design and mobile strategy. Providing high quality front-end site builds. Working alongside back-end devs to integrate with Umbraco CMS.</p>
+							{% unless forloop.last %}
+								<hr>
+							{% endunless %}
 
+						{% endfor %}
 
-				<hr>
-
-				<b class="float-right font-family-oswald">2011 - 2012</b>
-				<h4 class="mb-1 subheader">Designer</h4>
-				<h4 class="text-muted">JR Interactive</h4>
-				<p>Contracted fulltime by Sydney based agency. Produced front-end builds for high-value clients such as Sydney Seaplanes, Peats Ridge Festival, Perpetual Bank, ALDI, Sydney Film Festival and the University of Western Sydney. Ported existing table-based websites to HTML5, addressing speed, performance and cross compatibility. Consulted with partnering marketing / design agencies to solve technical issues in person and via phone. Performed regular maintenance to sites and ongoing technical support.</p>
-
-
-				<hr>
-
-				<b class="font-family-oswald float-right">2008 - 2011</b>
-				<h3 class="subheader">Flash Designer</h3>
-				<h4 class="text-muted">OSS Pty Ltd / Clevershow Corporation</h4>
-				<p>Creative lead on many multimedia projects for literacy and early learning across areas of design, programming, marketing and quality assurance. Resolved technical issues of cross compatibility with screen and print. Developed multi-platform interactive DVD-ROMS for distribution in US schools.</p>
-
-				<br>
-				<br>
-
-				<h2 class="h4 font-family-oswald">EDUCATION</h2>
-				<hr>
-
-				<b class="font-family-oswald float-right">2005 - 2008</b>
-				<h3 class="subheader">The University of Sydney</h3>
-				<h4 class="text-muted">Bachelor of Visual Arts</h4>
-				<p>(Film and digital art)</p>
+					</section>
+				{% endfor %}
 			</div>
 		</div>
 	</div>

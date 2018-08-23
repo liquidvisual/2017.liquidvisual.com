@@ -1,0 +1,168 @@
+/*
+    SECTION__RESUME.CSS
+
+    - updated: 23.08.18
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// SECTION
+//-----------------------------------------------------------------
+
+.section-resume {
+    @include media-breakpoint-down(sm) {
+        overflow: hidden; // [LOCKED] - allows full bleed on MOBILE
+    }
+
+    > .container {
+        @include media-breakpoint-up(xl) {
+            overflow: hidden; // [LOCKED] - allows sidebar to bleed out
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+// LOOSE BITS
+//-----------------------------------------------------------------
+
+.section-resume {
+
+    // SUBTITLE
+    .text-muted {
+        font-weight: 300;
+    }
+
+    // OSWALD
+    .font-family-oswald {
+        font-weight: 500;
+    }
+
+    // OSWALD TIMEFRAME
+    .text-timeframe {
+        font-size: rem-calc(16);
+
+        @include media-breakpoint-up(lg) {
+            font-size: 13px;
+        }
+    }
+
+    // NESTED DIVIDERS
+    article + hr {
+        border-color: lighten(#d8d9dc, 5%);
+        margin: rem-calc(30 0);
+    }
+}
+
+//-----------------------------------------------------------------
+// TOOLBAR
+//-----------------------------------------------------------------
+
+.section-resume .toolbar {
+    display: none;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    font-size: rem-calc(14);
+
+    // .btn {
+    //     padding: rem-calc(0 10);
+    //     border-bottom: 0;
+    //     // color: darken(#d8d9dc, 15%);
+    // }
+}
+
+//-----------------------------------------------------------------
+// PANELS (2x)
+//-----------------------------------------------------------------
+
+.section-resume .details-panel,
+.section-resume .contact-panel {
+    position: relative; // [LOCKED]
+    padding: rem-calc(40 0); // [LOCKED]
+    font-size: rem-calc(15); // [LOCKED]
+    z-index: 1; // [LOCKED]
+
+    @include media-breakpoint-up(md) {
+        padding: rem-calc(40 40 40 0); // [LOCKED]
+    }
+
+    // BLEED FILL
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -150%;
+        width: 300%;
+        height: 100%;
+        background: rgba(black, 0.08);
+        z-index: -1;
+
+        @include media-breakpoint-up(md) {
+            left: auto;
+            right: 0;
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+// DETAILS PANEL (SIDEBAR)
+//-----------------------------------------------------------------
+
+.section-resume .details-panel {
+    @include media-breakpoint-up(md) {
+        margin-top: rem-calc(-65); // [LOCKED]
+    }
+
+    //=========================================
+    // PHOTO
+    //=========================================
+
+    .details-panel-photo {
+        margin-top: rem-calc(-60);
+
+        @include media-breakpoint-up(md) {
+            margin-top: rem-calc(-100);
+        }
+
+        img {
+            border-radius: 100%; // [LOCKED]
+            box-shadow: 0 1px 6px 3px rgba(black, 0.08); // [LOCKED]
+            // -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            // filter: grayscale(100%);
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+// CONTACT PANEL
+//-----------------------------------------------------------------
+
+.section-resume .contact-panel {
+
+    img {
+        width: rem-calc(223);
+        max-width: 100%;
+    }
+
+    i {
+        min-width: 25px;
+        color: #444;
+        margin-right: 5px;
+    }
+
+    &:after {
+        background: rgba(black, 0.14);
+    }
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================

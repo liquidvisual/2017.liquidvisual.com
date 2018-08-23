@@ -77,9 +77,15 @@
 	min-width: rem-calc(30);
 	height: rem-calc(30);
 	// background: #f45f5e; // red
-	background: #73bc4c;
+	// background: #73bc4c;
+	background: #f79d5b;
 	border-radius: 100%;
 	margin-right: $spacer;
+}
+
+.availability-orb .ripple:before,
+.availability-orb .ripple:after {
+	border-color: #f79d5b;
 }
 
 //-----------------------------------------------------------------

@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6,
 	}
 
 	&.subheader {
-		font-weight: normal;
+		font-weight: 600; // is 500 necessary?
 		color: $brand-primary !important;
 	}
 }
@@ -179,6 +179,12 @@ h1, h2, h3, h4, h5, h6,
 
 hr {
 	border-width: 2px;
+
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-resolution: 192dpi) {
+	    border-width: 1.5px;
+	}
 }
 
 //-----------------------------------------------------------------
@@ -187,6 +193,7 @@ hr {
 
 .brand-primary-color   { color: $brand-primary !important; } // these can be replaced with text-color-primary eg
 .brand-secondary-color { color: $brand-secondary !important; }
+.text-body-color       { color: #555 !important; } // wtf?
 
 .font-family-oswald {
 	font-family: 'Oswald', sans-serif;

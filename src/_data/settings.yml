@@ -1,6 +1,6 @@
 # GLOBAL SITE SETTINGS
 cname: liquidvisual.yourwebvisual.com
-allow_robots: false
+allow_robots: true
 
 # META
 title: liquidvisual

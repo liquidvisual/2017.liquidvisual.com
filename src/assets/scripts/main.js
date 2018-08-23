@@ -26,7 +26,7 @@ $(function () {
 //-----------------------------------------------------------------
 
 function pixelGradient() {
-    $("h1.subheader, h2.subheader, h3.subheader, .pixel-grad").pxgradient({
+    $(".pixel-grad").pxgradient({
         step: 10, // Step Color. The smaller the number, the greater the load. Default: 10
         colors: ["#F12D66","#20B5C3"],
         dir: "x"

@@ -2,7 +2,7 @@
 <!--
     LIQUIDVISUAL-HERO
 
-    - updated: 16.01.18
+    - updated: 23.08.18
     - notes:
         * .has-height-preset-1 - used for internal pages to set a height
         * page.hero_text is an image path (not actual text)
@@ -29,9 +29,15 @@
 
                     <!-- HERO CAPTION #1 -->
                     <div class="lv-hero-item-caption">
-                        <h1 class="mb-0">
-                            <img width="100%" src="{{ hero_text }}" alt="{{ page.title }}">
-                        </h1>
+                        {% if page.title_override %}
+                            <h2 class="h1 mb-0">
+                                <img width="100%" src="{{ hero_text }}" alt="{{ page.title }}">
+                            </h2>
+                        {% else %}
+                            <h1 class="mb-0">
+                                <img width="100%" src="{{ hero_text }}" alt="{{ page.title }}">
+                            </h1>
+                        {% endif %}
                     </div>
 
                 {% else %}

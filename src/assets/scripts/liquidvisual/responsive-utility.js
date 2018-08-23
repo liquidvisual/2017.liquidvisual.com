@@ -1,5 +1,5 @@
 /*
-    RESPONSIVE-UTILITY.JS - Last updated: 20.07.18
+    RESPONSIVE-UTILITY.JS - Last updated: 23.08.18
 
     - Notes: Needs refactor (Vue possibly?)
 */
@@ -68,22 +68,30 @@
         if ($('.lv-screen-data').length != 1) {
             $body.append('<div class="lv-screen-data"></div>');
         }
-        var screenWidth = window.innerWidth; // NEW
+        var screenWidth = window.innerWidth; // NEW - chrome, firefox, opera
         var screenHeight = window.innerHeight;
 
         var queryWidth = $(window).width(); // old
         var queryHeight = $(window).height();
 
-        var device;
+        var chromeScreen;
+        var safariScreen; // what a pathetic piece of shit
 
-        if (screenWidth < breakpoints.sm) device = "xs";
-        if (screenWidth >= breakpoints.sm && screenWidth < breakpoints.md) device = "sm";
-        if (screenWidth >= breakpoints.md && screenWidth < breakpoints.lg) device = "md";
-        if (screenWidth >= breakpoints.lg && screenWidth < breakpoints.xl) device = "lg";
-        if (screenWidth >= breakpoints.xl && screenWidth < breakpoints.xxl) device = "xl";
-        if (screenWidth >= breakpoints.xxl) device = "xxl";
+        if (screenWidth < breakpoints.sm) chromeScreen = "xs";
+        if (screenWidth >= breakpoints.sm && screenWidth < breakpoints.md) chromeScreen = "sm";
+        if (screenWidth >= breakpoints.md && screenWidth < breakpoints.lg) chromeScreen = "md";
+        if (screenWidth >= breakpoints.lg && screenWidth < breakpoints.xl) chromeScreen = "lg";
+        if (screenWidth >= breakpoints.xl && screenWidth < breakpoints.xxl) chromeScreen = "xl";
+        if (screenWidth >= breakpoints.xxl) chromeScreen = "xxl";
 
-        $('.lv-screen-data').html(queryWidth+" x "+queryHeight+"<br><small>"+screenWidth+" x "+screenHeight+"</small><br>"+device)
+        if (queryWidth < breakpoints.sm) safariScreen = "xs";
+        if (queryWidth >= breakpoints.sm && queryWidth < breakpoints.md) safariScreen = "sm";
+        if (queryWidth >= breakpoints.md && queryWidth < breakpoints.lg) safariScreen = "md";
+        if (queryWidth >= breakpoints.lg && queryWidth < breakpoints.xl) safariScreen = "lg";
+        if (queryWidth >= breakpoints.xl && queryWidth < breakpoints.xxl) safariScreen = "xl";
+        if (queryWidth >= breakpoints.xxl) safariScreen = "xxl";
+
+        $('.lv-screen-data').html(queryWidth+" x "+queryHeight+"<br><small>"+screenWidth+" x "+screenHeight+"</small><br>"+chromeScreen+"  ["+safariScreen+"]")
             .css({
                 'position': 'fixed',
                 'top': 0,

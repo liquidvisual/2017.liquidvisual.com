@@ -17,23 +17,23 @@
 
     <meta name="description" content="
     {%- if page.description -%}
-        {{- page.description -}}
+        {{- page.description | truncate: 170 -}}
     {%- elsif page.excerpt -%}
-        {{- page.excerpt | strip_html | strip_newlines | truncate: 160 -}}
+        {{- page.excerpt | strip_html | strip_newlines | truncate: 170 -}}
     {% else %}
-        {{- site.data.settings.description -}}
+        {{- site.data.settings.description | truncate: 170 -}}
     {% endif %}">
 
     <title>
         {%- if page.url == '/' -%}
-            {{- site.data.settings.title_homepage -}}
+            {{- site.data.settings.title_homepage | truncate: 60 -}}
         {% else %}
-            {{- page.title }}
+            {{- page.title | truncate: 60 }}
         {%- endif -%}
     </title>
 
     <!-- CDN -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800,900|Source+Code+Pro:500,600|Oswald:300,500,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Source+Code+Pro:500,600|Oswald:300,500,600">
 
     <!-- PRIORITY SCRIPTS -->
     <script src="https://unpkg.com/vue/dist/vue{% unless site.environment == 'development' %}.min{% endunless %}.js"></script>

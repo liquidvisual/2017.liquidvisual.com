@@ -136,7 +136,7 @@ $hero-height-xxl: 1140px; //auto;
         padding-top: rem-calc(260);
     }
 
-    h1 {
+    h1, .h1 {
         position: relative;
         top: rem-calc(3); // 2 is best but IE10
         width: 100%;
