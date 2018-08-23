@@ -51,10 +51,12 @@
     .global-footer,
     .lv-hero-wrapper,
     .lv-off-canvas,
-    .lv-page-loader,
-    .lv-screen-data
+    .lv-screen-data,
+    #lv-page-loader,
+    #lv-page-loader[style]
     {
-        display: none;
+        display: none !important;
+        visibility: hidden !important;
     }
 }
 
