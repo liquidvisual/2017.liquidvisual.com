@@ -61,7 +61,6 @@ details:
     body: |
       - HTML / CSS<br>
       - JavaScript<br>
-      - SEO<br>
       - UX Design<br>
       - Video Editing<br>
       - Web Design<br>
