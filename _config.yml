@@ -3,7 +3,7 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: liquidvisual-boilerplate
+name: liquidvisual
 
 # Grunt handles images and assets.
 # exclude: ['img', 'css', 'scripts', 'fonts', '**.ico']

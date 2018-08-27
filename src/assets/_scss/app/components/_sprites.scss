@@ -18,15 +18,20 @@
     background: url(/assets/img/layout/spritesheet-long-drip@2x.png) no-repeat;
     background-size: cover; //em-calc(6192);
     overflow: hidden;
+    opacity: 0;
     // box-shadow: 0px 0px 1px 3px red;
 }
 
-.has-loaded .sprite-long-drip {
+// .has-loaded .sprite-long-drip {
+.sprite-long-drip.animate {
+    opacity: 1;
     animation: long-drip 1s 0.1s steps(35) forwards 1;
 }
 
 @keyframes long-drip {
-      100% { background-position: calc(#{em-calc(-172px*35)}); }
+      100% {
+        background-position: calc(#{em-calc(-172px*35)});
+      }
 }
 
 //-----------------------------------------------------------------

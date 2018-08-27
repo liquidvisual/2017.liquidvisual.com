@@ -34,6 +34,20 @@ function pixelGradient() {
 }
 
 //-----------------------------------------------------------------
+// QUICKIE - refactor
+//-----------------------------------------------------------------
+
+window.onscroll = function() {
+    var scrollHeight, totalHeight;
+    scrollHeight = document.body.scrollHeight;
+    totalHeight = window.scrollY + window.innerHeight + 50;
+
+    if (totalHeight >= scrollHeight) {
+        $('.global-footer .sprite-long-drip').addClass('animate');
+    }
+}
+
+//-----------------------------------------------------------------
 // HEADROOM.js
 //-----------------------------------------------------------------
 
