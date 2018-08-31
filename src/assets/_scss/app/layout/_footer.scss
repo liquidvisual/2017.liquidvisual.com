@@ -16,10 +16,21 @@
 	    position: fixed;
 	    bottom: 0;
 	    width: 100%;
-	    z-index: -1; // [LOCKED] - needed for IE11
+	    // z-index: -1; // [LOCKED] - needed for IE11
 	    // box-shadow: 0 10px 0px 100px $gray-darker; // [LOCKED] - create offset top background color for better ios rubbery scrolling
 	}
 }
+
+_:-ms-fullscreen,
+:root .global-footer {
+	@include media-breakpoint-up(md) {
+		z-index: -1; // can't click icons though :/
+	}
+}
+
+//-----------------------------------------------------------------
+// LONG DRIP
+//-----------------------------------------------------------------
 
 .global-footer .sprite-long-drip {
 	position: absolute;
@@ -44,7 +55,7 @@
 
 	> .container {
 		@include media-breakpoint-up(md) {
-		    padding-top: 100vh; //rem-calc(120); // [LOCKED] - for apple rubbery scroll upwards
+		    // padding-top: 100vh; //rem-calc(120); // [LOCKED] - for apple rubbery scroll upwards
 		    padding-bottom: rem-calc(40) !important; // [LOCKED] - safe, special case
 		}
 	}
