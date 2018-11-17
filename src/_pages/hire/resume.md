@@ -17,7 +17,7 @@ bio:
     children:
       - title: Freelance Web Developer
         subtitle: liquidvisual
-        timeframe: PRESENT
+        timeframe: 2015 - NOW
         body: |
           Specialising in custom website builds for digital agencies. Leveraging static site generators (Jekyll) to scaffold websites quickly for client previews. Developing Vue.js apps and widgets. Expertise in advanced responsive web design and mobile strategy. Providing cost effective solutions for agencies seeking scalable, high quality front-end site builds.
 

@@ -11,22 +11,6 @@
 // SPECIAL
 //-----------------------------------------------------------------
 
-.imac-monitor {
-	position: relative;
-	z-index: 1;
-
-	.imac-monitor-bg {
-		position: absolute;
-		top: rem-calc(15);
-		left: 50%;
-		width: 92%;
-		height: 65%;
-		background-size: cover;
-		transform: translateX(-50%);
-		z-index: -1;
-	}
-}
-
 .sans-fancy {
 	// font-family: 'Noto Sans';
 	font-family: 'Libre Baskerville';

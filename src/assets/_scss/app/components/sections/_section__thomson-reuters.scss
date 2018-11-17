@@ -1,0 +1,204 @@
+/*
+    SECTIONS__THOMSON-REUTERS.CSS
+
+    - updated: 17.11.18
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// PART 1/2
+//-----------------------------------------------------------------
+
+.section-thomson-reuters-1 {
+	z-index: 2;
+
+	//=========================================
+	// CONTAINER
+	//=========================================
+
+	.container {
+		position: static; // [LOCKED] - snap mobility heading to edges
+
+		@include media-breakpoint-up(md) {
+		    padding-top: 21.5%; // [LOCKED]
+		    padding-bottom: 0; // [LOCKED]
+		}
+
+		@include media-breakpoint-up(lg) {
+			padding-top: 21%; // [LOCKED] - creates roughly 50px padding
+		}
+
+		@include media-breakpoint-up(xl) {
+			position: relative; // [LOCKED] - revert context
+		    padding-top: rem-calc(246); // [LOCKED] - perfect - creates rough 60px padding
+		}
+	}
+
+	//=========================================
+	// MOBILITY HEADING
+	//=========================================
+
+	.mobility-heading {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: rem-calc(300); // [LOCKED] - max size it can grow
+		background: url(/assets/img/content/works/thomson-reuters/heading-mobility--darkish.svg) no-repeat;
+		background-size: 100%; // [LOCKED]
+		background-position: 0 rem-calc(-4); // [LOCKED]
+	}
+
+	//=========================================
+	// OFFSET WRAPPER 1 (LEFT)
+	//=========================================
+
+	.offset-wrapper-1 {
+		position: absolute;
+		left: -25%; // [LOCKED] - offset but still take up most of mobile screen
+		bottom: 0; // [LOCKED]
+		width: 100%;
+		margin-bottom: $spacer * 1.5; // [LOCKED] - for mobile when
+
+		@include media-breakpoint-up(sm) {
+		    margin-bottom: $spacer * 2; // [LOCKED] - for mobile when
+		}
+
+		@include media-breakpoint-up(md) {
+			bottom: rem-calc(-24); // [LOCKED] - align with bottom arrow
+		    left: -$container-gutter;
+		    margin-bottom: 0;
+		}
+	}
+
+	//=========================================
+	// OFFSET WRAPPER 2 (RIGHT)
+	//=========================================
+
+	.offset-wrapper-2 {
+		@include media-breakpoint-up(md) {
+		    position: absolute;
+		    top: 7.5%;
+		}
+
+		@include media-breakpoint-up(lg) {
+		    top: 15%;
+		}
+
+		@include media-breakpoint-up(xl) {
+		    top: rem-calc(122); // [LOCKED] - curated
+		}
+	}
+
+	//=========================================
+	// IPHONE WRAPPER
+	//=========================================
+
+	.iphone-wrapper {
+		position: absolute; // [LOCKED]
+		top: 14%;
+		right: rem-calc(-36); // [LOCKED]
+		width: 42%; // [LOCKED]
+		z-index: 1;
+
+		@include media-breakpoint-up(md) {
+		    top: 8%; // [LOCKED]
+		}
+
+		@include media-breakpoint-up(xl) {
+		    top: rem-calc(80); // [LOCKED]
+		}
+	}
+
+	//=========================================
+	// REUTERS LOGO
+	//=========================================
+
+	.reuters-logo-overflow {
+		position: absolute;
+		// top: rem-calc(10);
+		bottom: 0;
+		// right: 5%;
+		right: 0;
+
+		opacity: 0.2;
+		overflow: hidden;
+
+		@include media-breakpoint-up(md) {
+		    top: rem-calc(200);
+		    right: 0;
+		    opacity: 0.08;
+		}
+
+		.reuters-logo {
+			position: relative;
+			width: rem-calc(250);
+			height: rem-calc(250);
+			background: url(/assets/img/content/works/thomson-reuters/reuters-logo@2x.png) no-repeat;
+			background-size: contain;
+			// -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+			// filter: grayscale(100%);
+
+			right: -50%;
+			top: rem-calc(110);;
+
+		    @include media-breakpoint-up(md) {
+		    	top: 0;
+		        right: rem-calc(-190);
+		        width: rem-calc(430);
+		        height: rem-calc(430);
+		    }
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// 2/2
+//-----------------------------------------------------------------
+
+.section-thomson-reuters-2 {
+	z-index: 1;
+
+	.container {
+		padding-top: 0; // [LOCKED]
+	}
+
+	p {
+		font-size: rem-calc(14); // [LOCKED]
+	}
+
+	.digit {
+		min-width: rem-calc(22); // [LOCKED] - curated
+		margin-right: rem-calc(10);
+		font-size: rem-calc(22);
+		font-weight: 100;
+		font-family: Oswald;
+		line-height: 1.4;
+		color: grey;
+	}
+
+	.arrow-joiner {
+		margin-bottom: $spacer * 1.5;
+		text-align: center;
+		overflow: hidden;
+
+		.arrow {
+			display: inline-block;
+			position: relative;
+			top: rem-calc(-24);
+			width: rem-calc(40);
+			height: rem-calc(40);
+			background: $gray-dark;
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================

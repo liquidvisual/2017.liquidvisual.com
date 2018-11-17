@@ -1,0 +1,5 @@
+* Since the scribbles don't scale properly, they are sized and exported with Photoshop
+* to retain sharp lines, the base @2x image is created in Flash and exported at 72dpi
+* absolute pain in the ass
+* it's hard to get the lines right (note Safari has some weirder artifacts around edges)
+* if you want real crisp, make in CSS

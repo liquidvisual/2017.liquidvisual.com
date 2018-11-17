@@ -1,0 +1,55 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="1135px" height="960px" viewBox="0 0 1135 960">
+<defs>
+<g id="Layer5_0_FILL">
+<path fill="#3A393C" stroke="none" d="
+M 1135.4 28.8
+Q 1135.4 0 1106.7 0
+L 28.8 0
+Q 0 0 0 28.8
+L 0 757
+Q 0 785.8 28.8 785.8
+L 446.35 785.8 438 878.3
+Q 437.9 880 437.7 881.7 433.6 925.9 395.2 942.6 381.6 947.7 389.3 954.5 390.7 955.4 392.7 956.3 403.3 960.4 432.9 960.1
+L 704.3 960.1
+Q 733.9 960.4 744.6 956.3 746.6 955.4 747.9 954.5 755.6 947.7 742 942.6 703.4 925.9 699.5 881.7 699.3 880 699.2 878.3
+L 690.85 785.8 1106.7 785.8
+Q 1135.4 785.8 1135.4 757
+L 1135.4 28.8
+M 1088.9 49.4
+L 1088.9 636.1 45.8 636.1 45.8 49.4 1088.9 49.4 Z"/>
+</g>
+
+<g id="Layer4_0_FILL">
+<path fill="#434345" stroke="none" d="
+M 1135.4 757
+L 1135.4 683.6 0 683.6 0 757
+Q 0 785.8 28.8 785.8
+L 1106.7 785.8
+Q 1135.4 785.8 1135.4 757 Z"/>
+
+<path fill="#3A393C" stroke="none" d="
+M 1135.4 28.8
+Q 1135.4 0 1106.7 0
+L 28.8 0
+Q 0 0 0 28.8
+L 0 683.6 1135.4 683.6 1135.4 28.8
+M 1088.9 49.4
+L 1088.9 636.1 45.8 636.1 45.8 49.4 1088.9 49.4 Z"/>
+</g>
+
+<path id="Layer4_0_1_STROKES" stroke="#3A393C" stroke-width="0.1" stroke-linejoin="round" stroke-linecap="round" fill="none" d="
+M 1088.9 636.1
+L 45.8 636.1 45.8 49.4 1088.9 49.4 1088.9 636.1 Z"/>
+</defs>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Layer5_0_FILL"/>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Layer4_0_FILL"/>
+
+<use xlink:href="#Layer4_0_1_STROKES"/>
+</g>
+</svg>

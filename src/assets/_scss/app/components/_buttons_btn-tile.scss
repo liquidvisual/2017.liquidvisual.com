@@ -1,0 +1,219 @@
+/*
+    BUTTON TILE
+
+    - Last updated: 12.09.18
+    - liquidvisual.com
+
+    NOTES
+    	- https://stackoverflow.com/questions/14677490/blurry-text-after-using-css-transform-scale-in-chrome
+    	- https://developers.google.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas
+    	- translateZ is just for cross-compatibility
+    	- translateZ is essentially 'will-change' and creates a 'layer' for repainting
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// BUTTON TILE WRAPPER - used in /works/
+//-----------------------------------------------------------------
+
+.btn-tile-wrapper {
+	.text {
+		position: relative;
+
+		p {
+			@include media-breakpoint-down(sm) {
+			    font-size: rem-calc(15); // [LOCKED]
+			}
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+	    &.is-left-aligned  .text { padding-left: 15%; } // [LOCKED]
+	    &.is-right-aligned .text { padding-right: 15%; } // [LOCKED]
+	}
+
+	@include media-breakpoint-up(md) {
+	    &.is-left-aligned  .text { left: 15%; } // [LOCKED]
+	    &.is-right-aligned .text { right: 15%; } // [LOCKED]
+	}
+}
+
+//-----------------------------------------------------------------
+// PARALLAX HOVER
+//-----------------------------------------------------------------
+
+.parallax-hover {
+	position: relative; // NEW - does it break anything?
+}
+
+.parallax-hover .layer[style] { // override parallax.js
+	transform-style: flat !important; // [LOCKED] - fixes blurry image on Chrome (non-retina mostly)
+}
+
+.parallax-hover:hover {
+	z-index: 1;
+}
+
+//-----------------------------------------------------------------
+// BTN TILE
+//-----------------------------------------------------------------
+
+.btn-tile {
+	display: block; // [LOCK] - flex glitches on outer layer
+	position: relative;
+	box-shadow: 0 10px 20px 8px rgba(black, 0.2);
+	overflow: hidden;
+	transition: transform 300ms ease, box-shadow 300ms ease;
+	backface-visibility: hidden; // [LOCKED] - does it work? Who knows
+	will-change: transform, box-shadow;
+
+	.has-parallax, // risky? - added for squirrels
+	.has-parallax .layer, // risky? - added for squirrels
+	.btn-tile-bg,
+	.btn-tile-bg-item { // items are nested and optional
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.btn-tile-bg {
+		transform: scale(1.2); // [LOCKED] - good
+		transition: transform 300ms ease, background-size 300ms ease;
+		will-change: transform;
+	}
+
+	.btn-tile-bg > .btn-tile-bg-item {
+		transition: all 300ms ease;
+	}
+
+	//=========================================
+	// VIDEO (OPTIONAL)
+	//=========================================
+
+	video {
+		// filter: saturate(1.1); // temporary?
+	}
+
+	//=========================================
+	// HOVERS
+	//=========================================
+
+	&:hover {
+		box-shadow: 0 10px 20px 10px rgba(black, 0.2);
+		transform: translateZ(0) scale(1.048); // 1.05 [LOCKED] - perfect!!
+		z-index: 1;
+
+	    .btn-tile-bg {
+			transform: translateZ(0) scale(1.1); // [LOCKED]
+			// background-size: 100%; // remove?
+		}
+	}
+
+	//=========================================
+	// ACTIVE
+	//=========================================
+
+	&:active {
+		@include media-breakpoint-up(xl) {
+			transform: translateZ(0) scale(1.0);
+
+			.btn-tile-bg {
+				transform: translateZ(0) scale(1.152);
+			}
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// BTN TILE BG ITEMS
+//-----------------------------------------------------------------
+
+.item-glasses {
+	will-change: transform;
+}
+
+// GEORGE'S GLASSES
+.btn-tile:hover .btn-tile-bg > .item-glasses {
+	@include media-breakpoint-up(lg) {
+		transform-origin: 50% 51%;
+		animation: seinfeld-glasses-jump 300ms ease 0s 1 forwards;
+	}
+}
+
+@keyframes seinfeld-glasses-jump {
+	5%   { transform: rotate(3deg) translateX(1px) translateY(-2px); }
+	50%  { transform: rotate(0) translateX(0) translateY(0); }
+	70%  { transform: rotate(-2deg) translateX(1px) translateY(-1px); }
+	100% { transform: rotate(0) translateX(0) translateY(0); }
+}
+
+//-----------------------------------------------------------------
+// REZILLIA LAYER
+//-----------------------------------------------------------------
+
+.is-rezillia {
+	position: absolute; // [LOCKED]
+	left: 0; // [LOCKED]
+	bottom: 0; // [LOCKED]
+	width: 130%;
+	// width: 40%;
+	// border: 1px solid orange;
+	box-shadow: none;
+	pointer-events: none; // [LOCKED]
+	z-index: 1; // [LOCKED] - fixes recent bug
+	// will-change: transform;
+}
+
+.is-rezillia .btn-tile-bg {
+	transform: scale(1.04);
+
+	// transform-origin: top right;
+	// width: 98%; // just make graphic have extra padding inside itself
+}
+
+.parallax-hover:hover .is-rezillia {
+	transform: translateZ(0) scale(1.04); // was 1.048 // 1.05 [LOCKED] - perfect!!
+}
+
+.parallax-hover:active .is-rezillia {
+	@include media-breakpoint-up(xl) {
+	    transform: translateZ(0) scale(1); // 1.05 [LOCKED] - perfect!!
+	}
+}
+
+//-----------------------------------------------------------------
+
+.parallax-hover:hover .is-rezillia .btn-tile-bg {
+	// transform: translateZ(0) scale(1.04); // 1.05 [LOCKED] - perfect!!
+	transform: translateZ(0) scale(1); // 1.05 [LOCKED] - perfect!!
+}
+
+.parallax-hover:active .is-rezillia .btn-tile-bg {
+	transform: translateZ(0) scale(1.04); // 1.05 [LOCKED] - perfect!!
+}
+
+.item-rezillia-eyes-blink {
+	opacity: 0;
+	animation: blink 5s linear infinite;
+	transition: none;
+}
+
+@keyframes blink {
+    0%, 40%, 42%, 70%, 82%, 84% {
+        opacity: 0;
+    }
+	41%, 83% {
+		opacity: 1;
+	}
+}
+
+//=========================================
+//
+//=========================================
+

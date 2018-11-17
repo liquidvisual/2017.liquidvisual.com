@@ -128,6 +128,12 @@ brew install -v node
  npm -g update npm
  ```
 
+To update when npm refuses to update [source](https://stackoverflow.com/questions/49661521/how-to-update-npm-on-macos)
+
+ ```shell
+ npm install -g npm@latest
+ ```
+
 To test your Node install, try installing [Grunt](http://gruntjs.com/){:target="_blank"} which will be used to run the build process.
 
 ```shell

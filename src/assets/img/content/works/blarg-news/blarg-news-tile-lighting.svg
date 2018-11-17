@@ -1,0 +1,32 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="390px" height="390px" viewBox="0 0 390 390">
+<defs>
+<radialGradient id="Gradient_1" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="185.69937440995864" fx="0" fy="0" gradientTransform="matrix( 0.9733473824255747, -0.2293357214331904, 0.20496838032405776, 0.8696852130662812, 192.05,239.05) " spreadMethod="pad">
+<stop  offset="47.84313725490196%" stop-color="#000000" stop-opacity="0"/>
+
+<stop  offset="100%" stop-color="#000000" stop-opacity="0.24705882352941178"/>
+</radialGradient>
+
+<g id="Layer9_0_FILL">
+<path fill="url(#Gradient_1)" stroke="none" d="
+M 390 390
+L 390 0 0 0 0 390 390 390 Z"/>
+</g>
+
+<g id="Layer4_0_FILL">
+<path fill="#00FF00" stroke="none" d="
+M 835 707
+L 835 -317 -445 -317 -445 707 835 707
+M 390 0
+L 390 390 0 390 0 0 390 0 Z"/>
+</g>
+</defs>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Layer9_0_FILL"/>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Layer4_0_FILL"/>
+</g>
+</svg>

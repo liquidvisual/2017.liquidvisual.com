@@ -25,11 +25,11 @@
 #           body: Modern website design with personality. Hand coded in HTML5.
 
 # - title: Works
-  # url: /works/
-  # include_children_in_nav: false
-  # children:
-    # - title: Another Nerdy Podcast
-      # url: /works/#coming-soon/
+#   url: /works/
+#   include_children_in_nav: false
+#   children:
+#     - title: Another Nerdy Podcast
+#       url: /works/#coming-soon/
 
 #     - title: BobbleHedz
 #       url: /works/#coming-soon/
@@ -42,10 +42,13 @@
 #       url: /works/#coming-soon/
 #       featured: true
 
-#     - title: Orgami Email Series
+#     - title: Origami Email Series
 #       url: /works/#coming-soon/
 
 #     - title: Rezillia
+#       url: /works/#coming-soon/
+
+#     - title: Blarg! News
 #       url: /works/#coming-soon/
 
 #     - title: English Unlimited
@@ -75,11 +78,14 @@
 #     - title: Slayday
 #       url: /works/#coming-soon/
 
-#     - title: Flashden Series
-#       url: /works/#coming-soon/
+    # - title: Soberfish
+      # url: /works/#soberfish/
 
-#     - title: The Mitching Hour
-#       url: /works/#coming-soon/
+    # - title: The Wedding Warren
+      # url: /works/#coming-soon/
+
+    # - title: The Mitching Hour
+      # url: /works/#coming-soon/
 
 # - title: Tutorials
   # url: /tutorials/

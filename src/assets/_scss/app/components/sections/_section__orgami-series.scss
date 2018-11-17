@@ -1,64 +1,93 @@
 /*
-    SECTIONS__ORGAMI-SERIES.CSS
+    SECTIONS__ORIGAMI-SERIES.CSS
 
-    - updated: 17.03.17
+    - updated: 09.11.18
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
 // VARIABLES
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
-// ORGAMI EMAIL SERIES
+// ORIGAMI EMAIL SERIES
 //-----------------------------------------------------------------
 
-.section-orgami-series {
+.section-origami-series {
 
 	h1, h2, h3, h4, h5, h6,
 	p {
-		color: $gray-light !important; // refactor?
+		@include media-breakpoint-up(md) {
+		    color: white !important; // refactor? // $gray-light
+		}
 	}
 
 	.container {
-		background: none;
+		@include media-breakpoint-up(xl) {
+		    position: relative;
+		}
 
 		.col-md-5 {
 			@include media-breakpoint-down(sm) {
-			    width: 75%;
+				position: relative;
+			    width: 75%; // [LOCKED]
 			}
 		}
 	}
 
+	//=========================================
+	// BACKGROUND FILL
+	//=========================================
+
 	.bg-fill {
 		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+		right: 50%; // [LOCKED]
+		width: 200%; // [LOCKED]
+		height: calc(100% - #{rem-calc(60)}); // [LOCKED]
 		background: $gray-dark;
+		z-index: -1; // [LOCKED]
 
 		@include media-breakpoint-up(md) {
-		    width: 80%;
+			top: 0; // [LOCKED]
+			right: 30%; // [LOCKED]
+		    height: calc(100% - #{rem-calc(130)}); // [LOCKED]
+		}
+
+		@include media-breakpoint-up(xl) {
+		    left: 0;
+		    width: 70%;
 		    height: 85%;
 		}
 	}
 
-	.orgami-tile-top {
-		position: relative;
-		z-index: 1;
+	//=========================================
+	// ICARUS
+	//=========================================
+
+	.origami-tile-top {
+		position: relative; // [LOCKED]
+		top: rem-calc(-30); // [LOCKED]
+		left: -10%;
+		z-index: 1; // [LOCKED]
+		// opacity: 0.2;
 
 		@include media-breakpoint-up(md) {
-		    top: rem-calc(-110);
+		    top: rem-calc(-90);
 		    left: rem-calc(-20);
 		}
 	}
 
-	.orgami-tile-bottom {
+	//=========================================
+	// SQUIRRELS
+	//=========================================
+
+	.origami-tile-bottom {
 		position: relative;
-		left: rem-calc(-150);
-		margin-top: rem-calc(-250);
+		left: -50%;
+		margin-top: -60%;
+		margin-bottom: $spacer * 1.5;
 
 		@include media-breakpoint-up(md) {
-			margin-top: rem-calc(-340);
+			left: -35%;
+			margin-top: rem-calc(-260);
 		}
 	}
 }

@@ -18,6 +18,10 @@ body,
     // min-height: 100%; // uncomment to allow to be larger than 100%
 }
 
+html {
+	overflow-x: hidden; // so far - eng unlimited uses this - html covers ipad case (body creates scroll glitches on iphone)
+}
+
 //-----------------------------------------------------------------
 // ANTIALIAS
 //-----------------------------------------------------------------

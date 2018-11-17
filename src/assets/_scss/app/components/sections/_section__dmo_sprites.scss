@@ -79,7 +79,7 @@
     bottom: em-calc(-55);
     width: em-calc(282);
     height: em-calc(190);
-    background-image: url(/assets/img/content/danandmitch/sprite-dan-torso@2x.png);
+    background-image: url(/assets/img/content/works/dan-and-mitch/sprite-dan-torso@2x.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100%;
@@ -90,7 +90,7 @@
         bottom: em-calc(144);
         width: em-calc(158);
         height: em-calc(208);
-        background: url(/assets/img/content/danandmitch/sprite-dan-head@2x.png) no-repeat center center;
+        background: url(/assets/img/content/works/dan-and-mitch/sprite-dan-head@2x.png) no-repeat center center;
         background-size: 100%;
 
         .sprite-dan-head-eyes {
@@ -99,7 +99,7 @@
             left: calc(50% - #{em-calc(33)});
             width: em-calc(60);
             height: em-calc(20);
-            background: url(/assets/img/content/danandmitch/sprite-dan-head-eyes@2x.gif) no-repeat center;
+            background: url(/assets/img/content/works/dan-and-mitch/sprite-dan-head-eyes@2x.gif) no-repeat center;
             background-size: 100%;
         }
     }
@@ -115,7 +115,7 @@
     bottom: em-calc(-13);
     width: em-calc(264);
     height: em-calc(140);
-    background: url(/assets/img/content/danandmitch/sprite-mitch-torso@2x.png) no-repeat center center;
+    background: url(/assets/img/content/works/dan-and-mitch/sprite-mitch-torso@2x.png) no-repeat center center;
     background-size: 100%;
 
     .sprite-mitch-head {
@@ -124,7 +124,7 @@
         top: em-calc(-147);
         width: em-calc(144);
         height: em-calc(190);
-        background: url(/assets/img/content/danandmitch/sprite-mitch-head@2x.png) no-repeat center center;
+        background: url(/assets/img/content/works/dan-and-mitch/sprite-mitch-head@2x.png) no-repeat center center;
         background-size: 100%;
 
         .sprite-mitch-head-eyes {
@@ -133,7 +133,7 @@
             left: calc(50% - #{em-calc(30)});
             width: em-calc(58);
             height: em-calc(22);
-            background: url(/assets/img/content/danandmitch/sprite-mitch-head-eyes@2x.gif) no-repeat center;
+            background: url(/assets/img/content/works/dan-and-mitch/sprite-mitch-head-eyes@2x.gif) no-repeat center;
             background-size: 100%;
         }
     }

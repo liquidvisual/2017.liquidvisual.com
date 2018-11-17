@@ -1,0 +1,124 @@
+/*
+    SECTIONS__ENGLISH-UNLIMITED.CSS
+
+    - updated: 13.11.18
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// ENGLISH UNLIMITED
+//-----------------------------------------------------------------
+
+.section-english-unlimited {
+	position: relative; // [LOCKED]
+	z-index: 5; // [LOCKED] - overlap next section
+
+	@include media-breakpoint-down(sm) {
+	    overflow: hidden;
+	}
+
+	// SPECIAL LEFT BLEED
+	@include media-breakpoint-up(xl) {
+	    background: url(/assets/img/content/works/english-unlimited/triangle-bg-bleed.svg) no-repeat top left;
+	    background-size: 50% 100%;
+	}
+
+	.wysiwyg {
+		position: relative;
+		z-index: 1;
+	}
+
+	h1, h2, h3, h4, h5, h6,
+	p {
+		@include media-breakpoint-up(md) {
+		    color: white !important; // refactor?
+		}
+	}
+
+	//-----------------------------------------------------------------
+	// TRIANGULAR TEST
+	//-----------------------------------------------------------------
+
+	.bg-fill {
+		position: absolute; // [LOCKED]
+		top: 0; // [LOCKED]
+		left: -50%; // [LOCKED]
+		width: 160vw; // [LOCKED]
+		height: 113%; // [LOCKED] - tested
+		// border-bottom: 1px dashed black; // [REF]
+		background: url(/assets/img/content/works/english-unlimited/blob-00.svg) no-repeat top left;
+		background-size: contain; // [LOCKED]
+		// z-index: -1; // [LOCKED] - so text can cover
+
+		@include media-breakpoint-up(md) {
+			left: 0; // [LOCKED]
+			width: 104%; // [LOCKED] - allows drip spill downwards
+		    height: 200%; // [LOCKED] - tested
+		}
+
+		@include media-breakpoint-up(lg) {
+			left: -5%; // [LOCKED] - offset left
+		}
+
+		@include media-breakpoint-up(xl) {
+			left: 0;
+		    height: 111%;
+		}
+
+		@include media-breakpoint-up(xxl) {
+		    height: 111%;
+		}
+	}
+
+	//-----------------------------------------------------------------
+	// IMAC OVERFLOW
+	//-----------------------------------------------------------------
+
+	.imac-overflow {
+		position: relative;
+
+		// position: absolute;
+
+		// TAKEN FROM GLOBAL
+		@include media-breakpoint-up(md) {
+		    left: $container-gutter;
+		}
+
+		@include media-breakpoint-up(xl) {
+		    left: $container-gutter * 1.5;
+		    overflow: hidden;
+		}
+	}
+
+	//-----------------------------------------------------------------
+	// IMAC
+	//-----------------------------------------------------------------
+
+	.device-imac {
+		@include media-breakpoint-up(md) {
+		    left: rem-calc(100);
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// TRIANGULAR TEST
+//-----------------------------------------------------------------
+
+// .container {
+// 	background: orange !important;
+// 	background: url(/assets/img/content/works/english-unlimited/triangle-bg-2.svg) no-repeat top left;
+// 	background: url(/assets/img/content/works/english-unlimited/blob-bg-2.svg) no-repeat top left;
+// 	overflow: hidden;
+
+// 	@include media-breakpoint-up(xxl) {
+// 	    background-size: 76%;
+// 	    background-size: contain;
+// 	}
+// }
+
+//=========================================
+//
+//=========================================

@@ -1,19 +1,29 @@
 /*
-    PARALLAX.JS - Last updated: 17.08.18
+    PARALLAX.JS - Last updated: 11.09.18
+
+    NOTES
+    	- https://davidwalsh.name/nodelist-array
+        - https://stackoverflow.com/questions/1248081/get-the-browser-viewport-dimensions-with-javascript
 */
 //-----------------------------------------------------------------
 // VARIABLES
 //-----------------------------------------------------------------
+
+var browserWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+var parallaxElements = Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
+var scenes = [];
+
 //-----------------------------------------------------------------
 // PARALLAX SCENES
 //-----------------------------------------------------------------
 
-var targetElements = document.getElementsByClassName('has-parallax');
+if (browserWidth > 760) {
+	var parallaxElementsMediumUp = Array.prototype.slice.call(document.querySelectorAll('[data-parallax-md-up]'))
+	parallaxElements = parallaxElements.concat(parallaxElementsMediumUp);
+}
 
-var scenes = [];
-
-for (var i = 0; i < targetElements.length; i++) {
-    scenes.push(new Parallax(targetElements[i], {
+for (var i = 0; i < parallaxElements.length; i++) {
+    scenes.push(new Parallax(parallaxElements[i], {
         limitX: 10,
         limitY: 10,
         pointerEvents: true,
@@ -32,8 +42,6 @@ for (var i = 0; i < targetElements.length; i++) {
 //-----------------------------------------------------------------
 //
 //-----------------------------------------------------------------
-
-
 //==================================================
 //
 //==================================================

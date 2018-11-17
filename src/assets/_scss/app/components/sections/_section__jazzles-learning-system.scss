@@ -1,0 +1,56 @@
+/*
+    SECTIONS__JAZZLES-LEARNING-SYSTEM.CSS
+
+    - updated: 11.11.18
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// JAZZLES LEARNING SYSTEM
+//-----------------------------------------------------------------
+
+.section-jazzles-learning-system {
+	// background: url(/assets/img/content/works/english-unlimited/triangle-bg-bleed.svg) no-repeat top left;
+	// background-size: 50%;
+	z-index: 1;
+
+	.container {
+		// background: url(/assets/img/content/works/english-unlimited/triangle-bg-2.svg) no-repeat bottom left;
+		// background-size: 100%;
+		// background-color: #e1e3e6 !important;
+		background-color: darken($gray-light, 3%) !important;
+		// overflow: hidden;
+	}
+
+	.text-box {
+		background: white;
+		padding: $spacer * 2.5;
+		box-shadow: 0 4px 20px 3px rgba(black, 0.1);
+	}
+
+	.container {
+		@include media-breakpoint-up(xl) {
+		    position: relative;
+		}
+
+		.col-md-5 {
+			@include media-breakpoint-down(sm) {
+				position: relative;
+			    width: 75%; // [LOCKED]
+			}
+		}
+	}
+
+	//=========================================
+	// BACKGROUND FILL
+	//=========================================
+
+}
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================

@@ -1,7 +1,10 @@
 /* generated with grunt-sass-globbing */
 
 @import "breadcrumbs";
+@import "buttons_btn-tile";
 @import "buttons";
+@import "devices";
+@import "dialogue_bubbles";
 @import "forms";
 @import "hero";
 @import "lists";
@@ -19,10 +22,14 @@
 @import "sections/section__dmo_sprites";
 @import "sections/section__dmo";
 @import "sections/section__editorial";
+@import "sections/section__english-unlimited";
+@import "sections/section__jazzles-learning-system";
+@import "sections/section__loadshift";
 @import "sections/section__mad-magazines";
 @import "sections/section__orgami-series";
 @import "sections/section__projects-contents";
 @import "sections/section__resume";
+@import "sections/section__thomson-reuters";
 @import "sections/section__zine";
 @import "zine/_zine";
 @import "zine/zine-bubble";

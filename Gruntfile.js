@@ -92,7 +92,8 @@ module.exports = function (grunt) {
           // Don't send any file-change events to browsers
           codeSync: true,
           // Open the site in Chrome & Firefox
-          // browser: ["google chrome", "firefox"]
+          browser: ["google chrome"],
+          open: false,
           port: '<%= yeoman.port %>',
           host: '0.0.0.0',
           server: {
