@@ -17,6 +17,7 @@
 $(window).on('load', function() {
     $('html').addClass('has-loaded');
     pixelGradient();
+    launchParallax();
 });
 
 //-----------------------------------------------------------------
@@ -52,6 +53,39 @@ window.onscroll = function() {
         $('.global-footer .sprite-long-drip').addClass('animate');
     }
 }
+
+//-----------------------------------------------------------------
+// EYE PARALLAX
+//-----------------------------------------------------------------
+
+function launchParallax() {
+
+    // DAN EYES PARALLAX
+    var $target = $('.sprite-dan-head')[0];
+    var parallax = new Parallax($target, {
+        invertX: false,
+        invertY: false,
+        limitX: 15,
+        limitY: 15,
+    });
+
+    // // MITCH EYES PARALLAX
+    var $target = $('.sprite-mitch-head')[0];
+    var parallax = new Parallax($target, {
+        invertX: false,
+        invertY: true,
+        limitX: 10,
+        limitY: 20,
+    });
+}
+
+//-----------------------------------------------------------------
+// CUT DAN'S HAIR (FRILL)
+//-----------------------------------------------------------------
+
+// $('.sprite-dan-torso.has-long-hair').click(function(){
+//     $(this).toggleClass('has-long-hair');
+// });
 
 //-----------------------------------------------------------------
 // HEADROOM.js

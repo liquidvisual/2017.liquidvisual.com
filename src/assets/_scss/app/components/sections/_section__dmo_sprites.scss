@@ -1,7 +1,7 @@
 /*
-    SECTIONS__DMO_SPRITES.CSS
+    SPRITES.CSS
 
-    - updated: 28.12.17
+    - Last updated: 26.11.18, 02.11.16
     - liquidvisual.com
 */
 //--------------------------------------------------------------------
@@ -12,31 +12,21 @@
 //--------------------------------------------------------------------
 
 .character-sprites-wrapper {
-    position: absolute;
-    bottom: -($spacer * 2);
-    left: 0;
-    width: 100%;
-    // top: calc(#{$header-height-sm} + #{$spacer-y*2} + #{$hero-caption-height-sm});
-    // width: calc(100% - #{$spacer} * 2);
-    // width: calc(100% - #{$container-gutter});
-    font-size: rem-calc(11);
-    // background: aqua;
+    position: relative; // [LOCKED]
+    top: 2px; // [LOCKED] - offset to push below image = cleaner line
+    // border: 1px dashed black;
+    margin-top: -10%; // [LOCKED] - curated, pull them up close to the button on mobile
+    font-size: rem-calc(11); // [LOCKED]
+    pointer-events: none; // [LOCKED]
+    z-index: -1; // [LOCKED] - places sprites behind subscribe button
 
     @include media-breakpoint-up(sm) {
-        font-size: rem-calc(13);
+        font-size: rem-calc(13); // [LOCKED] - just looks right, on iPhone 6+
     }
 
     @include media-breakpoint-up(md) {
-        // top: calc(#{$header-height-sm} + #{$spacer-y*2} + #{$hero-caption-height-md});
-        font-size: rem-calc(16);
-        font-size: rem-calc(19);
-        // width: calc(100% - #{$spacer} * 3);
-        bottom: -($spacer * 3);
-    }
-
-    @include media-breakpoint-up(lg) {
-        // position: relative;
-        // top: 0;
+        margin-top: -5%; // [LOCKED] - pull it up less
+        font-size: rem-calc(15); // [LOCKED]
     }
 }
 
@@ -45,27 +35,16 @@
 //--------------------------------------------------------------------
 
 .character-sprites {
-    // position: absolute;
-    position: relative;
-    // left: $container-gutter/2;
-    width: calc(100% - #{$container-gutter});
-    height: em-calc(340);
-    overflow: hidden;
-
-    // margin: 0 auto;
-    float: right;
-
-    // background: orange;
+    max-width: 100%;
+    height: em-calc(340); // [LOCKED]
+    overflow: hidden; // [LOCKED]
+    // background: rgba(orange, 0.2);
+    // transform: rotate(0.01); // does it work?
+    transform: translateZ(0); // [LOCKED] - fixes glitch in safari?
 
     @include media-breakpoint-up(md) {
-        // left: $container-gutter;
-        width: calc(100% - #{$container-gutter*2});
-    }
-
-    @include media-breakpoint-up(lg) {
-        // left: auto;
-        // right: calc(#{$container-gutter} + #{em-calc(42)}); // magic number 42
-        width: em-calc(500); // ideal width
+        width: rem-calc(470);
+        margin: 0 auto;
     }
 }
 
@@ -79,9 +58,7 @@
     bottom: em-calc(-55);
     width: em-calc(282);
     height: em-calc(190);
-    background-image: url(/assets/img/content/works/dan-and-mitch/sprite-dan-torso@2x.png);
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: url(/assets/img/content/works/dan-and-mitch/sprite-dan-torso@2x.svg) no-repeat center center;
     background-size: 100%;
 
     .sprite-dan-head {
@@ -90,8 +67,11 @@
         bottom: em-calc(144);
         width: em-calc(158);
         height: em-calc(208);
-        background: url(/assets/img/content/works/dan-and-mitch/sprite-dan-head@2x.png) no-repeat center center;
+        background: url(/assets/img/content/works/dan-and-mitch/sprite-dan-head@2x.svg) no-repeat center center;
         background-size: 100%;
+
+        // SCISSORS EASTER EGG
+        cursor: url(/assets/img/content/works/dan-and-mitch/cursor-scissors-2.svg), auto;
 
         .sprite-dan-head-eyes {
             position: absolute;
@@ -105,6 +85,51 @@
     }
 }
 
+//=========================================
+// DAN LONG HAIR - just use image overlay to get positioning right
+//=========================================
+
+.sprite-dan-torso.has-long-hair {
+    background: none;
+
+    .sprite-dan-head {
+        position: absolute;
+        left: em-calc(48);
+        bottom: em-calc(143);
+        width: em-calc(506)/2.8; // this is important - uses original width/2
+        height: em-calc(518)/2.8;
+        background: url(/assets/img/content/works/dan-and-mitch/sprite-dan-head-long-hair-foreground@2x.svg) no-repeat center center;
+        background-size: 100%;
+
+        .sprite-dan-head-eyes {
+            top: em-calc(89);
+            left: calc(50% - #{em-calc(31)});
+        }
+    }
+
+    .sprite-dan-head-mullet {
+        position: absolute;
+        left: em-calc(48);
+        bottom: em-calc(143);
+        width: em-calc(506)/2.8; // this is important - uses original width/2
+        height: em-calc(518)/2.8;
+        background: url(/assets/img/content/works/dan-and-mitch/sprite-dan-head-long-hair-background@2x.svg) no-repeat center center;
+        background-size: 100%;
+        z-index: -2;
+    }
+
+    .sprite-dan-torso-hack {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url(/assets/img/content/works/dan-and-mitch/sprite-dan-torso@2x.svg) no-repeat center center;
+        background-size: 100%;
+        z-index: -1;
+    }
+}
+
 //-----------------------------------------------------------------
 // MITCH
 //-----------------------------------------------------------------
@@ -115,7 +140,7 @@
     bottom: em-calc(-13);
     width: em-calc(264);
     height: em-calc(140);
-    background: url(/assets/img/content/works/dan-and-mitch/sprite-mitch-torso@2x.png) no-repeat center center;
+    background: url(/assets/img/content/works/dan-and-mitch/sprite-mitch-torso@2x.svg) no-repeat center center;
     background-size: 100%;
 
     .sprite-mitch-head {
@@ -124,7 +149,7 @@
         top: em-calc(-147);
         width: em-calc(144);
         height: em-calc(190);
-        background: url(/assets/img/content/works/dan-and-mitch/sprite-mitch-head@2x.png) no-repeat center center;
+        background: url(/assets/img/content/works/dan-and-mitch/sprite-mitch-head@2x.svg) no-repeat center center;
         background-size: 100%;
 
         .sprite-mitch-head-eyes {

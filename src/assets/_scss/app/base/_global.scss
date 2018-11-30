@@ -76,6 +76,23 @@ body {
 }
 
 //-----------------------------------------------------------------
+// COLLAPSE SMALL DOWN
+//-----------------------------------------------------------------
+
+// .collapse-sm-down {
+// 	@include media-breakpoint-down(sm) {
+// 	    position: relative;
+// 	    // left: -$container-gutter / 1.5;
+// 	    // width: calc(100% + #{$container-gutter} * 2);
+
+// 	}
+// 	@include media-breakpoint-down(xs) {
+// 		// left: -$container-gutter;
+// 		// width: calc(100% + #{$container-gutter} * 2);
+// 	}
+// }
+
+//-----------------------------------------------------------------
 //
 //-----------------------------------------------------------------
 //=========================================

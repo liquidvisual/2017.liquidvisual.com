@@ -27,3 +27,20 @@
     </div>
     <button type="submit" class="btn btn-primary btn-block mb-0"><span class="text-hover">Do it!</span><span class="text-default">Subscribe</span></button>
 </form>
+
+{% comment %}
+
+TODO: make button hovers trigger secondary words
+
+.btn-primary {
+    &:hover,
+    &:active {
+      .text-default {
+            display: none; // what is this??
+        }
+    .text-hover {
+        display: inline-block; // what is this??
+    }
+}
+
+{% endcomment %}

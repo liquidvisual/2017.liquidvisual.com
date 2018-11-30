@@ -1,7 +1,7 @@
 /*
-    SECTIONS__DMO.CSS
+    SECTION__DMO.CSS
 
-    - updated: 28.12.17
+    - updated: 27.11.18, 28.12.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -11,45 +11,322 @@
 // DAN AND MITCH
 //-----------------------------------------------------------------
 
-.section-dmo {
-    // background: url(/assets/img/content/danandmitch/soft-bg.png) no-repeat;
-    // background-size: cover;
-    height: 700px;
-    overflow: hidden;
+.section-dmo-1 {
+    // height: 700px;
 
     > .container {
-        height: 100%;
+        padding-bottom: 0;
+        overflow: hidden;
     }
 
-    h2, p {
-        color: #222;
+    [class*=col-] {
+        // border: 1px dashed black;
+        z-index: 2; // [LOCKED] - incase of wallpaper
+    }
+}
+
+//-----------------------------------------------------------------
+// PARALLAX HOVER
+//-----------------------------------------------------------------
+
+.section-dmo-1 {
+    .parallax-hover {
+        // opacity: 0.5;
+        @include media-breakpoint-up(md) {
+            top: rem-calc(40);
+            width: calc(105%);
+            // margin-bottom: rem-calc(140);
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+// BTN TILE
+//-----------------------------------------------------------------
+
+.section-dmo-1 {
+    .btn-tile {
+
+        .btn-tile-bg {
+            transform: scale(1.2);
+            transform: none;
+        }
+
+        &:hover .btn-tile-bg {
+            // transform: translateZ(0) scale(1.1);
+            // transform: translateZ(0) scale(1.04);
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+// LOGO
+//-----------------------------------------------------------------
+
+.section-dmo-1 .logo {
+    position: relative;
+    // top: rem-calc(80); // magic
+    display: inline-block;
+    // margin: auto; // [LOCKED]
+
+    // @include media-breakpoint-up(sm) {
+    //     top: rem-calc(60); // magic
+    // }
+
+    // @include media-breakpoint-up(lg) {
+    //     top: rem-calc(70); // magic
+    // }
+
+    img {
+        width: rem-calc(250);
+
+        @include media-breakpoint-up(md) {
+            // width: rem-calc(250);
+            width: rem-calc(284);
+        }
+
+        // @include media-breakpoint-up(lg) {
+            // width: rem-calc(312);
+        // }
+    }
+}
+
+//=========================================
+// ON
+//=========================================
+
+.section-dmo-1 .logo .on {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: calc(100% + #{rem-calc(5)});
+    padding: rem-calc(5);
+    border-radius: rem-calc(4);
+    line-height: 0;
+    text-align: center;
+    background: #eb1900;
+    font-family: 'Bebas Neue';
+    font-size: rem-calc(16);
+    color: white;
+
+    @include media-breakpoint-up(md) {
+        padding: rem-calc(7);
+        border-radius: rem-calc(6);
+        font-size: rem-calc(26);
     }
 
-    .section-dmo-wallpaper {
-        display: none; ////////// !!!!!!!
+    img {
+        width: rem-calc(16);
+
+        @include media-breakpoint-up(lg) {
+            // width: rem-calc(20);
+            width: rem-calc(18);
+        }
+    }
+}
+
+//--------------------------------------------------------------------
+// SOCIAL MEDIA
+//--------------------------------------------------------------------
+
+$gray: #9fa1aa;
+
+.section-dmo-1 .social-media {
+    position: absolute;
+    top: rem-calc(30);
+    right: $container-gutter/2;
+    width: rem-calc(139);
+    height: rem-calc(236);
+    list-style: none;
+    padding: 0;
+
+    @include media-breakpoint-up(lg) {
+        right: $container-gutter; // [LOCKED] - perfect
+    }
+
+    li {
+        padding: 0;
+    }
+
+    a {
+        position: relative;
+        display: inline-block;
+        color: $gray;
+        font-size: rem-calc(50);
+    }
+}
+
+//=========================================
+// BITS
+//=========================================
+
+.section-dmo-1 .social-media {
+
+    .twitter,
+    .facebook,
+    .instagram,
+    .youtube {
+        transition: transform ease 300ms, color ease 300ms;
+
+        &:hover {
+            color: darken($gray, 25%);
+            transform: scale(1.0);
+
+            &:after {
+                transform: rotate(0deg) translate(3px, -14px);
+            }
+        }
+    }
+
+    .youtube {
+        top: rem-calc(8);
+        left: rem-calc(5);
+        font-size: rem-calc(45);
+        transform: rotate(16deg);
+    }
+
+    .instagram {
+        top: rem-calc(12);
+        left: rem-calc(-14);
+        transform: rotate(16deg);
+    }
+
+    .facebook {
+        top: rem-calc(52);
+        left: rem-calc(55);
+        transform: rotate(-16deg);
+        z-index: 1;
+    }
+
+    .twitter {
+        top: rem-calc(60);
+        left: rem-calc(30);
+        font-size: rem-calc(45);
+        transform: rotate(-10deg);
+    }
+}
+
+//-----------------------------------------------------------------
+// WALLPAPER
+//-----------------------------------------------------------------
+
+// .section-dmo-1 {
+//     .section-dmo-1-wallpaper {
+//         // display: none; ////////// !!!!!!!
+//         position: absolute;
+//         bottom: 0;
+//         left: -50%;
+//         width: 400%;
+//         height: 1000%;
+//         background: url(/assets/img/content/works/dan-and-mitch/icons-wallpaper.png) repeat top left;
+//         // background-size: 55%;
+//         background-size: 1170px;
+//         transform: rotate(10deg) translate(0, 0);
+//         transform-origin: 0 0;
+//         animation: dmo-wallpaper-scroller 130s linear infinite;
+//         // opacity: 0.6;
+//         // z-index: 2;
+//     }
+// }
+
+// @keyframes dmo-wallpaper-scroller {
+//     from { transform: rotate(10deg) translate(0, 0); }
+//     to { transform: rotate(10deg) translate(0, 80%); }
+// }
+
+//-----------------------------------------------------------------
+// SECTION DMO 2
+//-----------------------------------------------------------------
+
+.section-dmo-2 {
+
+    > .container {
+        @include media-breakpoint-up(md) {
+            padding-top: rem-calc(110);
+        }
+
+        @include media-breakpoint-up(xl) {
+            transform: translateZ(-1px);
+        }
+    }
+
+    .container.is-md-up {
+        @include media-breakpoint-down(sm) {
+            padding: 0;
+        }
+    }
+
+    .divider-wrapper {
         position: absolute;
-        bottom: 0;
-        left: -50%;
-        width: 400%;
-        height: 1000%;
-        background: url(/assets/img/content/works/dan-and-mitch/icons-wallpaper.png) repeat top left;
-        // background-size: 55%;
-        background-size: 1170px;
-        transform: rotate(10deg) translate(0, 0);
-        transform-origin: 0 0;
-        animation: dmo-wallpaper-scroller 130s linear infinite;
-        // opacity: 0.6;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        .divider {
+            height: 1px;
+            background: #c8cacc;
+            margin: 0; // [RESET]
+        }
+    }
+
+    .youtube-heading {
+        position: absolute;
+        top: rem-calc(10);
+        left: $container-gutter/1.5;
+        width: 80%;
+        z-index: -1;
+    }
+
+    // HAVE YOU SEEN THESE?
+    .have-you-seen-heading {
+        position: absolute;
+        // left: rem-calc(110);
+        left: 8%;
+        bottom: rem-calc(6);
+        color: #a5a5a5 !important;
+        transform: rotate(-90deg);
+        transform-origin: left top;
+
+        @include media-breakpoint-up(xl) {
+            left: 10%;
+        }
     }
 }
 
-@keyframes dmo-wallpaper-scroller {
-    from { transform: rotate(10deg) translate(0, 0); }
-    to { transform: rotate(10deg) translate(0, 80%); }
+//-----------------------------------------------------------------
+// POSTER GALLERY
+//-----------------------------------------------------------------
+
+.section-dmo-2 .poster-gallery {
+    @include media-breakpoint-down(sm) {
+        position: relative;
+        left: -$container-gutter/1.5;
+        width: calc(100% + #{$container-gutter} / 1.5 * 2);
+        padding: rem-calc(20) $container-gutter rem-calc(40) $container-gutter;
+        // background: orange;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+
+        .row {
+            flex-wrap: nowrap;
+        }
+
+        [class*=col-] {
+            min-width: 65%;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        left: -15px;
+        width: calc(100% + 30px);
+
+        [class*=col-] {
+            min-width: 80%;
+        }
+    }
 }
 
-//-----------------------------------------------------------------
-//
-//-----------------------------------------------------------------
+
 //=========================================
 //
 //=========================================

@@ -7,6 +7,6 @@ hero: /assets/img/content/hero/grad-3.png
 hero_classes: has-bleed-tint
 theme:
 logo: /assets/img/content/branding/logo-type--darker.svg
-hero_text: /assets/img/layout/headings/heading-works--darker.svg
+hero_text: /assets/img/layout/headings/heading-works--dark.svg
 sitemap: false
 ---

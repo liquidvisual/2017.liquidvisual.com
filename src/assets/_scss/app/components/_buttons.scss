@@ -1,10 +1,8 @@
 /*
     BUTTONS.CSS
 
-    - Last updated: 02.01.18
+    - Last updated: 22.11.18
     - liquidvisual.com
-
-    TODO: test margin - on tuts item - doesn't work!!
 */
 //-----------------------------------------------------------------
 // VARIABLES
@@ -16,55 +14,68 @@
 .btn-primary,
 .btn-primary.disabled,
 .btn-secondary {
-	padding: rem-calc(16 25 13 25); // [LOCKED]
+	padding: rem-calc(12 20 10 20); // [LOCKED]
+
+	padding-top: 12px;
+	padding-bottom: 10px;
+
 	border: 0; // [LOCKED] - reset
 	border-bottom: 3px solid darken($brand-secondary, 20%);
 	line-height: 1.2; // [LOCKED] - for multiline
 	box-shadow: 0 1px 2px 0px rgba(black, 0.2); // [LOCKED] - subtle
-	transition: 200ms ease background-color,
-				200ms ease border-color,
-				200ms ease color,
+	will-change: background-color, border-color, color, transform;
+	transition: 150ms ease background-color,
+				150ms ease border-color,
+				150ms ease color,
 				200ms ease transform;
+	// transform-style: flat !important; // [LOCKED] - fixes blurry image on Chrome (non-retina mostly)
+	// backface-visibility: hidden;
 
-	// &:focus {
-	// 	box-shadow: none;
-	// 	color: rgba(white, 0.5);
-	// 	box-shadow: 0 1px 2px 0px rgba(black, 0.2);
-	// }
+	//=========================================
+	// HOVERS
+	//=========================================
 
 	&:hover,
 	&:active {
 		background: lighten($brand-secondary, 15%) !important; // [LOCKED]
-		border-bottom: 3px solid darken($brand-secondary, 15%);
-		transform: scale(1.02);
-
-		.text-default {
-			display: none;
-		}
-
-		.text-hover {
-			display: inline-block;
-		}
+		border-bottom: 3px solid darken($brand-secondary, 10%); // [LOCKED]
+		transform: translateZ(0) scale(1.048); // [LOCKED] - smooth for Chrome
 	}
 
 	&:active {
-		// position: relative;
-		// top: 1px;
-		border-width: 2px;
-		margin-top: 1px;
-		box-shadow: none;
-		transition: none;
-		transform: scale(1.01);
-	}
-
-	// Allow hover to take control - must appear first
-	.text-hover {
-		display: none;
+		border-width: 2px; // [LOCKED] - px not rems - compress bottom by 1px
+		margin-top: 1px; // [LOCKED] - needs to offset 3px
+		box-shadow: none; // [LOCKED]
 	}
 }
 
 //-----------------------------------------------------------------
-// SECONDARY
+// YOUTUBE SUBSCRIBE (used in DMO)
+//-----------------------------------------------------------------
+
+.btn-subscribe {
+	$youtube-red: #eb1900;
+	padding-left: rem-calc(14); // [LOCKED] - curated
+	padding-right: rem-calc(14); // [LOCKED] - curated
+	border-bottom: 3px solid darken($youtube-red, 20%);
+	background: $youtube-red;
+
+	.fa-youtube-play {
+		position: relative;
+		top: rem-calc(3); // [LOCKED]
+		font-size: rem-calc(22);
+		line-height: 0;
+	}
+
+	&:hover,
+	&:active {
+		background: lighten($youtube-red, 5%) !important; // [LOCKED]
+		border-color: darken($youtube-red, 6%) !important;
+	}
+}
+
+//-----------------------------------------------------------------
+// SECONDARY (GHOST BUTTON)
 //-----------------------------------------------------------------
 
 .btn-secondary {

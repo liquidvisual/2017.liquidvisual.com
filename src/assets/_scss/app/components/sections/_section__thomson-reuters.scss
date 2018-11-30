@@ -1,7 +1,7 @@
 /*
     SECTIONS__THOMSON-REUTERS.CSS
 
-    - updated: 17.11.18
+    - updated: 21.11.18
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -118,11 +118,8 @@
 
 	.reuters-logo-overflow {
 		position: absolute;
-		// top: rem-calc(10);
 		bottom: 0;
-		// right: 5%;
 		right: 0;
-
 		opacity: 0.2;
 		overflow: hidden;
 
@@ -134,15 +131,14 @@
 
 		.reuters-logo {
 			position: relative;
+			top: rem-calc(110);
+			right: -50%;
 			width: rem-calc(250);
 			height: rem-calc(250);
 			background: url(/assets/img/content/works/thomson-reuters/reuters-logo@2x.png) no-repeat;
 			background-size: contain;
 			// -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
 			// filter: grayscale(100%);
-
-			right: -50%;
-			top: rem-calc(110);;
 
 		    @include media-breakpoint-up(md) {
 		    	top: 0;

@@ -48,8 +48,9 @@
     border: 1px solid white; //rgba(white, 0.7);
     border-radius: $border-radius;
     background: rgba(white, 0.12);
+    // background: rgba(black, 0.12);
     list-style: none; // [RESET]
-    font-family: $headings-font-family;
+    // font-family: $headings-font-family;
     font-size: rem-calc(16);
 }
 
@@ -110,6 +111,7 @@
 
 .lv-topbar .active .top-parent-anchor {
     background: rgba(white, 0.15);
+    // background: rgba(black, 0.12);
 }
 
 //-----------------------------------------------------------------
