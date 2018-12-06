@@ -286,7 +286,7 @@ $border-radius:               rem-calc(8); //.25rem !default;
 // // Font, line-height, and color for body text, headings, and more.
 
 // // stylelint-disable value-keyword-case
-$font-family-sans-serif:      "Gotham Rounded Book", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif: "Gotham Rounded Book", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 // $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // $font-family-base:            $font-family-sans-serif !default;
 // // stylelint-enable value-keyword-case
@@ -317,7 +317,7 @@ $h5-font-size: rem-calc(22); // [LOCKED]
 $h6-font-size: rem-calc(19); // [LOCKED]
 
 $headings-margin-bottom:      $spacer; //($spacer / 2) !default;
-$headings-font-family:        'Montserrat'; //inherit !default;
+$headings-font-family:        "Montserrat"; //inherit !default;
 $headings-font-weight:        700; //500 !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              white; //inherit !default;

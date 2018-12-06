@@ -19,7 +19,7 @@ body,
 }
 
 html {
-	overflow-x: hidden; // so far - eng unlimited uses this - html covers ipad case (body creates scroll glitches on iphone)
+	overflow-x: hidden !important; // so far - eng unlimited uses this - html covers ipad case (body creates scroll glitches on iphone)
 }
 
 //-----------------------------------------------------------------

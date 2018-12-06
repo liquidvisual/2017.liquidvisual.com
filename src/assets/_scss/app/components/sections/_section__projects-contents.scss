@@ -1,7 +1,7 @@
 /*
     SECTIONS__PROJECTS-CONTENTS.CSS
 
-    - updated: 23.01.18
+    - updated: 05.11.18
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -41,11 +41,15 @@
             @include media-breakpoint-up(md) {
                 content: "";
                 position: absolute;
-                bottom: rem-calc(-19);
+                bottom: rem-calc(-17);
                 right: 0;
                 width: rem-calc(145);
-                height: rem-calc(20);
+                height: rem-calc(50);
                 background: $gray-darker;
+            }
+
+            @include media-breakpoint-up(lg) {
+                bottom: rem-calc(-19);
             }
         }
     }
@@ -60,7 +64,8 @@
 
         @include media-breakpoint-up(md) {
             position: absolute;
-            width: rem-calc(300);
+            width: rem-calc(350);
+            // background: red;
         }
 
         a {

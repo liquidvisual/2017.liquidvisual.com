@@ -4,6 +4,13 @@
     NOTES
     	- https://davidwalsh.name/nodelist-array
         - https://stackoverflow.com/questions/1248081/get-the-browser-viewport-dimensions-with-javascript
+
+    USAGE:
+
+        <div data-parallax>
+            <span data-depth="0.6"></span>
+            <spam data-depth="0.3"></span>
+        </div>
 */
 //-----------------------------------------------------------------
 // VARIABLES
@@ -23,12 +30,15 @@ if (browserWidth > 760) {
 }
 
 for (var i = 0; i < parallaxElements.length; i++) {
+
+    var hoverOnly = !(parallaxElements[i].dataset.hoverOnly);
+
     scenes.push(new Parallax(parallaxElements[i], {
         limitX: 10,
         limitY: 10,
         pointerEvents: true,
         relativeInput: true,
-        hoverOnly: true
+        hoverOnly: hoverOnly
     }));
 }
 

@@ -1,0 +1,154 @@
+/*
+    SECTION__ARTIQULET.CSS
+
+    - updated: 06.11.18
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// ARTIQULET
+//-----------------------------------------------------------------
+
+.section-artiqulet {
+	@include media-breakpoint-down(sm) {
+	    overflow: hidden; // [LOCKED] - prevent spillage
+	}
+
+	// SPECIAL LEFT BLEED
+	@include media-breakpoint-up(xl) {
+	    background: url(/assets/img/content/works/artiqulet/bg-bleed-6.svg) no-repeat top left;
+	    background-size: 50% 100%;
+	}
+
+	h1, h2, h3, h4, h5, h6,
+	p {
+		@include media-breakpoint-up(md) {
+		    color: white !important; // refactor?
+		}
+	}
+
+	h2 img {
+		width: 50%;
+
+		@include media-breakpoint-up(md) {
+		    width: 68%;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// BG FILL
+//-----------------------------------------------------------------
+
+.section-artiqulet .bg-fill {
+	position: absolute; // [LOCKED]
+	top: 0; // [LOCKED]
+	left: -50%; // [LOCKED]
+	width: 150vw; // [LOCKED]
+	height: 100%; // [LOCKED] - tested
+	background: url(/assets/img/content/works/artiqulet/bga-11.svg) no-repeat top left;
+	background-size: 110% 50%; // [LOCKED]
+	z-index: -1; // [LOCKED] - so text can cover
+
+	@include media-breakpoint-up(md) {
+		left: 0; // [LOCKED]
+		width: 100%;
+	    height: 100%; // [LOCKED] - tested
+	    background-size: 110% 98%; // [LOCKED]  !! - 200% 100% looks good
+	}
+
+	@include media-breakpoint-up(lg) {
+	    left: -5%;
+	    background-size: 104% 100%; // [LOCKED]
+	}
+
+	@include media-breakpoint-up(xl) {
+	    left: 0;
+	    background-size: 100% 99.4%; // [LOCKED]
+	}
+
+	@include media-breakpoint-up(xxl) {
+	    background-size: 100% 100%; // [LOCKED]
+	}
+}
+
+.section-artiqulet .bottom-glob {
+	position: absolute;
+	bottom: -2px;
+	right: -2px;
+	width: 42%;
+}
+
+//-----------------------------------------------------------------
+// SWATCHES
+//-----------------------------------------------------------------
+
+.section-artiqulet .swatches {
+	position: absolute;
+	top: 42%;
+	right: -24%;
+	width: 54%;
+	z-index: 1;
+
+	@include media-breakpoint-up(md) {
+		top: auto;
+		right: -3%;
+		bottom: -11%;
+	    width: 30%;
+	}
+
+	@include media-breakpoint-up(lg) {
+	    	bottom: -10%;
+	    	right: -2%;
+	        width: 27%;
+	        transform: rotate(10deg);
+	}
+}
+
+//-----------------------------------------------------------------
+// SET SQUARE + ARTLINE
+//-----------------------------------------------------------------
+
+.section-artiqulet .set-square,
+.section-artiqulet .artline {
+	position: absolute;
+	top: 36%;
+	left: -11%;
+	width: 36%;
+
+	@include media-breakpoint-up(md) {
+	    top: -4%;
+	    left: -8%;
+	    width: 19%;
+	    display: none;
+	}
+
+	@include media-breakpoint-up(lg) {
+	    top: -7%;
+	    left: -10%;
+	}
+
+	@include media-breakpoint-up(xl) {
+	    // top: 8%;
+	    // left: -10%;
+	    top: 4%;
+	    left: -8%;
+	    width: 16%;
+	    transform: rotate(-10deg);
+	    z-index: -2; // [LOCKED]
+	}
+}
+
+// .section-artiqulet .artline {
+	// z-index: 1;
+	// transform: rotate(50deg);
+// }
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================

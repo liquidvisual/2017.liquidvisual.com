@@ -1,0 +1,234 @@
+/*
+    SECTION__MAL-WINTER.CSS
+
+    - updated: 04.12.18
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+
+$cloud-speed: 10;
+
+//-----------------------------------------------------------------
+// SECTION MAL WINTER
+//-----------------------------------------------------------------
+
+.section-mal-winter {
+	overflow: hidden; // [LOCKED] - for column tint spill
+
+	//=========================================
+	// PAGE SHADOW OVERLAY (XL+) - OVERRIDE
+	//=========================================
+
+	&:after {
+	    @include media-breakpoint-up(xl) {
+	        background-image: url(/assets/img/layout/page-shadow-knockout.png);
+	    }
+	}
+
+	//=========================================
+	// CONTAINER
+	//=========================================
+
+	> .container {
+		background: none !important; // [LOCKED] - knock out the default bg
+
+		@include media-breakpoint-up(xl) {
+		    overflow: hidden; // [LOCKED] - tint-bg bleed
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// DEVICE LAPTOP
+//-----------------------------------------------------------------
+
+.section-mal-winter .device-macbook {
+	.device-screen {
+		background-color: rgba(white, 0.2);
+
+		.device-screen-bg {
+			background-position: -18px;
+
+			@include media-breakpoint-up(md) {
+			    background-position: top center;
+			}
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// BOOK
+//-----------------------------------------------------------------
+
+.section-mal-winter .book {
+	position: absolute;
+	top: -8%;
+	right: 3%;
+	width: 27%;
+	z-index: 1;
+
+	@include media-breakpoint-up(sm) {
+	    width: 25%;
+	}
+
+	@include media-breakpoint-up(md) {
+	    top: -7%;
+	    right: 1%;
+	    width: 23%;
+	}
+
+	@include media-breakpoint-up(lg) {
+	    right: 8%;
+	    width: 19%;
+	}
+
+	.layer,
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+	}
+
+	.price-sticker {
+		display: block;
+		top: 25%;
+		left: 75%;
+		// right: 0;
+		background: #d10607;
+		width: rem-calc(50);
+		height: rem-calc(50);
+		line-height: rem-calc(53);
+		color: white;
+		font-size: rem-calc(18);
+		font-weight: 500;
+		text-align: center;
+		border-radius: 100%;
+		transform: rotate(-20deg);
+		box-shadow: 0 1px 2px 0px rgba(black, 0.2);
+		pointer-events: none;
+
+		.dollar-sign {
+			font-size: rem-calc(15);
+		}
+	}
+
+	// SHADOW
+    &:after {
+    	content: "";
+		background: black;
+		z-index: -1;
+		filter: blur(10px);
+		opacity: 0.2;
+    }
+}
+
+//=========================================
+// EDGE AND IE11 ARE USELESS
+//=========================================
+
+@supports (-ms-ime-align:auto) {
+    .section-mal-winter .book:after {
+        display: none;
+    }
+}
+
+@media all and (-ms-high-contrast:none) {
+    .section-mal-winter .book:after {
+        display: none;
+    }
+}
+
+//-----------------------------------------------------------------
+// COLUMN TINT BG - overflow caps huge height
+//-----------------------------------------------------------------
+
+.section-mal-winter .tint-bg {
+	position: absolute;
+	top: -200%; // [LOCKED]
+	left: -50%; // [LOCKED] - for sm-down
+	width: 150vw;
+	height: 400%;
+	background: rgba(black, 0.2);
+	z-index: -1;
+
+	@include media-breakpoint-up(md) {
+		left: rem-calc(-15); // [LOCKED] - curated
+	}
+}
+
+//-----------------------------------------------------------------
+// CLOUD BG LAYERS
+//-----------------------------------------------------------------
+
+.section-mal-winter .bg-layers {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+    height: 100%;
+	background: #528cb9;
+	// background: red;
+	// border: 2px dashed white;
+	z-index: -1;
+
+    .bg-layer-1,
+    .bg-layer-2 {
+        position: absolute;
+        top: 0; // 10px
+        left: 0;
+        width: 2820px * $cloud-speed;
+        height: 100%;
+        background-size: 2820px; // [LOCKED]
+        background-repeat: repeat-x;
+        background-position: bottom;
+        animation: hero-layer-1-scroller #{300*$cloud-speed}s linear infinite;
+    }
+
+    .bg-layer-2 {
+        animation: hero-layer-2-scroller #{300*$cloud-speed/2}s linear infinite;
+    }
+}
+
+//=========================================
+// KEYFRAMES
+//=========================================
+
+@keyframes hero-layer-1-scroller {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+}
+
+@keyframes hero-layer-2-scroller {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+}
+
+//=========================================
+// EDGE AND IE11 ARE USELESS
+//=========================================
+
+@supports (-ms-ime-align:auto) {
+    .bg-layer-1,
+    .bg-layer-2 {
+        animation: none !important;
+    }
+}
+
+@media all and (-ms-high-contrast:none) {
+    .bg-layer-1,
+    .bg-layer-2 {
+        animation: none !important;
+    }
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================

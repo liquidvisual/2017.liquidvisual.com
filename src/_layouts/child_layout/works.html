@@ -16,14 +16,14 @@ layout: base__page
 
 		<!-- LIST SET 1 -->
 		<ul class="list-set-1 list-unstyled text-md-right mb-0">
-			{% for item in sitemap[1].children limit: 10 %}
+			{% for item in sitemap[1].children limit: 9 %}
 				<li><span class="number">{% if forloop.index < 10 %}0{% endif %}{{forloop.index}}.</span> <a href="{{ item.url }}">{{ item.title }}</a></li>
 			{% endfor %}
 		</ul>
 
 		<!-- LIST SET 2 -->
 		<ul class="list-set-2 list-unstyled text-md-left">
-			{% for item in sitemap[1].children offset: 10 %}
+			{% for item in sitemap[1].children offset: 9 %}
 				<li><span class="number">{{ forloop.index | plus: 10 }}.</span> <a href="{{ item.url }}">{{ item.title }}</a></li>
 			{% endfor %}
 		</ul>
@@ -38,7 +38,7 @@ layout: base__page
 <!-- { % include works/origami_email_series.html %} -->
 
 <!-- TAGLINE (MAKE COMPONENT?) -->
-<!-- <section class="spec-section is-darker has-darker-bleed">
+<section class="spec-section is-darker has-darker-bleed" hidden>
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-11 col-lg-9 text-center">
@@ -48,7 +48,7 @@ layout: base__page
 			</div>
 		</div>
 	</div>
-</section> -->
+</section>
 
 <!-- { % include works/blarg_news_rezillia.html %} -->
 
@@ -58,8 +58,8 @@ layout: base__page
 
 <!-- { % include works/thomson_reuters.html %} -->
 
-{% include works/dan_and_mitch.html %}
+<!-- { % include works/dan_and_mitch.html %} -->
 
-<!-- { % include works/anne_uy.html %} -->
+<!-- { % include works/artiqulet.html %} -->
 
 <!-- { % include works/mal_winter.html %} -->

@@ -246,7 +246,7 @@ $gray: #9fa1aa;
         }
 
         @include media-breakpoint-up(xl) {
-            transform: translateZ(-1px);
+            transform: translateZ(0); // originally was -1px
         }
     }
 
