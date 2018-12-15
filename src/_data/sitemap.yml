@@ -55,40 +55,40 @@
 #       url: /works/#coming-soon/
 #       featured: true
 
-#     # - title: Jazzles Learning System
-#     #   url: /works/#coming-soon/
-#     #   featured: true
+    # - title: Jazzles Learning System
+    #   url: /works/#coming-soon/
+    #   featured: true
 
-#     - title: Thomson Reuters
-#       url: /works/#coming-soon/
-#       featured: true
+    # - title: Thomson Reuters
+    #   url: /works/#coming-soon/
+    #   featured: true
 
-#     - title: Dan & Mitch ON
-#       url: /works/#coming-soon/
+    # - title: Dan & Mitch ON
+    #   url: /works/#coming-soon/
 
-#     - title: Artiqulet
-#       url: /works/#coming-soon/
+    # - title: Artiqulet
+    #   url: /works/#coming-soon/
 
-#     - title: Mal Winter and the Cloud Runners
-#       url: /works/#coming-soon/
+    # - title: Mal Winter and the Cloud Runners
+    #   url: /works/#coming-soon/
 
-#     - title: Various Branding
-#       url: /works/#coming-soon/
+    # - title: Branding and Logos
+    #   url: /works/#coming-soon/
 
-#     # - title: Slayday
-#     #   url: /works/#coming-soon/
+    # - title: Slayday
+    #   url: /works/#coming-soon/
 
-#     # - title: Soberfish
-#       # url: /works/#soberfish/
+    # - title: Soberfish
+      # url: /works/#soberfish/
 
-#     # - title: The Wedding Warren
-#       # url: /works/#coming-soon/
+    # - title: The Wedding Warren
+      # url: /works/#coming-soon/
 
-#     # - title: The Mitching Hour
-#       # url: /works/#coming-soon/
+    # - title: The Mitching Hour
+      # url: /works/#coming-soon/
 
-# # - title: Tutorials
-#   # url: /tutorials/
+# - title: Tutorials
+  # url: /tutorials/
 
 - title: Hire
   url: /hire/

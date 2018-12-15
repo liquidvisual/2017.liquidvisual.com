@@ -1,0 +1,47 @@
+/*
+    SECTION__BRANDING.CSS
+
+    - updated: 13.12.18
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// BRANDING AND LOGOS
+//-----------------------------------------------------------------
+
+.section-branding {
+
+	> .container {
+		padding-right: 0;
+		// background-color: #f9f980 !important;
+		// background-image: url(/assets/img/content/works/branding-and-logos/tile-bg-3@2x.png);
+		// background-image: url(/assets/img/content/works/branding-and-logos/cards-bg@2x.png);
+		background-size: 700px;
+	}
+
+	.cards {
+		margin-top: -15%;
+	}
+
+	.dark {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: rem-calc(417);
+		height: 100%;
+		// background: rgba(black, 0.1);
+		z-index: -1;
+
+		/* Rectangle: */
+		background-image: linear-gradient(-180deg, rgba(black, 0.05) 0%, rgba(black,0) 80%);
+	}
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================

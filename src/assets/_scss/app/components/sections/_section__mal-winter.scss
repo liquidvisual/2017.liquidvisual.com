@@ -17,6 +17,10 @@ $cloud-speed: 10;
 .section-mal-winter {
 	overflow: hidden; // [LOCKED] - for column tint spill
 
+	h1, h2, p {
+		color: white;
+	}
+
 	//=========================================
 	// PAGE SHADOW OVERLAY (XL+) - OVERRIDE
 	//=========================================
