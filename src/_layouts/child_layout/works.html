@@ -4,7 +4,7 @@ layout: base__page
 
 {% assign sitemap = site.data.sitemap %}
 
-{% comment %}
+
 {% contentfor tagline %}
 	<!-- CONTENTS -->
 	<div class="section-projects-contents">
@@ -28,40 +28,45 @@ layout: base__page
 			{% endfor %}
 		</ul>
 	</div>
-{% endcontentfor %}
+{% endcontentfor %}{% comment %}
 {% endcomment %}
 
-<!-- { % include works/ANP_bobblehedz_narayan.html %} -->
+{% include works/ANP_bobblehedz_slayday.html %}
 
-<!-- { % include works/loadshift.html %} -->
+{% include works/loadshift.html %}
 
-<!-- { % include works/origami_email_series.html %} -->
+{% include works/origami_email_series.html %}
 
 <!-- TAGLINE (MAKE COMPONENT?) -->
-<section class="spec-section is-darker has-darker-bleed" hidden>
+<section class="spec-section is-darker has-darker-bleed" hiddenX>
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-11 col-lg-9 text-center">
 				<h2 class="mb-0">
-					<span class="brand-primary-color">Hello there Lorem ipsum</span> dolor sit amet. Lorem ipsum dolor sit amit
+					<span class="brand-primary-color">Coding everything I design</span> ensures nothing gets lots in translation.</span>
 				</h2>
 			</div>
 		</div>
 	</div>
 </section>
 
-<!-- { % include works/blarg_news_rezillia.html %} -->
+{% include works/blarg_news_rezillia.html %}
 
-<!-- { % include works/english_unlimited.html %} -->
+{% include works/english_unlimited_college.html %}
 
 <!-- { % include works/jazzles.html %} -->
 
-<!-- { % include works/thomson_reuters.html %} -->
+{% include works/thomson_reuters.html %}
 
-<!-- { % include works/dan_and_mitch.html %} -->
+{% include works/dan_and_mitch.html %}
 
-<!-- { % include works/artiqulet.html %} -->
+{% include works/anne_uy.html %}
 
-{% include works/mal_winter.html %}
+{% include works/mal_winter_and_the_cloud_runners.html %}
 
-{% include works/branding_and_logos.html %}
+{% include works/branding_and_business_stationery.html %}
+
+<div class="lv-alert-bar work-alert" style="pointer-events: none;">
+    <p><span class="text-warning">Hello stranger!</span> I'm still writing content for this page, so please check back soon.</p>
+    <span style="pointer-events: auto;" class="lv-alert-bar-close-btn">&times;</span>
+</div>

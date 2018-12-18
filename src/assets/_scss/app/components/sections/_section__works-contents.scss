@@ -16,7 +16,7 @@
 
     @include media-breakpoint-up(md) {
         display: inline-block;
-        padding: rem-calc(20 20 60 20); // [LOCKED] - controls the bottom padding
+        padding: rem-calc(20 20 30 20); // [LOCKED] - controls the bottom padding
         left: rem-calc(60);
     }
 
@@ -83,8 +83,8 @@
     }
 
     .list-set-2 {
-        bottom: rem-calc(-2);
-        left: calc(100% - #{rem-calc(150)});
+        bottom: rem-calc(17);
+        left: calc(100% - #{rem-calc(155)});
     }
 
     .number {

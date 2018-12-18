@@ -165,6 +165,12 @@
 		font-size: rem-calc(14); // [LOCKED]
 	}
 
+	a { // 'better call saul'
+		font-style: italic;
+		color: inherit;
+		font-weight: 400;
+	}
+
 	.digit {
 		min-width: rem-calc(22); // [LOCKED] - curated
 		margin-right: rem-calc(10);

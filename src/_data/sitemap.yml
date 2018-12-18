@@ -24,65 +24,59 @@
 #         - subtitle: Website Design Packages
 #           body: Modern website design with personality. Hand coded in HTML5.
 
-# - title: Works
-#   url: /works/
-#   include_children_in_nav: false
-#   children:
-#     - title: Another Nerdy Podcast
-#       url: /works/#coming-soon/
+- title: Works
+  url: /works/
+  include_children_in_nav: false
+  children:
+    - title: Another Nerdy Podcast
+      url: /works/#coming-soon/
 
-#     - title: BobbleHedz
-#       url: /works/#coming-soon/
+    - title: BobbleHedz
+      url: /works/#coming-soon/
 
-#     - title: Project Narayan
-#       url: /works/#coming-soon/
-#       featured: true
+    # - title: Slayday
+    #   url: /works/#coming-soon/
+    #   featured: true
 
-#     - title: Loadshift
-#       url: /works/#coming-soon/
-#       featured: true
+    - title: Loadshift
+      url: /works/#coming-soon/
+      featured: true
 
-#     - title: Origami Email Series
-#       url: /works/#coming-soon/
+    - title: Origami Email Series
+      url: /works/#coming-soon/
 
-#     - title: Rezillia
-#       url: /works/#coming-soon/
+    - title: Rezillia
+      url: /works/#coming-soon/
 
-#     - title: Blarg! News
-#       url: /works/#coming-soon/
+    - title: Blarg! News
+      url: /works/#coming-soon/
 
-#     - title: English Unlimited
-#       url: /works/#coming-soon/
-#       featured: true
+    - title: English Unlimited College
+      url: /works/#coming-soon/
+      featured: true
 
     # - title: Jazzles Learning System
     #   url: /works/#coming-soon/
     #   featured: true
 
-    # - title: Thomson Reuters
-    #   url: /works/#coming-soon/
-    #   featured: true
-
-    # - title: Dan & Mitch ON
-    #   url: /works/#coming-soon/
-
-    # - title: Artiqulet
-    #   url: /works/#coming-soon/
-
-    # - title: Mal Winter and the Cloud Runners
-    #   url: /works/#coming-soon/
-
-    # - title: Branding and Logos
-    #   url: /works/#coming-soon/
-
-    # - title: Slayday
-    #   url: /works/#coming-soon/
-
-    # - title: Soberfish
-      # url: /works/#soberfish/
-
     # - title: The Wedding Warren
       # url: /works/#coming-soon/
+
+    - title: Thomson Reuters
+      url: /works/#coming-soon/
+      featured: true
+
+    - title: Dan & Mitch
+      url: /works/#coming-soon/
+
+    - title: Anne Uy
+      url: /works/#coming-soon/
+
+    - title: Mal Winter and the Cloud Runners
+      url: /works/#coming-soon/
+
+    - title: Branding & Business Stationery
+      url: /works/#coming-soon/
 
     # - title: The Mitching Hour
       # url: /works/#coming-soon/

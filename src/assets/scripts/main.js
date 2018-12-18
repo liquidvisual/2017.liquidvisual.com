@@ -20,6 +20,12 @@ $(window).on('load', function() {
     launchParallax();
 });
 
+
+
+$('.lv-alert-bar-close-btn').on('click', function(){
+    $(this).parent().remove();
+})
+
 //-----------------------------------------------------------------
 // ONLOAD - TOOLTIP
 //-----------------------------------------------------------------

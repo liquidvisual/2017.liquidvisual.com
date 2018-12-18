@@ -1,41 +1,110 @@
 /*
     SECTION__BRANDING.CSS
 
-    - updated: 13.12.18
-    - liquidvisual.com
+    - updated: 17.12.18
+    NOTES:
+		This section breaks the rules of the typical section and
+		removes the coloring so another div can apply it's own.
+		This comes down to the mal-winter previous section tint
+		perfectly lining up.
 */
 //-----------------------------------------------------------------
 // VARIABLES
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
-// BRANDING AND LOGOS
+// BRANDING
 //-----------------------------------------------------------------
 
 .section-branding {
 
 	> .container {
-		padding-right: 0;
-		// background-color: #f9f980 !important;
-		// background-image: url(/assets/img/content/works/branding-and-logos/tile-bg-3@2x.png);
-		// background-image: url(/assets/img/content/works/branding-and-logos/cards-bg@2x.png);
-		background-size: 700px;
+		padding-right: 0; // [LOCKED] - push to edge
+		background: none !important; // [FORCE OVERRIDE] - place bg on lower layer
 	}
 
-	.cards {
-		margin-top: -15%;
+	.business-cards {
+		margin-top: rem-calc(-80); // [LOCKED]
+		margin-bottom: $spacer;
+		// border: 1px solid red;
+
+		@include media-breakpoint-up(md) {
+			margin-top: -13%; // [LOCKED]
+			margin-bottom: -10%;
+			margin-left: -5%; // [LOCKED]
+		}
+
+		@include media-breakpoint-up(lg) {
+		    // margin-top: -12%; // [LOCKED]
+		    // margin-bottom: -7%;
+		    margin-top: -11%;
+		    margin-bottom: -5%;
+		    margin-left: 0; // [RESET]
+		}
+
+		@include media-breakpoint-up(xl) {
+			overflow: hidden; // [LOCKED] - crop for page shadow
+		}
+
+		img {
+			width: 120%; // [LOCKED] - curated
+
+			@include media-breakpoint-up(md) {
+			    width: 130%; // [LOCKED] - perfect
+			}
+
+			@include media-breakpoint-up(lg) {
+			    width: 116%; // [LOCKED] - perfect
+			}
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// FIX IE11 BS
+//-----------------------------------------------------------------
+
+_:-ms-fullscreen,
+:root .section-branding > .container {
+	max-height: 500px;
+}
+
+//-----------------------------------------------------------------
+// MAL WINTER DESIGN ELEMENT SEEP
+//-----------------------------------------------------------------
+
+.section-branding .mal-winter-design-element-seep {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	// SM DOWN
+	@include media-breakpoint-down(sm) {
+	    background-image: linear-gradient(-180deg, rgba(black, 0.08) 0%, rgba(black,0) 300px);
 	}
 
-	.dark {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: rem-calc(417);
+	> .container {
 		height: 100%;
-		// background: rgba(black, 0.1);
-		z-index: -1;
 
-		/* Rectangle: */
-		background-image: linear-gradient(-180deg, rgba(black, 0.05) 0%, rgba(black,0) 80%);
+		@include media-breakpoint-up(md) {
+		    background: $gray-light;
+		}
+
+		@include media-breakpoint-up(xl) {
+		    overflow: hidden;
+		}
+
+		.tint-bg {
+			@include media-breakpoint-up(md) {
+				position: absolute;
+				top: 0; // [LOCKED]
+				left: rem-calc(-15); // [LOCKED] - curated
+				width: 150vw;
+				height: 100%;
+				background-image: linear-gradient(-180deg, rgba(black, 0.08) 0%, rgba(black,0) 330px);
+			}
+		}
 	}
 }
 
