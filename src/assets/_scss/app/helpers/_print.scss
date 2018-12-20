@@ -28,14 +28,14 @@
 	html,
 	body,
 	.lv-page,
-    .spec-section > .container,
-    .spec-section:after
+    .section > .container,
+    .section:after
 	{
     	background: none !important;
     }
 
-	.spec-section,
-    .spec-section .container,
+	.section,
+    .section .container,
     .details-panel,
     .contact-panel {
 		background: none !important;

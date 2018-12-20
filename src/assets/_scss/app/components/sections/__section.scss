@@ -1,5 +1,5 @@
 /*
-    SPEC-SECTIONS.CSS
+    SECTION.CSS
 
     - updated: 20.12.18
     - liquidvisual.com
@@ -28,7 +28,7 @@
 // SECTION
 //-----------------------------------------------------------------
 
-.spec-section {
+.section {
     position: relative; // [LOCKED] - for overlays
     z-index: 1; // [LOCKED]
 
@@ -96,7 +96,7 @@
 // this may get added to in future (?)
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-.spec-section.is-light {
+.section.is-light {
     color: $gray;
 
     h1, h2, h3, h4, h5, h6 {
@@ -114,7 +114,7 @@
 // HAS IMAGE BG
 //-----------------------------------------------------------------
 
-.spec-section.has-image-bg {
+.section.has-image-bg {
 
     > .container {
         background: none; // [LOCKED] - score
@@ -186,8 +186,8 @@
 // [LOCKED] - must be here to prevent override by 'background'
 //=========================================
 
-.spec-section.has-image-bg,
-.spec-section.has-image-bg > .container {
+.section.has-image-bg,
+.section.has-image-bg > .container {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
