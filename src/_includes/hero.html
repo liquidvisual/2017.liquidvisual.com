@@ -19,7 +19,7 @@
 
 <!-- HERO WRAPPER -->
 <section class="lv-hero-wrapper spec-section is-lightX has-light-bleedX has-bleed-tintX has-image-bg has-fixed-bleed {{ hero_classes }}" style="background-image: url('{{ hero }}')">
-    <div class="container">
+    <div class="container py-0">
 
         <!-- HERO -->
         <div class="lv-hero has-height-preset-1">
@@ -58,13 +58,15 @@
                                 <!-- DYNAMIC TEXT -->
                                 <h1 class="display-1 tagger">{{ page.title }}</h1>
 
-                                <!-- AUTHOR AVATAR -->
-                                <p class="d-flex align-items-center justify-content-center">
-                                    <img width="28" class="rounded-circle mr-2" src="/assets/img/content/avatars/avatar-mitch@2x.jpg" alt="Mitch">
-                                     <span>
-                                        by <a href="/hire/">{{ "Mitch Warren" }}</a> <span class="d-inline-block"> | {{ page.date | date: "%d %B %Y" }}</span>
-                                     </span>
-                                </p>
+                                {% if page.author %}
+                                    <!-- AUTHOR AVATAR -->
+                                    <p class="d-flex align-items-center justify-content-center">
+                                        <img width="28" class="rounded-circle mr-2" src="/assets/img/content/avatars/avatar-mitch@2x.jpg" alt="Mitch">
+                                         <span>
+                                            by <a href="/hire/">{{ "Mitch Warren" }}</a> <span class="d-inline-block"> | {{ page.date | date: "%d %B %Y" }}</span>
+                                         </span>
+                                    </p>
+                                {% endif %}
 
                             </div>
                         </div>

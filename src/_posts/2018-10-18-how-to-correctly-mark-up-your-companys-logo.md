@@ -3,10 +3,12 @@ layout: child_layout/tutorials_item
 date: 2015-02-03
 title: How to Correctly Mark Up Your Company's Logo
 categories: Development
+author: Mitch Warren
 hero: /assets/img/content/hero/swirl-5.png
 theme: theme-light
 logo: /assets/img/content/branding/logo-type--white-transparent.svg
 breadcrumbs: true
+comments: true
 ---
 
 <p class="lead dropcap">My lucky stars ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

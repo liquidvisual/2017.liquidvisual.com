@@ -27,6 +27,7 @@
 	<!-- https://stackoverflow.com/questions/16243972/showing-disqus-comment-count-in-a-div-or-span-not-a-href -->
 
 	<ul class="social-media">
+		{% if page.comments %}
 		<li>
 		    <a title="Comments" class="disqus" href="#disqus_thread">
 		        <span class="icon">
@@ -35,6 +36,7 @@
 		        </span>
 		    </a>
 		</li>
+		{% endif %}
 	    <li>
 	    	<a target="_blank" title="Share Facebook" class="facebook" href="https://www.facebook.com/sharer/sharer.php?u="
 	    		onclick="window.open(this.href + document.URL, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;">

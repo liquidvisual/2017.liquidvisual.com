@@ -1,7 +1,7 @@
 /*
     SPEC-SECTIONS.CSS
 
-    - updated: 29.12.17
+    - updated: 20.12.18
     - liquidvisual.com
 
     GLOSSARY:
@@ -11,6 +11,7 @@
             &.is-darker
             &.is-light
             &.is-white
+            &.is-edge-to-edge
             &.has-dark-bleed
             &.has-darker-bleed
             &.has-light-bleed
@@ -19,34 +20,6 @@
                 &.has-fixed-bleed
                 &.has-tint
                 &.has-bleed-tint
-
-    NOTES:
-        PROS: the main pros towards this new setup
-
-        * MEGA container no longer necessary
-        * remove overflow from hero
-        * cleaner (in theory) breadcrumbs code
-        * images inside containers have more accurate sizing
-        * assume the lack of hacky pseudos will help render glitches on ipad
-        * having one main system means breadcrumbs and hero can use same codebase
-        * clearer breakpoints
-        * footer is cleaner
-        * better footer with trackpad scrolling (glitches on other)
-        * can reliably enable fixed footer on tablets etc
-        * can have elements appear in the rails (I think?)
-        * is more automated
-
-        CONS:
-
-        * creates overriding issues with z-index
-        * breadcrumbs is still hard to work with
-        * new techniques force padding to be applied to contains instead of simpler sections (difficult trust me)
-        * harder mental model
-        * overall more problems and mental hoops that stray from convention
-        * forces relative onto containers
-        * can no longer specify backgrounds in CSS without "important"
-        * comprises convention of the hero carousel
-
 */
 //-----------------------------------------------------------------
 // VARIABLES

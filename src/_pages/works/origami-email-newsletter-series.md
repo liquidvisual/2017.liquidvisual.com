@@ -1,15 +1,23 @@
 ---
 layout: child_layout/tutorials_item
-date: 2015-02-03
-title: Embed Tagged Instagram Posts into your Website
-categories: Development
-author: Mitch Warren
-hero: /assets/img/content/hero/swirl-5.png
+title: Origami Email Newsletter Series
+permalink: /works/origami-email-newsletter-series/
+date: 2018-12-19
+categories: [design]
+hero: /assets/img/content/works/post-bg-2@2x.png
+hero_classes: has-bleed-tint
 theme: theme-light
 logo: /assets/img/content/branding/logo-type--white-transparent.svg
 breadcrumbs: true
-comments: true
 ---
+
+<!-- <iframe id="myframe" width="100%" height="306px" src="/about/"></iframe>
+<iframe id="myframe" width="100%" height="306px" src="/services/"></iframe>
+<iframe id="myframe" width="100%" height="306px" src="/tutorials/"></iframe>
+<iframe id="myframe" width="100%" height="306px" src="/hire/"></iframe> -->
+
+{% comment %}
+
 
 <div class="row mb-4 px-4">
 	<div class="col-md-4">
@@ -108,3 +116,5 @@ comments: true
 		</div>
 	</div>
 </div>
+
+{% endcomment %}

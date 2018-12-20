@@ -15,27 +15,9 @@ $hero-height-xl: 1010px; //auto;
 $hero-height-xxl: 1140px; //auto;
 
 //-----------------------------------------------------------------
-// HERO WRAPPER
-// creates the background parallax-ish effect on ALL heroes
-//-----------------------------------------------------------------
-
-.lv-hero-wrapper {
-    &.spec-section > .container {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-
-    // background: #e3e6eb !important;
-
-    &:after {
-        // display: none;
-    }
-}
-
-//=========================================
 // EDGE TO EDGE
 // heading img will hug sides
-//=========================================
+//-----------------------------------------------------------------
 
 .lv-hero-wrapper.is-edge-to-edge > .container {
     padding: 0;
@@ -88,6 +70,19 @@ $hero-height-xxl: 1140px; //auto;
         }
     }
 }
+
+
+//=========================================
+// HEIGHT PRESET 2 delete me
+//=========================================
+
+// .lv-hero-wrapper.is-full .lv-hero {
+//     height: auto;
+
+//     @include media-breakpoint-up(md) {
+//         height: 80vh;
+//     }
+// }
 
 //-----------------------------------------------------------------
 // HERO ITEM (SLIDES) - mostly applies to ZINE COVER
