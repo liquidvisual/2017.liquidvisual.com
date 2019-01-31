@@ -1,116 +1,23 @@
 /*
     HERO.CSS
 
-    - updated: 16.01.18
+    - updated: 20.12.18
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
 // VARIABLES
 //-----------------------------------------------------------------
-
-$hero-height-sm: auto;
-$hero-height-md: 100vh;
-$hero-height-lg: 1140px; //auto;
-$hero-height-xl: 1010px; //auto;
-$hero-height-xxl: 1140px; //auto;
-
 //-----------------------------------------------------------------
-// EDGE TO EDGE
-// heading img will hug sides
+// SECTION HERO
 //-----------------------------------------------------------------
 
-.lv-hero-wrapper.is-edge-to-edge > .container {
-    padding: 0;
-
-    @include media-breakpoint-down(lg) {
-        max-width: 100%;
-    }
-}
-
-//-----------------------------------------------------------------
-// HERO - CONTROLS HEIGHT
-//-----------------------------------------------------------------
-
-.lv-hero {
-    height: $hero-height-sm;
-    // overflow: hidden; // need?
-
-    @include media-breakpoint-up(md) {
-        height: $hero-height-md;
-    }
-
-    @include media-breakpoint-up(lg) {
-        height: $hero-height-lg;
-    }
+.section.section-hero > .container {
+    // flex-direction: row;
+    // align-items: flex-end;
 
     @include media-breakpoint-up(xl) {
-        height: $hero-height-xl;
-    }
-
-    @include media-breakpoint-up(xxl) {
-        height: $hero-height-xxl;
-    }
-
-    //=========================================
-    // HEIGHT PRESET 1
-    // used on internal pages
-    //=========================================
-
-    &.has-height-preset-1 {
-        height: auto;
-        background-position: center center;
-
-        @include media-breakpoint-up(xl) {
-           height: rem-calc(480); // [LOCKED]
-        }
-
-        .lv-hero-item {
-            align-items: flex-end; // margin auto failed on ie10
-            min-height: 0; // reverse possible option below
-        }
-    }
-}
-
-
-//=========================================
-// HEIGHT PRESET 2 delete me
-//=========================================
-
-// .lv-hero-wrapper.is-full .lv-hero {
-//     height: auto;
-
-//     @include media-breakpoint-up(md) {
-//         height: 80vh;
-//     }
-// }
-
-//-----------------------------------------------------------------
-// HERO ITEM (SLIDES) - mostly applies to ZINE COVER
-//-----------------------------------------------------------------
-
-.lv-hero-item {
-    position: relative; // [LOCKED]
-    display: flex;
-    width: 100%; // [LOCKED]
-    height: 100%; // [LOCKED]
-    // min-height: 100vh;
-    // background-repeat: no-repeat;
-    // background-position: center center;
-    // background-size: cover;
-
-    // account for topbar on mobile
-    @include media-breakpoint-down(sm) {
-        padding-top: $header-height-sm; // [LOCKED]
-    }
-
-    @include media-breakpoint-down(lg) {
-        background: none !important; // [LOCKED] - override bg parallax
-    }
-
-    // allows cover hero to hug viewport if 100vh above
-    > .container {
-        display: flex; // [LOCKED]
-        flex-direction: column; // [LOCKED]
+        min-height: rem-calc(480); // [LOCKED]
+        // min-height: rem-calc(400);
     }
 }
 
@@ -120,28 +27,28 @@ $hero-height-xxl: 1140px; //auto;
 //-----------------------------------------------------------------
 
 .lv-hero-item-caption {
-    width: 100%;
-    padding-top: rem-calc(70);
+    width: 100%; // [LOCKED] - required for hero title
+    padding-top: calc(#{$header-height-sm} + #{rem-calc(65)}); // [LOCKED] - account for topbar on mobile
+    // border: 1px dashed aqua;
 
     @include media-breakpoint-up(md) {
-        padding-top: rem-calc(230);
+        padding-top: rem-calc(230); // [LOCKED] - curated
     }
 
-    @include media-breakpoint-up(lg) {
-        padding-top: rem-calc(260);
+    @include media-breakpoint-up(xl) {
+        padding-top: rem-calc(180); //rem-calc(260); // [LOCKED] - curated
     }
 
     h1, .h1 {
         position: relative;
         top: rem-calc(3); // 2 is best but IE10
-        width: 100%;
-        // color: white;
+        // width: 100%;
         font-weight: 900;
     }
 
     p {
         font-size: rem-calc(16);
-        font-weight: 600; // good for now?
+        font-weight: 600;
     }
 
     a {

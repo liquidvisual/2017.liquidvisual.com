@@ -1,79 +1,72 @@
 {% comment %}
 <!--
-    LIQUIDVISUAL-HERO
+    SECTION-HERO
 
-    - updated: 23.08.18
-    - notes:
-        * .has-height-preset-1 - used for internal pages to set a height
-        * page.hero_text is an image path (not actual text)
+    - updated: 20.12.18
+    - NOTES:
+        * page.hero_title is an image path (not actual text)
 -->
 {% endcomment %}
 
 {% assign hero = page.hero | default: "/assets/img/content/hero/hero-bg.png" %}
-{% assign hero_text = page.hero_text %}
+{% assign hero_title = page.hero_title %}
 
 {% capture hero_classes %}
     {{ page.hero_classes }}
-    {% if hero_text %} is-edge-to-edge {% endif %}
+    {% if hero_title %} is-edge-to-edge {% endif %}
 {% endcapture %}
 
-<!-- HERO WRAPPER -->
-<section class="lv-hero-wrapper section is-lightX has-light-bleedX has-bleed-tintX has-image-bg has-fixed-bleed {{ hero_classes }}" style="background-image: url('{{ hero }}')">
-    <div class="container py-0">
+<!-- SECTION -->
+<section class="section section-hero has-image-bg has-fixed-bleed {{ hero_classes }}" style="background-image: url('{{ hero }}')">
+    <div class="container flex-row align-items-end py-0">
 
-        <!-- HERO -->
-        <div class="lv-hero has-height-preset-1">
-            <div class="lv-hero-item">
+        {% if hero_title %}
 
-                {% if hero_text %}
-
-                    <!-- HERO CAPTION #1 -->
-                    <div class="lv-hero-item-caption">
-                        {% if page.title_override %}
-                            <h2 class="h1 mb-0">
-                                <img width="100%" src="{{ hero_text }}" alt="{{ page.title }}">
-                            </h2>
-                        {% else %}
-                            <h1 class="mb-0">
-                                <img width="100%" src="{{ hero_text }}" alt="{{ page.title }}">
-                            </h1>
-                        {% endif %}
-                    </div>
-
+            <!-- HERO CAPTION #1 -->
+            <div class="lv-hero-item-caption">
+                {% if page.title_override %}
+                    <h2 class="h1 mb-0">
+                        <img width="100%" src="{{ hero_title }}" alt="{{ page.title }}">
+                    </h2>
                 {% else %}
-
-                    <!-- HERO CAPTION #2 -->
-                    <div class="lv-hero-item-caption mb-4">
-                        <div class="row">
-                            <div class="col-xl-11 text-center mx-auto">
-
-                                <!-- CATEGORY LABEL -->
-                                {% if page.categories %}
-                                    {% assign categories = page.categories | sort %}
-                                    {% for category in categories %}
-                                        <a class="btn-category mr-2 mb-2" href="/tutorials/categories/#{{ category | slugify }}">{{ category }}</a>
-                                    {% endfor %}
-                                {% endif %}
-
-                                <!-- DYNAMIC TEXT -->
-                                <h1 class="display-1 tagger">{{ page.title }}</h1>
-
-                                {% if page.author %}
-                                    <!-- AUTHOR AVATAR -->
-                                    <p class="d-flex align-items-center justify-content-center">
-                                        <img width="28" class="rounded-circle mr-2" src="/assets/img/content/avatars/avatar-mitch@2x.jpg" alt="Mitch">
-                                         <span>
-                                            by <a href="/hire/">{{ "Mitch Warren" }}</a> <span class="d-inline-block"> | {{ page.date | date: "%d %B %Y" }}</span>
-                                         </span>
-                                    </p>
-                                {% endif %}
-
-                            </div>
-                        </div>
-                    </div>
+                    <h1 class="mb-0">
+                        <img width="100%" src="{{ hero_title }}" alt="{{ page.title }}">
+                    </h1>
                 {% endif %}
-
             </div>
-        </div>
+
+        {% else %}
+
+            <!-- HERO CAPTION #2 -->
+            <div class="lv-hero-item-caption mb-4">
+                <div class="row">
+                    <div class="col-lg-11 text-center mx-auto">
+
+                        {% if page.categories %}
+                            <!-- CATEGORIES -->
+                            {% assign categories = page.categories | sort %}
+                            {% for category in categories %}
+                                <a class="btn-category mr-2 mb-2" href="/tutorials/categories/#{{ category | slugify }}">{{ category }}</a>
+                            {% endfor %}
+                        {% endif %}
+
+                        <!-- DYNAMIC TEXT -->
+                        <h1 class="display-1 tagger">{{ page.title }}</h1>
+
+                        {% if page.author %}
+                            <!-- AUTHOR INFO -->
+                            <p class="d-flex align-items-center justify-content-center">
+                                <img width="28" class="rounded-circle mr-2" src="/assets/img/content/avatars/avatar-mitch@2x.jpg" alt="Mitch">
+                                 <span>
+                                    by <a href="/hire/">{{ "Mitch Warren" }}</a> <span class="d-inline-block"> | {{ page.date | date: "%d %B %Y" }}</span>
+                                 </span>
+                            </p>
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
     </div>
 </section>

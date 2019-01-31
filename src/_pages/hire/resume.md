@@ -5,11 +5,11 @@ title_override: Mitch Warren
 subtitle: Web Developer & Designer
 permalink: /hire/resume/
 hero: /assets/img/content/hero/illuminated.jpg
+hero_title: /assets/img/layout/headings/heading-resume--light.svg
 hero_classes: has-bleed-tint
 theme: theme-light
 exclude_share_links: true
 logo: /assets/img/content/branding/logo-type--white-transparent.svg
-hero_text: /assets/img/layout/headings/heading-resume--light.svg
 breadcrumbs: true
 
 bio:

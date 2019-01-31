@@ -1,22 +1,28 @@
 ---
 layout: child_layout/tutorials_item
-title: Origami Email Newsletter Series
+title: Blarg! News
 permalink: /works/origami-email-newsletter-series/
 date: 2018-12-19
-categories: [design]
-hero: /assets/img/content/works/post-bg-2@2x.png
-hero_classes: has-bleed-tint
+#author: Dickhead
+#categories: [design]
+hero: /assets/img/content/works/post-bg-5@2x.png
+hero_title:
+hero_classes: has-bleed-tintX has-tintX is-light
 theme: theme-light
-logo: /assets/img/content/branding/logo-type--white-transparent.svg
+logo: /assets/img/content/branding/logo-type--dark.svg
 breadcrumbs: true
 ---
+
+<a href="/tutorials/embed-tagged-instagram-posts-with-the-new-api-changes/">click</a>
+
+<a href="/works/origami-email-newsletter-series/">Origami</a>
 
 <!-- <iframe id="myframe" width="100%" height="306px" src="/about/"></iframe>
 <iframe id="myframe" width="100%" height="306px" src="/services/"></iframe>
 <iframe id="myframe" width="100%" height="306px" src="/tutorials/"></iframe>
 <iframe id="myframe" width="100%" height="306px" src="/hire/"></iframe> -->
 
-{% comment %}
+
 
 
 <div class="row mb-4 px-4">
@@ -116,5 +122,5 @@ breadcrumbs: true
 		</div>
 	</div>
 </div>
-
+{% comment %}
 {% endcomment %}

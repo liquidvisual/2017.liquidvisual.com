@@ -173,7 +173,7 @@ $header-height-lg: 120px !default;
 
 		@include media-breakpoint-up(md) {
 			display: block; // [LOCKED] - applies to 'is-dynamic'
-			width: rem-calc(200);
+			width: rem-calc(190); ////rem-calc(200);
 		    padding: $spacer 0;
 		}
 

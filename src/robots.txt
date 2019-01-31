@@ -9,7 +9,6 @@ Disallow: /services/
 Disallow: /services/*
 Disallow: /tutorials/
 Disallow: /tutorials/*
-Disallow: /works/
 Disallow: /works/*
 Disallow: /hire/interview/
 
