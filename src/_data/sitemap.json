@@ -1,0 +1,106 @@
+{
+    "Home": {
+        "url": "/",
+    },
+    "About": {
+        "exclude": true,
+        "url": "/about/",
+        "children_excluded_from_nav": true,
+        "children": {
+            "How I work": {
+                "url": "/about/how-i-work/"
+            }
+        }
+    },
+    "Services": {
+        "exclude": true,
+        "url": "/services/",
+        "children_excluded_from_nav": false,
+        "children": {
+            "Digital Agency": {
+                "url": "/services/digital-agency/",
+                "dropdown_text": {
+                    "title": "Website Build",
+                    "body": "High performing static websites built with years of expertise. Fully versioned."
+                }
+            },
+            "Small Business": {
+                "url": "/services/small-business/",
+                "dropdown_text": {
+                    "title": "Website Design Packages",
+                    "body": "Modern website design with personality. Hand coded in HTML5"
+                }
+            }
+        }
+    },
+    "Works": {
+        "url": "/works/",
+        "children_excluded_from_nav": false,
+        "children": {
+            "Another Nerdy Podcast": {
+                "url": "/works/another-nerdy-podcast/",
+                "classes": "is-excluded-from-nav"
+            },
+            "BobbleHedz": {
+                "url": "/works/bobblehedz/",
+                "classes": "is-pending"
+            },
+            # "Slayday": {
+            #     "url": "/works/slayday/"
+            # },
+            "Loadshift": {
+                "url": "/works/loadshift/",
+                "featured": true,
+                "classes": "is-pending"
+            },
+            "Startup Onboarding Email Series": {
+                "url": "/works/startup-onboarding-email-series/"
+            },
+            "Rezillia": {
+                "url": "/works/rezillia/",
+                "classes": "is-pending"
+            },
+            "Blarg! News": {
+                "url": "/works/blarg-news/",
+                "classes": "is-pending"
+            },
+            "English Unlimited College": {
+                "url": "/works/english-unlimited-college/",
+                "featured": true
+            },
+            # "Jazzles Learning System": {
+            #     "url": "/works/jazzles-learning-system/",
+            # },
+            # "The Wedding Warren": {
+            #     "url": "/works/the-wedding-warren/"
+            # },
+            "Thomson Reuters": {
+                "url": "/works/thomson-reuters/",
+                "featured": true
+            },
+            "Dan & Mitch": {
+                "url": "/works/dan-and-mitch/",
+                "classes": "is-pending"
+            },
+            "Anne Uy": {
+                "url": "/works/anne-uy/"
+            },
+            "Mal Winter and the Cloud Runners": {
+                "url": "/works/mal-winter-and-the-cloud-runners/"
+            },
+            "Branding and Business Stationery": {
+                "url": "/works/branding-and-business-stationery/"
+            },
+            # "The Mitching Hour": {
+            #     "url": "/works/the-mitching-hour/"
+            # }
+        }
+    },
+    "Tutorials": {
+        "exclude": true,
+        "url": "/tutorials/"
+    },
+    "Hire": {
+        "url": "/hire/"
+    }
+}

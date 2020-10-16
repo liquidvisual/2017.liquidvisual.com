@@ -1,7 +1,7 @@
 /*
     HEADER.CSS
 
-    - updated: 26.12.16
+    - updated: 23.02.19
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -16,7 +16,7 @@ $header-height-lg: 120px !default;
 // HEADROOM
 //-----------------------------------------------------------------
 
-.headroom.global-header {
+.headroom .global-header {
     will-change: transform;
     transition: transform 250ms ease;
 
@@ -31,7 +31,7 @@ $header-height-lg: 120px !default;
 // PINNED - SCROLLING DOWN
 //****************************************************
 
-.headroom--pinned.global-header {
+.headroom--pinned .global-header {
 	@include media-breakpoint-down(md) { // mobile/tablet only
 	    transform: translateY(0%);
 	}
@@ -41,7 +41,7 @@ $header-height-lg: 120px !default;
 // UNPINNED - SCROLLING UP
 //****************************************************
 
-.headroom--unpinned.global-header {
+.headroom--unpinned .global-header {
 	@include media-breakpoint-down(md) { // mobile/portrait only
 		transform: translateY(-100%);
 		transition-delay: 1000ms; // delay for UX
@@ -57,7 +57,7 @@ $header-height-lg: 120px !default;
 // HEADROOM IS DISABLED FOR LARGE UP
 //****************************************************
 
-.headroom--not-top.headroom--pinned.global-header {
+.headroom--not-top.headroom--pinned .global-header {
 	@include media-breakpoint-up(lg) {
 	    display: none;
 	    opacity: 0; // [LOCKED]
@@ -69,7 +69,7 @@ $header-height-lg: 120px !default;
 // header is transparent when at top
 //****************************************************
 
-.headroom--top.global-header {
+.headroom--top .global-header {
 	background: none;
 	box-shadow: none;
 
@@ -91,7 +91,7 @@ $header-height-lg: 120px !default;
 // logo is dark over white on mobile
 //****************************************************
 
-.headroom--not-top.global-header {
+.headroom--not-top .global-header {
 	.logo img.is-dark {
 		@include media-breakpoint-down(sm) {
 		    display: block !important;
@@ -104,7 +104,7 @@ $header-height-lg: 120px !default;
 // md-up has custom dark header
 //****************************************************
 
-.headroom--not-top.headroom--pinned.global-header {
+.headroom--not-top.headroom--pinned .global-header {
 	@include media-breakpoint-up(md) {
 	    background: rgba(#111, 0.9);
 	}
@@ -116,7 +116,7 @@ $header-height-lg: 120px !default;
 // logo is default over dark on portrait
 //****************************************************
 
-.headroom--not-top.headroom--pinned.global-header {
+.headroom--not-top.headroom--pinned .global-header {
 	.logo img.is-dynamic {
 		@include media-breakpoint-up(md) {
 		    display: none !important;

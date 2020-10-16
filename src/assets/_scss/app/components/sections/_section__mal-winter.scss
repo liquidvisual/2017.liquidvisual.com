@@ -27,7 +27,8 @@ $cloud-speed: 10;
 
 	&:after {
 	    @include media-breakpoint-up(xl) {
-	        background-image: url(/assets/img/layout/page-shadow-knockout.png);
+	    	// [class*='is-'] <-- have to override this
+	        background-image: url(/assets/img/layout/page-shadow-knockout.png) !important;
 	    }
 	}
 

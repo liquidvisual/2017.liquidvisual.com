@@ -105,7 +105,7 @@
 		padding: em-calc(0 22);
 		border-radius: 100%;
 		text-align: center;
-		background: lighten($brand-secondary, 5%);
+		background: lighten($secondary, 5%);
 		overflow: hidden; // [SAFEGUARD]
 
 		.text {

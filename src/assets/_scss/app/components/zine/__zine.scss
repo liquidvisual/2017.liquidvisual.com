@@ -112,11 +112,11 @@
     .text-highlight-white {
         display: inline;
         position: relative;
-        background: $brand-primary;
+        background: $primary;
         font-size: rem-calc(16);
         line-height: 1.8; // closest could get it
         color: white;
-        box-shadow: 0 0 0 rem-calc(10) $brand-primary;
+        box-shadow: 0 0 0 rem-calc(10) $primary;
         box-decoration-break: clone; // [LOCKED]
     }
 

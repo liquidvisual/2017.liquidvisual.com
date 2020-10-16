@@ -17,8 +17,15 @@ layout: base__page
 
 				<!-- MITCH WARREN -->
 				<header class="mb-5 text-center text-md-left">
-					<h1 class="mb-1 display-1 text-capitalize">{{ title }}</span></h1>
-					<p class="h6 text-muted">{{ subtitle }}</p>
+
+					<h1 class="mb-1">
+						{{ title }}
+					</h1>
+
+					<p class="h5 text-muted">
+						{{ subtitle }}
+					</p>
+
 				</header>
 
 				{% comment %}
@@ -107,8 +114,8 @@ layout: base__page
 												<span class="d-inline-block mb-3 text-timeframe font-family-oswald">{{ item.timeframe }}</span>
 											</div>
 											<div class="col-md-8 order-md-first">
-												<h3 class="h4 subheader mb-2">{{ item.title }}</h3>
-												<h4 class="h6 font-family-sans-serif text-body-color text-body-color">{{ item.subtitle }}</h4>
+												<h3 class="h4 text-primary font-weight-bold mb-2">{{ item.title }}</h3>
+												<h4 class="h6 font-family-sans-serif" style="color: #555;">{{ item.subtitle }}</h4>
 											</div>
 										</div>
 									</header>

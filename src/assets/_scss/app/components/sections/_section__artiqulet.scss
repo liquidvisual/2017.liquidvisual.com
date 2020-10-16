@@ -149,6 +149,39 @@
 //-----------------------------------------------------------------
 //
 //-----------------------------------------------------------------
+
+.section-artiqulet.is-article {
+	> .container {
+		padding-top: rem-calc(152);
+		// padding-top: rem-calc(152);
+		// padding-top: rem-calc(200);
+		padding-bottom: rem-calc(200);
+		// background: inherit !important; // [FORCE OVERRIDE] - place bg on lower layer
+	}
+
+	// REFACTOR THIS MITCH!
+	a.btn-category {
+		border-color: yellow;
+		color: yellow !important;
+	}
+
+	.swatches {
+		// position: absolute;
+		// top: 42%;
+		// right: -24%;
+		// width: 54%;
+		// z-index: 1;
+
+		@include media-breakpoint-up(md) {
+			bottom: 3%;
+			width: 25%;
+		}
+
+		@include media-breakpoint-up(lg) {
+	    	bottom: 1%;
+		}
+	}
+}
 //=========================================
 //
 //=========================================

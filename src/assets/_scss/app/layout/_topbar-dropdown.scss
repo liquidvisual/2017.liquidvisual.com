@@ -76,7 +76,7 @@
     border-radius: 5px 5px 0 0;
 }
 
-.lv-topbar .dropdown li:last-child {
+.lv-topbar .dropdown[data-parent="Services"] li:last-child {
     border: 0;
     padding: rem-calc(30 4 20 4);
     border-radius: 0 0 5px 5px;
@@ -104,12 +104,12 @@
 
 .lv-topbar .dropdown li:nth-child(odd) h5,
 .lv-topbar .dropdown li:nth-child(odd) .h5 {
-    color: $brand-primary;
+    color: $primary;
 }
 
 .lv-topbar .dropdown li:nth-child(even) h5,
 .lv-topbar .dropdown li:nth-child(even) .h5 {
-    color: $brand-secondary;
+    color: $secondary;
 }
 
 //=========================================
@@ -152,7 +152,7 @@
             font-size: rem-calc(14);
             text-transform: uppercase;
             // color: rgba(black, 0.4);
-            color: $brand-primary;
+            color: $primary;
         }
 
         p {
@@ -165,6 +165,27 @@
 
     .text {
         color: white;
+    }
+}
+
+//-----------------------------------------------------------------
+// DROPDOWN GENERIC
+//-----------------------------------------------------------------
+
+.lv-topbar .dropdown[data-parent="Works"] {
+    li {
+        padding: 0;
+        border-radius: 0;
+
+        &:hover a {
+            color: $primary;
+        }
+
+        a {
+            padding: rem-calc(8 10);
+            color: #777;
+            text-align: left;
+        }
     }
 }
 

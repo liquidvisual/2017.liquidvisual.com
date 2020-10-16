@@ -1,0 +1,73 @@
+---
+layout: base__page
+---
+
+{% assign works = site.data.sitemap.Works.children %}
+
+{% contentfor tagline %}
+	<!-- CONTENTS -->
+	<div class="section-projects-contents">
+
+		<!-- CONTENTS -->
+		<p class="image mb-4">
+			<img width="330" src="/assets/img/content/works/contents.svg" alt="Contents">
+		</p>
+
+		<!-- LIST SET 1 -->
+		<ul class="list-set-1 list-unstyled text-md-right mb-0">
+			{% for item in works limit: 9 %}
+				<li><span class="number">{% if forloop.index < 10 %}0{% endif %}{{forloop.index}}.</span> <a href="{{ item[1].url }}">{{ item[0] }}</a></li>
+			{% endfor %}
+		</ul>
+
+		<!-- LIST SET 2 -->
+		<ul class="list-set-2 list-unstyled text-md-left">
+			{% for item in works offset: 9 %}
+				<li><span class="number">{{ forloop.index | plus: 10 }}.</span> <a href="{{ item[1].url }}">{{ item[0] }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endcontentfor %}{% comment %}
+{% endcomment %}
+
+{% include works/ANP_bobblehedz_slayday.html %}
+
+{% include works/loadshift.html %}
+
+{% include works/startup_onboarding_email_series.html %}
+
+<!-- TAGLINE (MAKE COMPONENT?) -->
+<section class="section is-darker has-darker-bleed" hiddenX>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-11 col-lg-9 text-center">
+				<h2 class="mb-0 py-4">
+					<span class="text-primary">Coding everything I design</span> ensures nothing gets lost in translation.</span>
+				</h2>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% include works/blarg_news_rezillia.html %}
+
+{% include works/english_unlimited_college.html %}
+
+<!-- { % include works/jazzles.html %} -->
+
+{% include works/thomson_reuters.html %}
+
+{% include works/dan_and_mitch.html %}
+
+{% include works/anne_uy.html %}
+
+{% include works/mal_winter_and_the_cloud_runners.html %}
+
+{% include works/branding_and_business_stationery.html %}
+
+{% comment %}
+<div class="lv-alert-bar work-alert" style="pointer-events: none;">
+    <p><span class="text-warning">Hello stranger!</span> I'm still writing content for this page, so please check back soon.</p>
+    <span style="pointer-events: auto;" class="lv-alert-bar-close-btn">&times;</span>
+</div>
+{% endcomment %}

@@ -16,9 +16,11 @@ $gray-light-bleed: desaturate(darken($gray-light, 4%), 1%); // coincides with bl
 
 .theme-light {
 	background-color: $gray-light-bleed; // for body before load
+}
 
-	.lv-page { // for off-canvas
-		background: $gray-light-bleed;
+.theme-dark-nav {
+	.lv-topbar > ul {
+		background-color: rgba(black, 0.22);
 	}
 }
 

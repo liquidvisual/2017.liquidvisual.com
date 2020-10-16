@@ -23,6 +23,7 @@ body,
 // }
 
 // so far - eng unlimited uses this, and branding cards - html covers ipad case (body creates scroll glitches on iphone)
+// ** UPDATE from GNL - 03.07.19 - try only on body (omit html) - works beter with modals ******
 html, body {
 	overflow-x: hidden;
 }
@@ -35,6 +36,11 @@ body {
 	 -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	         font-smoothing: antialised;
+
+	         // background-image: url(/assets/img/layout/page-shadow.png);
+	         // background-repeat: repeat-y;
+	         // background-position: center top;
+	         // background-size: rem-calc(1400); // [LOCKED] - image size
 }
 
 //-----------------------------------------------------------------
@@ -53,12 +59,7 @@ body {
 	@include media-breakpoint-up(md) {
 		content: "";
 		display: block;
-	    // height: rem-calc(646); // [LOCKED] - tested
-	    height: rem-calc(450); // will require tweaking whenever footer changes
-	}
-
-	@include media-breakpoint-up(lg) {
-	    height: rem-calc(418); // [LOCKED] - tested
+	    height: rem-calc(418); //rem-calc(450); // will require tweaking whenever footer changes
 	}
 }
 

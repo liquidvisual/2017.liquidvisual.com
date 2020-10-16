@@ -25,11 +25,6 @@
 	    background-size: 50% 100%;
 	}
 
-	.wysiwyg {
-		position: relative;
-		z-index: 1;
-	}
-
 	h1, h2, h3, h4, h5, h6,
 	p {
 		@include media-breakpoint-up(md) {
@@ -109,6 +104,16 @@
 		    left: rem-calc(100);
 		}
 	}
+}
+
+//-----------------------------------------------------------------
+// ENGLISH UNLIMITED -- ARTICLE
+//-----------------------------------------------------------------
+
+.section-english-unlimited.is-article > .container {
+	padding-top: rem-calc(152);
+	// padding-bottom: rem-calc(152);
+	// padding-bottom: rem-calc(154);
 }
 
 //-----------------------------------------------------------------

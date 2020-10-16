@@ -45,13 +45,13 @@
 .lv-topbar ul {
     padding: 0; // [RESET]
     margin: 0;  // [RESET]
-    border: 1px solid white; //rgba(white, 0.7);
+    // border: 1px solid rgba(white, 0.5); //rgba(white, 0.7);
     border-radius: $border-radius;
-    background: rgba(white, 0.12);
-    // background: rgba(black, 0.12);
+    // background: rgba(white, 0.12);
+    background: $gray-darker; //linear-gradient(to right, $secondary 0%,$primary  100%); //$gray-darker; //rgba(black, 0.12);
     list-style: none; // [RESET]
     // font-family: $headings-font-family;
-    font-size: rem-calc(16);
+    font-size: rem-calc(15); // 16
 }
 
 //=========================================
@@ -66,9 +66,19 @@
         margin: 0; // [RESET]
     }
 
-    > li:first-child a { border-radius: $border-radius 0 0 $border-radius; }
-    > li:last-child a  { border-radius: 0 $border-radius $border-radius 0; }
+    a[data-alias="home"] {
+        border-radius: $border-radius 0 0 $border-radius;
+    }
+
+    a[data-alias="hire"] {
+        border-radius: 0 $border-radius $border-radius 0;
+    }
 }
+
+// in case you want downward arrows
+// .lv-topbar > ul > li > a > .submenu-arrow {
+//     display: none;
+// }
 
 //-----------------------------------------------------------------
 // ALL ANCHORS (INCL. DROPDOWN CHILDREN)
@@ -89,7 +99,7 @@
 // TOP PARENT ANCHORS (NAV)
 //-----------------------------------------------------------------
 
-.lv-topbar .top-parent-anchor {
+.lv-topbar > ul > li > a {
     display: block; // [LOCKED]
     padding: rem-calc(0 20);
     line-height: 44px; // [LOCKED]
@@ -105,13 +115,14 @@
 // HOVER, ACTIVE
 //=========================================
 
-.lv-topbar .top-parent-anchor:hover {
-    background: rgba(black, 0.1);
+.lv-topbar > ul > li > a:hover {
+    // background: rgba(black, 0.1);
+    background: rgba(black, 0.04);
 }
 
-.lv-topbar .active .top-parent-anchor {
-    background: rgba(white, 0.15);
-    // background: rgba(black, 0.12);
+.lv-topbar > ul > li.active a  {
+    // background: rgba(white, 0.15);
+    background: rgba(black, 0.1);
 }
 
 //-----------------------------------------------------------------
@@ -136,7 +147,7 @@
 //-----------------------------------------------------------------
 
 .lv-topbar .dropdown {
-    display: none; // [OPT IN DESIGN / OFF CANVAS ETC]
+    // display: none; // [OPT IN DESIGN / OFF CANVAS ETC]
     position: absolute;
     left: 0;
     width: rem-calc(240);
@@ -161,8 +172,8 @@
     left: auto;
 }
 
-.lv-topbar .dropdown.is-nav-included {
-    display: block;
+.lv-topbar .is-excluded-from-nav {
+    display: none;
 }
 
 //=========================================
@@ -178,6 +189,27 @@
         color: #444;
         transition: none; // [LOCKED]
     }
+
+    &.is-pending {
+        a {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            &:after {
+                content: "";
+                width: 6px;
+                height: 6px;
+                margin-left: auto;
+                background: $danger;
+                border-radius: 100%;
+            }
+        }
+    }
+}
+
+.lv-topbar .dropdown li.is-excluded-from-dropdown {
+    display: none;
 }
 
 //=========================================

@@ -1,0 +1,88 @@
+---
+layout: base__page_full
+---
+
+{% assign hero = page.hero | default: '/assets/img/content/hero/swirl-5.png' %}
+
+<!-- SPREAD TEMPLATE A -->
+<section class="section is-dark has-light-bleedX has-bleed-tint has-image-bg" style="background-image: url({{ hero }})">
+    <div class="container">
+
+		<!-- HERO -->
+    	<section class="section pt-4 mt-5 mb-4">
+			<div class="row">
+				<div class="col-md-6">
+
+					<!-- CATEGORIES -->
+					{% if page.categories %}
+					    <div>
+						    {% assign categories = page.categories | sort %}
+						    {% for category in categories %}
+						        <a class="btn-category mr-1 mb-2" href="/tutorials/categories/#{{ category | slugify }}">
+						        	{{ category }}
+						        </a>
+						    {% endfor %}
+					    </div>
+					{% endif %}
+
+					<!-- HEADING -->
+			        <h1 class="display-1 text-uppercase mb-4">
+			            {{ page.title }}
+			        </h1>
+
+					<!-- LEAD -->
+			        <p class="lead">
+			        	An offbeat unsuccessful YouTube channel about movies, comics and popular culture.
+			        </p>
+
+				</div>
+			</div>
+		</section>
+
+		{% if page.breadcrumbs %}
+			{% include snippets/breadcrumbs.html %}
+		{% endif %}
+
+		<!-- CONTENT #1 -->
+		<section class="section mb-4">
+	        <div class="row">
+				<div class="col-md-9">
+					<div class="dropcapX" style="column-count: 2; column-gap: 50px;">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labovre et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labovre et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<p><img width="100%" src="https://placehold.it/384x194" alt="..."></p>
+					<p><img width="100%" src="https://placehold.it/384x194" alt="..."></p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section mb-4">
+			<div class="row">
+				<div class="col-md-5">
+
+					<p><img width="100%" src="https://placehold.it/384x194" alt="..."></p>
+					<p><img width="100%" src="https://placehold.it/384x194" alt="..."></p>
+					<p><strong><em>Lorem ipsum dolor sit amet, consectetur.</em></strong></p>
+
+				</div>
+				<div class="col-md-7 pr-5">
+					<hr>
+						<p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<hr class="mb-4">
+
+					<div class="row">
+						<div class="col-md-12">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<p><img width="100%" src="https://placehold.it/384x194" alt="..."></p>
+
+		</section>
+
+    </div>
+</section>

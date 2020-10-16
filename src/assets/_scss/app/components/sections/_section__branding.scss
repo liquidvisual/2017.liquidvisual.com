@@ -109,6 +109,40 @@ _:-ms-fullscreen,
 }
 
 //-----------------------------------------------------------------
+// IS ARTICLE
+//-----------------------------------------------------------------
+
+.section-branding.is-article {
+
+	.business-cards {
+		@include media-breakpoint-up(lg) {
+
+		}
+
+		img {
+
+			// @include media-breakpoint-up(md) {
+			//     width: 130%; // [LOCKED] - perfect
+			// }
+
+			@include media-breakpoint-up(lg) {
+				position: relative;
+				left: 5%;
+			    width: 110%; // 116
+			}
+		}
+	}
+
+	> .container {
+		// padding-top: rem-calc(152);
+		// padding-top: rem-calc(100);
+		padding-top: rem-calc(200);
+		padding-bottom: rem-calc(200);
+		background: inherit !important; // [FORCE OVERRIDE] - place bg on lower layer
+	}
+}
+
+//-----------------------------------------------------------------
 //
 //-----------------------------------------------------------------
 //=========================================

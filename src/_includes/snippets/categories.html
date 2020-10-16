@@ -1,0 +1,11 @@
+<!-- CATEGORIES -->
+{% if page.categories %}
+    <div>
+	    {% assign categories = page.categories | sort %}
+	    {% for category in categories %}
+	        <a class="btn-category mr-1 mb-2" href="/tutorials/categories/#{{ category | slugify }}">
+	        	{{ category }}
+	        </a>
+	    {% endfor %}
+    </div>
+{% endif %}

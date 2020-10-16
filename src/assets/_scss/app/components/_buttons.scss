@@ -12,7 +12,6 @@
 //-----------------------------------------------------------------
 
 .btn-primary,
-.btn-primary.disabled,
 .btn-secondary {
 	padding: rem-calc(12 20 10 20); // [LOCKED]
 
@@ -20,7 +19,7 @@
 	padding-bottom: 10px;
 
 	border: 0; // [LOCKED] - reset
-	border-bottom: 3px solid darken($brand-secondary, 20%);
+	border-bottom: 3px solid darken($secondary, 20%);
 	line-height: 1.2; // [LOCKED] - for multiline
 	box-shadow: 0 1px 2px 0px rgba(black, 0.2); // [LOCKED] - subtle
 	will-change: background-color, border-color, color, transform;
@@ -37,8 +36,8 @@
 
 	&:hover,
 	&:active {
-		background: lighten($brand-secondary, 15%) !important; // [LOCKED]
-		border-bottom: 3px solid darken($brand-secondary, 10%); // [LOCKED]
+		background: lighten($secondary, 15%) !important; // [LOCKED]
+		border-bottom: 3px solid darken($secondary, 10%); // [LOCKED]
 		transform: translateZ(0) scale(1.048); // [LOCKED] - smooth for Chrome
 	}
 
@@ -78,25 +77,25 @@
 // SECONDARY (GHOST BUTTON)
 //-----------------------------------------------------------------
 
-.btn-secondary {
-	border: 0;
-	background: none;
-	color: $brand-secondary;
-	box-shadow: 0 0 0 2px $brand-secondary;
+// .btn-outline-secondary {
+// 	border: 0;
+// 	background: none;
+// 	color: $secondary;
+// 	box-shadow: 0 0 0 2px $secondary;
 
-	&:hover,
-	&:active {
-		position: relative;
-		top: 2px;
-		box-shadow: none;
-		margin-top: -3px; // tricky
-	}
+// 	&:hover,
+// 	&:active {
+// 		position: relative;
+// 		top: 2px;
+// 		box-shadow: none;
+// 		margin-top: -3px; // tricky
+// 	}
 
-	&:active {
-		border-bottom: 2px solid darken($brand-secondary, 15%) !important;
-		margin-top: -2px;
-	}
-}
+// 	&:active {
+// 		border-bottom: 2px solid darken($secondary, 15%) !important;
+// 		margin-top: -2px;
+// 	}
+// }
 
 //-----------------------------------------------------------------
 // CATEGORY - used in tuts item
@@ -110,6 +109,11 @@
 	line-height: 1.1;
 	text-transform: uppercase;
 	color: $yellow !important;
+}
+
+.is-light .btn-category {
+	border-color: $primary;
+	color: $primary !important;
 }
 
 //=========================================

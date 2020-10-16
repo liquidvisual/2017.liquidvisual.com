@@ -1,7 +1,7 @@
 /*
     HERO.CSS
 
-    - updated: 20.12.18
+    - updated: 05.05.19
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -9,21 +9,21 @@
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 // SECTION HERO
+// https://stackoverflow.com/questions/19371626/flexbox-not-centering-vertically-in-ie
 //-----------------------------------------------------------------
 
-.section.section-hero > .container {
-    // flex-direction: row;
-    // align-items: flex-end;
+.section.section-hero {
+    display: flex;
 
-    @include media-breakpoint-up(xl) {
-        min-height: rem-calc(480); // [LOCKED]
-        // min-height: rem-calc(400);
+    > .container {
+        @include media-breakpoint-up(xl) {
+            min-height: rem-calc(480); // [LOCKED]
+        }
     }
 }
 
 //-----------------------------------------------------------------
 // HERO ITEM CAPTION
-// Used only right now on tutorial item
 //-----------------------------------------------------------------
 
 .lv-hero-item-caption {
@@ -39,18 +39,23 @@
         padding-top: rem-calc(180); //rem-calc(260); // [LOCKED] - curated
     }
 
+    //-----------------------------------------------------------------
+    // This only applies to tutorial item right now
+    //-----------------------------------------------------------------
+
     h1, .h1 {
         position: relative;
         top: rem-calc(3); // 2 is best but IE10
-        // width: 100%;
-        font-weight: 900;
+        font-weight: 800;
     }
 
-    p {
+    // EG. by Mitch Warren | 03 February 2015
+    .lv-hero-item-caption-author {
         font-size: rem-calc(16);
         font-weight: 600;
     }
 
+    // EG. author link
     a {
         color: rgba(black, 0.4);
         transition: opacity 200ms ease;

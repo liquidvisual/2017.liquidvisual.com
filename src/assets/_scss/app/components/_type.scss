@@ -2,7 +2,6 @@
     TYPE.CSS
 
     - updated: 09.01.18
-    - liquidvisual.com
 */
 //--------------------------------------------------------------------
 // VARIABLES
@@ -18,13 +17,69 @@ html {
 }
 
 //-----------------------------------------------------------------
+// HEADINGS
+//-----------------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	// word-wrap: break-word; // experiment
+	// transform: scaleX(0.93);
+	// transform-origin: left;
+	// -webkit-text-size-adjust: none;
+
+	small { // superfluous so far
+		font-family: $font-family-sans-serif;
+		font-weight: $font-weight-bold;
+		color: darken($gray-light, 35%);
+	}
+
+	&.subheader {
+		font-weight: 600; // is 500 necessary?
+	}
+}
+
+//-----------------------------------------------------------------
+// DISPLAY HEADINGS
+//-----------------------------------------------------------------
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+	// text-transform: uppercase;
+	// line-height: 1.1;
+	// line-height: 0.9; // comment
+}
+
+//-----------------------------------------------------------------
+// HEADINGS MOBILE
+//-----------------------------------------------------------------
+
+@include media-breakpoint-down(sm) {
+    h1, .h1 { font-size: calc(#{$h1-font-size} - 64%); }
+    h2, .h2 { font-size: calc(#{$h2-font-size} - 40%); }
+    h3, .h3 { font-size: calc(#{$h3-font-size} - 20%); }
+    h4, .h4 { font-size: calc(#{$h4-font-size} - 24%); }
+    h5, .h5 { font-size: calc(#{$h5-font-size} - 15%); }
+    // h6, .h6 { font-size: calc(#{$h6-font-size} - 2%); }
+}
+
+@include media-breakpoint-down(sm) {
+	.display-1 { font-size: $h1-font-size; }
+	// .display-1 { font-size: calc(#{$display1-size} - 100%); }
+    // .display-2 { font-size: calc(#{$display1-size} - 100%) !important; }
+    // .display-3 { font-size: calc(#{$display1-size} - 100%) !important; }
+    // .display-4 { font-size: calc(#{$display1-size} - 100%) !important; }
+}
+
+//-----------------------------------------------------------------
 // ANCHORS
 //-----------------------------------------------------------------
 
 a, button {
-	font-weight: bold;
-	transition: color ease 300ms, background-color ease 300ms;
+	font-weight: $font-weight-bolder;
 	word-break: break-word; // handles long links in safari
+	transition: color ease 300ms, background-color ease 300ms;
 }
 
 //-----------------------------------------------------------------
@@ -32,8 +87,8 @@ a, button {
 //-----------------------------------------------------------------
 
 [data-toggle="tooltip"] {
-	// padding-bottom: rem-calc(2);
-	border-bottom: 2px dotted rgba($brand-primary, 0.7);
+	padding-bottom: rem-calc(2);
+	border-bottom: 2px dotted rgba($primary, 0.7);
 	cursor: help;
 }
 
@@ -55,7 +110,7 @@ p, ul, ol, td {
 
 p.lead {
 	margin-bottom: $spacer*2;
-	font-weight: 500;
+	line-height: 1.4;
 
 	@include media-breakpoint-down(sm) {
 	    font-size: rem-calc(21); // [LOCKED] - special order
@@ -71,7 +126,7 @@ p.lead {
 	font-size: $lead-font-size;
 	font-weight: 500;
 	font-style: italic;
-	color: $brand-primary;
+	color: $primary;
 
 	@include media-breakpoint-down(sm) {
 	    font-size: rem-calc(21); // [LOCKED] - special order
@@ -99,82 +154,37 @@ p.lead {
 // DROPCAP
 //=========================================
 
-.dropcap::first-letter {
+.dropcap::first-letter,
+.dropcap > p::first-letter {
 	margin: rem-calc(0 5 0 -5);
 	float: left;
 	font-size: rem-calc(64); // [LOCKED] - check other browsers
 	font-weight: 400;
 	line-height: 1;
 	// line-height: rem-calc(60);
-	color: $brand-primary;
+	color: $primary;
 }
 
 //-----------------------------------------------------------------
-// HEADINGS
+// SPACER / DIVIDER / HR
 //-----------------------------------------------------------------
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-	// word-wrap: break-word; // experiment
-	// transform: scaleX(0.93);
-	// transform-origin: left;
-	// -webkit-text-size-adjust: none;
-
-	small { // superfluous so far
-		font-family: $font-family-sans-serif;
-		font-weight: normal;
-		color: darken($gray-light, 35%);
-	}
-
-	&.subheader {
-		font-weight: 600; // is 500 necessary?
-		color: $brand-primary !important;
-	}
+.spacer {
+	width: 1px;
+	height: 1px;
 }
-
-//-----------------------------------------------------------------
-// DISPLAY HEADINGS
-//-----------------------------------------------------------------
-
-.display-1,
-.display-2,
-.display-3,
-.display-4 {
-	text-transform: uppercase;
-	line-height: 1.1;
-}
-
-//-----------------------------------------------------------------
-// HEADINGS MOBILE
-//-----------------------------------------------------------------
-
-@include media-breakpoint-down(sm) {
-    h1, .h1 { font-size: calc(#{$h1-font-size} - 64%); }
-    h2, .h2 { font-size: calc(#{$h2-font-size} - 40%); }
-    h3, .h3 { font-size: calc(#{$h3-font-size} - 20%); }
-    h4, .h4 { font-size: calc(#{$h4-font-size} - 24%); }
-    h5, .h5 { font-size: calc(#{$h5-font-size} - 15%); }
-    // h6, .h6 { font-size: calc(#{$h6-font-size} - 2%); }
-}
-
-@include media-breakpoint-down(sm) {
-	.display-1 { font-size: $h1-font-size; }
-	// .display-1 { font-size: calc(#{$display1-size} - 100%); }
-    // .display-2 { font-size: calc(#{$display1-size} - 100%) !important; }
-    // .display-3 { font-size: calc(#{$display1-size} - 100%) !important; }
-    // .display-4 { font-size: calc(#{$display1-size} - 100%) !important; }
-}
-
-//-----------------------------------------------------------------
-// DIVIDER / HR
-//-----------------------------------------------------------------
 
 .divider {
-	margin: $spacer*1.5 0 $spacer*2 0;
 	height: 2px;
 	border: 0;
-	background: $brand-primary;
-	background: linear-gradient(to right,  $brand-primary 0%,$brand-secondary 100%);
+	margin: $spacer*1.5 0 $spacer*2 0;
+	background: linear-gradient(to right, $primary 0%, $secondary 100%);
+
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-resolution: 192dpi) {
+	    height: 1.5px;
+	}
 }
 
 hr {
@@ -188,25 +198,17 @@ hr {
 }
 
 //-----------------------------------------------------------------
-// UTILITIES
+// FONT FAMILIES
 //-----------------------------------------------------------------
 
-.brand-primary-color   { color: $brand-primary !important; } // these can be replaced with text-color-primary eg
-.brand-secondary-color { color: $brand-secondary !important; }
-.text-body-color       { color: #555 !important; } // wtf?
-
 .font-family-oswald {
-	font-family: 'Oswald', sans-serif;
+	font-family: Oswald;
 	font-weight: 600;
 }
 
-.font-weight-thin {
-	font-weight: 300;
-}
-
-.spacer {
-	width: 1px;
-	height: 1px;
+.font-family-times {
+	font-family: Times;
+	font-weight: 400;
 }
 
 //=========================================

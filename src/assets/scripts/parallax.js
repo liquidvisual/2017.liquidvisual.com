@@ -52,6 +52,44 @@ for (var i = 0; i < parallaxElements.length; i++) {
 //-----------------------------------------------------------------
 //
 //-----------------------------------------------------------------
+
+function launchParallax() {
+
+    // DAN EYES PARALLAX
+    const danHead = document.querySelector('.sprite-dan-head');
+
+    if (danHead) {
+        new Parallax(danHead, {
+            invertX: false,
+            invertY: false,
+            limitX: 15,
+            limitY: 15,
+        });
+    }
+
+    // // MITCH EYES PARALLAX
+    const mitchHead = document.querySelector('.sprite-mitch-head');
+
+    if (mitchHead) {
+        new Parallax(mitchHead, {
+            invertX: false,
+            invertY: true,
+            limitX: 10,
+            limitY: 20,
+        });
+    }
+}
+
+launchParallax();
+
+//==================================================
+// CUT DAN'S HAIR (FRILL)
+//==================================================
+
+// $('.sprite-dan-torso.has-long-hair').click(function(){
+//     $(this).toggleClass('has-long-hair');
+// });
+
 //==================================================
 //
 //==================================================

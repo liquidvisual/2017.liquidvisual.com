@@ -71,10 +71,9 @@ details:
       - Bootstrap<br>
       - Github<br>
       - Jekyll<br>
-      - JQuery<br>
       - Netlify CMS<br>
       - Sass<br>
-      - Vue.js / Vuex
+      - Vue.js + Vuex
 
   - title: Software
     body: |

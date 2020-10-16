@@ -2,8 +2,7 @@
 /*
     MAIN.CSS
 
-    - Last updated: 30.11.18
-    - liquidvisual.com
+    - updated: 25.02.19
 */
 //-----------------------------------------------------------------
 // MIXINS
@@ -58,9 +57,8 @@
 @import "liquidvisual/components/alert-bar";
 @import "liquidvisual/components/block-grid";
 @import "liquidvisual/components/custom";
-@import "liquidvisual/components/toolbox";
-// @import "liquidvisual/vendor/magnific-popup/main";
 @import "liquidvisual/vendor/syntax-highlighting";
+@import "liquidvisual/components/toolbox";
 
 //-----------------------------------------------------------------
 // NODE DEPENDENCIES

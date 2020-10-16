@@ -21,7 +21,7 @@
 	}
 }
 
-_:-ms-fullscreen,
+_:-ms-fullscreen, // IE11?
 :root .global-footer {
 	@include media-breakpoint-up(md) {
 		z-index: -1; // can't click icons though :/
@@ -34,7 +34,8 @@ _:-ms-fullscreen,
 
 .global-footer .sprite-long-drip {
 	position: absolute;
-	top: rem-calc(-100);
+	// top: rem-calc(-100);
+	top: rem-calc(-60);
 	right: 0;
 	font-size: 6px;
 
@@ -63,7 +64,7 @@ _:-ms-fullscreen,
 	h1, h2, h3, h4, h5, h6 {
 		font-size: rem-calc(13);
 		text-transform: uppercase;
-		color: $brand-primary;
+		color: $primary;
 	}
 
 	p, ul {
@@ -101,7 +102,7 @@ _:-ms-fullscreen,
 	}
 
 	a {
-		color: $brand-primary;
+		color: $primary;
 	}
 
 	//=========================================

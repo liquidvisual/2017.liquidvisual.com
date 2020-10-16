@@ -1,7 +1,7 @@
 /*
     PRINT.CSS
 
-    - updated: 23.08.18
+    - updated: 06.03.19
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -46,10 +46,10 @@
     	}
     }
 
-	.breadcrumb-wrapper,
+	.section-breadcrumbs,
+    .section-hero,
     .global-header,
     .global-footer,
-    .lv-hero-wrapper, // not used anymore
     .lv-off-canvas,
     .lv-screen-data,
     #lv-page-loader,
@@ -59,8 +59,6 @@
         visibility: hidden !important;
     }
 }
-
-
 
 //-----------------------------------------------------------------
 //

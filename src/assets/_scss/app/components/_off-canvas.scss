@@ -1,7 +1,7 @@
 /*
     OFF-CANVAS.CSS
 
-    - Last updated: 16.04.18
+    - Last updated: 04.03.19, 16.04.18
     - liquidvisual.com
 
     - latest update removes 'off-canvas' effect and transforms.
@@ -12,7 +12,7 @@
 //-----------------------------------------------------------------
 
 $body-bg: white !default;
-$menu-bg-color: black; //darken(#3e3e4b, 15%);
+$menu-bg-color: lighten($gray-dark, 10%); //darken(#3e3e4b, 15%);
 $menu-width-xs: 267px;
 $menu-width-md: 350px;
 $hamburger-width: 28px;
@@ -160,6 +160,8 @@ $hamburger-slit-height: 3px;
 //-----------------------------------------------------------------
 
 .lv-off-canvas ul {
+	display: flex; // 04.03.19 -- added for switching social media order, due to insane liquid shortfall
+	flex-direction: column; // 04.03.19
 
 	li {
 		border-bottom: 1px solid rgba(white, 0.1);
@@ -306,7 +308,7 @@ $hamburger-slit-height: 3px;
 	}
 
 	.lv-hamburger-middle {
-		background: rgba(black, 0.6) !important; // [LOCKED] - override theming
+		background: rgba(black, 0.8) !important; // [LOCKED] - override theming
 		position: fixed;
 		top: 0;
 		left: 0;

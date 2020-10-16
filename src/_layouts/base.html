@@ -35,17 +35,15 @@
     <!-- CDN -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Source+Code+Pro:500,600|Oswald:300,500,600">
 
-    <!-- PRIORITY SCRIPTS -->
-    <script src="https://unpkg.com/vue/dist/vue{% unless site.environment == 'development' %}.min{% endunless %}.js"></script>
-    <script>Vue.config.productionTip = false;</script>
-    <script src="/tutorials/posts.js"></script>
-
     <!-- build:css({src,.tmp}) /assets/css/minified.css -->
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css">
     <!-- endbuild -->
 
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <!-- build:js({src,.}) /assets/scripts/vue.js -->
+    <script src="/node_modules/vue/dist/vue{% unless site.environment == 'development' %}.min{% endunless %}.js"></script>
+    <script>Vue.config.productionTip = false;</script>
+    <!-- endbuild -->
 
 </head>
 <body class="{{ page.theme }}">
@@ -55,14 +53,14 @@
     <div class="lv-page">
 
         <!-- HEADER -->
-        <header class="global-header fixed-top">
+        <header class="global-header">
             <div class="container">
                 {% include header.html %}
 
                 <!-- NAVIGATION -->
                 <nav class="global-navigation hidden-md-down">
                     <div class="lv-topbar">
-                        {% include snippets/navigation.html %}
+                        {% include snippets/nav.html %}
                     </div>
                 </nav>
             </div>
@@ -79,7 +77,7 @@
 
     <!-- OFF-CANVAS MENU -->
     <nav class="lv-off-canvas" data-off-canvas-menu aria-hidden="true">
-        {% include snippets/navigation.html %}
+        {% include snippets/nav.html %}
     </nav>
 
     <!--[if lte IE 9]>
@@ -96,18 +94,17 @@
     <script src="/node_modules/popper.js/dist/umd/popper.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="/node_modules/bootstrap-validator/dist/validator.js"></script>
-    <script src="/node_modules/bootstrap-validator/dist/validator.js"></script>
     <script src="/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js"></script>
+    <script src="/node_modules/headroom.js/dist/headroom.js"></script>
     <script src="/node_modules/vanilla-tilt/dist/vanilla-tilt.js"></script>
-    <script src="/assets/scripts/liquidvisual/utilities.js"></script>
     <script src="/assets/scripts/liquidvisual/responsive-utility.js"></script>
-    <script src="/assets/scripts/vendor/headroom.js"></script>
     <script src="/assets/scripts/vendor/parallax.js"></script>
-    <script src="/assets/scripts/vendor/pxgradient-1.0.3.js"></script>
     <script src="/assets/scripts/off-canvas.js"></script>
     <script src="/assets/scripts/parallax.js"></script>
     <script src="/assets/scripts/main.js"></script>
     <!-- endbuild -->
+
+    <!-- <script src="/assets/scripts/vendor/pxgradient-1.0.3.js"></script> -->
 
     {% include snippets/google_analytics.html %}
 

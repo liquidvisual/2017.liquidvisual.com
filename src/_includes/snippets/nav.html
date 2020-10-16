@@ -1,0 +1,94 @@
+{% comment %}
+<!--
+    NAV.HTML - RECURSIVE
+
+    - updated: 05.03.19
+
+    OUTPUT EG:
+
+        <ul>
+            <li class="active"><a href="/">LINK</a></li>
+            <li><a href="#"><span class="text">LINK</span></a></li>
+            <li class="has-dropdown">
+                <a href="#">
+                    <span class="text">LINK</span>
+                    <span class="submenu-arrow"><i class="fa fa-angle-right"></i></span>
+                </a>
+                <ul class="dropdown" data-parent="LINK">
+                    <li><a href="#"><span class="text">LINK</span></a></li>
+                </ul>
+            </li>
+        </ul>
+-->
+{% endcomment %}
+
+{% assign data = include.data | default: site.data.sitemap %}
+{% assign first_pass = include.first_pass | default: false %}
+
+{%- capture ul_classes -%}
+    {% if forloop %} dropdown {% endif %}
+    {% if item.children_excluded_from_nav %} is-excluded-from-nav {% endif %}
+{%- endcapture -%}
+
+<ul class="{{ ul_classes }}" data-parent="{{ name }}">
+    {% for node in data %}
+
+        {% assign item = node[1] %}
+        {% assign children = item.children %}
+        {% assign name = node[0] %}
+
+        {%- capture li_classes -%}
+            {% if item.url == "/" and page.url == "/" %} active {% endif %}
+            {% if page.url contains item.url and item.url != "/" %} active {% endif %}
+            {% if children %} has-dropdown {% endif %}
+            {% if children and forloop.index >= 6 or forloop.last %} is-right-aligned {% endif %}
+            {% if item.classes %}{{ item.classes }}{% endif %}
+        {%- endcapture -%}
+
+        {% if forloop.first and first_pass == false %}
+            <!-- SOCIAL MEDIA -->
+            <li class="is-off-canvas-only pt-2 order-last">
+                {% include snippets/social_media.html preset=3 %}
+            </li>
+        {% endif %}
+
+        {% unless item.exclude %}
+            <li class="{{ li_classes }}">
+
+                <!-- ANCHOR -->
+                <a href="{{ item.url }}" data-alias="{{ name | slugify }}">
+
+                    {% if forloop.first and first_pass != true %}
+
+                        <!-- TEXT (HOME) -->
+                        <img class="hidden-md-down" width="10" src="/assets/img/ui/fi-home.svg" alt="Home">
+                        <span class="text hidden-lg-up">Home</span>
+
+                    {% elsif item.dropdown_text and first_pass == true %}
+
+                        <!-- TEXT (SERVICES) -->
+                        <h5 class="text">{{ name }}</h5>
+                        <div class="dropdown-text">
+                            <h6>{{ item.dropdown_text.title }}</h6>
+                            <p>{{ item.dropdown_text.body }}</p>
+                        </div>
+
+                    {% else %}
+
+                        <!-- TEXT -->
+                        <span class="text">
+                            {{ name }}
+                        </span>
+
+                    {% endif %}
+                </a>
+
+                {% if children %}
+                    <!-- DROPDOWN -->
+                    {% include snippets/nav.html data=children first_pass=true %}
+                {% endif %}
+
+            </li>
+        {% endunless %}
+    {% endfor %}
+</ul>

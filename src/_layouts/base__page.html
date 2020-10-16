@@ -2,29 +2,70 @@
 layout: base
 ---
 
-{% include hero.html %}
+{%- capture hero_classes -%}
+	{% if page.hero contains '/assets/'
+	   or page.hero contains 'gradient' %}
+	   		has-image-bg has-fixed-bleed
+	{% endif %}
+	{{ page.hero_classes | default: 'is-light'}}
+{%- endcapture -%}
 
-{% if page.breadcrumbs %}
-	{% include snippets/breadcrumb.html %}
+{%- capture hero_style -%}
+	{% if page.hero contains 'gradient' %}
+		background-image: {{ page.hero }}
+	{% elsif page.hero contains '/assets/img/' %}
+		background-image: url({{ page.hero }})
+	{% else %}
+		background-color: {{ page.hero }}"
+	{% endif %}
+{%- endcapture -%}
+
+<!-- HERO -->
+<section
+	class="section section-hero is-edge-to-edge {{ hero_classes }}"
+	style="{{ hero_style }}"
+>
+    <div class="container">
+
+    	{% ifhascontent hero %}
+    		{% contentblock hero no-convert %}
+    	{% endifhascontent %}
+    	{% ifnothascontent hero %}
+
+	        <!-- HERO CAPTION -->
+	        <div class="lv-hero-item-caption mt-auto">
+	            {% if page.title_override %}
+	                <h2 class="h1 mb-0">
+	                    <img width="100%" src="{{ page.hero_title }}" alt="{{ page.title }}">
+	                </h2>
+	            {% else %}
+	                <h1 class="mb-0">
+	                    <img width="100%" src="{{ page.hero_title }}" alt="{{ page.title }}">
+	                </h1>
+	            {% endif %}
+	        </div>
+
+        {% endifnothascontent %}
+    </div>
+
+    {% contentblock hero_additional no-convert %}
+</section>
+
+{% if page.breadcrumbs == true %}
+	{% include snippets/breadcrumbs.html %}
 {% endif %}
 
-<!-- BODY -->
-<main class="main-body">
+{% ifhascontent tagline %}
+	<!-- TAGLINE -->
+	<section class="section is-darker has-darker-bleed">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-11 col-lg-9 text-center">
+					{% contentblock tagline no-convert %}
+				</div>
+			</div>
+		</div>
+	</section>
+{% endifhascontent %}
 
-	{% ifhascontent tagline %}
-    	<!-- TAGLINE -->
-    	<section class="section is-darker has-darker-bleed">
-    		<div class="container">
-    			<div class="row justify-content-center">
-    				<div class="col-md-11 col-lg-9 text-center">
-    					{% contentblock tagline no-convert %}
-    				</div>
-    			</div>
-    		</div>
-    	</section>
-	{% endifhascontent %}
-
-	{{ content }}
-</main>
-
-{% contentblock content_additional no-convert %}
+{{ content }}

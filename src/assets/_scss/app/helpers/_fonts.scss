@@ -1,8 +1,7 @@
 /*
     FONTS.CSS
 
-    - updated: 08.12.17
-    - liquidvisual.com
+    - updated: 25.02.19
 */
 //-----------------------------------------------------------------
 // VARIABLES
@@ -11,32 +10,103 @@
 $font-path: "/assets/fonts" !default;
 
 //-----------------------------------------------------------------
-// Gotham (Used for headings)
+// STERADIAN
 //-----------------------------------------------------------------
 
-// Medium
-// @font-face {
-//     font-family: 'Gotham';
-//     font-style: normal;
-//     font-weight: normal;
-//     src: url('#{$font-path}/Gotham-Medium.eot');
-//     src: local('☺'),
-//         url('#{$font-path}/Gotham-Medium.woff') format('woff'),
-//         url('#{$font-path}/Gotham-Medium.ttf') format('truetype'),
-//         url('#{$font-path}/Gotham-Medium.svg') format('svg');
-// }
+// Bold
+@font-face {
+    font-family: 'Steradian';
+    font-style: normal;
+    font-weight: 600;
+    src: url('#{$font-path}/SteradianBold.eot');
+    src: local('☺'),
+        url('#{$font-path}/SteradianBold.woff2') format('woff2'),
+        url('#{$font-path}/SteradianBold.woff') format('woff'),
+        url('#{$font-path}/SteradianBold.ttf') format('truetype'),
+        url('#{$font-path}/SteradianBold.svg') format('svg');
+}
 
-// // Bold
-// @font-face {
-//     font-family: 'Gotham';
-//     font-style: normal;
-//     font-weight: bold;
-//     src: url('#{$font-path}/Gotham-Bold.ttf.eot');
-//     src: local('☺'),
-//         url('#{$font-path}/Gotham-Bold.woff') format('woff'),
-//         url('#{$font-path}/Gotham-Bold.tff') format('truetype'),
-//         url('#{$font-path}/Gotham-Bold.svg') format('svg');
-// }
+// Black
+@font-face {
+    font-family: 'Steradian';
+    font-style: normal;
+    font-weight: 700;
+    src: url('#{$font-path}/SteradianBlack.eot');
+    src: local('☺'),
+        url('#{$font-path}/SteradianBlack.woff2') format('woff2'),
+        url('#{$font-path}/SteradianBlack.woff') format('woff'),
+        url('#{$font-path}/SteradianBlack.ttf') format('truetype'),
+        url('#{$font-path}/SteradianBlack.svg') format('svg');
+}
+
+//-----------------------------------------------------------------
+// GORDITA
+//-----------------------------------------------------------------
+
+// Light
+@font-face {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 300;
+    src: url('#{$font-path}/Gordita-Light.eot');
+    src: local('☺'),
+        url('#{$font-path}/Gordita-Light.woff2') format('woff2'),
+        url('#{$font-path}/Gordita-Light.woff') format('woff'),
+        url('#{$font-path}/Gordita-Light.ttf') format('truetype'),
+        url('#{$font-path}/Gordita-Light.svg') format('svg');
+}
+
+// Regular
+@font-face {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 400;
+    src: url('#{$font-path}/Gordita-Regular.eot');
+    src: local('☺'),
+        url('#{$font-path}/Gordita-Regular.woff2') format('woff2'),
+        url('#{$font-path}/Gordita-Regular.woff') format('woff'),
+        url('#{$font-path}/Gordita-Regular.ttf') format('truetype'),
+        url('#{$font-path}/Gordita-Regular.svg') format('svg');
+}
+
+// Medium
+@font-face {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 500;
+    src: url('#{$font-path}/Gordita-Medium.eot');
+    src: local('☺'),
+        url('#{$font-path}/Gordita-Medium.woff2') format('woff2'),
+        url('#{$font-path}/Gordita-Medium.woff') format('woff'),
+        url('#{$font-path}/Gordita-Medium.ttf') format('truetype'),
+        url('#{$font-path}/Gordita-Medium.svg') format('svg');
+}
+
+// Bold
+@font-face {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 600;
+    src: url('#{$font-path}/Gordita-Bold.eot');
+    src: local('☺'),
+        url('#{$font-path}/Gordita-Bold.woff2') format('woff2'),
+        url('#{$font-path}/Gordita-Bold.woff') format('woff'),
+        url('#{$font-path}/Gordita-Bold.ttf') format('truetype'),
+        url('#{$font-path}/Gordita-Bold.svg') format('svg');
+}
+
+// Black
+@font-face {
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 700;
+    src: url('#{$font-path}/Gordita-Black.eot');
+    src: local('☺'),
+        url('#{$font-path}/Gordita-Black.woff2') format('woff2'),
+        url('#{$font-path}/Gordita-Black.woff') format('woff'),
+        url('#{$font-path}/Gordita-Black.ttf') format('truetype'),
+        url('#{$font-path}/Gordita-Black.svg') format('svg');
+}
 
 //-----------------------------------------------------------------
 // Gotham Light (Used for text)
@@ -134,7 +204,7 @@ $font-path: "/assets/fonts" !default;
 @font-face {
     font-family: 'Gotham Rounded Book';
     font-style: normal;
-    font-weight: bold;
+    font-weight: 600;
     src: url('#{$font-path}/GothamRnd-Bold.eot');
     src: local('☺'),
         url('#{$font-path}/GothamRnd-Bold.woff') format('woff'),
@@ -146,7 +216,7 @@ $font-path: "/assets/fonts" !default;
 @font-face {
     font-family: 'Gotham Rounded Book';
     font-style: italic;
-    font-weight: bold;
+    font-weight: 600;
     src: url('#{$font-path}/GothamRnd-BoldIta.eot');
     src: local('☺'),
         url('#{$font-path}/GothamRnd-BoldIta.woff') format('woff'),

@@ -1,0 +1,42 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="1095px" height="1479px" viewBox="0 0 1095 1479">
+<defs>
+<radialGradient id="Gradient_1" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="285.7875" fx="0" fy="0" gradientTransform="matrix( 1, 0, 0, 0.7489393342955868, 209.05,214.05) " spreadMethod="pad">
+<stop  offset="0%" stop-color="#F87972"/>
+
+<stop  offset="100%" stop-color="#C4375A"/>
+</radialGradient>
+
+<filter id="Filter_1" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+<feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 " result="result1"/>
+</filter>
+
+<g id="Mask_Symbol_63_0_2_MASK_0_FILL">
+<path fill="#FFFFFF" stroke="none" d="
+M 0 0
+L 0 624.1 355.85 624.1 355.85 0 0 0 Z"/>
+</g>
+
+<g id="Symbol_63_0_Layer2_0_FILL">
+<path fill="url(#Gradient_1)" stroke="none" d="
+M 471.95 -8.25
+L -184.05 -8.25 -184.05 624.1 471.95 624.1 471.95 -8.25 Z"/>
+</g>
+</defs>
+
+<g filter="url(#Filter_1)" transform="matrix( 1, 0, 0, 1, 0,0) ">
+<g transform="matrix( 3.07928466796875, 0, 0, 2.3715667724609375, 0,0) ">
+<mask id="Mask_Mask_1">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Mask_Symbol_63_0_2_MASK_0_FILL"/>
+</g>
+</mask>
+
+<g mask="url(#Mask_Mask_1)">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Symbol_63_0_Layer2_0_FILL"/>
+</g>
+</g>
+</g>
+</g>
+</svg>

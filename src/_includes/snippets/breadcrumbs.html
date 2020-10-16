@@ -1,0 +1,64 @@
+{% comment %}
+<!--
+    BREADCRUMBS
+
+    updated: 06.03.19
+    liquidvisual.com
+-->
+{% endcomment %}
+
+{% assign crumbs = page.url | split: '/' %}
+
+{% capture breadcrumb_classes %}
+    {% if page.theme contains 'theme-light' and include.classes == null %}
+        is-light has-light-bleed
+    {% else %}
+        {{ include.classes }}
+    {% endif %}
+{% endcapture %}
+
+<!-- BREADCRUMBS -->
+<section class="section section-breadcrumbs {{ breadcrumb_classes }}">
+    <div class="container py-0">
+
+        <!-- BREADCRUMB NAV -->
+        <nav class="breadcrumb-nav">
+            <ol class="breadcrumb">
+                {% for crumb in crumbs offset: 1 %}
+                    {% unless forloop.last %}
+                    <li class="breadcrumb-item">
+                        <a
+                            class="anchor"
+                            href="
+                            {%- assign crumb_limit = forloop.index | plus: 1 -%}
+                            {%- for crumb in crumbs limit: crumb_limit -%}
+                                {{ crumb | append: '/' }}
+                            {%- endfor -%}"
+                        >
+                            <i class="fa fa-arrow-circle-left"></i>
+                            <span class="hidden-sm-down">Back to</span>
+                            {{ crumb | replace:'-',' ' }}
+                        </a>
+                    </li>
+                    {% endunless %}
+                {% endfor %}
+            </ol>
+
+            {% if page.theme contains 'theme-light' and page.exclude_share_links != true %}
+                <!-- SHARE LINKS -->
+                <div class="ml-auto">
+                    {% include snippets/social_media.html preset=2 %}
+                </div>
+            {% endif %}
+
+        </nav>
+
+        <!-- BG OVERFLOW -->
+        {% if page.theme contains 'theme-light' and page.exclude_share_links != true %}
+            <div class="breadcrumb-bg-overflow">
+                <div class="breadcrumb-bg"></div>
+            </div>
+        {% endif %}
+
+    </div>
+</section>
