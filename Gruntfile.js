@@ -61,7 +61,7 @@ module.exports = function (grunt) {
       },
       jekyll: {
         files: [
-          '<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
+          '<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown,json}',
           '!<%= yeoman.app %>/_bower_components/**/*'
         ],
         tasks: ['jekyll:server']
@@ -438,7 +438,22 @@ module.exports = function (grunt) {
             //'apple-touch*.png'
           ],
           dest: '<%= yeoman.dist %>'
-        }]
+        },
+        /*{
+          expand: true,
+          dot: true,
+          cwd: 'node_modules/font-awesome/', // change this for font-awesome
+          src: ['fonts/*.*'],
+          dest: '<%= yeoman.assets %>'
+        },
+        {
+          expand: true,
+          dot: true,
+          cwd: 'node_modules/lightgallery.js/dist', // change this for font-awesome
+          src: ['fonts/*.*', 'img/*.*'],
+          dest: '<%= yeoman.assets %>'
+        }*/
+        ]
       }
     },
     //-----------------------------------------------------
